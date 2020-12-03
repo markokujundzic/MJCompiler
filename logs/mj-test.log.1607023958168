@@ -1,0 +1,349 @@
+INFO  20:31:56,051 - Compiling source file: C:\Users\Asus\Desktop\FAKS\PP1\MJCompiler\test\program.mj
+INFO  20:31:56,139 - #2 program
+INFO  20:31:56,139 - #9 MJProgram
+INFO  20:31:56,139 - #9 char
+INFO  20:31:56,141 - #9 x
+INFO  20:31:56,142 - #6 ;
+INFO  20:31:56,144 - #9 int
+INFO  20:31:56,146 - #9 y
+INFO  20:31:56,146 - #6 ;
+INFO  20:31:56,146 - #3 {
+INFO  20:31:56,146 - #9 int
+INFO  20:31:56,147 - #9 main
+INFO  20:31:56,147 - #15 (
+INFO  20:31:56,148 - #16 )
+INFO  20:31:56,149 - #3 {
+INFO  20:31:56,150 - #9 y
+INFO  20:31:56,151 - #8 =
+INFO  20:31:56,154 - #10 5
+INFO  20:31:56,155 - #39 +
+INFO  20:31:56,159 - #10 4
+INFO  20:31:56,161 - #46 <
+INFO  20:31:56,162 - #10 2
+INFO  20:31:56,164 - #40 *
+INFO  20:31:56,170 - #10 3
+INFO  20:31:56,172 - #34 &&
+INFO  20:31:56,173 - #11 true
+INFO  20:31:56,173 - #35 ?
+INFO  20:31:56,174 - #11 false
+INFO  20:31:56,174 - #35 ?
+INFO  20:31:56,174 - #10 1
+INFO  20:31:56,174 - #20 :
+INFO  20:31:56,174 - #10 2
+INFO  20:31:56,174 - #20 :
+INFO  20:31:56,174 - #11 false
+INFO  20:31:56,174 - #35 ?
+INFO  20:31:56,174 - #10 1
+INFO  20:31:56,174 - #20 :
+INFO  20:31:56,175 - #11 false
+INFO  20:31:56,175 - #35 ?
+INFO  20:31:56,175 - #10 1
+INFO  20:31:56,175 - #20 :
+INFO  20:31:56,175 - #10 2
+INFO  20:31:56,175 - #6 ;
+INFO  20:31:56,176 - #4 }
+INFO  20:31:56,176 - #4 }
+INFO  20:31:56,180 - Program(
+  ProgramName(
+   MJProgram
+  ) [ProgramName]
+  YesDeclarations(
+    YesDeclarations(
+      NoDeclarations(
+      ) [NoDeclarations]
+      VariableDeclaration(
+        VarDecl(
+          Type(
+           char
+          ) [Type]
+          VarDeclSingle(
+            DeclVariable(
+              VarDeclName(
+               x
+              ) [VarDeclName]
+              NoVarDeclArrayOption(
+              ) [NoVarDeclArrayOption]
+            ) [DeclVariable]
+          ) [VarDeclSingle]
+        ) [VarDecl]
+      ) [VariableDeclaration]
+    ) [YesDeclarations]
+    VariableDeclaration(
+      VarDecl(
+        Type(
+         int
+        ) [Type]
+        VarDeclSingle(
+          DeclVariable(
+            VarDeclName(
+             y
+            ) [VarDeclName]
+            NoVarDeclArrayOption(
+            ) [NoVarDeclArrayOption]
+          ) [DeclVariable]
+        ) [VarDeclSingle]
+      ) [VarDecl]
+    ) [VariableDeclaration]
+  ) [YesDeclarations]
+  YesMethodDeclarationList(
+    NoMethodDeclarationList(
+    ) [NoMethodDeclarationList]
+    MethodDeclaration(
+      ReturnTypeType(
+        Type(
+         int
+        ) [Type]
+      ) [ReturnTypeType]
+      MethodName(
+       main
+      ) [MethodName]
+      NoMethodParameters(
+      ) [NoMethodParameters]
+      NoMethodVariables(
+      ) [NoMethodVariables]
+      YesMethodStatements(
+        NoMethodStatements(
+        ) [NoMethodStatements]
+        DesignatorStatementDecl(
+          DesignatorStatement(
+            Designator(
+              DesignatorName(
+               y
+              ) [DesignatorName]
+              NoDesignatorList(
+              ) [NoDesignatorList]
+            ) [Designator]
+            DesignatorAdditionAssignOpExpression(
+              Assignop(
+              ) [Assignop]
+              TernaryExpr(
+                ConditionTerm(
+                  CondTermList(
+                    CondTermCondFact(
+                      ExprCondFact(
+                        SingleCondFact(
+                          TermExpr(
+                            Term(
+                              IntFactor(
+                               5
+                              ) [IntFactor]
+                              NoPossibleFactors(
+                              ) [NoPossibleFactors]
+                            ) [Term]
+                            YesTermList(
+                              NoTermList(
+                              ) [NoTermList]
+                              AddopPlus(
+                              ) [AddopPlus]
+                              Term(
+                                IntFactor(
+                                 4
+                                ) [IntFactor]
+                                NoPossibleFactors(
+                                ) [NoPossibleFactors]
+                              ) [Term]
+                            ) [YesTermList]
+                          ) [TermExpr]
+                        ) [SingleCondFact]
+                        RelopLess(
+                        ) [RelopLess]
+                        TermExpr(
+                          Term(
+                            IntFactor(
+                             2
+                            ) [IntFactor]
+                            YesPossibleFactors(
+                              NoPossibleFactors(
+                              ) [NoPossibleFactors]
+                              PossibleFactor(
+                                MulopMul(
+                                ) [MulopMul]
+                                IntFactor(
+                                 3
+                                ) [IntFactor]
+                              ) [PossibleFactor]
+                            ) [YesPossibleFactors]
+                          ) [Term]
+                          NoTermList(
+                          ) [NoTermList]
+                        ) [TermExpr]
+                      ) [ExprCondFact]
+                    ) [CondTermCondFact]
+                    SingleCondFact(
+                      TermExpr(
+                        Term(
+                          BoolFactor(
+                           true
+                          ) [BoolFactor]
+                          NoPossibleFactors(
+                          ) [NoPossibleFactors]
+                        ) [Term]
+                        NoTermList(
+                        ) [NoTermList]
+                      ) [TermExpr]
+                    ) [SingleCondFact]
+                  ) [CondTermList]
+                ) [ConditionTerm]
+                TernaryExpr(
+                  ConditionTerm(
+                    CondTermCondFact(
+                      SingleCondFact(
+                        TermExpr(
+                          Term(
+                            BoolFactor(
+                             false
+                            ) [BoolFactor]
+                            NoPossibleFactors(
+                            ) [NoPossibleFactors]
+                          ) [Term]
+                          NoTermList(
+                          ) [NoTermList]
+                        ) [TermExpr]
+                      ) [SingleCondFact]
+                    ) [CondTermCondFact]
+                  ) [ConditionTerm]
+                  NoTernaryExpr(
+                    ConditionTerm(
+                      CondTermCondFact(
+                        SingleCondFact(
+                          TermExpr(
+                            Term(
+                              IntFactor(
+                               1
+                              ) [IntFactor]
+                              NoPossibleFactors(
+                              ) [NoPossibleFactors]
+                            ) [Term]
+                            NoTermList(
+                            ) [NoTermList]
+                          ) [TermExpr]
+                        ) [SingleCondFact]
+                      ) [CondTermCondFact]
+                    ) [ConditionTerm]
+                  ) [NoTernaryExpr]
+                  NoTernaryExpr(
+                    ConditionTerm(
+                      CondTermCondFact(
+                        SingleCondFact(
+                          TermExpr(
+                            Term(
+                              IntFactor(
+                               2
+                              ) [IntFactor]
+                              NoPossibleFactors(
+                              ) [NoPossibleFactors]
+                            ) [Term]
+                            NoTermList(
+                            ) [NoTermList]
+                          ) [TermExpr]
+                        ) [SingleCondFact]
+                      ) [CondTermCondFact]
+                    ) [ConditionTerm]
+                  ) [NoTernaryExpr]
+                ) [TernaryExpr]
+                TernaryExpr(
+                  ConditionTerm(
+                    CondTermCondFact(
+                      SingleCondFact(
+                        TermExpr(
+                          Term(
+                            BoolFactor(
+                             false
+                            ) [BoolFactor]
+                            NoPossibleFactors(
+                            ) [NoPossibleFactors]
+                          ) [Term]
+                          NoTermList(
+                          ) [NoTermList]
+                        ) [TermExpr]
+                      ) [SingleCondFact]
+                    ) [CondTermCondFact]
+                  ) [ConditionTerm]
+                  NoTernaryExpr(
+                    ConditionTerm(
+                      CondTermCondFact(
+                        SingleCondFact(
+                          TermExpr(
+                            Term(
+                              IntFactor(
+                               1
+                              ) [IntFactor]
+                              NoPossibleFactors(
+                              ) [NoPossibleFactors]
+                            ) [Term]
+                            NoTermList(
+                            ) [NoTermList]
+                          ) [TermExpr]
+                        ) [SingleCondFact]
+                      ) [CondTermCondFact]
+                    ) [ConditionTerm]
+                  ) [NoTernaryExpr]
+                  TernaryExpr(
+                    ConditionTerm(
+                      CondTermCondFact(
+                        SingleCondFact(
+                          TermExpr(
+                            Term(
+                              BoolFactor(
+                               false
+                              ) [BoolFactor]
+                              NoPossibleFactors(
+                              ) [NoPossibleFactors]
+                            ) [Term]
+                            NoTermList(
+                            ) [NoTermList]
+                          ) [TermExpr]
+                        ) [SingleCondFact]
+                      ) [CondTermCondFact]
+                    ) [ConditionTerm]
+                    NoTernaryExpr(
+                      ConditionTerm(
+                        CondTermCondFact(
+                          SingleCondFact(
+                            TermExpr(
+                              Term(
+                                IntFactor(
+                                 1
+                                ) [IntFactor]
+                                NoPossibleFactors(
+                                ) [NoPossibleFactors]
+                              ) [Term]
+                              NoTermList(
+                              ) [NoTermList]
+                            ) [TermExpr]
+                          ) [SingleCondFact]
+                        ) [CondTermCondFact]
+                      ) [ConditionTerm]
+                    ) [NoTernaryExpr]
+                    NoTernaryExpr(
+                      ConditionTerm(
+                        CondTermCondFact(
+                          SingleCondFact(
+                            TermExpr(
+                              Term(
+                                IntFactor(
+                                 2
+                                ) [IntFactor]
+                                NoPossibleFactors(
+                                ) [NoPossibleFactors]
+                              ) [Term]
+                              NoTermList(
+                              ) [NoTermList]
+                            ) [TermExpr]
+                          ) [SingleCondFact]
+                        ) [CondTermCondFact]
+                      ) [ConditionTerm]
+                    ) [NoTernaryExpr]
+                  ) [TernaryExpr]
+                ) [TernaryExpr]
+              ) [TernaryExpr]
+            ) [DesignatorAdditionAssignOpExpression]
+          ) [DesignatorStatement]
+        ) [DesignatorStatementDecl]
+      ) [YesMethodStatements]
+    ) [MethodDeclaration]
+  ) [YesMethodDeclarationList]
+) [Program]
+INFO  20:31:56,181 - ===================================
+INFO  20:31:56,189 -  Print count calls = 0
+INFO  20:31:56,189 -  Deklarisanih promenljivih ima = 2

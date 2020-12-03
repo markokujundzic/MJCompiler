@@ -1,0 +1,500 @@
+package rs.ac.bg.etf.pp1;
+
+import java_cup.runtime.*;
+import org.apache.log4j.*;
+import rs.ac.bg.etf.pp1.ast.*;
+
+parser code
+{:
+    Boolean error_detected;
+
+	Logger log = Logger.getLogger(getClass());
+
+    public void report_fatal_error(String message, Object info) throws java.lang.Exception
+    {
+        done_parsing();
+        report_error(message, info);
+    }
+
+    public void syntax_error(Symbol cur_token)
+    {
+        report_error("Syntax error", cur_token);
+    }
+
+    public void unrecovered_syntax_error(Symbol cur_token) throws java.lang.Exception
+    {
+        report_fatal_error("Fatal error, parsing terminated", cur_token);
+    }
+
+    public void report_error(String message, Object info)
+    {
+    	StringBuilder msg = new StringBuilder(message);
+
+    	error_detected = true;
+
+    	if (info instanceof Symbol)
+    	{
+    	    msg.append (" on line ").append(((Symbol)info).left);
+    	}
+
+        log.error(msg.toString());
+    }
+:}
+
+init with
+{:
+    error_detected = false;
+:}
+
+scan with
+{:
+	Symbol s = this.getScanner().next_token();
+
+	if (s != null && s.value != null)
+	{
+	    log.info(s.toString() + " " + s.value.toString());
+	}
+
+	return s;
+:}
+
+/* TERMINALS */
+terminal PROGRAM, LEFT_BRACE, RIGHT_BRACE;
+terminal CONST, SEMICOLON, COMMA, ASSIGN;
+terminal String IDENTIFIER;
+terminal Integer INT;
+terminal Boolean BOOL;
+terminal Character CHAR;
+terminal LEFT_PARENTHESIS, RIGHT_PARENTHESIS, VOID;
+terminal BREAK, CONTINUE, COLON;
+terminal PERIOD, LEFT_SQUARE, RIGHT_SQUARE;
+terminal INCREMENT, DECREMENT;
+terminal IF, ELSE, DO, WHILE;
+terminal RETURN, READ, PRINT;
+terminal OR, AND, QUESTION_MARK, MINUS;
+terminal NEW, ENUM, PLUS;
+terminal MUL, DIV, MOD;
+terminal EQUAL, NOT_EQUAL;
+terminal GREATER, LESS;
+terminal GREATER_OR_EQUAL;
+terminal LESS_OR_EQUAL;
+
+/* NONTERMINALS */
+nonterminal Program, ProgramName, DeclarationList, Declaration, MethodDeclarationList;
+nonterminal ConstDecl, VarDecl, ConstDeclVariables, ConstDeclVariable, Type;
+nonterminal ConstDeclName, ConstDeclValue, CondTerm, CondFact, Relop;
+nonterminal DeclVariables, DeclVariable, VarDeclName, VarDeclArrayOption;
+nonterminal MethodDeclaration, ReturnType, MethodName, MethodParameters, MethodVariables, MethodStatements;
+nonterminal FormPars, Statement, FormParList, FormPar, FormParName, FormParArrayOption;
+nonterminal DesignatorStatement, IfStatement, DoWhileStatement, ReturnStatement;
+nonterminal PrintStatement, ReadStatement, Designator, DesignatorAddition, DesignatorName, DesignatorList;
+nonterminal DesignatorOptional, DesignatorOptionalName, DesignatorActPars, Assignop;
+nonterminal Expr, ActPars, PossibleStatement, ElseStatement, Condition;
+nonterminal ReturnExpr, PrintInts, PrintInt, PossibleExpressions, PossibleExpr, SimpleExpr;
+nonterminal Term, Addop, Factor, PossibleFactors, PossibleFactor, Mulop;
+nonterminal OptionalRelopExpr, OptionalCondTerm, OptionalCondFact;
+nonterminal TermList;
+
+/* PRECEDENCE */
+precedence left ELSE;
+// precedence left COLON, QUESTION_MARK;
+
+/* PROGRAM - START */
+
+Program ::=
+        (Program) PROGRAM ProgramName DeclarationList LEFT_BRACE MethodDeclarationList RIGHT_BRACE
+        ;
+ProgramName ::=
+        (ProgramName) IDENTIFIER:program_name
+        ;
+
+/* PROGRAM - END */
+
+/* DECLARATIONS - START */
+
+DeclarationList ::=
+        (YesDeclarations) DeclarationList Declaration
+        |
+        (NoDeclarations) /* epsilon */
+        ;
+Declaration ::=
+        (ConstantDeclaration) ConstDecl
+        |
+        (VariableDeclaration) VarDecl
+        ;
+
+/* CONST_DECL - START */
+
+ConstDecl ::=
+        (ConstDecl) CONST Type ConstDeclVariables SEMICOLON
+        ;
+ConstDeclVariables ::=
+        (ConstDeclPlural) ConstDeclVariables COMMA ConstDeclVariable
+        |
+        (ConstDeclSingle) ConstDeclVariable
+        ;
+ConstDeclVariable ::=
+        (ConstDeclVariable) ConstDeclName ASSIGN ConstDeclValue
+        ;
+ConstDeclName ::=
+        (ConstDeclName) IDENTIFIER:name
+        ;
+ConstDeclValue ::=
+        (ConstDeclValueInt) INT:value
+        |
+        (ConstDeclValueChar) CHAR:value
+        |
+        (ConstDeclValueBool) BOOL:value
+        ;
+
+/* CONST_DECL - END */
+
+/* VAR_DECL - START */
+
+VarDecl ::=
+        (VarDecl) Type DeclVariables SEMICOLON
+        ;
+DeclVariables ::=
+        (VarDeclPlural) DeclVariables COMMA DeclVariable
+        |
+        (VarDeclSingle) DeclVariable
+        ;
+DeclVariable ::=
+        (DeclVariable) VarDeclName VarDeclArrayOption
+        ;
+VarDeclName ::=
+        (VarDeclName) IDENTIFIER:name
+        ;
+VarDeclArrayOption ::=
+        (YesVarDeclArrayOption) LEFT_SQUARE RIGHT_SQUARE
+        |
+        (NoVarDeclArrayOption) /* epsilon */
+        ;
+
+/* VAR_DECL - END */
+
+/* METHOD_DECL - START */
+
+MethodDeclarationList ::=
+        (YesMethodDeclarationList) MethodDeclarationList MethodDeclaration
+        |
+        (NoMethodDeclarationList) /* epsilon */
+        ;
+MethodDeclaration ::=
+        (MethodDeclaration) ReturnType MethodName LEFT_PARENTHESIS MethodParameters RIGHT_PARENTHESIS MethodVariables LEFT_BRACE MethodStatements RIGHT_BRACE
+        ;
+ReturnType ::=
+        (ReturnTypeType) Type
+        |
+        (ReturnTypeVoid) VOID
+        ;
+MethodName ::=
+        (MethodName) IDENTIFIER:name
+        ;
+MethodParameters ::=
+        (YesMethodParameters) FormPars
+        |
+        (NoMethodParameters) /* epsilon */
+        ;
+MethodVariables ::=
+        (YesMethodVariables) MethodVariables VarDecl
+        |
+        (NoMethodVariables) /* epsilon */
+        ;
+MethodStatements ::=
+        (YesMethodStatements) MethodStatements Statement
+        |
+        (NoMethodStatements) /* epsilon */
+        ;
+
+/* METHOD_DECL - END */
+
+/* DECLARATIONS - END */
+
+/* FORM_PARS - START */
+
+FormPars ::=
+        (FormPars) FormParList
+        ;
+FormParList ::=
+        (FormParPlural) FormPar COMMA FormParList
+        |
+        (FormParSingle) FormPar
+        ;
+FormPar ::=
+        (FormPar) Type FormParName FormParArrayOption
+        ;
+FormParName ::=
+        (FormParName) IDENTIFIER:name
+        ;
+FormParArrayOption ::=
+        (YesFormParArrayOption) LEFT_SQUARE RIGHT_SQUARE
+        |
+        (NoFormParArrayOption) /* epsilon */
+        ;
+
+/* FORM_PARS - END */
+
+/* TYPE - START */
+
+Type ::=
+        (Type) IDENTIFIER:name
+        ;
+
+/* TYPE - END */
+
+/* STATEMENT - START */
+
+Statement ::=
+        (DesignatorStatementDecl) DesignatorStatement SEMICOLON
+        |
+        (IfStatementDecl) IfStatement
+        |
+        (DoWhileStatementDecl) DoWhileStatement
+        |
+        (BreakStatement) BREAK SEMICOLON
+        |
+        (ContinueStatement) CONTINUE SEMICOLON
+        |
+        (ReturnStatementDecl) ReturnStatement
+        |
+        (ReadStatementDecl) ReadStatement
+        |
+        (PrintStatementDecl) PrintStatement
+        |
+        (MultipleStatements) LEFT_BRACE MethodStatements RIGHT_BRACE
+        ;
+
+/* STATEMENT - END */
+
+/* DESIGNATOR_STATEMENT - START */
+
+DesignatorStatement ::=
+        (DesignatorStatement) Designator DesignatorAddition
+        ;
+Designator ::=
+        (Designator) DesignatorName DesignatorList
+        ;
+DesignatorName ::=
+        (DesignatorName) IDENTIFIER:name
+        ;
+DesignatorList ::=
+        (YesDesignatorList) DesignatorList DesignatorOptional
+        |
+        (NoDesignatorList) /* epsilon */
+        ;
+DesignatorOptional ::=
+        (DesignatorOptionalPeriod) PERIOD DesignatorOptionalName
+        |
+        (DesignatorOptionalExpression) LEFT_SQUARE Expr RIGHT_SQUARE
+        ;
+DesignatorOptionalName ::=
+        (DesignatorOptionalName) IDENTIFIER:name
+        ;
+DesignatorAddition ::=
+		(DesignatorAdditionAssignOpExpression) Assignop Expr
+		|
+		(DesignatorAdditionActPars) LEFT_PARENTHESIS DesignatorActPars RIGHT_PARENTHESIS
+		|
+		(DesignatorAdditionIncrement) INCREMENT
+		|
+		(DesignatorAdditionDecrement) DECREMENT
+		;
+DesignatorActPars ::=
+		(YesDesignatorActPars) ActPars
+		|
+		(DesignatorNoActPars) /* epsilon */
+		;
+
+/* DESIGNATOR_STATEMENT - END */
+
+/* IF_STATEMENT - START */
+
+IfStatement ::=
+		(IfStatement) IF LEFT_PARENTHESIS Condition RIGHT_PARENTHESIS Statement PossibleStatement
+		;
+PossibleStatement ::=
+		(YesPossibleStatement) ElseStatement Statement
+		|
+		(NoPossibleStatement) /* epsilon */
+		;
+ElseStatement ::=
+		(ElseStatement) ELSE
+		;
+
+/* IF_STATEMENT - END */
+
+/* DO_WHILE - START */
+
+DoWhileStatement ::=
+		(DoWhileStatement) DO Statement WHILE LEFT_PARENTHESIS Condition RIGHT_PARENTHESIS SEMICOLON
+		;
+
+/* DO_WHILE - END */
+
+/* RETURN_STATEMENT - START */
+
+ReturnStatement ::=
+		(ReturnStatement) RETURN ReturnExpr SEMICOLON
+		;
+ReturnExpr ::=
+		(YesReturnExpr) Expr
+		|
+		(NoReturnExpr) /* epsilon */
+		;
+/* RETURN_STATEMENT - END */
+
+/* READ_STATEMENT - START */
+
+ReadStatement ::=
+		(ReadStatement) READ LEFT_PARENTHESIS Designator RIGHT_PARENTHESIS SEMICOLON
+		;
+
+/* READ_STATEMENT - END */
+
+/* PRINT_STATEMENT - START */
+
+PrintStatement ::=
+		(PrintStatement) PRINT LEFT_PARENTHESIS Expr PrintInts RIGHT_PARENTHESIS SEMICOLON
+		;
+PrintInts ::=
+		(YesPrintInts) PrintInt
+		|
+		(NoPrintInts) /* epsilon */
+		;
+PrintInt ::=
+		(PrintInt) COMMA INT:number_to_print
+		;
+
+/* PRINT_STATEMENT - END */
+
+/* ACT_PARS - START */
+
+ActPars ::=
+		(ActPars) Expr PossibleExpressions
+		;
+PossibleExpressions ::=
+		(YesPossibleExpressions) PossibleExpressions PossibleExpr
+		|
+		(NoPossibleExpressions) /* epsilon */
+		;
+PossibleExpr ::=
+		(PossibleExpr) COMMA Expr
+		;
+
+/* ACT_PARS - END */
+
+/* CONDITIONS - START */
+
+Condition ::=
+		(ConditionList) Condition OR CondTerm
+		|
+		(ConditionTerm) CondTerm
+		;
+CondTerm ::=
+		(CondTermList) CondTerm AND CondFact
+		|
+		(CondTermCondFact) CondFact
+		;
+CondFact ::=
+		(SingleCondFact) SimpleExpr
+		|
+		(ExprCondFact) CondFact Relop SimpleExpr
+		;
+
+/* CONDITIONS - END */
+
+/* EXPR - START */
+
+Expr ::=
+        (TernaryExpr) Condition QUESTION_MARK Expr COLON Expr
+        |
+        (NoTernaryExpr) Condition
+		;
+
+SimpleExpr ::=
+		(TermExpr) Term TermList
+		|
+		(MinusTermExpr) MINUS Term TermList
+		;
+
+TermList ::=
+		(YesTermList) TermList Addop Term
+		|
+		(NoTermList) /* epsilon */
+		;
+
+/* EXPR - END */
+
+/* TERM - START */
+
+Term ::=
+		(Term) Factor PossibleFactors
+		;
+
+PossibleFactors ::=
+		(YesPossibleFactors) PossibleFactors PossibleFactor
+		|
+		(NoPossibleFactors) /* epsilon */
+		;
+
+PossibleFactor ::=
+		(PossibleFactor) Mulop Factor
+		;
+
+/* TERM - END */
+
+/* FACTOR - START */
+
+Factor ::=
+		(DesignatorFactor) Designator
+		|
+		(FunctionCallFactor) Designator LEFT_PARENTHESIS DesignatorActPars RIGHT_PARENTHESIS
+		|
+		(IntFactor) INT
+		|
+		(CharFactor) CHAR
+		|
+		(BoolFactor) BOOL
+		|
+		(NewFactor) NEW Type
+		|
+		(NewArrayFactor) NEW Type LEFT_SQUARE Expr RIGHT_SQUARE
+		|
+		(ExprFactor) LEFT_PARENTHESIS Expr RIGHT_PARENTHESIS
+		;
+
+/* FACTOR - END */
+
+/* OP - START */
+
+Assignop ::=
+		(Assignop) ASSIGN
+		;
+Addop ::=
+		(AddopPlus) PLUS
+		|
+		(AddopMinus) MINUS
+		;
+Mulop ::=
+		(MulopMul) MUL
+		|
+		(MulopDiv) DIV
+		|
+		(MulopMod) MOD
+		;
+Relop ::=
+		(RelopEqual) EQUAL
+		|
+		(RelopNotEqual) NOT_EQUAL
+		|
+		(RelopGreater) GREATER
+		|
+		(RelopGreaterOrEqual) GREATER_OR_EQUAL
+		|
+		(RelopLess) LESS
+		|
+		(RelopLessOrEqual) LESS_OR_EQUAL
+		;
+
+/* OP - END */

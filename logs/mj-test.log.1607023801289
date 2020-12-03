@@ -1,0 +1,265 @@
+INFO  20:29:55,630 - Compiling source file: C:\Users\Asus\Desktop\FAKS\PP1\MJCompiler\test\program.mj
+INFO  20:29:55,717 - #2 program
+INFO  20:29:55,717 - #9 MJProgram
+INFO  20:29:55,717 - #9 char
+INFO  20:29:55,719 - #9 x
+INFO  20:29:55,719 - #6 ;
+INFO  20:29:55,722 - #9 int
+INFO  20:29:55,723 - #9 y
+INFO  20:29:55,723 - #6 ;
+INFO  20:29:55,723 - #3 {
+INFO  20:29:55,723 - #9 int
+INFO  20:29:55,724 - #9 main
+INFO  20:29:55,724 - #15 (
+INFO  20:29:55,725 - #16 )
+INFO  20:29:55,725 - #3 {
+INFO  20:29:55,726 - #9 y
+INFO  20:29:55,727 - #8 =
+INFO  20:29:55,728 - #10 5
+INFO  20:29:55,729 - #39 +
+INFO  20:29:55,731 - #10 4
+INFO  20:29:55,732 - #46 <
+INFO  20:29:55,733 - #10 2
+INFO  20:29:55,734 - #40 *
+INFO  20:29:55,740 - #10 3
+INFO  20:29:55,742 - #34 &&
+INFO  20:29:55,743 - #11 true
+INFO  20:29:55,743 - #35 ?
+INFO  20:29:55,743 - #11 false
+INFO  20:29:55,744 - #20 :
+INFO  20:29:55,744 - #11 false
+INFO  20:29:55,744 - #35 ?
+INFO  20:29:55,744 - #10 1
+INFO  20:29:55,744 - #20 :
+INFO  20:29:55,744 - #10 2
+INFO  20:29:55,744 - #6 ;
+INFO  20:29:55,745 - #4 }
+INFO  20:29:55,745 - #4 }
+INFO  20:29:55,750 - Program(
+  ProgramName(
+   MJProgram
+  ) [ProgramName]
+  YesDeclarations(
+    YesDeclarations(
+      NoDeclarations(
+      ) [NoDeclarations]
+      VariableDeclaration(
+        VarDecl(
+          Type(
+           char
+          ) [Type]
+          VarDeclSingle(
+            DeclVariable(
+              VarDeclName(
+               x
+              ) [VarDeclName]
+              NoVarDeclArrayOption(
+              ) [NoVarDeclArrayOption]
+            ) [DeclVariable]
+          ) [VarDeclSingle]
+        ) [VarDecl]
+      ) [VariableDeclaration]
+    ) [YesDeclarations]
+    VariableDeclaration(
+      VarDecl(
+        Type(
+         int
+        ) [Type]
+        VarDeclSingle(
+          DeclVariable(
+            VarDeclName(
+             y
+            ) [VarDeclName]
+            NoVarDeclArrayOption(
+            ) [NoVarDeclArrayOption]
+          ) [DeclVariable]
+        ) [VarDeclSingle]
+      ) [VarDecl]
+    ) [VariableDeclaration]
+  ) [YesDeclarations]
+  YesMethodDeclarationList(
+    NoMethodDeclarationList(
+    ) [NoMethodDeclarationList]
+    MethodDeclaration(
+      ReturnTypeType(
+        Type(
+         int
+        ) [Type]
+      ) [ReturnTypeType]
+      MethodName(
+       main
+      ) [MethodName]
+      NoMethodParameters(
+      ) [NoMethodParameters]
+      NoMethodVariables(
+      ) [NoMethodVariables]
+      YesMethodStatements(
+        NoMethodStatements(
+        ) [NoMethodStatements]
+        DesignatorStatementDecl(
+          DesignatorStatement(
+            Designator(
+              DesignatorName(
+               y
+              ) [DesignatorName]
+              NoDesignatorList(
+              ) [NoDesignatorList]
+            ) [Designator]
+            DesignatorAdditionAssignOpExpression(
+              Assignop(
+              ) [Assignop]
+              TernaryExpr(
+                ConditionTerm(
+                  CondTermList(
+                    CondTermCondFact(
+                      ExprCondFact(
+                        SingleCondFact(
+                          TermExpr(
+                            Term(
+                              IntFactor(
+                               5
+                              ) [IntFactor]
+                              NoPossibleFactors(
+                              ) [NoPossibleFactors]
+                            ) [Term]
+                            YesTermList(
+                              NoTermList(
+                              ) [NoTermList]
+                              AddopPlus(
+                              ) [AddopPlus]
+                              Term(
+                                IntFactor(
+                                 4
+                                ) [IntFactor]
+                                NoPossibleFactors(
+                                ) [NoPossibleFactors]
+                              ) [Term]
+                            ) [YesTermList]
+                          ) [TermExpr]
+                        ) [SingleCondFact]
+                        RelopLess(
+                        ) [RelopLess]
+                        TermExpr(
+                          Term(
+                            IntFactor(
+                             2
+                            ) [IntFactor]
+                            YesPossibleFactors(
+                              NoPossibleFactors(
+                              ) [NoPossibleFactors]
+                              PossibleFactor(
+                                MulopMul(
+                                ) [MulopMul]
+                                IntFactor(
+                                 3
+                                ) [IntFactor]
+                              ) [PossibleFactor]
+                            ) [YesPossibleFactors]
+                          ) [Term]
+                          NoTermList(
+                          ) [NoTermList]
+                        ) [TermExpr]
+                      ) [ExprCondFact]
+                    ) [CondTermCondFact]
+                    SingleCondFact(
+                      TermExpr(
+                        Term(
+                          BoolFactor(
+                           true
+                          ) [BoolFactor]
+                          NoPossibleFactors(
+                          ) [NoPossibleFactors]
+                        ) [Term]
+                        NoTermList(
+                        ) [NoTermList]
+                      ) [TermExpr]
+                    ) [SingleCondFact]
+                  ) [CondTermList]
+                ) [ConditionTerm]
+                NoTernaryExpr(
+                  ConditionTerm(
+                    CondTermCondFact(
+                      SingleCondFact(
+                        TermExpr(
+                          Term(
+                            BoolFactor(
+                             false
+                            ) [BoolFactor]
+                            NoPossibleFactors(
+                            ) [NoPossibleFactors]
+                          ) [Term]
+                          NoTermList(
+                          ) [NoTermList]
+                        ) [TermExpr]
+                      ) [SingleCondFact]
+                    ) [CondTermCondFact]
+                  ) [ConditionTerm]
+                ) [NoTernaryExpr]
+                TernaryExpr(
+                  ConditionTerm(
+                    CondTermCondFact(
+                      SingleCondFact(
+                        TermExpr(
+                          Term(
+                            BoolFactor(
+                             false
+                            ) [BoolFactor]
+                            NoPossibleFactors(
+                            ) [NoPossibleFactors]
+                          ) [Term]
+                          NoTermList(
+                          ) [NoTermList]
+                        ) [TermExpr]
+                      ) [SingleCondFact]
+                    ) [CondTermCondFact]
+                  ) [ConditionTerm]
+                  NoTernaryExpr(
+                    ConditionTerm(
+                      CondTermCondFact(
+                        SingleCondFact(
+                          TermExpr(
+                            Term(
+                              IntFactor(
+                               1
+                              ) [IntFactor]
+                              NoPossibleFactors(
+                              ) [NoPossibleFactors]
+                            ) [Term]
+                            NoTermList(
+                            ) [NoTermList]
+                          ) [TermExpr]
+                        ) [SingleCondFact]
+                      ) [CondTermCondFact]
+                    ) [ConditionTerm]
+                  ) [NoTernaryExpr]
+                  NoTernaryExpr(
+                    ConditionTerm(
+                      CondTermCondFact(
+                        SingleCondFact(
+                          TermExpr(
+                            Term(
+                              IntFactor(
+                               2
+                              ) [IntFactor]
+                              NoPossibleFactors(
+                              ) [NoPossibleFactors]
+                            ) [Term]
+                            NoTermList(
+                            ) [NoTermList]
+                          ) [TermExpr]
+                        ) [SingleCondFact]
+                      ) [CondTermCondFact]
+                    ) [ConditionTerm]
+                  ) [NoTernaryExpr]
+                ) [TernaryExpr]
+              ) [TernaryExpr]
+            ) [DesignatorAdditionAssignOpExpression]
+          ) [DesignatorStatement]
+        ) [DesignatorStatementDecl]
+      ) [YesMethodStatements]
+    ) [MethodDeclaration]
+  ) [YesMethodDeclarationList]
+) [Program]
+INFO  20:29:55,751 - ===================================
+INFO  20:29:55,754 -  Print count calls = 0
+INFO  20:29:55,754 -  Deklarisanih promenljivih ima = 2
