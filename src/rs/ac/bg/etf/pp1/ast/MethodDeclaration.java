@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 3/11/2020 21:21:52
+// 10/11/2020 21:10:44
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -9,31 +9,31 @@ public class MethodDeclaration implements SyntaxNode {
 
     private SyntaxNode parent;
     private int line;
-    private ReturnType ReturnType;
+    private MethodReturnType MethodReturnType;
     private MethodName MethodName;
     private MethodParameters MethodParameters;
     private MethodVariables MethodVariables;
-    private MethodStatements MethodStatements;
+    private MethodBody MethodBody;
 
-    public MethodDeclaration (ReturnType ReturnType, MethodName MethodName, MethodParameters MethodParameters, MethodVariables MethodVariables, MethodStatements MethodStatements) {
-        this.ReturnType=ReturnType;
-        if(ReturnType!=null) ReturnType.setParent(this);
+    public MethodDeclaration (MethodReturnType MethodReturnType, MethodName MethodName, MethodParameters MethodParameters, MethodVariables MethodVariables, MethodBody MethodBody) {
+        this.MethodReturnType=MethodReturnType;
+        if(MethodReturnType!=null) MethodReturnType.setParent(this);
         this.MethodName=MethodName;
         if(MethodName!=null) MethodName.setParent(this);
         this.MethodParameters=MethodParameters;
         if(MethodParameters!=null) MethodParameters.setParent(this);
         this.MethodVariables=MethodVariables;
         if(MethodVariables!=null) MethodVariables.setParent(this);
-        this.MethodStatements=MethodStatements;
-        if(MethodStatements!=null) MethodStatements.setParent(this);
+        this.MethodBody=MethodBody;
+        if(MethodBody!=null) MethodBody.setParent(this);
     }
 
-    public ReturnType getReturnType() {
-        return ReturnType;
+    public MethodReturnType getMethodReturnType() {
+        return MethodReturnType;
     }
 
-    public void setReturnType(ReturnType ReturnType) {
-        this.ReturnType=ReturnType;
+    public void setMethodReturnType(MethodReturnType MethodReturnType) {
+        this.MethodReturnType=MethodReturnType;
     }
 
     public MethodName getMethodName() {
@@ -60,12 +60,12 @@ public class MethodDeclaration implements SyntaxNode {
         this.MethodVariables=MethodVariables;
     }
 
-    public MethodStatements getMethodStatements() {
-        return MethodStatements;
+    public MethodBody getMethodBody() {
+        return MethodBody;
     }
 
-    public void setMethodStatements(MethodStatements MethodStatements) {
-        this.MethodStatements=MethodStatements;
+    public void setMethodBody(MethodBody MethodBody) {
+        this.MethodBody=MethodBody;
     }
 
     public SyntaxNode getParent() {
@@ -89,28 +89,28 @@ public class MethodDeclaration implements SyntaxNode {
     }
 
     public void childrenAccept(Visitor visitor) {
-        if(ReturnType!=null) ReturnType.accept(visitor);
+        if(MethodReturnType!=null) MethodReturnType.accept(visitor);
         if(MethodName!=null) MethodName.accept(visitor);
         if(MethodParameters!=null) MethodParameters.accept(visitor);
         if(MethodVariables!=null) MethodVariables.accept(visitor);
-        if(MethodStatements!=null) MethodStatements.accept(visitor);
+        if(MethodBody!=null) MethodBody.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
-        if(ReturnType!=null) ReturnType.traverseTopDown(visitor);
+        if(MethodReturnType!=null) MethodReturnType.traverseTopDown(visitor);
         if(MethodName!=null) MethodName.traverseTopDown(visitor);
         if(MethodParameters!=null) MethodParameters.traverseTopDown(visitor);
         if(MethodVariables!=null) MethodVariables.traverseTopDown(visitor);
-        if(MethodStatements!=null) MethodStatements.traverseTopDown(visitor);
+        if(MethodBody!=null) MethodBody.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
-        if(ReturnType!=null) ReturnType.traverseBottomUp(visitor);
+        if(MethodReturnType!=null) MethodReturnType.traverseBottomUp(visitor);
         if(MethodName!=null) MethodName.traverseBottomUp(visitor);
         if(MethodParameters!=null) MethodParameters.traverseBottomUp(visitor);
         if(MethodVariables!=null) MethodVariables.traverseBottomUp(visitor);
-        if(MethodStatements!=null) MethodStatements.traverseBottomUp(visitor);
+        if(MethodBody!=null) MethodBody.traverseBottomUp(visitor);
         accept(visitor);
     }
 
@@ -119,8 +119,8 @@ public class MethodDeclaration implements SyntaxNode {
         buffer.append(tab);
         buffer.append("MethodDeclaration(\n");
 
-        if(ReturnType!=null)
-            buffer.append(ReturnType.toString("  "+tab));
+        if(MethodReturnType!=null)
+            buffer.append(MethodReturnType.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");
@@ -143,8 +143,8 @@ public class MethodDeclaration implements SyntaxNode {
             buffer.append(tab+"  null");
         buffer.append("\n");
 
-        if(MethodStatements!=null)
-            buffer.append(MethodStatements.toString("  "+tab));
+        if(MethodBody!=null)
+            buffer.append(MethodBody.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");

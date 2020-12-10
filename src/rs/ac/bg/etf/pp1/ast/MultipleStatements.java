@@ -1,25 +1,25 @@
 // generated with ast extension for cup
 // version 0.8
-// 3/11/2020 21:21:52
+// 10/11/2020 21:10:44
 
 
 package rs.ac.bg.etf.pp1.ast;
 
 public class MultipleStatements extends Statement {
 
-    private MethodStatements MethodStatements;
+    private MethodBody MethodBody;
 
-    public MultipleStatements (MethodStatements MethodStatements) {
-        this.MethodStatements=MethodStatements;
-        if(MethodStatements!=null) MethodStatements.setParent(this);
+    public MultipleStatements (MethodBody MethodBody) {
+        this.MethodBody=MethodBody;
+        if(MethodBody!=null) MethodBody.setParent(this);
     }
 
-    public MethodStatements getMethodStatements() {
-        return MethodStatements;
+    public MethodBody getMethodBody() {
+        return MethodBody;
     }
 
-    public void setMethodStatements(MethodStatements MethodStatements) {
-        this.MethodStatements=MethodStatements;
+    public void setMethodBody(MethodBody MethodBody) {
+        this.MethodBody=MethodBody;
     }
 
     public void accept(Visitor visitor) {
@@ -27,16 +27,16 @@ public class MultipleStatements extends Statement {
     }
 
     public void childrenAccept(Visitor visitor) {
-        if(MethodStatements!=null) MethodStatements.accept(visitor);
+        if(MethodBody!=null) MethodBody.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
-        if(MethodStatements!=null) MethodStatements.traverseTopDown(visitor);
+        if(MethodBody!=null) MethodBody.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
-        if(MethodStatements!=null) MethodStatements.traverseBottomUp(visitor);
+        if(MethodBody!=null) MethodBody.traverseBottomUp(visitor);
         accept(visitor);
     }
 
@@ -45,8 +45,8 @@ public class MultipleStatements extends Statement {
         buffer.append(tab);
         buffer.append("MultipleStatements(\n");
 
-        if(MethodStatements!=null)
-            buffer.append(MethodStatements.toString("  "+tab));
+        if(MethodBody!=null)
+            buffer.append(MethodBody.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");

@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 3/11/2020 21:21:52
+// 10/11/2020 21:10:44
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -10,13 +10,13 @@ public class PrintStatement implements SyntaxNode {
     private SyntaxNode parent;
     private int line;
     private Expr Expr;
-    private PrintInts PrintInts;
+    private OptionalPrintNumber OptionalPrintNumber;
 
-    public PrintStatement (Expr Expr, PrintInts PrintInts) {
+    public PrintStatement (Expr Expr, OptionalPrintNumber OptionalPrintNumber) {
         this.Expr=Expr;
         if(Expr!=null) Expr.setParent(this);
-        this.PrintInts=PrintInts;
-        if(PrintInts!=null) PrintInts.setParent(this);
+        this.OptionalPrintNumber=OptionalPrintNumber;
+        if(OptionalPrintNumber!=null) OptionalPrintNumber.setParent(this);
     }
 
     public Expr getExpr() {
@@ -27,12 +27,12 @@ public class PrintStatement implements SyntaxNode {
         this.Expr=Expr;
     }
 
-    public PrintInts getPrintInts() {
-        return PrintInts;
+    public OptionalPrintNumber getOptionalPrintNumber() {
+        return OptionalPrintNumber;
     }
 
-    public void setPrintInts(PrintInts PrintInts) {
-        this.PrintInts=PrintInts;
+    public void setOptionalPrintNumber(OptionalPrintNumber OptionalPrintNumber) {
+        this.OptionalPrintNumber=OptionalPrintNumber;
     }
 
     public SyntaxNode getParent() {
@@ -57,18 +57,18 @@ public class PrintStatement implements SyntaxNode {
 
     public void childrenAccept(Visitor visitor) {
         if(Expr!=null) Expr.accept(visitor);
-        if(PrintInts!=null) PrintInts.accept(visitor);
+        if(OptionalPrintNumber!=null) OptionalPrintNumber.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
         if(Expr!=null) Expr.traverseTopDown(visitor);
-        if(PrintInts!=null) PrintInts.traverseTopDown(visitor);
+        if(OptionalPrintNumber!=null) OptionalPrintNumber.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
         if(Expr!=null) Expr.traverseBottomUp(visitor);
-        if(PrintInts!=null) PrintInts.traverseBottomUp(visitor);
+        if(OptionalPrintNumber!=null) OptionalPrintNumber.traverseBottomUp(visitor);
         accept(visitor);
     }
 
@@ -83,8 +83,8 @@ public class PrintStatement implements SyntaxNode {
             buffer.append(tab+"  null");
         buffer.append("\n");
 
-        if(PrintInts!=null)
-            buffer.append(PrintInts.toString("  "+tab));
+        if(OptionalPrintNumber!=null)
+            buffer.append(OptionalPrintNumber.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");

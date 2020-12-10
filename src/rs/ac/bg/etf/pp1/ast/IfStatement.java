@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 3/11/2020 21:21:52
+// 10/11/2020 21:10:44
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -11,15 +11,15 @@ public class IfStatement implements SyntaxNode {
     private int line;
     private Condition Condition;
     private Statement Statement;
-    private PossibleStatement PossibleStatement;
+    private OptionalStatement OptionalStatement;
 
-    public IfStatement (Condition Condition, Statement Statement, PossibleStatement PossibleStatement) {
+    public IfStatement (Condition Condition, Statement Statement, OptionalStatement OptionalStatement) {
         this.Condition=Condition;
         if(Condition!=null) Condition.setParent(this);
         this.Statement=Statement;
         if(Statement!=null) Statement.setParent(this);
-        this.PossibleStatement=PossibleStatement;
-        if(PossibleStatement!=null) PossibleStatement.setParent(this);
+        this.OptionalStatement=OptionalStatement;
+        if(OptionalStatement!=null) OptionalStatement.setParent(this);
     }
 
     public Condition getCondition() {
@@ -38,12 +38,12 @@ public class IfStatement implements SyntaxNode {
         this.Statement=Statement;
     }
 
-    public PossibleStatement getPossibleStatement() {
-        return PossibleStatement;
+    public OptionalStatement getOptionalStatement() {
+        return OptionalStatement;
     }
 
-    public void setPossibleStatement(PossibleStatement PossibleStatement) {
-        this.PossibleStatement=PossibleStatement;
+    public void setOptionalStatement(OptionalStatement OptionalStatement) {
+        this.OptionalStatement=OptionalStatement;
     }
 
     public SyntaxNode getParent() {
@@ -69,20 +69,20 @@ public class IfStatement implements SyntaxNode {
     public void childrenAccept(Visitor visitor) {
         if(Condition!=null) Condition.accept(visitor);
         if(Statement!=null) Statement.accept(visitor);
-        if(PossibleStatement!=null) PossibleStatement.accept(visitor);
+        if(OptionalStatement!=null) OptionalStatement.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
         if(Condition!=null) Condition.traverseTopDown(visitor);
         if(Statement!=null) Statement.traverseTopDown(visitor);
-        if(PossibleStatement!=null) PossibleStatement.traverseTopDown(visitor);
+        if(OptionalStatement!=null) OptionalStatement.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
         if(Condition!=null) Condition.traverseBottomUp(visitor);
         if(Statement!=null) Statement.traverseBottomUp(visitor);
-        if(PossibleStatement!=null) PossibleStatement.traverseBottomUp(visitor);
+        if(OptionalStatement!=null) OptionalStatement.traverseBottomUp(visitor);
         accept(visitor);
     }
 
@@ -103,8 +103,8 @@ public class IfStatement implements SyntaxNode {
             buffer.append(tab+"  null");
         buffer.append("\n");
 
-        if(PossibleStatement!=null)
-            buffer.append(PossibleStatement.toString("  "+tab));
+        if(OptionalStatement!=null)
+            buffer.append(OptionalStatement.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");

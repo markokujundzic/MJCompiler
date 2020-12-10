@@ -1,42 +1,24 @@
 // generated with ast extension for cup
 // version 0.8
-// 3/11/2020 21:21:52
+// 10/11/2020 21:10:44
 
 
 package rs.ac.bg.etf.pp1.ast;
 
-public class PrintInt implements SyntaxNode {
+public class PrintInt extends PrintNumber {
 
-    private SyntaxNode parent;
-    private int line;
-    private Integer number_to_print;
+    private Integer number;
 
-    public PrintInt (Integer number_to_print) {
-        this.number_to_print=number_to_print;
+    public PrintInt (Integer number) {
+        this.number=number;
     }
 
-    public Integer getNumber_to_print() {
-        return number_to_print;
+    public Integer getNumber() {
+        return number;
     }
 
-    public void setNumber_to_print(Integer number_to_print) {
-        this.number_to_print=number_to_print;
-    }
-
-    public SyntaxNode getParent() {
-        return parent;
-    }
-
-    public void setParent(SyntaxNode parent) {
-        this.parent=parent;
-    }
-
-    public int getLine() {
-        return line;
-    }
-
-    public void setLine(int line) {
-        this.line=line;
+    public void setNumber(Integer number) {
+        this.number=number;
     }
 
     public void accept(Visitor visitor) {
@@ -59,7 +41,7 @@ public class PrintInt implements SyntaxNode {
         buffer.append(tab);
         buffer.append("PrintInt(\n");
 
-        buffer.append(" "+tab+number_to_print);
+        buffer.append(" "+tab+number);
         buffer.append("\n");
 
         buffer.append(tab);

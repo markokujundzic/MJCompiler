@@ -81,23 +81,20 @@ terminal LESS_OR_EQUAL;
 
 /* NONTERMINALS */
 nonterminal Program, ProgramName, DeclarationList, Declaration, MethodDeclarationList;
-nonterminal ConstDecl, VarDecl, ConstDeclVariables, ConstDeclVariable, Type;
+nonterminal ConstDecl, VarDecl, ConstDeclList, ConstDeclVariable, Type;
 nonterminal ConstDeclName, ConstDeclValue, CondTerm, CondFact, Relop;
-nonterminal DeclVariables, DeclVariable, VarDeclName, VarDeclArrayOption;
-nonterminal MethodDeclaration, ReturnType, MethodName, MethodParameters, MethodVariables, MethodStatements;
+nonterminal VarDeclList, DeclVariable, VarDeclName, VarDeclArrayOption;
+nonterminal MethodDeclaration, MethodReturnType, MethodName, MethodParameters, MethodVariables, MethodBody;
 nonterminal FormPars, Statement, FormParList, FormPar, FormParName, FormParArrayOption;
 nonterminal DesignatorStatement, IfStatement, DoWhileStatement, ReturnStatement;
-nonterminal PrintStatement, ReadStatement, Designator, DesignatorAddition, DesignatorName, DesignatorList;
-nonterminal DesignatorOptional, DesignatorOptionalName, DesignatorActPars, Assignop;
-nonterminal Expr, ActPars, PossibleStatement, ElseStatement, Condition;
-nonterminal ReturnExpr, PrintInts, PrintInt, PossibleExpressions, PossibleExpr, SimpleExpr;
-nonterminal Term, Addop, Factor, PossibleFactors, PossibleFactor, Mulop;
-nonterminal OptionalRelopExpr, OptionalCondTerm, OptionalCondFact;
-nonterminal TermList;
+nonterminal PrintStatement, ReadStatement, Designator, DesignatorAddition, DesignatorName, OptionalDesignatorList;
+nonterminal OptionalDesignator, OptionalDesignatorName, DesignatorActPars, Assignop;
+nonterminal Expr, ActPars, OptionalStatement, ElseStatement, Condition, OptionalTermList;
+nonterminal ReturnExpr, OptionalPrintNumber, PrintNumber, OptionalExpressions, OptionalExpr, FiniteExpr;
+nonterminal Term, Addop, Factor, OptionalFactors, OptionalFactor, Mulop;
 
 /* PRECEDENCE */
 precedence left ELSE;
-// precedence left COLON, QUESTION_MARK;
 
 /* PROGRAM - START */
 
@@ -113,9 +110,9 @@ ProgramName ::=
 /* DECLARATIONS - START */
 
 DeclarationList ::=
-        (YesDeclarations) DeclarationList Declaration
+        (YesDeclarationList) DeclarationList Declaration
         |
-        (NoDeclarations) /* epsilon */
+        (NoDeclarationList) /* epsilon */
         ;
 Declaration ::=
         (ConstantDeclaration) ConstDecl
@@ -126,12 +123,12 @@ Declaration ::=
 /* CONST_DECL - START */
 
 ConstDecl ::=
-        (ConstDecl) CONST Type ConstDeclVariables SEMICOLON
+        (ConstDecl) CONST Type ConstDeclList SEMICOLON
         ;
-ConstDeclVariables ::=
-        (ConstDeclPlural) ConstDeclVariables COMMA ConstDeclVariable
+ConstDeclList ::=
+        (PluralConstDeclList) ConstDeclList COMMA ConstDeclVariable
         |
-        (ConstDeclSingle) ConstDeclVariable
+        (SingleConstDeclList) ConstDeclVariable
         ;
 ConstDeclVariable ::=
         (ConstDeclVariable) ConstDeclName ASSIGN ConstDeclValue
@@ -152,12 +149,12 @@ ConstDeclValue ::=
 /* VAR_DECL - START */
 
 VarDecl ::=
-        (VarDecl) Type DeclVariables SEMICOLON
+        (VarDecl) Type VarDeclList SEMICOLON
         ;
-DeclVariables ::=
-        (VarDeclPlural) DeclVariables COMMA DeclVariable
+VarDeclList ::=
+        (PluralVarDeclList) VarDeclList COMMA DeclVariable
         |
-        (VarDeclSingle) DeclVariable
+        (SingleVarDeclList) DeclVariable
         ;
 DeclVariable ::=
         (DeclVariable) VarDeclName VarDeclArrayOption
@@ -181,12 +178,12 @@ MethodDeclarationList ::=
         (NoMethodDeclarationList) /* epsilon */
         ;
 MethodDeclaration ::=
-        (MethodDeclaration) ReturnType MethodName LEFT_PARENTHESIS MethodParameters RIGHT_PARENTHESIS MethodVariables LEFT_BRACE MethodStatements RIGHT_BRACE
+        (MethodDeclaration) MethodReturnType MethodName LEFT_PARENTHESIS MethodParameters RIGHT_PARENTHESIS MethodVariables LEFT_BRACE MethodBody RIGHT_BRACE
         ;
-ReturnType ::=
-        (ReturnTypeType) Type
+MethodReturnType ::=
+        (TypeMethodReturnType) Type
         |
-        (ReturnTypeVoid) VOID
+        (VoidMethodReturnType) VOID
         ;
 MethodName ::=
         (MethodName) IDENTIFIER:name
@@ -201,10 +198,10 @@ MethodVariables ::=
         |
         (NoMethodVariables) /* epsilon */
         ;
-MethodStatements ::=
-        (YesMethodStatements) MethodStatements Statement
+MethodBody ::=
+        (YesMethodBody) MethodBody Statement
         |
-        (NoMethodStatements) /* epsilon */
+        (NoMethodBody) /* epsilon */
         ;
 
 /* METHOD_DECL - END */
@@ -217,9 +214,9 @@ FormPars ::=
         (FormPars) FormParList
         ;
 FormParList ::=
-        (FormParPlural) FormPar COMMA FormParList
+        (PluralFormParList) FormPar COMMA FormParList
         |
-        (FormParSingle) FormPar
+        (SingleFormParList) FormPar
         ;
 FormPar ::=
         (FormPar) Type FormParName FormParArrayOption
@@ -262,7 +259,7 @@ Statement ::=
         |
         (PrintStatementDecl) PrintStatement
         |
-        (MultipleStatements) LEFT_BRACE MethodStatements RIGHT_BRACE
+        (MultipleStatements) LEFT_BRACE MethodBody RIGHT_BRACE
         ;
 
 /* STATEMENT - END */
@@ -273,32 +270,32 @@ DesignatorStatement ::=
         (DesignatorStatement) Designator DesignatorAddition
         ;
 Designator ::=
-        (Designator) DesignatorName DesignatorList
+        (Designator) DesignatorName OptionalDesignatorList
         ;
 DesignatorName ::=
         (DesignatorName) IDENTIFIER:name
         ;
-DesignatorList ::=
-        (YesDesignatorList) DesignatorList DesignatorOptional
+OptionalDesignatorList ::=
+        (YesOptionalDesignatorList) OptionalDesignatorList OptionalDesignator
         |
-        (NoDesignatorList) /* epsilon */
+        (NoOptionalDesignatorList) /* epsilon */
         ;
-DesignatorOptional ::=
-        (DesignatorOptionalPeriod) PERIOD DesignatorOptionalName
+OptionalDesignator ::=
+        (PeriodOptionalDesignator) PERIOD OptionalDesignatorName
         |
-        (DesignatorOptionalExpression) LEFT_SQUARE Expr RIGHT_SQUARE
+        (ExprOptionalDesignator) LEFT_SQUARE Expr RIGHT_SQUARE
         ;
-DesignatorOptionalName ::=
-        (DesignatorOptionalName) IDENTIFIER:name
+OptionalDesignatorName ::=
+        (OptionalDesignatorName) IDENTIFIER:name
         ;
 DesignatorAddition ::=
-		(DesignatorAdditionAssignOpExpression) Assignop Expr
+		(AssignOpExprDesignatorAddition) Assignop Expr
 		|
-		(DesignatorAdditionActPars) LEFT_PARENTHESIS DesignatorActPars RIGHT_PARENTHESIS
+		(ActParsDesignatorAddition) LEFT_PARENTHESIS DesignatorActPars RIGHT_PARENTHESIS
 		|
-		(DesignatorAdditionIncrement) INCREMENT
+		(IncrementDesignatorAddition) INCREMENT
 		|
-		(DesignatorAdditionDecrement) DECREMENT
+		(DecrementDesignatorAddition) DECREMENT
 		;
 DesignatorActPars ::=
 		(YesDesignatorActPars) ActPars
@@ -311,19 +308,18 @@ DesignatorActPars ::=
 /* IF_STATEMENT - START */
 
 IfStatement ::=
-		(IfStatement) IF LEFT_PARENTHESIS Condition RIGHT_PARENTHESIS Statement PossibleStatement
+		(IfStatement) IF LEFT_PARENTHESIS Condition RIGHT_PARENTHESIS Statement OptionalStatement
 		;
-PossibleStatement ::=
-		(YesPossibleStatement) ElseStatement Statement
+OptionalStatement ::=
+		(YesOptionalStatement) ElseStatement Statement
 		|
-		(NoPossibleStatement) /* epsilon */
+		(NoOptionalStatement) /* epsilon */
 		;
 ElseStatement ::=
 		(ElseStatement) ELSE
 		;
 
 /* IF_STATEMENT - END */
-//test commit marak
 
 /* DO_WHILE - START */
 
@@ -356,15 +352,15 @@ ReadStatement ::=
 /* PRINT_STATEMENT - START */
 
 PrintStatement ::=
-		(PrintStatement) PRINT LEFT_PARENTHESIS Expr PrintInts RIGHT_PARENTHESIS SEMICOLON
+		(PrintStatement) PRINT LEFT_PARENTHESIS Expr OptionalPrintNumber RIGHT_PARENTHESIS SEMICOLON
 		;
-PrintInts ::=
-		(YesPrintInts) PrintInt
+OptionalPrintNumber ::=
+		(OptionalYesPrintNumber) PrintNumber
 		|
-		(NoPrintInts) /* epsilon */
+		(OptionalNoPrintNumber) /* epsilon */
 		;
-PrintInt ::=
-		(PrintInt) COMMA INT:number_to_print
+PrintNumber ::=
+		(PrintInt) COMMA INT:number
 		;
 
 /* PRINT_STATEMENT - END */
@@ -372,15 +368,15 @@ PrintInt ::=
 /* ACT_PARS - START */
 
 ActPars ::=
-		(ActPars) Expr PossibleExpressions
+		(ActPars) Expr OptionalExpressions
 		;
-PossibleExpressions ::=
-		(YesPossibleExpressions) PossibleExpressions PossibleExpr
+OptionalExpressions ::=
+		(YesOptionalExpressions) OptionalExpressions OptionalExpr
 		|
-		(NoPossibleExpressions) /* epsilon */
+		(NoOptionalExpressions) /* epsilon */
 		;
-PossibleExpr ::=
-		(PossibleExpr) COMMA Expr
+OptionalExpr ::=
+		(OptionalExpr) COMMA Expr
 		;
 
 /* ACT_PARS - END */
@@ -388,19 +384,19 @@ PossibleExpr ::=
 /* CONDITIONS - START */
 
 Condition ::=
-		(ConditionList) Condition OR CondTerm
+		(PluralCondition) Condition OR CondTerm
 		|
-		(ConditionTerm) CondTerm
+		(SingleCondition) CondTerm
 		;
 CondTerm ::=
-		(CondTermList) CondTerm AND CondFact
+		(PluralCondTerm) CondTerm AND CondFact
 		|
-		(CondTermCondFact) CondFact
+		(SingleCondTerm) CondFact
 		;
 CondFact ::=
-		(SingleCondFact) SimpleExpr
+		(SingleCondFact) FiniteExpr
 		|
-		(ExprCondFact) CondFact Relop SimpleExpr
+		(PluralCondFact) CondFact Relop FiniteExpr
 		;
 
 /* CONDITIONS - END */
@@ -408,21 +404,19 @@ CondFact ::=
 /* EXPR - START */
 
 Expr ::=
-        (TernaryExpr) Condition QUESTION_MARK Expr COLON Expr
+        (YesTernaryExpr) Condition QUESTION_MARK Expr COLON Expr
         |
         (NoTernaryExpr) Condition
 		;
-
-SimpleExpr ::=
-		(TermExpr) Term TermList
+FiniteExpr ::=
+		(TermFiniteExpr) Term OptionalTermList
 		|
-		(MinusTermExpr) MINUS Term TermList
+		(MinusTermFiniteExpr) MINUS Term OptionalTermList
 		;
-
-TermList ::=
-		(YesTermList) TermList Addop Term
+OptionalTermList ::=
+		(YesOptionalTermList) OptionalTermList Addop Term
 		|
-		(NoTermList) /* epsilon */
+		(NoOptionalTermList) /* epsilon */
 		;
 
 /* EXPR - END */
@@ -430,17 +424,15 @@ TermList ::=
 /* TERM - START */
 
 Term ::=
-		(Term) Factor PossibleFactors
+		(Term) Factor OptionalFactors
 		;
-
-PossibleFactors ::=
-		(YesPossibleFactors) PossibleFactors PossibleFactor
+OptionalFactors ::=
+		(YesOptionalFactors) OptionalFactors OptionalFactor
 		|
-		(NoPossibleFactors) /* epsilon */
+		(NoOptionalFactors) /* epsilon */
 		;
-
-PossibleFactor ::=
-		(PossibleFactor) Mulop Factor
+OptionalFactor ::=
+		(OptionalFactor) Mulop Factor
 		;
 
 /* TERM - END */
@@ -452,11 +444,11 @@ Factor ::=
 		|
 		(FunctionCallFactor) Designator LEFT_PARENTHESIS DesignatorActPars RIGHT_PARENTHESIS
 		|
-		(IntFactor) INT
+		(IntFactor) INT:value
 		|
-		(CharFactor) CHAR
+		(CharFactor) CHAR:value
 		|
-		(BoolFactor) BOOL
+		(BoolFactor) BOOL:value
 		|
 		(NewFactor) NEW Type
 		|
