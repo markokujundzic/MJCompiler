@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 10/11/2020 21:15:52
+// 11/11/2020 23:31:44
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -26,6 +26,7 @@ public interface Visitor {
     public void visit(OptionalFactors OptionalFactors);
     public void visit(ConstDeclList ConstDeclList);
     public void visit(OptionalDesignator OptionalDesignator);
+    public void visit(ConstDeclVariable ConstDeclVariable);
     public void visit(MethodBody MethodBody);
     public void visit(ConstDeclValue ConstDeclValue);
     public void visit(VarDeclList VarDeclList);
@@ -36,7 +37,9 @@ public interface Visitor {
     public void visit(MethodReturnType MethodReturnType);
     public void visit(Statement Statement);
     public void visit(ReturnExpr ReturnExpr);
+    public void visit(VarDecl VarDecl);
     public void visit(FormParArrayOption FormParArrayOption);
+    public void visit(ConstDecl ConstDecl);
     public void visit(CondFact CondFact);
     public void visit(Declaration Declaration);
     public void visit(OptionalPrintNumber OptionalPrintNumber);
@@ -143,15 +146,17 @@ public interface Visitor {
     public void visit(DeclVariable DeclVariable);
     public void visit(SingleVarDeclList SingleVarDeclList);
     public void visit(PluralVarDeclList PluralVarDeclList);
-    public void visit(VarDecl VarDecl);
+    public void visit(VarDeclYesError VarDeclYesError);
+    public void visit(VarDeclNoError VarDeclNoError);
     public void visit(ConstDeclValueBool ConstDeclValueBool);
     public void visit(ConstDeclValueChar ConstDeclValueChar);
     public void visit(ConstDeclValueInt ConstDeclValueInt);
     public void visit(ConstDeclName ConstDeclName);
-    public void visit(ConstDeclVariable ConstDeclVariable);
+    public void visit(ConstDeclVariableNoError ConstDeclVariableNoError);
     public void visit(SingleConstDeclList SingleConstDeclList);
     public void visit(PluralConstDeclList PluralConstDeclList);
-    public void visit(ConstDecl ConstDecl);
+    public void visit(ConstDeclYesError ConstDeclYesError);
+    public void visit(ConstDeclNoError ConstDeclNoError);
     public void visit(VariableDeclaration VariableDeclaration);
     public void visit(ConstantDeclaration ConstantDeclaration);
     public void visit(NoDeclarationList NoDeclarationList);

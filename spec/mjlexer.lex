@@ -86,4 +86,4 @@ import java_cup.runtime.Symbol;
 [0-9]+                        { return new_symbol(sym.INT, new Integer(yytext())); }
 ([a-z]|[A-Z])[a-z|A-Z|0-9|_]* { return new_symbol(sym.IDENTIFIER, yytext()); }
 
-. { System.err.println("Lexical error: (" + yytext() + ") at line " + (yyline + 1)); }
+. { System.err.println("Lexical error: (" + yytext() + ") on line " + (yyline + 1)); }

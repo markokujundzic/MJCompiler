@@ -99,11 +99,11 @@ precedence left ELSE;
 /* PROGRAM - START */
 
 Program ::=
-        (Program) PROGRAM ProgramName DeclarationList LEFT_BRACE MethodDeclarationList RIGHT_BRACE
-        ;
+		(Program) PROGRAM ProgramName DeclarationList LEFT_BRACE MethodDeclarationList RIGHT_BRACE
+		;
 ProgramName ::=
-        (ProgramName) IDENTIFIER:program_name
-        ;
+		(ProgramName) IDENTIFIER:program_name
+		;
 
 /* PROGRAM - END */
 
@@ -123,7 +123,10 @@ Declaration ::=
 /* CONST_DECL - START */
 
 ConstDecl ::=
-        (ConstDecl) CONST Type ConstDeclList SEMICOLON
+        (ConstDeclNoError) CONST Type ConstDeclList SEMICOLON
+        |
+        (ConstDeclYesError) CONST error:error
+        {: parser.report_error("Successful error recovery by parser on line " + errorleft + " -> ConstDecl", null); :}
         ;
 ConstDeclList ::=
         (PluralConstDeclList) ConstDeclList COMMA ConstDeclVariable
@@ -131,7 +134,7 @@ ConstDeclList ::=
         (SingleConstDeclList) ConstDeclVariable
         ;
 ConstDeclVariable ::=
-        (ConstDeclVariable) ConstDeclName ASSIGN ConstDeclValue
+        (ConstDeclVariableNoError) ConstDeclName ASSIGN ConstDeclValue
         ;
 ConstDeclName ::=
         (ConstDeclName) IDENTIFIER:name
@@ -149,7 +152,10 @@ ConstDeclValue ::=
 /* VAR_DECL - START */
 
 VarDecl ::=
-        (VarDecl) Type VarDeclList SEMICOLON
+        (VarDeclNoError) Type VarDeclList SEMICOLON
+        |
+        (VarDeclYesError) error:error SEMICOLON
+       	{: parser.report_error("Successful error recovery by parser on line " + errorleft + " -> VarDecl", null); :}
         ;
 VarDeclList ::=
         (PluralVarDeclList) VarDeclList COMMA DeclVariable

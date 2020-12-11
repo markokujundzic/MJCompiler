@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 10/11/2020 21:15:52
+// 11/11/2020 23:31:44
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -26,6 +26,7 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(OptionalFactors OptionalFactors) { }
     public void visit(ConstDeclList ConstDeclList) { }
     public void visit(OptionalDesignator OptionalDesignator) { }
+    public void visit(ConstDeclVariable ConstDeclVariable) { }
     public void visit(MethodBody MethodBody) { }
     public void visit(ConstDeclValue ConstDeclValue) { }
     public void visit(VarDeclList VarDeclList) { }
@@ -36,7 +37,9 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(MethodReturnType MethodReturnType) { }
     public void visit(Statement Statement) { }
     public void visit(ReturnExpr ReturnExpr) { }
+    public void visit(VarDecl VarDecl) { }
     public void visit(FormParArrayOption FormParArrayOption) { }
+    public void visit(ConstDecl ConstDecl) { }
     public void visit(CondFact CondFact) { }
     public void visit(Declaration Declaration) { }
     public void visit(OptionalPrintNumber OptionalPrintNumber) { }
@@ -143,15 +146,17 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(DeclVariable DeclVariable) { visit(); }
     public void visit(SingleVarDeclList SingleVarDeclList) { visit(); }
     public void visit(PluralVarDeclList PluralVarDeclList) { visit(); }
-    public void visit(VarDecl VarDecl) { visit(); }
+    public void visit(VarDeclYesError VarDeclYesError) { visit(); }
+    public void visit(VarDeclNoError VarDeclNoError) { visit(); }
     public void visit(ConstDeclValueBool ConstDeclValueBool) { visit(); }
     public void visit(ConstDeclValueChar ConstDeclValueChar) { visit(); }
     public void visit(ConstDeclValueInt ConstDeclValueInt) { visit(); }
     public void visit(ConstDeclName ConstDeclName) { visit(); }
-    public void visit(ConstDeclVariable ConstDeclVariable) { visit(); }
+    public void visit(ConstDeclVariableNoError ConstDeclVariableNoError) { visit(); }
     public void visit(SingleConstDeclList SingleConstDeclList) { visit(); }
     public void visit(PluralConstDeclList PluralConstDeclList) { visit(); }
-    public void visit(ConstDecl ConstDecl) { visit(); }
+    public void visit(ConstDeclYesError ConstDeclYesError) { visit(); }
+    public void visit(ConstDeclNoError ConstDeclNoError) { visit(); }
     public void visit(VariableDeclaration VariableDeclaration) { visit(); }
     public void visit(ConstantDeclaration ConstantDeclaration) { visit(); }
     public void visit(NoDeclarationList NoDeclarationList) { visit(); }

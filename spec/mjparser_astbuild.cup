@@ -150,11 +150,11 @@ precedence left ELSE;
 /* PROGRAM - START */
 
 Program ::=
-        (Program) PROGRAM ProgramName:P1 DeclarationList:D2 LEFT_BRACE MethodDeclarationList:M3 RIGHT_BRACE {: RESULT=new Program(P1, D2, M3); RESULT.setLine(P1left); :}
-        ;
+		(Program) PROGRAM ProgramName:P1 DeclarationList:D2 LEFT_BRACE MethodDeclarationList:M3 RIGHT_BRACE {: RESULT=new Program(P1, D2, M3); RESULT.setLine(P1left); :}
+		;
 ProgramName ::=
-        (ProgramName) IDENTIFIER:program_name {: RESULT=new ProgramName(program_name); RESULT.setLine(program_nameleft); :}
-        ;
+		(ProgramName) IDENTIFIER:program_name {: RESULT=new ProgramName(program_name); RESULT.setLine(program_nameleft); :}
+		;
 
 /* PROGRAM - END */
 
@@ -174,7 +174,10 @@ Declaration ::=
 /* CONST_DECL - START */
 
 ConstDecl ::=
-        (ConstDecl) CONST Type:T1 ConstDeclList:C2 SEMICOLON {: RESULT=new ConstDecl(T1, C2); RESULT.setLine(T1left); :}
+        (ConstDeclNoError) CONST Type:T1 ConstDeclList:C2 SEMICOLON {: RESULT=new ConstDeclNoError(T1, C2); RESULT.setLine(T1left); :}
+        |
+        (ConstDeclYesError) CONST error:error
+        {: parser.report_error("Successful error recovery by parser on line " + errorleft + " -> ConstDecl", null); :} {: RESULT=new ConstDeclYesError(); :}
         ;
 ConstDeclList ::=
         (PluralConstDeclList) ConstDeclList:C1 COMMA ConstDeclVariable:C2 {: RESULT=new PluralConstDeclList(C1, C2); RESULT.setLine(C1left); :}
@@ -182,7 +185,7 @@ ConstDeclList ::=
         (SingleConstDeclList) ConstDeclVariable:C1 {: RESULT=new SingleConstDeclList(C1); RESULT.setLine(C1left); :}
         ;
 ConstDeclVariable ::=
-        (ConstDeclVariable) ConstDeclName:C1 ASSIGN ConstDeclValue:C2 {: RESULT=new ConstDeclVariable(C1, C2); RESULT.setLine(C1left); :}
+        (ConstDeclVariableNoError) ConstDeclName:C1 ASSIGN ConstDeclValue:C2 {: RESULT=new ConstDeclVariableNoError(C1, C2); RESULT.setLine(C1left); :}
         ;
 ConstDeclName ::=
         (ConstDeclName) IDENTIFIER:name {: RESULT=new ConstDeclName(name); RESULT.setLine(nameleft); :}
@@ -200,7 +203,10 @@ ConstDeclValue ::=
 /* VAR_DECL - START */
 
 VarDecl ::=
-        (VarDecl) Type:T1 VarDeclList:V2 SEMICOLON {: RESULT=new VarDecl(T1, V2); RESULT.setLine(T1left); :}
+        (VarDeclNoError) Type:T1 VarDeclList:V2 SEMICOLON {: RESULT=new VarDeclNoError(T1, V2); RESULT.setLine(T1left); :}
+        |
+        (VarDeclYesError) error:error SEMICOLON
+       	{: parser.report_error("Successful error recovery by parser on line " + errorleft + " -> VarDecl", null); :} {: RESULT=new VarDeclYesError(); :}
         ;
 VarDeclList ::=
         (PluralVarDeclList) VarDeclList:V1 COMMA DeclVariable:D2 {: RESULT=new PluralVarDeclList(V1, D2); RESULT.setLine(V1left); :}
