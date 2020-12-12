@@ -1,11 +1,11 @@
 // generated with ast extension for cup
 // version 0.8
-// 12/11/2020 11:42:13
+// 12/11/2020 12:36:36
 
 
 package rs.ac.bg.etf.pp1.ast;
 
-public abstract class AssignOpExprDesignatorAddition implements SyntaxNode {
+public abstract class PossibleErrorCondition implements SyntaxNode {
 
     private SyntaxNode parent;
 

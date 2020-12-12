@@ -6,20 +6,20 @@ import rs.ac.bg.etf.pp1.ast.*;
 
 parser code
 {:
-    Boolean error_detected;
+	Boolean error_detected;
 
 	Logger log = Logger.getLogger(getClass());
 
-    public void report_fatal_error(String message, Object info) throws java.lang.Exception
-    {
-        done_parsing();
-        report_error(message, info);
-    }
+	public void report_fatal_error(String message, Object info) throws java.lang.Exception
+	{
+		done_parsing();
+		report_error(message, info);
+	}
 
-    public void syntax_error(Symbol cur_token)
-    {
-        report_error("Syntax error", cur_token);
-    }
+	public void syntax_error(Symbol cur_token)
+	{
+		report_error("Syntax error", cur_token);
+	}
 
     public void unrecovered_syntax_error(Symbol cur_token) throws java.lang.Exception
     {
@@ -82,7 +82,7 @@ terminal LESS_OR_EQUAL;
 /* NONTERMINALS */
 nonterminal Program, ProgramName, DeclarationList, Declaration, MethodDeclarationList;
 nonterminal ConstDecl, VarDecl, ConstDeclList, ConstDeclVariable, Type;
-nonterminal ConstDeclName, ConstDeclValue, CondTerm, CondFact, Relop;
+nonterminal ConstDeclName, ConstDeclValue, CondTerm, CondFact, Relop, PossibleErrorCondition;
 nonterminal VarDeclList, DeclVariable, VarDeclName, VarDeclArrayOption;
 nonterminal MethodDeclaration, MethodReturnType, MethodName, MethodParameters, MethodVariables, MethodBody;
 nonterminal FormPars, Statement, FormParList, FormPar, FormParName, FormParArrayOption;
@@ -91,7 +91,7 @@ nonterminal PrintStatement, ReadStatement, Designator, DesignatorAddition, Desig
 nonterminal OptionalDesignator, OptionalDesignatorName, DesignatorActPars, Assignop;
 nonterminal Expr, ActPars, OptionalStatement, ElseStatement, Condition, OptionalTermList;
 nonterminal ReturnExpr, OptionalPrintNumber, PrintNumber, OptionalExpressions, OptionalExpr, FiniteExpr;
-nonterminal Term, Addop, Factor, OptionalFactors, OptionalFactor, Mulop, AssignOpExprDesignatorAddition;
+nonterminal Term, Addop, Factor, OptionalFactors, OptionalFactor, Mulop, PossibleErrorDesignatorAddition;
 
 /* PRECEDENCE */
 precedence left ELSE;
@@ -110,119 +110,119 @@ ProgramName ::=
 /* DECLARATIONS - START */
 
 DeclarationList ::=
-        (YesDeclarationList) DeclarationList Declaration
-        |
-        (NoDeclarationList) /* epsilon */
-        ;
+		(YesDeclarationList) DeclarationList Declaration
+		|
+		(NoDeclarationList) /* epsilon */
+		;
 Declaration ::=
-        (ConstantDeclaration) ConstDecl
-        |
-        (VariableDeclaration) VarDecl
-        ;
+		(ConstantDeclaration) ConstDecl
+		|
+		(VariableDeclaration) VarDecl
+		;
 
 /* CONST_DECL - START */
 
 ConstDecl ::=
-        (ConstDeclNoError) CONST Type ConstDeclList SEMICOLON
-        |
-        (ConstDeclYesError) CONST error:error SEMICOLON
-        {:
-        	parser.report_error("Successful error recovery by parser on line " + errorleft + " -> Constant Declaration", null);
-        :}
-        ;
+		(ConstDeclNoError) CONST Type ConstDeclList SEMICOLON
+		|
+		(ConstDeclYesError) CONST error:error SEMICOLON
+		{:
+			parser.report_error("Successful error recovery by parser on line " + errorleft + " -> Constant Declaration", null);
+		:}
+		;
 ConstDeclList ::=
-        (PluralConstDeclList) ConstDeclList COMMA ConstDeclVariable
-        |
-        (SingleConstDeclList) ConstDeclVariable
-        |
-        (ErrorConstDeclList) error:error
-        {:
-        	parser.report_error("Successful error recovery by parser on line " + errorleft + " -> Constant Declaration", null);
-        :}
-        ;
+		(PluralConstDeclList) ConstDeclList COMMA ConstDeclVariable
+		|
+		(SingleConstDeclList) ConstDeclVariable
+		|
+		(ErrorConstDeclList) error:error
+		{:
+			parser.report_error("Successful error recovery by parser on line " + errorleft + " -> Constant Declaration", null);
+		:}
+		;
 ConstDeclVariable ::=
-        (ConstDeclVariableNoError) ConstDeclName ASSIGN ConstDeclValue
-        ;
+		(ConstDeclVariableNoError) ConstDeclName ASSIGN ConstDeclValue
+		;
 ConstDeclName ::=
-        (ConstDeclName) IDENTIFIER:name
-        ;
+		(ConstDeclName) IDENTIFIER:name
+		;
 ConstDeclValue ::=
-        (ConstDeclValueInt) INT:value
-        |
-        (ConstDeclValueChar) CHAR:value
-        |
-        (ConstDeclValueBool) BOOL:value
-        ;
+		(ConstDeclValueInt) INT:value
+		|
+		(ConstDeclValueChar) CHAR:value
+		|
+		(ConstDeclValueBool) BOOL:value
+		;
 
 /* CONST_DECL - END */
 
 /* VAR_DECL - START */
 
 VarDecl ::=
-        (VarDeclNoError) Type VarDeclList SEMICOLON
-        |
-        (VarDeclYesError) error:error SEMICOLON
-       	{:
-       		parser.report_error("Successful error recovery by parser on line " + errorleft + " -> Variable Declaration", null);
-       	:}
-        ;
+		(VarDeclNoError) Type VarDeclList SEMICOLON
+		|
+		(VarDeclYesError) error:error SEMICOLON
+		{:
+			parser.report_error("Successful error recovery by parser on line " + errorleft + " -> Variable Declaration", null);
+		:}
+		;
 VarDeclList ::=
-        (PluralVarDeclList) VarDeclList COMMA DeclVariable
-        |
-        (SingleVarDeclList) DeclVariable
-        |
-        (ErrorVarDeclList) error:error
-       	{:
-       		parser.report_error("Successful error recovery by parser on line " + errorleft + " -> Variable Declaration", null);
-        :}
-        ;
+		(PluralVarDeclList) VarDeclList COMMA DeclVariable
+		|
+		(SingleVarDeclList) DeclVariable
+		|
+		(ErrorVarDeclList) error:error
+		{:
+			parser.report_error("Successful error recovery by parser on line " + errorleft + " -> Variable Declaration", null);
+		:}
+		;
 DeclVariable ::=
-        (DeclVariable) VarDeclName VarDeclArrayOption
-        ;
+		(DeclVariable) VarDeclName VarDeclArrayOption
+		;
 VarDeclName ::=
-        (VarDeclName) IDENTIFIER:name
-        ;
+		(VarDeclName) IDENTIFIER:name
+		;
 VarDeclArrayOption ::=
-        (YesVarDeclArrayOption) LEFT_SQUARE RIGHT_SQUARE
-        |
-        (NoVarDeclArrayOption) /* epsilon */
-        ;
+		(YesVarDeclArrayOption) LEFT_SQUARE RIGHT_SQUARE
+		|
+		(NoVarDeclArrayOption) /* epsilon */
+		;
 
 /* VAR_DECL - END */
 
 /* METHOD_DECL - START */
 
 MethodDeclarationList ::=
-        (YesMethodDeclarationList) MethodDeclarationList MethodDeclaration
-        |
-        (NoMethodDeclarationList) /* epsilon */
-        ;
+		(YesMethodDeclarationList) MethodDeclarationList MethodDeclaration
+		|
+		(NoMethodDeclarationList) /* epsilon */
+		;
 MethodDeclaration ::=
-        (MethodDeclaration) MethodReturnType MethodName LEFT_PARENTHESIS MethodParameters RIGHT_PARENTHESIS MethodVariables LEFT_BRACE MethodBody RIGHT_BRACE
-        ;
+		(MethodDeclaration) MethodReturnType MethodName LEFT_PARENTHESIS MethodParameters RIGHT_PARENTHESIS MethodVariables LEFT_BRACE MethodBody RIGHT_BRACE
+		;
 MethodReturnType ::=
-        (TypeMethodReturnType) Type
-        |
-        (VoidMethodReturnType) VOID
-        ;
+		(TypeMethodReturnType) Type
+		|
+		(VoidMethodReturnType) VOID
+		;
 MethodName ::=
-        (MethodName) IDENTIFIER:name
-        ;
+		(MethodName) IDENTIFIER:name
+		;
 MethodParameters ::=
-        (YesMethodParameters) FormPars
-        |
-        (NoMethodParameters) /* epsilon */
-        ;
+		(YesMethodParameters) FormPars
+		|
+		(NoMethodParameters) /* epsilon */
+		;
 MethodVariables ::=
-        (YesMethodVariables) MethodVariables VarDecl
-        |
-        (NoMethodVariables) /* epsilon */
-        ;
+		(YesMethodVariables) MethodVariables VarDecl
+		|
+		(NoMethodVariables) /* epsilon */
+		;
 MethodBody ::=
-        (YesMethodBody) MethodBody Statement
-        |
-        (NoMethodBody) /* epsilon */
-        ;
+		(YesMethodBody) MethodBody Statement
+		|
+		(NoMethodBody) /* epsilon */
+		;
 
 /* METHOD_DECL - END */
 
@@ -231,85 +231,90 @@ MethodBody ::=
 /* FORM_PARS - START */
 
 FormPars ::=
-        (FormPars) FormParList
-        ;
+		(FormPars) FormParList
+		;
 FormParList ::=
-        (PluralFormParList) FormPar COMMA FormParList
-        |
-        (SingleFormParList) FormPar
-        ;
+		(PluralFormParList) FormPar COMMA FormParList
+		|
+		(SingleFormParList) FormPar
+		;
 FormPar ::=
-        (FormPar) Type FormParName FormParArrayOption
-        ;
+		(FormParNoError) Type FormParName FormParArrayOption
+		|
+		(FormParYesError) error:error
+		{:
+			parser.report_error("Successful error recovery by parser on line " + errorleft + " -> Formal function parameter", null);
+		:}
+		;
 FormParName ::=
-        (FormParName) IDENTIFIER:name
-        ;
+		(FormParName) IDENTIFIER:name
+		;
 FormParArrayOption ::=
-        (YesFormParArrayOption) LEFT_SQUARE RIGHT_SQUARE
-        |
-        (NoFormParArrayOption) /* epsilon */
-        ;
+		(YesFormParArrayOption) LEFT_SQUARE RIGHT_SQUARE
+		|
+		(NoFormParArrayOption) /* epsilon */
+		;
 
 /* FORM_PARS - END */
 
 /* TYPE - START */
 
 Type ::=
-        (Type) IDENTIFIER:name
-        ;
+		(Type) IDENTIFIER:name
+		;
 
 /* TYPE - END */
 
 /* STATEMENT - START */
 
 Statement ::=
-        (DesignatorStatementDecl) DesignatorStatement SEMICOLON
-        |
-        (IfStatementDecl) IfStatement
-        |
-        (DoWhileStatementDecl) DoWhileStatement
-        |
-        (BreakStatement) BREAK SEMICOLON
-        |
-        (ContinueStatement) CONTINUE SEMICOLON
-        |
-        (ReturnStatementDecl) ReturnStatement
-        |
-        (ReadStatementDecl) ReadStatement
-        |
-        (PrintStatementDecl) PrintStatement
-        |
-        (MultipleStatements) LEFT_BRACE MethodBody RIGHT_BRACE
-        ;
+		(DesignatorStatementDecl) DesignatorStatement SEMICOLON
+		|
+		(IfStatementDecl) IfStatement
+		|
+		(DoWhileStatementDecl) DoWhileStatement
+		|
+		(BreakStatement) BREAK SEMICOLON
+		|
+		(ContinueStatement) CONTINUE SEMICOLON
+		|
+		(ReturnStatementDecl) ReturnStatement
+		|
+		(ReadStatementDecl) ReadStatement
+		|
+		(PrintStatementDecl) PrintStatement
+		|
+		(MultipleStatements) LEFT_BRACE MethodBody RIGHT_BRACE
+		;
 
 /* STATEMENT - END */
 
 /* DESIGNATOR_STATEMENT - START */
 
 DesignatorStatement ::=
-        (DesignatorStatement) Designator DesignatorAddition
-        ;
+		(DesignatorStatement) Designator DesignatorAddition
+		;
 Designator ::=
-        (Designator) DesignatorName OptionalDesignatorList
-        ;
+		(Designator) DesignatorName OptionalDesignatorList
+		;
 DesignatorName ::=
-        (DesignatorName) IDENTIFIER:name
-        ;
+		(DesignatorName) IDENTIFIER:name
+		;
 OptionalDesignatorList ::=
-        (YesOptionalDesignatorList) OptionalDesignatorList OptionalDesignator
-        |
-        (NoOptionalDesignatorList) /* epsilon */
-        ;
+		(YesOptionalDesignatorList) OptionalDesignatorList OptionalDesignator
+		|
+		(NoOptionalDesignatorList) /* epsilon */
+		;
 OptionalDesignator ::=
-        (PeriodOptionalDesignator) PERIOD OptionalDesignatorName
-        |
-        (ExprOptionalDesignator) LEFT_SQUARE Expr RIGHT_SQUARE
-        ;
+		(PeriodOptionalDesignator) PERIOD OptionalDesignatorName
+		|
+		(ExprOptionalDesignator) LEFT_SQUARE Expr RIGHT_SQUARE
+		;
 OptionalDesignatorName ::=
-        (OptionalDesignatorName) IDENTIFIER:name
-        ;
+		(OptionalDesignatorName) IDENTIFIER:name
+		;
 DesignatorAddition ::=
-		(PossibleErrorDesignatorAddition) AssignOpExprDesignatorAddition
+		(PossibleErrorAssignOpDesignatorAddition) PossibleErrorDesignatorAddition
 		|
 		(ActParsDesignatorAddition) LEFT_PARENTHESIS DesignatorActPars RIGHT_PARENTHESIS
 		|
@@ -317,15 +322,14 @@ DesignatorAddition ::=
 		|
 		(DecrementDesignatorAddition) DECREMENT
 		;
-AssignOpExprDesignatorAddition ::=
+PossibleErrorDesignatorAddition ::=
 		(AssignOpExprDesignatorAdditionNoError) Assignop Expr
 		|
 		(AssignOpExprDesignatorAdditionYesError) error:error
 		{:
 			parser.report_error("Successful error recovery by parser on line " + errorleft + " -> Designator Assignment", null);
-        :}
+		:}
 		;
-
 DesignatorActPars ::=
 		(YesDesignatorActPars) ActPars
 		|
@@ -337,7 +341,15 @@ DesignatorActPars ::=
 /* IF_STATEMENT - START */
 
 IfStatement ::=
-		(IfStatement) IF LEFT_PARENTHESIS Condition RIGHT_PARENTHESIS Statement OptionalStatement
+		(IfStatement) IF LEFT_PARENTHESIS PossibleErrorCondition RIGHT_PARENTHESIS Statement OptionalStatement
+		;
+PossibleErrorCondition ::=
+		(IfConditionNoError) Condition
+		|
+		(IfConditionYesError) error:error
+		{:
+			parser.report_error("Successful error recovery by parser on line " + errorleft + " -> If Statement Condition", null);
+		:}
 		;
 OptionalStatement ::=
 		(YesOptionalStatement) ElseStatement Statement

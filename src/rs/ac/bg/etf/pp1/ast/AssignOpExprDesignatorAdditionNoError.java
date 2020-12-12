@@ -1,11 +1,11 @@
 // generated with ast extension for cup
 // version 0.8
-// 12/11/2020 11:42:13
+// 12/11/2020 12:36:35
 
 
 package rs.ac.bg.etf.pp1.ast;
 
-public class AssignOpExprDesignatorAdditionNoError extends AssignOpExprDesignatorAddition {
+public class AssignOpExprDesignatorAdditionNoError extends PossibleErrorDesignatorAddition {
 
     private Assignop Assignop;
     private Expr Expr;

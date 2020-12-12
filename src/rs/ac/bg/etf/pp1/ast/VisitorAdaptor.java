@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 12/11/2020 11:42:13
+// 12/11/2020 12:36:36
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -22,7 +22,6 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(Factor Factor) { }
     public void visit(CondTerm CondTerm) { }
     public void visit(DesignatorActPars DesignatorActPars) { }
-    public void visit(AssignOpExprDesignatorAddition AssignOpExprDesignatorAddition) { }
     public void visit(Condition Condition) { }
     public void visit(OptionalFactors OptionalFactors) { }
     public void visit(ConstDeclList ConstDeclList) { }
@@ -42,7 +41,10 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(FormParArrayOption FormParArrayOption) { }
     public void visit(ConstDecl ConstDecl) { }
     public void visit(CondFact CondFact) { }
+    public void visit(FormPar FormPar) { }
     public void visit(Declaration Declaration) { }
+    public void visit(PossibleErrorCondition PossibleErrorCondition) { }
+    public void visit(PossibleErrorDesignatorAddition PossibleErrorDesignatorAddition) { }
     public void visit(OptionalPrintNumber OptionalPrintNumber) { }
     public void visit(MethodParameters MethodParameters) { }
     public void visit(RelopLessOrEqual RelopLessOrEqual) { visit(); }
@@ -97,6 +99,8 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(ElseStatement ElseStatement) { visit(); }
     public void visit(NoOptionalStatement NoOptionalStatement) { visit(); }
     public void visit(YesOptionalStatement YesOptionalStatement) { visit(); }
+    public void visit(IfConditionYesError IfConditionYesError) { visit(); }
+    public void visit(IfConditionNoError IfConditionNoError) { visit(); }
     public void visit(IfStatement IfStatement) { visit(); }
     public void visit(DesignatorNoActPars DesignatorNoActPars) { visit(); }
     public void visit(YesDesignatorActPars YesDesignatorActPars) { visit(); }
@@ -105,7 +109,7 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(DecrementDesignatorAddition DecrementDesignatorAddition) { visit(); }
     public void visit(IncrementDesignatorAddition IncrementDesignatorAddition) { visit(); }
     public void visit(ActParsDesignatorAddition ActParsDesignatorAddition) { visit(); }
-    public void visit(PossibleErrorDesignatorAddition PossibleErrorDesignatorAddition) { visit(); }
+    public void visit(PossibleErrorAssignOpDesignatorAddition PossibleErrorAssignOpDesignatorAddition) { visit(); }
     public void visit(OptionalDesignatorName OptionalDesignatorName) { visit(); }
     public void visit(ExprOptionalDesignator ExprOptionalDesignator) { visit(); }
     public void visit(PeriodOptionalDesignator PeriodOptionalDesignator) { visit(); }
@@ -127,7 +131,8 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(NoFormParArrayOption NoFormParArrayOption) { visit(); }
     public void visit(YesFormParArrayOption YesFormParArrayOption) { visit(); }
     public void visit(FormParName FormParName) { visit(); }
-    public void visit(FormPar FormPar) { visit(); }
+    public void visit(FormParYesError FormParYesError) { visit(); }
+    public void visit(FormParNoError FormParNoError) { visit(); }
     public void visit(SingleFormParList SingleFormParList) { visit(); }
     public void visit(PluralFormParList PluralFormParList) { visit(); }
     public void visit(FormPars FormPars) { visit(); }

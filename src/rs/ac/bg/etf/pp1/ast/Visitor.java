@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 12/11/2020 11:42:13
+// 12/11/2020 12:36:36
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -22,7 +22,6 @@ public interface Visitor {
     public void visit(Factor Factor);
     public void visit(CondTerm CondTerm);
     public void visit(DesignatorActPars DesignatorActPars);
-    public void visit(AssignOpExprDesignatorAddition AssignOpExprDesignatorAddition);
     public void visit(Condition Condition);
     public void visit(OptionalFactors OptionalFactors);
     public void visit(ConstDeclList ConstDeclList);
@@ -42,7 +41,10 @@ public interface Visitor {
     public void visit(FormParArrayOption FormParArrayOption);
     public void visit(ConstDecl ConstDecl);
     public void visit(CondFact CondFact);
+    public void visit(FormPar FormPar);
     public void visit(Declaration Declaration);
+    public void visit(PossibleErrorCondition PossibleErrorCondition);
+    public void visit(PossibleErrorDesignatorAddition PossibleErrorDesignatorAddition);
     public void visit(OptionalPrintNumber OptionalPrintNumber);
     public void visit(MethodParameters MethodParameters);
     public void visit(RelopLessOrEqual RelopLessOrEqual);
@@ -97,6 +99,8 @@ public interface Visitor {
     public void visit(ElseStatement ElseStatement);
     public void visit(NoOptionalStatement NoOptionalStatement);
     public void visit(YesOptionalStatement YesOptionalStatement);
+    public void visit(IfConditionYesError IfConditionYesError);
+    public void visit(IfConditionNoError IfConditionNoError);
     public void visit(IfStatement IfStatement);
     public void visit(DesignatorNoActPars DesignatorNoActPars);
     public void visit(YesDesignatorActPars YesDesignatorActPars);
@@ -105,7 +109,7 @@ public interface Visitor {
     public void visit(DecrementDesignatorAddition DecrementDesignatorAddition);
     public void visit(IncrementDesignatorAddition IncrementDesignatorAddition);
     public void visit(ActParsDesignatorAddition ActParsDesignatorAddition);
-    public void visit(PossibleErrorDesignatorAddition PossibleErrorDesignatorAddition);
+    public void visit(PossibleErrorAssignOpDesignatorAddition PossibleErrorAssignOpDesignatorAddition);
     public void visit(OptionalDesignatorName OptionalDesignatorName);
     public void visit(ExprOptionalDesignator ExprOptionalDesignator);
     public void visit(PeriodOptionalDesignator PeriodOptionalDesignator);
@@ -127,7 +131,8 @@ public interface Visitor {
     public void visit(NoFormParArrayOption NoFormParArrayOption);
     public void visit(YesFormParArrayOption YesFormParArrayOption);
     public void visit(FormParName FormParName);
-    public void visit(FormPar FormPar);
+    public void visit(FormParYesError FormParYesError);
+    public void visit(FormParNoError FormParNoError);
     public void visit(SingleFormParList SingleFormParList);
     public void visit(PluralFormParList PluralFormParList);
     public void visit(FormPars FormPars);

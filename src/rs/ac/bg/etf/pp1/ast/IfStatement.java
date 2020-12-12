@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 12/11/2020 11:42:13
+// 12/11/2020 12:36:35
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -9,25 +9,25 @@ public class IfStatement implements SyntaxNode {
 
     private SyntaxNode parent;
     private int line;
-    private Condition Condition;
+    private PossibleErrorCondition PossibleErrorCondition;
     private Statement Statement;
     private OptionalStatement OptionalStatement;
 
-    public IfStatement (Condition Condition, Statement Statement, OptionalStatement OptionalStatement) {
-        this.Condition=Condition;
-        if(Condition!=null) Condition.setParent(this);
+    public IfStatement (PossibleErrorCondition PossibleErrorCondition, Statement Statement, OptionalStatement OptionalStatement) {
+        this.PossibleErrorCondition=PossibleErrorCondition;
+        if(PossibleErrorCondition!=null) PossibleErrorCondition.setParent(this);
         this.Statement=Statement;
         if(Statement!=null) Statement.setParent(this);
         this.OptionalStatement=OptionalStatement;
         if(OptionalStatement!=null) OptionalStatement.setParent(this);
     }
 
-    public Condition getCondition() {
-        return Condition;
+    public PossibleErrorCondition getPossibleErrorCondition() {
+        return PossibleErrorCondition;
     }
 
-    public void setCondition(Condition Condition) {
-        this.Condition=Condition;
+    public void setPossibleErrorCondition(PossibleErrorCondition PossibleErrorCondition) {
+        this.PossibleErrorCondition=PossibleErrorCondition;
     }
 
     public Statement getStatement() {
@@ -67,20 +67,20 @@ public class IfStatement implements SyntaxNode {
     }
 
     public void childrenAccept(Visitor visitor) {
-        if(Condition!=null) Condition.accept(visitor);
+        if(PossibleErrorCondition!=null) PossibleErrorCondition.accept(visitor);
         if(Statement!=null) Statement.accept(visitor);
         if(OptionalStatement!=null) OptionalStatement.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
-        if(Condition!=null) Condition.traverseTopDown(visitor);
+        if(PossibleErrorCondition!=null) PossibleErrorCondition.traverseTopDown(visitor);
         if(Statement!=null) Statement.traverseTopDown(visitor);
         if(OptionalStatement!=null) OptionalStatement.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
-        if(Condition!=null) Condition.traverseBottomUp(visitor);
+        if(PossibleErrorCondition!=null) PossibleErrorCondition.traverseBottomUp(visitor);
         if(Statement!=null) Statement.traverseBottomUp(visitor);
         if(OptionalStatement!=null) OptionalStatement.traverseBottomUp(visitor);
         accept(visitor);
@@ -91,8 +91,8 @@ public class IfStatement implements SyntaxNode {
         buffer.append(tab);
         buffer.append("IfStatement(\n");
 
-        if(Condition!=null)
-            buffer.append(Condition.toString("  "+tab));
+        if(PossibleErrorCondition!=null)
+            buffer.append(PossibleErrorCondition.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");
