@@ -1,0 +1,174 @@
+INFO  13:53:40,756 - Compiling source file: C:\Users\Asus\Desktop\FAKS\PP1\MJCompiler\test\error_recovery_1.mj
+INFO  13:53:40,834 - #2 program
+INFO  13:53:40,834 - #9 error_recovery_1
+INFO  13:53:40,834 - #5 const
+INFO  13:53:40,834 - #9 int
+INFO  13:53:40,834 - #9 i
+INFO  13:53:40,834 - #8 =
+INFO  13:53:40,849 - #38 *
+ERROR 13:53:40,849 - Syntax error on line 3
+INFO  13:53:40,849 - #7 ,
+INFO  13:53:40,849 - #9 k
+INFO  13:53:40,849 - #8 =
+INFO  13:53:40,849 - #10 5
+ERROR 13:53:40,849 - Successful error recovery by parser on line 3 -> Constant Declaration
+INFO  13:53:40,849 - #7 ,
+INFO  13:53:40,849 - #9 l
+INFO  13:53:40,849 - #8 =
+INFO  13:53:40,849 - #7 ,
+ERROR 13:53:40,849 - Syntax error on line 3
+INFO  13:53:40,849 - #6 ;
+INFO  13:53:40,849 - #9 int
+INFO  13:53:40,849 - #9 x
+INFO  13:53:40,849 - #7 ,
+ERROR 13:53:40,849 - Successful error recovery by parser on line 3 -> Constant Declaration
+INFO  13:53:40,865 - #37 +
+ERROR 13:53:40,865 - Syntax error on line 4
+INFO  13:53:40,865 - #7 ,
+INFO  13:53:40,865 - #9 y
+INFO  13:53:40,865 - #20 [
+INFO  13:53:40,865 - #21 ]
+ERROR 13:53:40,865 - Successful error recovery by parser on line 4 -> Variable Declaration
+INFO  13:53:40,865 - #6 ;
+INFO  13:53:40,865 - #5 const
+INFO  13:53:40,865 - #9 int
+INFO  13:53:40,865 - #6 ;
+ERROR 13:53:40,865 - Syntax error on line 5
+INFO  13:53:40,865 - #9 int
+INFO  13:53:40,865 - #9 niz
+INFO  13:53:40,865 - #20 [
+ERROR 13:53:40,865 - Successful error recovery by parser on line 5 -> Constant Declaration
+INFO  13:53:40,865 - #21 ]
+INFO  13:53:40,865 - #7 ,
+INFO  13:53:40,865 - #6 ;
+ERROR 13:53:40,865 - Syntax error on line 7
+INFO  13:53:40,865 - #9 bool
+INFO  13:53:40,865 - #9 ibool
+INFO  13:53:40,865 - #3 {
+ERROR 13:53:40,865 - Successful error recovery by parser on line 7 -> Variable Declaration
+ERROR 13:53:40,865 - Syntax error on line 8
+INFO  13:53:40,865 - #4 }
+INFO  13:53:40,865 - #6 ;
+INFO  13:53:40,865 - #9 int
+INFO  13:53:40,865 - #9 niz
+INFO  13:53:40,865 - #20 [
+ERROR 13:53:40,865 - Successful error recovery by parser on line 8 -> Variable Declaration
+INFO  13:53:40,865 - #21 ]
+INFO  13:53:40,865 - #6 ;
+INFO  13:53:40,865 - #3 {
+INFO  13:53:40,865 - #15 void
+INFO  13:53:40,865 - #9 main
+INFO  13:53:40,865 - #13 (
+INFO  13:53:40,865 - #14 )
+INFO  13:53:40,865 - #3 {
+INFO  13:53:40,865 - #4 }
+INFO  13:53:40,865 - #4 }
+INFO  13:53:40,865 - Program(
+  ProgramName(
+   error_recovery_1
+  ) [ProgramName]
+  YesDeclarationList(
+    YesDeclarationList(
+      YesDeclarationList(
+        YesDeclarationList(
+          YesDeclarationList(
+            YesDeclarationList(
+              NoDeclarationList(
+              ) [NoDeclarationList]
+              ConstantDeclaration(
+                ConstDeclNoError(
+                  Type(
+                   int
+                  ) [Type]
+                  ErrorConstDeclList(
+                  ) [ErrorConstDeclList]
+                ) [ConstDeclNoError]
+              ) [ConstantDeclaration]
+            ) [YesDeclarationList]
+            VariableDeclaration(
+              VarDeclNoError(
+                Type(
+                 int
+                ) [Type]
+                PluralVarDeclList(
+                  ErrorVarDeclList(
+                  ) [ErrorVarDeclList]
+                  DeclVariable(
+                    VarDeclName(
+                     y
+                    ) [VarDeclName]
+                    YesVarDeclArrayOption(
+                    ) [YesVarDeclArrayOption]
+                  ) [DeclVariable]
+                ) [PluralVarDeclList]
+              ) [VarDeclNoError]
+            ) [VariableDeclaration]
+          ) [YesDeclarationList]
+          ConstantDeclaration(
+            ConstDeclNoError(
+              Type(
+               int
+              ) [Type]
+              ErrorConstDeclList(
+              ) [ErrorConstDeclList]
+            ) [ConstDeclNoError]
+          ) [ConstantDeclaration]
+        ) [YesDeclarationList]
+        VariableDeclaration(
+          VarDeclNoError(
+            Type(
+             int
+            ) [Type]
+            ErrorVarDeclList(
+            ) [ErrorVarDeclList]
+          ) [VarDeclNoError]
+        ) [VariableDeclaration]
+      ) [YesDeclarationList]
+      VariableDeclaration(
+        VarDeclNoError(
+          Type(
+           bool
+          ) [Type]
+          ErrorVarDeclList(
+          ) [ErrorVarDeclList]
+        ) [VarDeclNoError]
+      ) [VariableDeclaration]
+    ) [YesDeclarationList]
+    VariableDeclaration(
+      VarDeclNoError(
+        Type(
+         int
+        ) [Type]
+        SingleVarDeclList(
+          DeclVariable(
+            VarDeclName(
+             niz
+            ) [VarDeclName]
+            YesVarDeclArrayOption(
+            ) [YesVarDeclArrayOption]
+          ) [DeclVariable]
+        ) [SingleVarDeclList]
+      ) [VarDeclNoError]
+    ) [VariableDeclaration]
+  ) [YesDeclarationList]
+  YesMethodDeclarationList(
+    NoMethodDeclarationList(
+    ) [NoMethodDeclarationList]
+    MethodDeclaration(
+      VoidMethodReturnType(
+      ) [VoidMethodReturnType]
+      MethodName(
+       main
+      ) [MethodName]
+      NoMethodParameters(
+      ) [NoMethodParameters]
+      NoMethodVariables(
+      ) [NoMethodVariables]
+      NoMethodBody(
+      ) [NoMethodBody]
+    ) [MethodDeclaration]
+  ) [YesMethodDeclarationList]
+) [Program]
+INFO  13:53:40,865 - ===================================
+INFO  13:53:40,865 -  Print count calls = 0
+INFO  13:53:40,865 -  Deklarisanih promenljivih ima = 0

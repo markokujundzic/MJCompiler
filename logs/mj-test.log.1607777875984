@@ -1,0 +1,323 @@
+INFO  13:56:44,500 - Compiling source file: C:\Users\Asus\Desktop\FAKS\PP1\MJCompiler\test\error_recovery_2.mj
+INFO  13:56:44,579 - #2 program
+INFO  13:56:44,579 - #9 error_recovery_2
+INFO  13:56:44,579 - #9 int
+INFO  13:56:44,579 - #9 niz
+INFO  13:56:44,579 - #20 [
+INFO  13:56:44,594 - #21 ]
+INFO  13:56:44,594 - #6 ;
+INFO  13:56:44,594 - #9 bool
+INFO  13:56:44,594 - #9 ibool
+INFO  13:56:44,594 - #6 ;
+INFO  13:56:44,594 - #3 {
+INFO  13:56:44,594 - #15 void
+INFO  13:56:44,594 - #9 main
+INFO  13:56:44,594 - #13 (
+INFO  13:56:44,594 - #14 )
+INFO  13:56:44,594 - #3 {
+INFO  13:56:44,594 - #9 ibool
+INFO  13:56:44,594 - #8 =
+INFO  13:56:44,594 - #11 false
+INFO  13:56:44,594 - #7 ,
+ERROR 13:56:44,594 - Syntax error on line 9
+INFO  13:56:44,610 - #6 ;
+INFO  13:56:44,610 - #9 niz
+INFO  13:56:44,610 - #8 =
+INFO  13:56:44,610 - #35 new
+ERROR 13:56:44,610 - Successful error recovery by parser on line 9 -> Designator Assignment
+INFO  13:56:44,610 - #9 int
+INFO  13:56:44,610 - #20 [
+INFO  13:56:44,610 - #10 3
+INFO  13:56:44,610 - #21 ]
+INFO  13:56:44,610 - #6 ;
+INFO  13:56:44,610 - #9 niz
+INFO  13:56:44,610 - #20 [
+INFO  13:56:44,610 - #10 0
+INFO  13:56:44,610 - #21 ]
+INFO  13:56:44,610 - #8 =
+INFO  13:56:44,610 - #6 ;
+ERROR 13:56:44,610 - Syntax error on line 11
+INFO  13:56:44,610 - #9 niz
+INFO  13:56:44,610 - #20 [
+INFO  13:56:44,610 - #10 1
+ERROR 13:56:44,610 - Successful error recovery by parser on line 11 -> Designator Assignment
+INFO  13:56:44,610 - #21 ]
+INFO  13:56:44,610 - #8 =
+INFO  13:56:44,610 - #11 true
+INFO  13:56:44,610 - #33 ?
+INFO  13:56:44,610 - #11 false
+INFO  13:56:44,610 - #18 :
+INFO  13:56:44,610 - #6 ;
+ERROR 13:56:44,610 - Syntax error on line 12
+INFO  13:56:44,610 - #9 niz
+INFO  13:56:44,610 - #20 [
+INFO  13:56:44,610 - #10 2
+ERROR 13:56:44,610 - Successful error recovery by parser on line 12 -> Designator Assignment
+INFO  13:56:44,610 - #21 ]
+INFO  13:56:44,610 - #8 =
+INFO  13:56:44,610 - #33 ?
+ERROR 13:56:44,610 - Syntax error on line 13
+INFO  13:56:44,610 - #10 4
+INFO  13:56:44,610 - #6 ;
+INFO  13:56:44,610 - #4 }
+INFO  13:56:44,610 - #4 }
+ERROR 13:56:44,610 - Successful error recovery by parser on line 13 -> Designator Assignment
+INFO  13:56:44,610 - Program(
+  ProgramName(
+   error_recovery_2
+  ) [ProgramName]
+  YesDeclarationList(
+    YesDeclarationList(
+      NoDeclarationList(
+      ) [NoDeclarationList]
+      VariableDeclaration(
+        VarDeclNoError(
+          Type(
+           int
+          ) [Type]
+          SingleVarDeclList(
+            DeclVariable(
+              VarDeclName(
+               niz
+              ) [VarDeclName]
+              YesVarDeclArrayOption(
+              ) [YesVarDeclArrayOption]
+            ) [DeclVariable]
+          ) [SingleVarDeclList]
+        ) [VarDeclNoError]
+      ) [VariableDeclaration]
+    ) [YesDeclarationList]
+    VariableDeclaration(
+      VarDeclNoError(
+        Type(
+         bool
+        ) [Type]
+        SingleVarDeclList(
+          DeclVariable(
+            VarDeclName(
+             ibool
+            ) [VarDeclName]
+            NoVarDeclArrayOption(
+            ) [NoVarDeclArrayOption]
+          ) [DeclVariable]
+        ) [SingleVarDeclList]
+      ) [VarDeclNoError]
+    ) [VariableDeclaration]
+  ) [YesDeclarationList]
+  YesMethodDeclarationList(
+    NoMethodDeclarationList(
+    ) [NoMethodDeclarationList]
+    MethodDeclaration(
+      VoidMethodReturnType(
+      ) [VoidMethodReturnType]
+      MethodName(
+       main
+      ) [MethodName]
+      NoMethodParameters(
+      ) [NoMethodParameters]
+      NoMethodVariables(
+      ) [NoMethodVariables]
+      YesMethodBody(
+        YesMethodBody(
+          YesMethodBody(
+            YesMethodBody(
+              YesMethodBody(
+                NoMethodBody(
+                ) [NoMethodBody]
+                DesignatorStatementDecl(
+                  DesignatorStatement(
+                    Designator(
+                      DesignatorName(
+                       ibool
+                      ) [DesignatorName]
+                      NoOptionalDesignatorList(
+                      ) [NoOptionalDesignatorList]
+                    ) [Designator]
+                    PossibleErrorAssignOpDesignatorAddition(
+                      AssignOpExprDesignatorAdditionYesError(
+                      ) [AssignOpExprDesignatorAdditionYesError]
+                    ) [PossibleErrorAssignOpDesignatorAddition]
+                  ) [DesignatorStatement]
+                ) [DesignatorStatementDecl]
+              ) [YesMethodBody]
+              DesignatorStatementDecl(
+                DesignatorStatement(
+                  Designator(
+                    DesignatorName(
+                     niz
+                    ) [DesignatorName]
+                    NoOptionalDesignatorList(
+                    ) [NoOptionalDesignatorList]
+                  ) [Designator]
+                  PossibleErrorAssignOpDesignatorAddition(
+                    AssignOpExprDesignatorAdditionNoError(
+                      Assignop(
+                      ) [Assignop]
+                      NoTernaryExpr(
+                        SingleCondition(
+                          SingleCondTerm(
+                            SingleCondFact(
+                              TermFiniteExpr(
+                                Term(
+                                  NewArrayFactor(
+                                    Type(
+                                     int
+                                    ) [Type]
+                                    NoTernaryExpr(
+                                      SingleCondition(
+                                        SingleCondTerm(
+                                          SingleCondFact(
+                                            TermFiniteExpr(
+                                              Term(
+                                                IntFactor(
+                                                 3
+                                                ) [IntFactor]
+                                                NoOptionalFactors(
+                                                ) [NoOptionalFactors]
+                                              ) [Term]
+                                              NoOptionalTermList(
+                                              ) [NoOptionalTermList]
+                                            ) [TermFiniteExpr]
+                                          ) [SingleCondFact]
+                                        ) [SingleCondTerm]
+                                      ) [SingleCondition]
+                                    ) [NoTernaryExpr]
+                                  ) [NewArrayFactor]
+                                  NoOptionalFactors(
+                                  ) [NoOptionalFactors]
+                                ) [Term]
+                                NoOptionalTermList(
+                                ) [NoOptionalTermList]
+                              ) [TermFiniteExpr]
+                            ) [SingleCondFact]
+                          ) [SingleCondTerm]
+                        ) [SingleCondition]
+                      ) [NoTernaryExpr]
+                    ) [AssignOpExprDesignatorAdditionNoError]
+                  ) [PossibleErrorAssignOpDesignatorAddition]
+                ) [DesignatorStatement]
+              ) [DesignatorStatementDecl]
+            ) [YesMethodBody]
+            DesignatorStatementDecl(
+              DesignatorStatement(
+                Designator(
+                  DesignatorName(
+                   niz
+                  ) [DesignatorName]
+                  YesOptionalDesignatorList(
+                    NoOptionalDesignatorList(
+                    ) [NoOptionalDesignatorList]
+                    ExprOptionalDesignator(
+                      NoTernaryExpr(
+                        SingleCondition(
+                          SingleCondTerm(
+                            SingleCondFact(
+                              TermFiniteExpr(
+                                Term(
+                                  IntFactor(
+                                   0
+                                  ) [IntFactor]
+                                  NoOptionalFactors(
+                                  ) [NoOptionalFactors]
+                                ) [Term]
+                                NoOptionalTermList(
+                                ) [NoOptionalTermList]
+                              ) [TermFiniteExpr]
+                            ) [SingleCondFact]
+                          ) [SingleCondTerm]
+                        ) [SingleCondition]
+                      ) [NoTernaryExpr]
+                    ) [ExprOptionalDesignator]
+                  ) [YesOptionalDesignatorList]
+                ) [Designator]
+                PossibleErrorAssignOpDesignatorAddition(
+                  AssignOpExprDesignatorAdditionYesError(
+                  ) [AssignOpExprDesignatorAdditionYesError]
+                ) [PossibleErrorAssignOpDesignatorAddition]
+              ) [DesignatorStatement]
+            ) [DesignatorStatementDecl]
+          ) [YesMethodBody]
+          DesignatorStatementDecl(
+            DesignatorStatement(
+              Designator(
+                DesignatorName(
+                 niz
+                ) [DesignatorName]
+                YesOptionalDesignatorList(
+                  NoOptionalDesignatorList(
+                  ) [NoOptionalDesignatorList]
+                  ExprOptionalDesignator(
+                    NoTernaryExpr(
+                      SingleCondition(
+                        SingleCondTerm(
+                          SingleCondFact(
+                            TermFiniteExpr(
+                              Term(
+                                IntFactor(
+                                 1
+                                ) [IntFactor]
+                                NoOptionalFactors(
+                                ) [NoOptionalFactors]
+                              ) [Term]
+                              NoOptionalTermList(
+                              ) [NoOptionalTermList]
+                            ) [TermFiniteExpr]
+                          ) [SingleCondFact]
+                        ) [SingleCondTerm]
+                      ) [SingleCondition]
+                    ) [NoTernaryExpr]
+                  ) [ExprOptionalDesignator]
+                ) [YesOptionalDesignatorList]
+              ) [Designator]
+              PossibleErrorAssignOpDesignatorAddition(
+                AssignOpExprDesignatorAdditionYesError(
+                ) [AssignOpExprDesignatorAdditionYesError]
+              ) [PossibleErrorAssignOpDesignatorAddition]
+            ) [DesignatorStatement]
+          ) [DesignatorStatementDecl]
+        ) [YesMethodBody]
+        DesignatorStatementDecl(
+          DesignatorStatement(
+            Designator(
+              DesignatorName(
+               niz
+              ) [DesignatorName]
+              YesOptionalDesignatorList(
+                NoOptionalDesignatorList(
+                ) [NoOptionalDesignatorList]
+                ExprOptionalDesignator(
+                  NoTernaryExpr(
+                    SingleCondition(
+                      SingleCondTerm(
+                        SingleCondFact(
+                          TermFiniteExpr(
+                            Term(
+                              IntFactor(
+                               2
+                              ) [IntFactor]
+                              NoOptionalFactors(
+                              ) [NoOptionalFactors]
+                            ) [Term]
+                            NoOptionalTermList(
+                            ) [NoOptionalTermList]
+                          ) [TermFiniteExpr]
+                        ) [SingleCondFact]
+                      ) [SingleCondTerm]
+                    ) [SingleCondition]
+                  ) [NoTernaryExpr]
+                ) [ExprOptionalDesignator]
+              ) [YesOptionalDesignatorList]
+            ) [Designator]
+            PossibleErrorAssignOpDesignatorAddition(
+              AssignOpExprDesignatorAdditionYesError(
+              ) [AssignOpExprDesignatorAdditionYesError]
+            ) [PossibleErrorAssignOpDesignatorAddition]
+          ) [DesignatorStatement]
+        ) [DesignatorStatementDecl]
+      ) [YesMethodBody]
+    ) [MethodDeclaration]
+  ) [YesMethodDeclarationList]
+) [Program]
+INFO  13:56:44,610 - ===================================
+INFO  13:56:44,625 -  Print count calls = 0
+INFO  13:56:44,625 -  Deklarisanih promenljivih ima = 0

@@ -1,0 +1,338 @@
+INFO  14:01:18,252 - Compiling source file: C:\Users\Asus\Desktop\FAKS\PP1\MJCompiler\test\error_recovery_3.mj
+INFO  14:01:18,330 - #2 program
+INFO  14:01:18,330 - #9 error_recovery_3
+INFO  14:01:18,330 - #3 {
+INFO  14:01:18,330 - #9 int
+INFO  14:01:18,330 - #9 sum
+INFO  14:01:18,330 - #13 (
+INFO  14:01:18,330 - #9 int
+INFO  14:01:18,330 - #10 1
+ERROR 14:01:18,330 - Syntax error on line 4
+INFO  14:01:18,330 - #9 z
+INFO  14:01:18,330 - #7 ,
+INFO  14:01:18,330 - #9 int
+INFO  14:01:18,330 - #9 d
+INFO  14:01:18,330 - #37 +
+ERROR 14:01:18,330 - Successful error recovery by parser on line 4 -> Formal function parameter
+ERROR 14:01:18,330 - Syntax error on line 4
+INFO  14:01:18,330 - #14 )
+INFO  14:01:18,330 - #3 {
+INFO  14:01:18,345 - #28 return
+INFO  14:01:18,345 - #9 z
+ERROR 14:01:18,345 - Successful error recovery by parser on line 4 -> Formal function parameter
+INFO  14:01:18,345 - #37 +
+INFO  14:01:18,345 - #9 d
+INFO  14:01:18,345 - #6 ;
+INFO  14:01:18,345 - #4 }
+INFO  14:01:18,345 - #9 int
+INFO  14:01:18,345 - #9 foo
+INFO  14:01:18,345 - #13 (
+INFO  14:01:18,345 - #9 int
+INFO  14:01:18,345 - #34 -
+ERROR 14:01:18,345 - Syntax error on line 9
+INFO  14:01:18,345 - #9 a
+INFO  14:01:18,345 - #7 ,
+INFO  14:01:18,345 - #9 int
+INFO  14:01:18,345 - #9 inc
+INFO  14:01:18,345 - #14 )
+ERROR 14:01:18,345 - Successful error recovery by parser on line 9 -> Formal function parameter
+INFO  14:01:18,345 - #3 {
+INFO  14:01:18,345 - #28 return
+INFO  14:01:18,345 - #9 a
+INFO  14:01:18,345 - #37 +
+INFO  14:01:18,345 - #9 inc
+INFO  14:01:18,345 - #6 ;
+INFO  14:01:18,345 - #4 }
+INFO  14:01:18,345 - #9 bool
+INFO  14:01:18,345 - #9 verify
+INFO  14:01:18,345 - #13 (
+INFO  14:01:18,345 - #33 ?
+ERROR 14:01:18,345 - Syntax error on line 14
+INFO  14:01:18,345 - #14 )
+INFO  14:01:18,345 - #3 {
+INFO  14:01:18,345 - #30 print
+INFO  14:01:18,345 - #13 (
+ERROR 14:01:18,345 - Successful error recovery by parser on line 14 -> Formal function parameter
+INFO  14:01:18,345 - #12 v
+INFO  14:01:18,345 - #14 )
+INFO  14:01:18,345 - #6 ;
+INFO  14:01:18,345 - #28 return
+INFO  14:01:18,361 - #11 false
+INFO  14:01:18,361 - #6 ;
+INFO  14:01:18,361 - #4 }
+INFO  14:01:18,361 - #15 void
+INFO  14:01:18,361 - #9 main
+INFO  14:01:18,361 - #13 (
+INFO  14:01:18,361 - #14 )
+INFO  14:01:18,361 - #3 {
+INFO  14:01:18,361 - #4 }
+INFO  14:01:18,361 - #4 }
+INFO  14:01:18,361 - Program(
+  ProgramName(
+   error_recovery_3
+  ) [ProgramName]
+  NoDeclarationList(
+  ) [NoDeclarationList]
+  YesMethodDeclarationList(
+    YesMethodDeclarationList(
+      YesMethodDeclarationList(
+        YesMethodDeclarationList(
+          NoMethodDeclarationList(
+          ) [NoMethodDeclarationList]
+          MethodDeclaration(
+            TypeMethodReturnType(
+              Type(
+               int
+              ) [Type]
+            ) [TypeMethodReturnType]
+            MethodName(
+             sum
+            ) [MethodName]
+            YesMethodParameters(
+              FormPars(
+                PluralFormParList(
+                  FormParYesError(
+                  ) [FormParYesError]
+                  SingleFormParList(
+                    FormParYesError(
+                    ) [FormParYesError]
+                  ) [SingleFormParList]
+                ) [PluralFormParList]
+              ) [FormPars]
+            ) [YesMethodParameters]
+            NoMethodVariables(
+            ) [NoMethodVariables]
+            YesMethodBody(
+              NoMethodBody(
+              ) [NoMethodBody]
+              ReturnStatementDecl(
+                ReturnStatement(
+                  YesReturnExpr(
+                    NoTernaryExpr(
+                      SingleCondition(
+                        SingleCondTerm(
+                          SingleCondFact(
+                            TermFiniteExpr(
+                              Term(
+                                DesignatorFactor(
+                                  Designator(
+                                    DesignatorName(
+                                     z
+                                    ) [DesignatorName]
+                                    NoOptionalDesignatorList(
+                                    ) [NoOptionalDesignatorList]
+                                  ) [Designator]
+                                ) [DesignatorFactor]
+                                NoOptionalFactors(
+                                ) [NoOptionalFactors]
+                              ) [Term]
+                              YesOptionalTermList(
+                                NoOptionalTermList(
+                                ) [NoOptionalTermList]
+                                AddopPlus(
+                                ) [AddopPlus]
+                                Term(
+                                  DesignatorFactor(
+                                    Designator(
+                                      DesignatorName(
+                                       d
+                                      ) [DesignatorName]
+                                      NoOptionalDesignatorList(
+                                      ) [NoOptionalDesignatorList]
+                                    ) [Designator]
+                                  ) [DesignatorFactor]
+                                  NoOptionalFactors(
+                                  ) [NoOptionalFactors]
+                                ) [Term]
+                              ) [YesOptionalTermList]
+                            ) [TermFiniteExpr]
+                          ) [SingleCondFact]
+                        ) [SingleCondTerm]
+                      ) [SingleCondition]
+                    ) [NoTernaryExpr]
+                  ) [YesReturnExpr]
+                ) [ReturnStatement]
+              ) [ReturnStatementDecl]
+            ) [YesMethodBody]
+          ) [MethodDeclaration]
+        ) [YesMethodDeclarationList]
+        MethodDeclaration(
+          TypeMethodReturnType(
+            Type(
+             int
+            ) [Type]
+          ) [TypeMethodReturnType]
+          MethodName(
+           foo
+          ) [MethodName]
+          YesMethodParameters(
+            FormPars(
+              PluralFormParList(
+                FormParYesError(
+                ) [FormParYesError]
+                SingleFormParList(
+                  FormParNoError(
+                    Type(
+                     int
+                    ) [Type]
+                    FormParName(
+                     inc
+                    ) [FormParName]
+                    NoFormParArrayOption(
+                    ) [NoFormParArrayOption]
+                  ) [FormParNoError]
+                ) [SingleFormParList]
+              ) [PluralFormParList]
+            ) [FormPars]
+          ) [YesMethodParameters]
+          NoMethodVariables(
+          ) [NoMethodVariables]
+          YesMethodBody(
+            NoMethodBody(
+            ) [NoMethodBody]
+            ReturnStatementDecl(
+              ReturnStatement(
+                YesReturnExpr(
+                  NoTernaryExpr(
+                    SingleCondition(
+                      SingleCondTerm(
+                        SingleCondFact(
+                          TermFiniteExpr(
+                            Term(
+                              DesignatorFactor(
+                                Designator(
+                                  DesignatorName(
+                                   a
+                                  ) [DesignatorName]
+                                  NoOptionalDesignatorList(
+                                  ) [NoOptionalDesignatorList]
+                                ) [Designator]
+                              ) [DesignatorFactor]
+                              NoOptionalFactors(
+                              ) [NoOptionalFactors]
+                            ) [Term]
+                            YesOptionalTermList(
+                              NoOptionalTermList(
+                              ) [NoOptionalTermList]
+                              AddopPlus(
+                              ) [AddopPlus]
+                              Term(
+                                DesignatorFactor(
+                                  Designator(
+                                    DesignatorName(
+                                     inc
+                                    ) [DesignatorName]
+                                    NoOptionalDesignatorList(
+                                    ) [NoOptionalDesignatorList]
+                                  ) [Designator]
+                                ) [DesignatorFactor]
+                                NoOptionalFactors(
+                                ) [NoOptionalFactors]
+                              ) [Term]
+                            ) [YesOptionalTermList]
+                          ) [TermFiniteExpr]
+                        ) [SingleCondFact]
+                      ) [SingleCondTerm]
+                    ) [SingleCondition]
+                  ) [NoTernaryExpr]
+                ) [YesReturnExpr]
+              ) [ReturnStatement]
+            ) [ReturnStatementDecl]
+          ) [YesMethodBody]
+        ) [MethodDeclaration]
+      ) [YesMethodDeclarationList]
+      MethodDeclaration(
+        TypeMethodReturnType(
+          Type(
+           bool
+          ) [Type]
+        ) [TypeMethodReturnType]
+        MethodName(
+         verify
+        ) [MethodName]
+        YesMethodParameters(
+          FormPars(
+            SingleFormParList(
+              FormParYesError(
+              ) [FormParYesError]
+            ) [SingleFormParList]
+          ) [FormPars]
+        ) [YesMethodParameters]
+        NoMethodVariables(
+        ) [NoMethodVariables]
+        YesMethodBody(
+          YesMethodBody(
+            NoMethodBody(
+            ) [NoMethodBody]
+            PrintStatementDecl(
+              PrintStatement(
+                NoTernaryExpr(
+                  SingleCondition(
+                    SingleCondTerm(
+                      SingleCondFact(
+                        TermFiniteExpr(
+                          Term(
+                            CharFactor(
+                             v
+                            ) [CharFactor]
+                            NoOptionalFactors(
+                            ) [NoOptionalFactors]
+                          ) [Term]
+                          NoOptionalTermList(
+                          ) [NoOptionalTermList]
+                        ) [TermFiniteExpr]
+                      ) [SingleCondFact]
+                    ) [SingleCondTerm]
+                  ) [SingleCondition]
+                ) [NoTernaryExpr]
+                OptionalNoPrintNumber(
+                ) [OptionalNoPrintNumber]
+              ) [PrintStatement]
+            ) [PrintStatementDecl]
+          ) [YesMethodBody]
+          ReturnStatementDecl(
+            ReturnStatement(
+              YesReturnExpr(
+                NoTernaryExpr(
+                  SingleCondition(
+                    SingleCondTerm(
+                      SingleCondFact(
+                        TermFiniteExpr(
+                          Term(
+                            BoolFactor(
+                             false
+                            ) [BoolFactor]
+                            NoOptionalFactors(
+                            ) [NoOptionalFactors]
+                          ) [Term]
+                          NoOptionalTermList(
+                          ) [NoOptionalTermList]
+                        ) [TermFiniteExpr]
+                      ) [SingleCondFact]
+                    ) [SingleCondTerm]
+                  ) [SingleCondition]
+                ) [NoTernaryExpr]
+              ) [YesReturnExpr]
+            ) [ReturnStatement]
+          ) [ReturnStatementDecl]
+        ) [YesMethodBody]
+      ) [MethodDeclaration]
+    ) [YesMethodDeclarationList]
+    MethodDeclaration(
+      VoidMethodReturnType(
+      ) [VoidMethodReturnType]
+      MethodName(
+       main
+      ) [MethodName]
+      NoMethodParameters(
+      ) [NoMethodParameters]
+      NoMethodVariables(
+      ) [NoMethodVariables]
+      NoMethodBody(
+      ) [NoMethodBody]
+    ) [MethodDeclaration]
+  ) [YesMethodDeclarationList]
+) [Program]
+INFO  14:01:18,361 - ===================================
+INFO  14:01:18,361 -  Print count calls = 0
+INFO  14:01:18,361 -  Deklarisanih promenljivih ima = 0

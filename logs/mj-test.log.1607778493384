@@ -1,0 +1,396 @@
+INFO  14:08:01,016 - Compiling source file: C:\Users\Asus\Desktop\FAKS\PP1\MJCompiler\test\error_recovery_4.mj
+INFO  14:08:01,094 - #2 program
+INFO  14:08:01,094 - #9 error_recovery_4
+INFO  14:08:01,094 - #9 int
+INFO  14:08:01,094 - #9 x
+INFO  14:08:01,094 - #7 ,
+INFO  14:08:01,094 - #9 y
+INFO  14:08:01,094 - #6 ;
+INFO  14:08:01,094 - #9 bool
+INFO  14:08:01,094 - #9 temp
+INFO  14:08:01,094 - #6 ;
+INFO  14:08:01,094 - #9 int
+INFO  14:08:01,094 - #9 niz
+INFO  14:08:01,094 - #20 [
+INFO  14:08:01,094 - #21 ]
+INFO  14:08:01,094 - #6 ;
+INFO  14:08:01,094 - #3 {
+INFO  14:08:01,094 - #15 void
+INFO  14:08:01,094 - #9 main
+INFO  14:08:01,110 - #13 (
+INFO  14:08:01,110 - #14 )
+INFO  14:08:01,110 - #3 {
+INFO  14:08:01,110 - #24 if
+INFO  14:08:01,110 - #13 (
+INFO  14:08:01,110 - #9 temp
+INFO  14:08:01,110 - #8 =
+ERROR 14:08:01,110 - Syntax error on line 11
+INFO  14:08:01,110 - #11 false
+INFO  14:08:01,110 - #14 )
+INFO  14:08:01,110 - #9 x
+INFO  14:08:01,110 - #22 ++
+INFO  14:08:01,110 - #6 ;
+ERROR 14:08:01,110 - Successful error recovery by parser on line 11 -> If Statement Condition
+INFO  14:08:01,125 - #24 if
+INFO  14:08:01,125 - #13 (
+INFO  14:08:01,125 - #14 )
+ERROR 14:08:01,125 - Syntax error on line 13
+INFO  14:08:01,125 - #9 x
+INFO  14:08:01,125 - #23 --
+INFO  14:08:01,125 - #6 ;
+ERROR 14:08:01,125 - Successful error recovery by parser on line 13 -> If Statement Condition
+INFO  14:08:01,125 - #24 if
+INFO  14:08:01,125 - #13 (
+INFO  14:08:01,125 - #9 x
+INFO  14:08:01,125 - #8 =
+ERROR 14:08:01,125 - Syntax error on line 15
+INFO  14:08:01,125 - #38 *
+INFO  14:08:01,125 - #8 =
+INFO  14:08:01,125 - #10 7
+INFO  14:08:01,125 - #14 )
+INFO  14:08:01,125 - #9 y
+INFO  14:08:01,125 - #8 =
+INFO  14:08:01,125 - #10 5
+ERROR 14:08:01,125 - Successful error recovery by parser on line 15 -> If Statement Condition
+INFO  14:08:01,125 - #6 ;
+INFO  14:08:01,125 - #24 if
+INFO  14:08:01,125 - #13 (
+INFO  14:08:01,125 - #9 x
+INFO  14:08:01,125 - #22 ++
+ERROR 14:08:01,125 - Syntax error on line 17
+INFO  14:08:01,125 - #37 +
+INFO  14:08:01,125 - #14 )
+INFO  14:08:01,125 - #30 print
+INFO  14:08:01,125 - #13 (
+INFO  14:08:01,125 - #9 eol
+ERROR 14:08:01,125 - Successful error recovery by parser on line 17 -> If Statement Condition
+INFO  14:08:01,125 - #14 )
+INFO  14:08:01,125 - #6 ;
+INFO  14:08:01,125 - #24 if
+INFO  14:08:01,125 - #13 (
+INFO  14:08:01,125 - #11 true
+INFO  14:08:01,125 - #32 &&
+INFO  14:08:01,125 - #11 false
+INFO  14:08:01,125 - #31 ||
+INFO  14:08:01,125 - #11 true
+INFO  14:08:01,125 - #14 )
+INFO  14:08:01,125 - #30 print
+INFO  14:08:01,125 - #13 (
+INFO  14:08:01,125 - #9 eof
+INFO  14:08:01,125 - #14 )
+INFO  14:08:01,125 - #6 ;
+INFO  14:08:01,125 - #4 }
+INFO  14:08:01,125 - #4 }
+INFO  14:08:01,125 - Program(
+  ProgramName(
+   error_recovery_4
+  ) [ProgramName]
+  YesDeclarationList(
+    YesDeclarationList(
+      YesDeclarationList(
+        NoDeclarationList(
+        ) [NoDeclarationList]
+        VariableDeclaration(
+          VarDeclNoError(
+            Type(
+             int
+            ) [Type]
+            PluralVarDeclList(
+              SingleVarDeclList(
+                DeclVariable(
+                  VarDeclName(
+                   x
+                  ) [VarDeclName]
+                  NoVarDeclArrayOption(
+                  ) [NoVarDeclArrayOption]
+                ) [DeclVariable]
+              ) [SingleVarDeclList]
+              DeclVariable(
+                VarDeclName(
+                 y
+                ) [VarDeclName]
+                NoVarDeclArrayOption(
+                ) [NoVarDeclArrayOption]
+              ) [DeclVariable]
+            ) [PluralVarDeclList]
+          ) [VarDeclNoError]
+        ) [VariableDeclaration]
+      ) [YesDeclarationList]
+      VariableDeclaration(
+        VarDeclNoError(
+          Type(
+           bool
+          ) [Type]
+          SingleVarDeclList(
+            DeclVariable(
+              VarDeclName(
+               temp
+              ) [VarDeclName]
+              NoVarDeclArrayOption(
+              ) [NoVarDeclArrayOption]
+            ) [DeclVariable]
+          ) [SingleVarDeclList]
+        ) [VarDeclNoError]
+      ) [VariableDeclaration]
+    ) [YesDeclarationList]
+    VariableDeclaration(
+      VarDeclNoError(
+        Type(
+         int
+        ) [Type]
+        SingleVarDeclList(
+          DeclVariable(
+            VarDeclName(
+             niz
+            ) [VarDeclName]
+            YesVarDeclArrayOption(
+            ) [YesVarDeclArrayOption]
+          ) [DeclVariable]
+        ) [SingleVarDeclList]
+      ) [VarDeclNoError]
+    ) [VariableDeclaration]
+  ) [YesDeclarationList]
+  YesMethodDeclarationList(
+    NoMethodDeclarationList(
+    ) [NoMethodDeclarationList]
+    MethodDeclaration(
+      VoidMethodReturnType(
+      ) [VoidMethodReturnType]
+      MethodName(
+       main
+      ) [MethodName]
+      NoMethodParameters(
+      ) [NoMethodParameters]
+      NoMethodVariables(
+      ) [NoMethodVariables]
+      YesMethodBody(
+        YesMethodBody(
+          YesMethodBody(
+            YesMethodBody(
+              YesMethodBody(
+                NoMethodBody(
+                ) [NoMethodBody]
+                IfStatementDecl(
+                  IfStatement(
+                    IfConditionYesError(
+                    ) [IfConditionYesError]
+                    DesignatorStatementDecl(
+                      DesignatorStatement(
+                        Designator(
+                          DesignatorName(
+                           x
+                          ) [DesignatorName]
+                          NoOptionalDesignatorList(
+                          ) [NoOptionalDesignatorList]
+                        ) [Designator]
+                        IncrementDesignatorAddition(
+                        ) [IncrementDesignatorAddition]
+                      ) [DesignatorStatement]
+                    ) [DesignatorStatementDecl]
+                    NoOptionalStatement(
+                    ) [NoOptionalStatement]
+                  ) [IfStatement]
+                ) [IfStatementDecl]
+              ) [YesMethodBody]
+              IfStatementDecl(
+                IfStatement(
+                  IfConditionYesError(
+                  ) [IfConditionYesError]
+                  DesignatorStatementDecl(
+                    DesignatorStatement(
+                      Designator(
+                        DesignatorName(
+                         x
+                        ) [DesignatorName]
+                        NoOptionalDesignatorList(
+                        ) [NoOptionalDesignatorList]
+                      ) [Designator]
+                      DecrementDesignatorAddition(
+                      ) [DecrementDesignatorAddition]
+                    ) [DesignatorStatement]
+                  ) [DesignatorStatementDecl]
+                  NoOptionalStatement(
+                  ) [NoOptionalStatement]
+                ) [IfStatement]
+              ) [IfStatementDecl]
+            ) [YesMethodBody]
+            IfStatementDecl(
+              IfStatement(
+                IfConditionYesError(
+                ) [IfConditionYesError]
+                DesignatorStatementDecl(
+                  DesignatorStatement(
+                    Designator(
+                      DesignatorName(
+                       y
+                      ) [DesignatorName]
+                      NoOptionalDesignatorList(
+                      ) [NoOptionalDesignatorList]
+                    ) [Designator]
+                    PossibleErrorAssignOpDesignatorAddition(
+                      AssignOpExprDesignatorAdditionNoError(
+                        Assignop(
+                        ) [Assignop]
+                        NoTernaryExpr(
+                          SingleCondition(
+                            SingleCondTerm(
+                              SingleCondFact(
+                                TermFiniteExpr(
+                                  Term(
+                                    IntFactor(
+                                     5
+                                    ) [IntFactor]
+                                    NoOptionalFactors(
+                                    ) [NoOptionalFactors]
+                                  ) [Term]
+                                  NoOptionalTermList(
+                                  ) [NoOptionalTermList]
+                                ) [TermFiniteExpr]
+                              ) [SingleCondFact]
+                            ) [SingleCondTerm]
+                          ) [SingleCondition]
+                        ) [NoTernaryExpr]
+                      ) [AssignOpExprDesignatorAdditionNoError]
+                    ) [PossibleErrorAssignOpDesignatorAddition]
+                  ) [DesignatorStatement]
+                ) [DesignatorStatementDecl]
+                NoOptionalStatement(
+                ) [NoOptionalStatement]
+              ) [IfStatement]
+            ) [IfStatementDecl]
+          ) [YesMethodBody]
+          IfStatementDecl(
+            IfStatement(
+              IfConditionYesError(
+              ) [IfConditionYesError]
+              PrintStatementDecl(
+                PrintStatement(
+                  NoTernaryExpr(
+                    SingleCondition(
+                      SingleCondTerm(
+                        SingleCondFact(
+                          TermFiniteExpr(
+                            Term(
+                              DesignatorFactor(
+                                Designator(
+                                  DesignatorName(
+                                   eol
+                                  ) [DesignatorName]
+                                  NoOptionalDesignatorList(
+                                  ) [NoOptionalDesignatorList]
+                                ) [Designator]
+                              ) [DesignatorFactor]
+                              NoOptionalFactors(
+                              ) [NoOptionalFactors]
+                            ) [Term]
+                            NoOptionalTermList(
+                            ) [NoOptionalTermList]
+                          ) [TermFiniteExpr]
+                        ) [SingleCondFact]
+                      ) [SingleCondTerm]
+                    ) [SingleCondition]
+                  ) [NoTernaryExpr]
+                  OptionalNoPrintNumber(
+                  ) [OptionalNoPrintNumber]
+                ) [PrintStatement]
+              ) [PrintStatementDecl]
+              NoOptionalStatement(
+              ) [NoOptionalStatement]
+            ) [IfStatement]
+          ) [IfStatementDecl]
+        ) [YesMethodBody]
+        IfStatementDecl(
+          IfStatement(
+            IfConditionNoError(
+              PluralCondition(
+                SingleCondition(
+                  PluralCondTerm(
+                    SingleCondTerm(
+                      SingleCondFact(
+                        TermFiniteExpr(
+                          Term(
+                            BoolFactor(
+                             true
+                            ) [BoolFactor]
+                            NoOptionalFactors(
+                            ) [NoOptionalFactors]
+                          ) [Term]
+                          NoOptionalTermList(
+                          ) [NoOptionalTermList]
+                        ) [TermFiniteExpr]
+                      ) [SingleCondFact]
+                    ) [SingleCondTerm]
+                    SingleCondFact(
+                      TermFiniteExpr(
+                        Term(
+                          BoolFactor(
+                           false
+                          ) [BoolFactor]
+                          NoOptionalFactors(
+                          ) [NoOptionalFactors]
+                        ) [Term]
+                        NoOptionalTermList(
+                        ) [NoOptionalTermList]
+                      ) [TermFiniteExpr]
+                    ) [SingleCondFact]
+                  ) [PluralCondTerm]
+                ) [SingleCondition]
+                SingleCondTerm(
+                  SingleCondFact(
+                    TermFiniteExpr(
+                      Term(
+                        BoolFactor(
+                         true
+                        ) [BoolFactor]
+                        NoOptionalFactors(
+                        ) [NoOptionalFactors]
+                      ) [Term]
+                      NoOptionalTermList(
+                      ) [NoOptionalTermList]
+                    ) [TermFiniteExpr]
+                  ) [SingleCondFact]
+                ) [SingleCondTerm]
+              ) [PluralCondition]
+            ) [IfConditionNoError]
+            PrintStatementDecl(
+              PrintStatement(
+                NoTernaryExpr(
+                  SingleCondition(
+                    SingleCondTerm(
+                      SingleCondFact(
+                        TermFiniteExpr(
+                          Term(
+                            DesignatorFactor(
+                              Designator(
+                                DesignatorName(
+                                 eof
+                                ) [DesignatorName]
+                                NoOptionalDesignatorList(
+                                ) [NoOptionalDesignatorList]
+                              ) [Designator]
+                            ) [DesignatorFactor]
+                            NoOptionalFactors(
+                            ) [NoOptionalFactors]
+                          ) [Term]
+                          NoOptionalTermList(
+                          ) [NoOptionalTermList]
+                        ) [TermFiniteExpr]
+                      ) [SingleCondFact]
+                    ) [SingleCondTerm]
+                  ) [SingleCondition]
+                ) [NoTernaryExpr]
+                OptionalNoPrintNumber(
+                ) [OptionalNoPrintNumber]
+              ) [PrintStatement]
+            ) [PrintStatementDecl]
+            NoOptionalStatement(
+            ) [NoOptionalStatement]
+          ) [IfStatement]
+        ) [IfStatementDecl]
+      ) [YesMethodBody]
+    ) [MethodDeclaration]
+  ) [YesMethodDeclarationList]
+) [Program]
+INFO  14:08:01,125 - ===================================
+INFO  14:08:01,141 -  Print count calls = 0
+INFO  14:08:01,141 -  Deklarisanih promenljivih ima = 0
