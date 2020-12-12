@@ -91,7 +91,7 @@ nonterminal PrintStatement, ReadStatement, Designator, DesignatorAddition, Desig
 nonterminal OptionalDesignator, OptionalDesignatorName, DesignatorActPars, Assignop;
 nonterminal Expr, ActPars, OptionalStatement, ElseStatement, Condition, OptionalTermList;
 nonterminal ReturnExpr, OptionalPrintNumber, PrintNumber, OptionalExpressions, OptionalExpr, FiniteExpr;
-nonterminal Term, Addop, Factor, OptionalFactors, OptionalFactor, Mulop;
+nonterminal Term, Addop, Factor, OptionalFactors, OptionalFactor, Mulop, AssignOpExprDesignatorAddition;
 
 /* PRECEDENCE */
 precedence left ELSE;
@@ -125,13 +125,20 @@ Declaration ::=
 ConstDecl ::=
         (ConstDeclNoError) CONST Type ConstDeclList SEMICOLON
         |
-        (ConstDeclYesError) CONST error:error
-        {: parser.report_error("Successful error recovery by parser on line " + errorleft + " -> ConstDecl", null); :}
+        (ConstDeclYesError) CONST error:error SEMICOLON
+        {:
+        	parser.report_error("Successful error recovery by parser on line " + errorleft + " -> Constant Declaration", null);
+        :}
         ;
 ConstDeclList ::=
         (PluralConstDeclList) ConstDeclList COMMA ConstDeclVariable
         |
         (SingleConstDeclList) ConstDeclVariable
+        |
+        (ErrorConstDeclList) error:error
+        {:
+        	parser.report_error("Successful error recovery by parser on line " + errorleft + " -> Constant Declaration", null);
+        :}
         ;
 ConstDeclVariable ::=
         (ConstDeclVariableNoError) ConstDeclName ASSIGN ConstDeclValue
@@ -155,12 +162,19 @@ VarDecl ::=
         (VarDeclNoError) Type VarDeclList SEMICOLON
         |
         (VarDeclYesError) error:error SEMICOLON
-       	{: parser.report_error("Successful error recovery by parser on line " + errorleft + " -> VarDecl", null); :}
+       	{:
+       		parser.report_error("Successful error recovery by parser on line " + errorleft + " -> Variable Declaration", null);
+       	:}
         ;
 VarDeclList ::=
         (PluralVarDeclList) VarDeclList COMMA DeclVariable
         |
         (SingleVarDeclList) DeclVariable
+        |
+        (ErrorVarDeclList) error:error
+       	{:
+       		parser.report_error("Successful error recovery by parser on line " + errorleft + " -> Variable Declaration", null);
+        :}
         ;
 DeclVariable ::=
         (DeclVariable) VarDeclName VarDeclArrayOption
@@ -295,7 +309,7 @@ OptionalDesignatorName ::=
         (OptionalDesignatorName) IDENTIFIER:name
         ;
 DesignatorAddition ::=
-		(AssignOpExprDesignatorAddition) Assignop Expr
+		(PossibleErrorDesignatorAddition) AssignOpExprDesignatorAddition
 		|
 		(ActParsDesignatorAddition) LEFT_PARENTHESIS DesignatorActPars RIGHT_PARENTHESIS
 		|
@@ -303,6 +317,15 @@ DesignatorAddition ::=
 		|
 		(DecrementDesignatorAddition) DECREMENT
 		;
+AssignOpExprDesignatorAddition ::=
+		(AssignOpExprDesignatorAdditionNoError) Assignop Expr
+		|
+		(AssignOpExprDesignatorAdditionYesError) error:error
+		{:
+			parser.report_error("Successful error recovery by parser on line " + errorleft + " -> Designator Assignment", null);
+        :}
+		;
+
 DesignatorActPars ::=
 		(YesDesignatorActPars) ActPars
 		|

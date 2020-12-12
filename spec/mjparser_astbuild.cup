@@ -143,6 +143,7 @@ nonterminal Factor Factor;
 nonterminal OptionalFactors OptionalFactors;
 nonterminal OptionalFactor OptionalFactor;
 nonterminal Mulop Mulop;
+nonterminal AssignOpExprDesignatorAddition AssignOpExprDesignatorAddition;
 
 /* PRECEDENCE */
 precedence left ELSE;
@@ -176,13 +177,20 @@ Declaration ::=
 ConstDecl ::=
         (ConstDeclNoError) CONST Type:T1 ConstDeclList:C2 SEMICOLON {: RESULT=new ConstDeclNoError(T1, C2); RESULT.setLine(T1left); :}
         |
-        (ConstDeclYesError) CONST error:error
-        {: parser.report_error("Successful error recovery by parser on line " + errorleft + " -> ConstDecl", null); :} {: RESULT=new ConstDeclYesError(); :}
+        (ConstDeclYesError) CONST error:error SEMICOLON
+        {:
+        	parser.report_error("Successful error recovery by parser on line " + errorleft + " -> Constant Declaration", null);
+        :} {: RESULT=new ConstDeclYesError(); :}
         ;
 ConstDeclList ::=
         (PluralConstDeclList) ConstDeclList:C1 COMMA ConstDeclVariable:C2 {: RESULT=new PluralConstDeclList(C1, C2); RESULT.setLine(C1left); :}
         |
         (SingleConstDeclList) ConstDeclVariable:C1 {: RESULT=new SingleConstDeclList(C1); RESULT.setLine(C1left); :}
+        |
+        (ErrorConstDeclList) error:error
+        {:
+        	parser.report_error("Successful error recovery by parser on line " + errorleft + " -> Constant Declaration", null);
+        :} {: RESULT=new ErrorConstDeclList(); :}
         ;
 ConstDeclVariable ::=
         (ConstDeclVariableNoError) ConstDeclName:C1 ASSIGN ConstDeclValue:C2 {: RESULT=new ConstDeclVariableNoError(C1, C2); RESULT.setLine(C1left); :}
@@ -206,12 +214,19 @@ VarDecl ::=
         (VarDeclNoError) Type:T1 VarDeclList:V2 SEMICOLON {: RESULT=new VarDeclNoError(T1, V2); RESULT.setLine(T1left); :}
         |
         (VarDeclYesError) error:error SEMICOLON
-       	{: parser.report_error("Successful error recovery by parser on line " + errorleft + " -> VarDecl", null); :} {: RESULT=new VarDeclYesError(); :}
+       	{:
+       		parser.report_error("Successful error recovery by parser on line " + errorleft + " -> Variable Declaration", null);
+       	:} {: RESULT=new VarDeclYesError(); :}
         ;
 VarDeclList ::=
         (PluralVarDeclList) VarDeclList:V1 COMMA DeclVariable:D2 {: RESULT=new PluralVarDeclList(V1, D2); RESULT.setLine(V1left); :}
         |
         (SingleVarDeclList) DeclVariable:D1 {: RESULT=new SingleVarDeclList(D1); RESULT.setLine(D1left); :}
+        |
+        (ErrorVarDeclList) error:error
+       	{:
+       		parser.report_error("Successful error recovery by parser on line " + errorleft + " -> Variable Declaration", null);
+        :} {: RESULT=new ErrorVarDeclList(); :}
         ;
 DeclVariable ::=
         (DeclVariable) VarDeclName:V1 VarDeclArrayOption:V2 {: RESULT=new DeclVariable(V1, V2); RESULT.setLine(V1left); :}
@@ -346,7 +361,7 @@ OptionalDesignatorName ::=
         (OptionalDesignatorName) IDENTIFIER:name {: RESULT=new OptionalDesignatorName(name); RESULT.setLine(nameleft); :}
         ;
 DesignatorAddition ::=
-		(AssignOpExprDesignatorAddition) Assignop:A1 Expr:E2 {: RESULT=new AssignOpExprDesignatorAddition(A1, E2); RESULT.setLine(A1left); :}
+		(PossibleErrorDesignatorAddition) AssignOpExprDesignatorAddition:A1 {: RESULT=new PossibleErrorDesignatorAddition(A1); RESULT.setLine(A1left); :}
 		|
 		(ActParsDesignatorAddition) LEFT_PARENTHESIS DesignatorActPars:D1 RIGHT_PARENTHESIS {: RESULT=new ActParsDesignatorAddition(D1); RESULT.setLine(D1left); :}
 		|
@@ -354,6 +369,15 @@ DesignatorAddition ::=
 		|
 		(DecrementDesignatorAddition) DECREMENT {: RESULT=new DecrementDesignatorAddition(); :}
 		;
+AssignOpExprDesignatorAddition ::=
+		(AssignOpExprDesignatorAdditionNoError) Assignop:A1 Expr:E2 {: RESULT=new AssignOpExprDesignatorAdditionNoError(A1, E2); RESULT.setLine(A1left); :}
+		|
+		(AssignOpExprDesignatorAdditionYesError) error:error
+		{:
+			parser.report_error("Successful error recovery by parser on line " + errorleft + " -> Designator Assignment", null);
+        :} {: RESULT=new AssignOpExprDesignatorAdditionYesError(); :}
+		;
+
 DesignatorActPars ::=
 		(YesDesignatorActPars) ActPars:A1 {: RESULT=new YesDesignatorActPars(A1); RESULT.setLine(A1left); :}
 		|

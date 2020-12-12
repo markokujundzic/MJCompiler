@@ -1,78 +1,37 @@
 // generated with ast extension for cup
 // version 0.8
-// 11/11/2020 23:31:44
+// 12/11/2020 11:42:13
 
 
 package rs.ac.bg.etf.pp1.ast;
 
-public class AssignOpExprDesignatorAddition extends DesignatorAddition {
+public abstract class AssignOpExprDesignatorAddition implements SyntaxNode {
 
-    private Assignop Assignop;
-    private Expr Expr;
+    private SyntaxNode parent;
 
-    public AssignOpExprDesignatorAddition (Assignop Assignop, Expr Expr) {
-        this.Assignop=Assignop;
-        if(Assignop!=null) Assignop.setParent(this);
-        this.Expr=Expr;
-        if(Expr!=null) Expr.setParent(this);
+    private int line;
+
+    public SyntaxNode getParent() {
+        return parent;
     }
 
-    public Assignop getAssignop() {
-        return Assignop;
+    public void setParent(SyntaxNode parent) {
+        this.parent=parent;
     }
 
-    public void setAssignop(Assignop Assignop) {
-        this.Assignop=Assignop;
+    public int getLine() {
+        return line;
     }
 
-    public Expr getExpr() {
-        return Expr;
+    public void setLine(int line) {
+        this.line=line;
     }
 
-    public void setExpr(Expr Expr) {
-        this.Expr=Expr;
-    }
+    public abstract void accept(Visitor visitor);
+    public abstract void childrenAccept(Visitor visitor);
+    public abstract void traverseTopDown(Visitor visitor);
+    public abstract void traverseBottomUp(Visitor visitor);
 
-    public void accept(Visitor visitor) {
-        visitor.visit(this);
-    }
-
-    public void childrenAccept(Visitor visitor) {
-        if(Assignop!=null) Assignop.accept(visitor);
-        if(Expr!=null) Expr.accept(visitor);
-    }
-
-    public void traverseTopDown(Visitor visitor) {
-        accept(visitor);
-        if(Assignop!=null) Assignop.traverseTopDown(visitor);
-        if(Expr!=null) Expr.traverseTopDown(visitor);
-    }
-
-    public void traverseBottomUp(Visitor visitor) {
-        if(Assignop!=null) Assignop.traverseBottomUp(visitor);
-        if(Expr!=null) Expr.traverseBottomUp(visitor);
-        accept(visitor);
-    }
-
-    public String toString(String tab) {
-        StringBuffer buffer=new StringBuffer();
-        buffer.append(tab);
-        buffer.append("AssignOpExprDesignatorAddition(\n");
-
-        if(Assignop!=null)
-            buffer.append(Assignop.toString("  "+tab));
-        else
-            buffer.append(tab+"  null");
-        buffer.append("\n");
-
-        if(Expr!=null)
-            buffer.append(Expr.toString("  "+tab));
-        else
-            buffer.append(tab+"  null");
-        buffer.append("\n");
-
-        buffer.append(tab);
-        buffer.append(") [AssignOpExprDesignatorAddition]");
-        return buffer.toString();
-    }
+    public String toString() { return toString(""); }
+    public abstract String toString(String tab);
 }

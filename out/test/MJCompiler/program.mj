@@ -2,10 +2,11 @@
 
 program test302
 
-const int jedan = 1;
+const int i=*, k = 5, l = ,;
+int x, +, y[];
 
-int i;
-bool ibool;
+int niz[],;
+bool ibool{};
 
 int niz[];
 
@@ -35,7 +36,7 @@ int niz[];
 		if(1!=1) print(-6);
 		else print(0);  
 			
-		ibool = false;
+		ibool = false,;
 		i = 0;
 		do{
 			if(i == 2) ibool = true;
@@ -47,8 +48,8 @@ int niz[];
 			else print(-1);
 		
 		niz = new int[3];
-		niz[0] = 1;
-		niz[1] = 2;
+		niz[0] = ;
+		niz[1] = true ? false :;
 		niz[2] = sum(niz[1], niz[0]) + 1;
 		if(verify() || niz[2] == 4) print(ord('A')); 
 		else print(ord('a'));

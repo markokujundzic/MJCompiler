@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 11/11/2020 23:31:44
+// 12/11/2020 11:42:13
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -22,6 +22,7 @@ public interface Visitor {
     public void visit(Factor Factor);
     public void visit(CondTerm CondTerm);
     public void visit(DesignatorActPars DesignatorActPars);
+    public void visit(AssignOpExprDesignatorAddition AssignOpExprDesignatorAddition);
     public void visit(Condition Condition);
     public void visit(OptionalFactors OptionalFactors);
     public void visit(ConstDeclList ConstDeclList);
@@ -99,10 +100,12 @@ public interface Visitor {
     public void visit(IfStatement IfStatement);
     public void visit(DesignatorNoActPars DesignatorNoActPars);
     public void visit(YesDesignatorActPars YesDesignatorActPars);
+    public void visit(AssignOpExprDesignatorAdditionYesError AssignOpExprDesignatorAdditionYesError);
+    public void visit(AssignOpExprDesignatorAdditionNoError AssignOpExprDesignatorAdditionNoError);
     public void visit(DecrementDesignatorAddition DecrementDesignatorAddition);
     public void visit(IncrementDesignatorAddition IncrementDesignatorAddition);
     public void visit(ActParsDesignatorAddition ActParsDesignatorAddition);
-    public void visit(AssignOpExprDesignatorAddition AssignOpExprDesignatorAddition);
+    public void visit(PossibleErrorDesignatorAddition PossibleErrorDesignatorAddition);
     public void visit(OptionalDesignatorName OptionalDesignatorName);
     public void visit(ExprOptionalDesignator ExprOptionalDesignator);
     public void visit(PeriodOptionalDesignator PeriodOptionalDesignator);
@@ -144,6 +147,7 @@ public interface Visitor {
     public void visit(YesVarDeclArrayOption YesVarDeclArrayOption);
     public void visit(VarDeclName VarDeclName);
     public void visit(DeclVariable DeclVariable);
+    public void visit(ErrorVarDeclList ErrorVarDeclList);
     public void visit(SingleVarDeclList SingleVarDeclList);
     public void visit(PluralVarDeclList PluralVarDeclList);
     public void visit(VarDeclYesError VarDeclYesError);
@@ -153,6 +157,7 @@ public interface Visitor {
     public void visit(ConstDeclValueInt ConstDeclValueInt);
     public void visit(ConstDeclName ConstDeclName);
     public void visit(ConstDeclVariableNoError ConstDeclVariableNoError);
+    public void visit(ErrorConstDeclList ErrorConstDeclList);
     public void visit(SingleConstDeclList SingleConstDeclList);
     public void visit(PluralConstDeclList PluralConstDeclList);
     public void visit(ConstDeclYesError ConstDeclYesError);
