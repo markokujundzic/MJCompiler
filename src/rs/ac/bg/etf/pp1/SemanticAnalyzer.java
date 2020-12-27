@@ -12,7 +12,9 @@ public class SemanticAnalyzer extends VisitorAdaptor
     private Logger log = Logger.getLogger(getClass());
 
     private boolean errorDetected = false;
+
     private int varDeclCount = 0;
+    private int currentConstValue = -1;
 
     private Struct currentType = null;
 
@@ -66,7 +68,7 @@ public class SemanticAnalyzer extends VisitorAdaptor
 
         if (typeNode == SymTab.noObj)
         {
-            report_error("Type " + type.getName() + " not found in Symbol Table, on line " + type.getLine(), null);
+            report_error("Type " + type.getName() + " not found in Symbol Table on line " + type.getLine(), null);
             type.struct = currentType = SymTab.noType;
         }
         else if (typeNode.getKind() == Obj.Type)
@@ -75,12 +77,12 @@ public class SemanticAnalyzer extends VisitorAdaptor
         }
         else
         {
-            report_error("Error: Identifier " + type.getName() + " does not represent a type, on line " + type.getLine(), null);
+            report_error("Error: Identifier " + type.getName() + " does not represent a type on line " + type.getLine(), null);
             type.struct = currentType = SymTab.noType;
         }
     }
 
-    /* Global variable */
+    /* Global variables */
     public void visit(DeclVariable declVariable)
     {
         varDeclCount++;
@@ -91,18 +93,58 @@ public class SemanticAnalyzer extends VisitorAdaptor
             if (declVariable.getVarDeclArrayOption() instanceof YesVarDeclArrayOption)
             {
                 SymTab.insert(Obj.Var, declVariable.getVarDeclName().getName(), new Struct(Struct.Array, currentType));
-                report_info("Global array " + declVariable.getVarDeclName().getName() + " declared, on line " + declVariable.getVarDeclName().getLine(), declVariable);
+                report_info("Global array " + declVariable.getVarDeclName().getName() + " declared on line " + declVariable.getVarDeclName().getLine(), declVariable);
             }
             else if (declVariable.getVarDeclArrayOption() instanceof NoVarDeclArrayOption)
             {
                 SymTab.insert(Obj.Var, declVariable.getVarDeclName().getName(), currentType);
-                report_info("Global variable " + declVariable.getVarDeclName().getName() + " declared, on line " + declVariable.getVarDeclName().getLine(), declVariable);
+                report_info("Global variable " + declVariable.getVarDeclName().getName() + " declared on line " + declVariable.getVarDeclName().getLine(), declVariable);
             }
         }
         else
         {
-            errorDetected = true;
-            report_error("Error: Global variable " + declVariable.getVarDeclName().getName() + " has already been declared, on line " + declVariable.getVarDeclName().getLine(), null);
+            report_error("Error: Global variable " + declVariable.getVarDeclName().getName() + " has already been declared on line " + declVariable.getVarDeclName().getLine(), null);
+        }
+    }
+
+    /* Constants */
+    public void visit(ConstDeclValueInt constDeclValueInt)
+    {
+        currentConstValue = constDeclValueInt.getValue();
+        constDeclValueInt.struct = SymTab.intType;
+    }
+
+    public void visit(ConstDeclValueChar constDeclValueChar)
+    {
+        currentConstValue = constDeclValueChar.getValue();
+        constDeclValueChar.struct = SymTab.charType;
+    }
+
+    public void visit(ConstDeclValueBool constDeclValueBool)
+    {
+        currentConstValue = constDeclValueBool.getValue() ? 1 : 0;
+        constDeclValueBool.struct = SymTab.boolType;
+    }
+    public void visit(ConstDeclVariableNoError constDeclVariableNoError)
+    {
+        Obj constNode = SymTab.find(constDeclVariableNoError.getConstDeclName().getName());
+
+        if (constNode == SymTab.noObj)
+        {
+            if (currentType.compatibleWith(constDeclVariableNoError.getConstDeclValue().struct))
+            {
+                Obj constant = SymTab.insert(Obj.Con, constDeclVariableNoError.getConstDeclName().getName(), constDeclVariableNoError.getConstDeclValue().struct);
+                constant.setAdr(currentConstValue);
+                report_info("Const array " + constDeclVariableNoError.getConstDeclName().getName() + " declared on line " + constDeclVariableNoError.getConstDeclName().getLine(), constDeclVariableNoError);
+            }
+            else
+            {
+                report_error("Error: Const variable " + constDeclVariableNoError.getConstDeclName().getName() + " is not compatible with assigning value on line " + constDeclVariableNoError.getConstDeclName().getLine(), null);
+            }
+        }
+        else
+        {
+            report_error("Error: Const variable " + constDeclVariableNoError.getConstDeclName().getName() + " has already been declared on line " + constDeclVariableNoError.getConstDeclName().getLine(), null);
         }
     }
 }

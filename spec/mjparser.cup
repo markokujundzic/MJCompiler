@@ -84,9 +84,11 @@ nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgramName, Program;
 
 nonterminal rs.etf.pp1.symboltable.concepts.Struct Type;
 
+nonterminal rs.etf.pp1.symboltable.concepts.Struct ConstDeclValue;
+
 nonterminal DeclarationList, Declaration, MethodDeclarationList;
 nonterminal ConstDecl, VarDecl, ConstDeclList, ConstDeclVariable;
-nonterminal ConstDeclName, ConstDeclValue, CondTerm, CondFact, Relop, PossibleErrorCondition;
+nonterminal ConstDeclName, CondTerm, CondFact, Relop, PossibleErrorCondition;
 nonterminal VarDeclList, DeclVariable, VarDeclName, VarDeclArrayOption;
 nonterminal MethodDeclaration, MethodReturnType, MethodName, MethodParameters, MethodVariables, MethodBody;
 nonterminal FormPars, Statement, FormParList, FormPar, FormParName, FormParArrayOption;

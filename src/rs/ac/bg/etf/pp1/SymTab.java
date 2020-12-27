@@ -5,7 +5,7 @@ import rs.etf.pp1.symboltable.concepts.*;
 
 public class SymTab extends Tab
 {
-    private static final Struct boolType = new Struct(Struct.Bool);
+    public static final Struct boolType = new Struct(Struct.Bool);
 
     public static void init()
     {
