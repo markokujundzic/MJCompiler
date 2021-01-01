@@ -72,7 +72,7 @@ terminal INCREMENT, DECREMENT;
 terminal IF, ELSE, DO, WHILE;
 terminal RETURN, READ, PRINT;
 terminal OR, AND, QUESTION_MARK, MINUS;
-terminal NEW, ENUM, PLUS;
+terminal NEW, PLUS;
 terminal MUL, DIV, MOD;
 terminal EQUAL, NOT_EQUAL;
 terminal GREATER, LESS;
@@ -80,11 +80,9 @@ terminal GREATER_OR_EQUAL;
 terminal LESS_OR_EQUAL;
 
 /* NONTERMINALS */
-nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgramName, Program;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgramName, Program, MethodName;
 
-nonterminal rs.etf.pp1.symboltable.concepts.Struct Type;
-
-nonterminal rs.etf.pp1.symboltable.concepts.Struct ConstDeclValue;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, MethodReturnType, ConstDeclValue;
 
 nonterminal DeclarationList DeclarationList;
 nonterminal Declaration Declaration;
@@ -103,8 +101,6 @@ nonterminal DeclVariable DeclVariable;
 nonterminal VarDeclName VarDeclName;
 nonterminal VarDeclArrayOption VarDeclArrayOption;
 nonterminal MethodDeclaration MethodDeclaration;
-nonterminal MethodReturnType MethodReturnType;
-nonterminal MethodName MethodName;
 nonterminal MethodParameters MethodParameters;
 nonterminal MethodVariables MethodVariables;
 nonterminal MethodBody MethodBody;
@@ -196,7 +192,7 @@ ConstDeclList ::=
 		:} {: RESULT=new ErrorConstDeclList(); :}
 		;
 ConstDeclVariable ::=
-		(ConstDeclVariableNoError) ConstDeclName:C1 ASSIGN ConstDeclValue:C2 {: RESULT=new ConstDeclVariableNoError(C1, C2); RESULT.setLine(C1left); :}
+		(ConstDeclVariable) ConstDeclName:C1 ASSIGN ConstDeclValue:C2 {: RESULT=new ConstDeclVariable(C1, C2); RESULT.setLine(C1left); :}
 		;
 ConstDeclName ::=
 		(ConstDeclName) IDENTIFIER:name {: RESULT=new ConstDeclName(name); RESULT.setLine(nameleft); :}

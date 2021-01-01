@@ -12,11 +12,22 @@ public class SemanticAnalyzer extends VisitorAdaptor
     private Logger log = Logger.getLogger(getClass());
 
     private boolean errorDetected = false;
+    private boolean returnFound = false;
+    private boolean mainFound = false;
+
+    private Obj currentMethod = null;
 
     private int varDeclCount = 0;
     private int currentConstValue = -1;
 
     private Struct currentType = null;
+    private Struct curerntMethodReturnType = null;
+
+    /* Error */
+    public boolean passed()
+    {
+        return !errorDetected;
+    }
 
     /* Report error */
     public void report_error(String message, SyntaxNode info)
@@ -57,6 +68,10 @@ public class SemanticAnalyzer extends VisitorAdaptor
 
     public void visit(Program program)
     {
+        if (!mainFound)
+        {
+            report_error("Semantic error: Method main has not been declared!", null);
+        }
         SymTab.chainLocalSymbols(program.getProgramName().obj);
         SymTab.closeScope();
     }
@@ -77,7 +92,7 @@ public class SemanticAnalyzer extends VisitorAdaptor
         }
         else
         {
-            report_error("Error: Identifier " + type.getName() + " does not represent a type on line " + type.getLine(), null);
+            report_error("Semantic Error: Identifier " + type.getName() + " does not represent a type on line " + type.getLine(), null);
             type.struct = currentType = SymTab.noType;
         }
     }
@@ -93,17 +108,17 @@ public class SemanticAnalyzer extends VisitorAdaptor
             if (declVariable.getVarDeclArrayOption() instanceof YesVarDeclArrayOption)
             {
                 SymTab.insert(Obj.Var, declVariable.getVarDeclName().getName(), new Struct(Struct.Array, currentType));
-                report_info("Global array " + declVariable.getVarDeclName().getName() + " declared on line " + declVariable.getVarDeclName().getLine(), declVariable);
+                report_info("Global array " + declVariable.getVarDeclName().getName() + " declared", declVariable);
             }
             else if (declVariable.getVarDeclArrayOption() instanceof NoVarDeclArrayOption)
             {
                 SymTab.insert(Obj.Var, declVariable.getVarDeclName().getName(), currentType);
-                report_info("Global variable " + declVariable.getVarDeclName().getName() + " declared on line " + declVariable.getVarDeclName().getLine(), declVariable);
+                report_info("Global variable " + declVariable.getVarDeclName().getName() + " declared", declVariable);
             }
         }
         else
         {
-            report_error("Error: Global variable " + declVariable.getVarDeclName().getName() + " has already been declared on line " + declVariable.getVarDeclName().getLine(), null);
+            report_error("Semantic Error: Global variable " + declVariable.getVarDeclName().getName() + " has already been declared on line " + declVariable.getVarDeclName().getLine(), null);
         }
     }
 
@@ -125,26 +140,89 @@ public class SemanticAnalyzer extends VisitorAdaptor
         currentConstValue = constDeclValueBool.getValue() ? 1 : 0;
         constDeclValueBool.struct = SymTab.boolType;
     }
-    public void visit(ConstDeclVariableNoError constDeclVariableNoError)
+
+    public void visit(ConstDeclVariable constDeclVariable)
     {
-        Obj constNode = SymTab.find(constDeclVariableNoError.getConstDeclName().getName());
+        Obj constNode = SymTab.find(constDeclVariable.getConstDeclName().getName());
 
         if (constNode == SymTab.noObj)
         {
-            if (currentType.compatibleWith(constDeclVariableNoError.getConstDeclValue().struct))
+            if (currentType.compatibleWith(constDeclVariable.getConstDeclValue().struct))
             {
-                Obj constant = SymTab.insert(Obj.Con, constDeclVariableNoError.getConstDeclName().getName(), constDeclVariableNoError.getConstDeclValue().struct);
+                Obj constant = SymTab.insert(Obj.Con, constDeclVariable.getConstDeclName().getName(), constDeclVariable.getConstDeclValue().struct);
                 constant.setAdr(currentConstValue);
-                report_info("Const array " + constDeclVariableNoError.getConstDeclName().getName() + " declared on line " + constDeclVariableNoError.getConstDeclName().getLine(), constDeclVariableNoError);
+                report_info("Const variable " + constDeclVariable.getConstDeclName().getName() + " declared", constDeclVariable);
             }
             else
             {
-                report_error("Error: Const variable " + constDeclVariableNoError.getConstDeclName().getName() + " is not compatible with assigning value on line " + constDeclVariableNoError.getConstDeclName().getLine(), null);
+                report_error("Semantic Error: Const variable " + constDeclVariable.getConstDeclName().getName() + " is not compatible with assigning value on line " + constDeclVariable.getConstDeclName().getLine(), null);
             }
         }
         else
         {
-            report_error("Error: Const variable " + constDeclVariableNoError.getConstDeclName().getName() + " has already been declared on line " + constDeclVariableNoError.getConstDeclName().getLine(), null);
+            report_error("Semantic Error: Const variable " + constDeclVariable.getConstDeclName().getName() + " has already been declared on line " + constDeclVariable.getConstDeclName().getLine(), null);
         }
+    }
+
+    /* Methods */
+    public void visit(TypeMethodReturnType typeMethodReturnType)
+    {
+        curerntMethodReturnType = typeMethodReturnType.getType().struct;
+    }
+
+    public void visit(VoidMethodReturnType voidMethodReturnType)
+    {
+        curerntMethodReturnType = SymTab.noType;
+    }
+
+    public void visit(MethodName methodName)
+    {
+        Obj method = SymTab.find(methodName.getName());
+
+        if (method == SymTab.noObj)
+        {
+            methodName.obj = currentMethod = SymTab.insert(Obj.Meth, methodName.getName(), curerntMethodReturnType);
+
+            SymTab.openScope();
+            report_info("Method " + currentMethod.getName() + " declared", methodName);
+
+            if (methodName.getName().equals("main"))
+            {
+                mainFound = true;
+            }
+
+            if (methodName.getName().equals("main") && curerntMethodReturnType != SymTab.noType)
+            {
+                report_error("Semantic Error: Method " + methodName.getName() + " must return void on line " + methodName.getLine(), null);
+            }
+        }
+        else
+        {
+            report_error("Semantic Error: Method " + methodName.getName() + " has already been declared on line " + methodName.getLine(), null);
+        }
+    }
+
+    public void visit(MethodDeclaration methodDeclaration)
+    {
+        if (!methodDeclaration.getMethodName().getName().equals("main") && !returnFound && curerntMethodReturnType != SymTab.noType)
+        {
+            report_error("Semantic Error: Method " + currentMethod.getName() + " does not have a return statement on line " + methodDeclaration.getLine(), null);
+        }
+        else if (returnFound && curerntMethodReturnType == SymTab.noType)
+        {
+            report_error("Semantic Error: Method " + currentMethod.getName() + " of type void has a return statement on line " + methodDeclaration.getLine(), null);
+        }
+
+        SymTab.chainLocalSymbols(currentMethod);
+        SymTab.closeScope();
+
+        currentMethod = null;
+        curerntMethodReturnType = null;
+        returnFound = false;
+    }
+
+    public void visit()
+    {
+
     }
 }

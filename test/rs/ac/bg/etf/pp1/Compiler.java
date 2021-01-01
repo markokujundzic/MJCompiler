@@ -2,7 +2,6 @@ package rs.ac.bg.etf.pp1;
 
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.Reader;
@@ -15,47 +14,56 @@ import org.apache.log4j.xml.DOMConfigurator;
 import rs.ac.bg.etf.pp1.ast.Program;
 import rs.ac.bg.etf.pp1.util.Log4JUtils;
 
-public class MJParserTest {
+public class Compiler
+{
 
-	static {
+	static
+	{
 		DOMConfigurator.configure(Log4JUtils.instance().findLoggerConfigFile());
 		Log4JUtils.instance().prepareLogFile(Logger.getRootLogger());
 	}
 	
-	public static void main(String[] args) throws Exception {
+	public static void main(String[] args) throws Exception
+	{
 		
-		Logger log = Logger.getLogger(MJParserTest.class);
+		Logger log = Logger.getLogger(Compiler.class);
 		
 		Reader br = null;
-		try {
+		try
+		{
 			File sourceCode = new File("test/program.mj");
 			log.info("Compiling source file: " + sourceCode.getAbsolutePath());
 			
 			br = new BufferedReader(new FileReader(sourceCode));
 			Yylex lexer = new Yylex(br);
 			
-			MJParser p = new MJParser(lexer);
-	        Symbol s = p.parse();  //pocetak parsiranja
+			MJParser parser = new MJParser(lexer);
+	        Symbol symbol = parser.parse();
 	        
-	        Program prog = (Program)(s.value); 
-			// ispis sintaksnog stabla
-			log.info(prog.toString(""));
+	        Program program = (Program)(symbol.value);
+	        SymTab.init();
+
+			log.info(program.toString(""));
 			log.info("===================================");
 
-			// ispis prepoznatih programskih konstrukcija
-			RuleVisitor v = new RuleVisitor();
-			prog.traverseBottomUp(v); 
-	      
-			log.info(" Print count calls = " + v.printCallCount);
 
-			log.info(" Deklarisanih promenljivih ima = " + v.varDeclCount);
-			
+			SemanticAnalyzer semanticAnalyzer = new SemanticAnalyzer();
+			program.traverseBottomUp(semanticAnalyzer);
+
+			SymTab.dump();
+
+			if (!parser.errorDetected && semanticAnalyzer.passed())
+			{
+				log.info("Parsing finished successfully");
+			}
+			else
+			{
+				log.error("Parsing finished unsuccessfully");
+			}
 		} 
-		finally {
+		finally
+		{
 			if (br != null) try { br.close(); } catch (IOException e1) { log.error(e1.getMessage(), e1); }
 		}
-
 	}
-	
-	
 }

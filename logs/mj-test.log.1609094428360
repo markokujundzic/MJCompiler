@@ -1,0 +1,89 @@
+INFO  19:39:46,401 - Compiling source file: C:\Users\Asus\Desktop\FAKS\PP1\MJCompiler\test\program.mj
+INFO  19:39:46,483 - #2 program
+INFO  19:39:46,484 - #9 prog
+INFO  19:39:46,484 - #5 const
+INFO  19:39:46,485 - #9 int
+INFO  19:39:46,485 - #9 jedan
+INFO  19:39:46,486 - #8 =
+INFO  19:39:46,487 - #11 false
+INFO  19:39:46,487 - #6 ;
+INFO  19:39:46,488 - #5 const
+INFO  19:39:46,489 - #9 bool
+INFO  19:39:46,489 - #9 tmp
+INFO  19:39:46,489 - #8 =
+INFO  19:39:46,489 - #11 false
+INFO  19:39:46,489 - #6 ;
+INFO  19:39:46,489 - #3 {
+INFO  19:39:46,489 - #15 void
+INFO  19:39:46,490 - #9 main
+INFO  19:39:46,491 - #13 (
+INFO  19:39:46,492 - #14 )
+INFO  19:39:46,493 - #3 {
+INFO  19:39:46,493 - #4 }
+INFO  19:39:46,494 - #4 }
+INFO  19:39:46,509 - Program(
+  ProgramName(
+   prog
+  ) [ProgramName]
+  YesDeclarationList(
+    YesDeclarationList(
+      NoDeclarationList(
+      ) [NoDeclarationList]
+      ConstantDeclaration(
+        ConstDeclNoError(
+          Type(
+           int
+          ) [Type]
+          SingleConstDeclList(
+            ConstDeclVariable(
+              ConstDeclName(
+               jedan
+              ) [ConstDeclName]
+              ConstDeclValueBool(
+               false
+              ) [ConstDeclValueBool]
+            ) [ConstDeclVariable]
+          ) [SingleConstDeclList]
+        ) [ConstDeclNoError]
+      ) [ConstantDeclaration]
+    ) [YesDeclarationList]
+    ConstantDeclaration(
+      ConstDeclNoError(
+        Type(
+         bool
+        ) [Type]
+        SingleConstDeclList(
+          ConstDeclVariable(
+            ConstDeclName(
+             tmp
+            ) [ConstDeclName]
+            ConstDeclValueBool(
+             false
+            ) [ConstDeclValueBool]
+          ) [ConstDeclVariable]
+        ) [SingleConstDeclList]
+      ) [ConstDeclNoError]
+    ) [ConstantDeclaration]
+  ) [YesDeclarationList]
+  YesMethodDeclarationList(
+    NoMethodDeclarationList(
+    ) [NoMethodDeclarationList]
+    MethodDeclaration(
+      VoidMethodReturnType(
+      ) [VoidMethodReturnType]
+      MethodName(
+       main
+      ) [MethodName]
+      NoMethodParameters(
+      ) [NoMethodParameters]
+      NoMethodVariables(
+      ) [NoMethodVariables]
+      NoMethodBody(
+      ) [NoMethodBody]
+    ) [MethodDeclaration]
+  ) [YesMethodDeclarationList]
+) [Program]
+INFO  19:39:46,510 - ===================================
+ERROR 19:39:46,512 - Error: Const variable jedan is not compatible with assigning value on line 3
+INFO  19:39:46,512 - Const variable tmp declared on line 4
+INFO  19:39:46,512 - ===================================

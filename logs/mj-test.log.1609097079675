@@ -1,0 +1,174 @@
+INFO  20:24:15,634 - Compiling source file: C:\Users\Asus\Desktop\FAKS\PP1\MJCompiler\test\program.mj
+INFO  20:24:15,713 - #2 program
+INFO  20:24:15,713 - #9 prog
+INFO  20:24:15,713 - #5 const
+INFO  20:24:15,715 - #9 int
+INFO  20:24:15,715 - #9 jedan
+INFO  20:24:15,716 - #8 =
+INFO  20:24:15,717 - #10 4
+INFO  20:24:15,717 - #6 ;
+INFO  20:24:15,718 - #5 const
+INFO  20:24:15,718 - #9 bool
+INFO  20:24:15,718 - #9 tmp
+INFO  20:24:15,718 - #8 =
+INFO  20:24:15,718 - #11 true
+INFO  20:24:15,718 - #6 ;
+INFO  20:24:15,718 - #9 int
+INFO  20:24:15,718 - #9 x
+INFO  20:24:15,718 - #7 ,
+INFO  20:24:15,721 - #9 z
+INFO  20:24:15,721 - #20 [
+INFO  20:24:15,721 - #21 ]
+INFO  20:24:15,721 - #6 ;
+INFO  20:24:15,722 - #9 int
+INFO  20:24:15,728 - #9 y
+INFO  20:24:15,728 - #20 [
+INFO  20:24:15,728 - #21 ]
+INFO  20:24:15,728 - #6 ;
+INFO  20:24:15,728 - #9 bool
+INFO  20:24:15,728 - #9 array
+INFO  20:24:15,728 - #20 [
+INFO  20:24:15,728 - #21 ]
+INFO  20:24:15,728 - #6 ;
+INFO  20:24:15,728 - #3 {
+INFO  20:24:15,728 - #15 void
+INFO  20:24:15,729 - #9 main
+INFO  20:24:15,730 - #13 (
+INFO  20:24:15,731 - #14 )
+INFO  20:24:15,732 - #3 {
+INFO  20:24:15,733 - #4 }
+INFO  20:24:15,734 - #4 }
+INFO  20:24:15,743 - Program(
+  ProgramName(
+   prog
+  ) [ProgramName]
+  YesDeclarationList(
+    YesDeclarationList(
+      YesDeclarationList(
+        YesDeclarationList(
+          YesDeclarationList(
+            NoDeclarationList(
+            ) [NoDeclarationList]
+            ConstantDeclaration(
+              ConstDeclNoError(
+                Type(
+                 int
+                ) [Type]
+                SingleConstDeclList(
+                  ConstDeclVariable(
+                    ConstDeclName(
+                     jedan
+                    ) [ConstDeclName]
+                    ConstDeclValueInt(
+                     4
+                    ) [ConstDeclValueInt]
+                  ) [ConstDeclVariable]
+                ) [SingleConstDeclList]
+              ) [ConstDeclNoError]
+            ) [ConstantDeclaration]
+          ) [YesDeclarationList]
+          ConstantDeclaration(
+            ConstDeclNoError(
+              Type(
+               bool
+              ) [Type]
+              SingleConstDeclList(
+                ConstDeclVariable(
+                  ConstDeclName(
+                   tmp
+                  ) [ConstDeclName]
+                  ConstDeclValueBool(
+                   true
+                  ) [ConstDeclValueBool]
+                ) [ConstDeclVariable]
+              ) [SingleConstDeclList]
+            ) [ConstDeclNoError]
+          ) [ConstantDeclaration]
+        ) [YesDeclarationList]
+        VariableDeclaration(
+          VarDeclNoError(
+            Type(
+             int
+            ) [Type]
+            PluralVarDeclList(
+              SingleVarDeclList(
+                DeclVariable(
+                  VarDeclName(
+                   x
+                  ) [VarDeclName]
+                  NoVarDeclArrayOption(
+                  ) [NoVarDeclArrayOption]
+                ) [DeclVariable]
+              ) [SingleVarDeclList]
+              DeclVariable(
+                VarDeclName(
+                 z
+                ) [VarDeclName]
+                YesVarDeclArrayOption(
+                ) [YesVarDeclArrayOption]
+              ) [DeclVariable]
+            ) [PluralVarDeclList]
+          ) [VarDeclNoError]
+        ) [VariableDeclaration]
+      ) [YesDeclarationList]
+      VariableDeclaration(
+        VarDeclNoError(
+          Type(
+           int
+          ) [Type]
+          SingleVarDeclList(
+            DeclVariable(
+              VarDeclName(
+               y
+              ) [VarDeclName]
+              YesVarDeclArrayOption(
+              ) [YesVarDeclArrayOption]
+            ) [DeclVariable]
+          ) [SingleVarDeclList]
+        ) [VarDeclNoError]
+      ) [VariableDeclaration]
+    ) [YesDeclarationList]
+    VariableDeclaration(
+      VarDeclNoError(
+        Type(
+         bool
+        ) [Type]
+        SingleVarDeclList(
+          DeclVariable(
+            VarDeclName(
+             array
+            ) [VarDeclName]
+            YesVarDeclArrayOption(
+            ) [YesVarDeclArrayOption]
+          ) [DeclVariable]
+        ) [SingleVarDeclList]
+      ) [VarDeclNoError]
+    ) [VariableDeclaration]
+  ) [YesDeclarationList]
+  YesMethodDeclarationList(
+    NoMethodDeclarationList(
+    ) [NoMethodDeclarationList]
+    MethodDeclaration(
+      VoidMethodReturnType(
+      ) [VoidMethodReturnType]
+      MethodName(
+       main
+      ) [MethodName]
+      NoMethodParameters(
+      ) [NoMethodParameters]
+      NoMethodVariables(
+      ) [NoMethodVariables]
+      NoMethodBody(
+      ) [NoMethodBody]
+    ) [MethodDeclaration]
+  ) [YesMethodDeclarationList]
+) [Program]
+INFO  20:24:15,743 - ===================================
+INFO  20:24:15,747 - Const variable jedan declared on line 3
+INFO  20:24:15,747 - Const variable tmp declared on line 4
+INFO  20:24:15,747 - Global variable x declared on line 6
+INFO  20:24:15,747 - Global array z declared on line 6
+INFO  20:24:15,747 - Global array y declared on line 7
+INFO  20:24:15,747 - Global array array declared on line 8
+INFO  20:24:15,747 - ===================================
+INFO  20:24:15,748 - Parsing finished successfully

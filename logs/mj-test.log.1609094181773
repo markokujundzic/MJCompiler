@@ -1,0 +1,89 @@
+INFO  19:36:05,300 - Compiling source file: C:\Users\Asus\Desktop\FAKS\PP1\MJCompiler\test\program.mj
+INFO  19:36:05,386 - #2 program
+INFO  19:36:05,386 - #9 prog
+INFO  19:36:05,386 - #5 const
+INFO  19:36:05,388 - #9 int
+INFO  19:36:05,388 - #9 jedan
+INFO  19:36:05,389 - #8 =
+INFO  19:36:05,390 - #10 1
+INFO  19:36:05,390 - #6 ;
+INFO  19:36:05,391 - #5 const
+INFO  19:36:05,391 - #9 bool
+INFO  19:36:05,391 - #9 tmp
+INFO  19:36:05,391 - #8 =
+INFO  19:36:05,391 - #11 false
+INFO  19:36:05,392 - #6 ;
+INFO  19:36:05,392 - #3 {
+INFO  19:36:05,392 - #15 void
+INFO  19:36:05,393 - #9 main
+INFO  19:36:05,394 - #13 (
+INFO  19:36:05,395 - #14 )
+INFO  19:36:05,396 - #3 {
+INFO  19:36:05,397 - #4 }
+INFO  19:36:05,397 - #4 }
+INFO  19:36:05,414 - Program(
+  ProgramName(
+   prog
+  ) [ProgramName]
+  YesDeclarationList(
+    YesDeclarationList(
+      NoDeclarationList(
+      ) [NoDeclarationList]
+      ConstantDeclaration(
+        ConstDeclNoError(
+          Type(
+           int
+          ) [Type]
+          SingleConstDeclList(
+            ConstDeclVariable(
+              ConstDeclName(
+               jedan
+              ) [ConstDeclName]
+              ConstDeclValueInt(
+               1
+              ) [ConstDeclValueInt]
+            ) [ConstDeclVariable]
+          ) [SingleConstDeclList]
+        ) [ConstDeclNoError]
+      ) [ConstantDeclaration]
+    ) [YesDeclarationList]
+    ConstantDeclaration(
+      ConstDeclNoError(
+        Type(
+         bool
+        ) [Type]
+        SingleConstDeclList(
+          ConstDeclVariable(
+            ConstDeclName(
+             tmp
+            ) [ConstDeclName]
+            ConstDeclValueBool(
+             false
+            ) [ConstDeclValueBool]
+          ) [ConstDeclVariable]
+        ) [SingleConstDeclList]
+      ) [ConstDeclNoError]
+    ) [ConstantDeclaration]
+  ) [YesDeclarationList]
+  YesMethodDeclarationList(
+    NoMethodDeclarationList(
+    ) [NoMethodDeclarationList]
+    MethodDeclaration(
+      VoidMethodReturnType(
+      ) [VoidMethodReturnType]
+      MethodName(
+       main
+      ) [MethodName]
+      NoMethodParameters(
+      ) [NoMethodParameters]
+      NoMethodVariables(
+      ) [NoMethodVariables]
+      NoMethodBody(
+      ) [NoMethodBody]
+    ) [MethodDeclaration]
+  ) [YesMethodDeclarationList]
+) [Program]
+INFO  19:36:05,414 - ===================================
+INFO  19:36:05,416 - Const variable jedan declared on line 3 on line 3
+INFO  19:36:05,416 - Const variable tmp declared on line 4 on line 4
+INFO  19:36:05,416 - ===================================

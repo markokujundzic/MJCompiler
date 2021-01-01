@@ -72,7 +72,7 @@ terminal INCREMENT, DECREMENT;
 terminal IF, ELSE, DO, WHILE;
 terminal RETURN, READ, PRINT;
 terminal OR, AND, QUESTION_MARK, MINUS;
-terminal NEW, ENUM, PLUS;
+terminal NEW, PLUS;
 terminal MUL, DIV, MOD;
 terminal EQUAL, NOT_EQUAL;
 terminal GREATER, LESS;
@@ -80,17 +80,15 @@ terminal GREATER_OR_EQUAL;
 terminal LESS_OR_EQUAL;
 
 /* NONTERMINALS */
-nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgramName, Program;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgramName, Program, MethodName;
 
-nonterminal rs.etf.pp1.symboltable.concepts.Struct Type;
-
-nonterminal rs.etf.pp1.symboltable.concepts.Struct ConstDeclValue;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, MethodReturnType, ConstDeclValue;
 
 nonterminal DeclarationList, Declaration, MethodDeclarationList;
 nonterminal ConstDecl, VarDecl, ConstDeclList, ConstDeclVariable;
 nonterminal ConstDeclName, CondTerm, CondFact, Relop, PossibleErrorCondition;
 nonterminal VarDeclList, DeclVariable, VarDeclName, VarDeclArrayOption;
-nonterminal MethodDeclaration, MethodReturnType, MethodName, MethodParameters, MethodVariables, MethodBody;
+nonterminal MethodDeclaration, MethodParameters, MethodVariables, MethodBody;
 nonterminal FormPars, Statement, FormParList, FormPar, FormParName, FormParArrayOption;
 nonterminal DesignatorStatement, IfStatement, DoWhileStatement, ReturnStatement;
 nonterminal PrintStatement, ReadStatement, Designator, DesignatorAddition, DesignatorName, OptionalDesignatorList;
@@ -147,7 +145,7 @@ ConstDeclList ::=
 		:}
 		;
 ConstDeclVariable ::=
-		(ConstDeclVariableNoError) ConstDeclName ASSIGN ConstDeclValue
+		(ConstDeclVariable) ConstDeclName ASSIGN ConstDeclValue
 		;
 ConstDeclName ::=
 		(ConstDeclName) IDENTIFIER:name

@@ -1,0 +1,149 @@
+INFO  19:45:49,799 - Compiling source file: C:\Users\Asus\Desktop\FAKS\PP1\MJCompiler\test\program.mj
+INFO  19:45:49,879 - #2 program
+INFO  19:45:49,879 - #9 prog
+INFO  19:45:49,879 - #5 const
+INFO  19:45:49,881 - #9 int
+INFO  19:45:49,881 - #9 jedan
+INFO  19:45:49,882 - #8 =
+INFO  19:45:49,883 - #10 4
+INFO  19:45:49,883 - #6 ;
+INFO  19:45:49,884 - #5 const
+INFO  19:45:49,884 - #9 bool
+INFO  19:45:49,884 - #9 tmp
+INFO  19:45:49,884 - #8 =
+INFO  19:45:49,885 - #11 true
+INFO  19:45:49,885 - #6 ;
+INFO  19:45:49,885 - #9 int
+INFO  19:45:49,885 - #9 x
+INFO  19:45:49,885 - #7 ,
+INFO  19:45:49,888 - #9 z
+INFO  19:45:49,888 - #20 [
+INFO  19:45:49,888 - #21 ]
+INFO  19:45:49,888 - #6 ;
+INFO  19:45:49,889 - #9 int
+INFO  19:45:49,895 - #9 y
+INFO  19:45:49,895 - #20 [
+INFO  19:45:49,895 - #21 ]
+INFO  19:45:49,895 - #6 ;
+INFO  19:45:49,895 - #3 {
+INFO  19:45:49,895 - #15 void
+INFO  19:45:49,896 - #9 main
+INFO  19:45:49,897 - #13 (
+INFO  19:45:49,897 - #14 )
+INFO  19:45:49,898 - #3 {
+INFO  19:45:49,898 - #4 }
+INFO  19:45:49,899 - #4 }
+INFO  19:45:49,908 - Program(
+  ProgramName(
+   prog
+  ) [ProgramName]
+  YesDeclarationList(
+    YesDeclarationList(
+      YesDeclarationList(
+        YesDeclarationList(
+          NoDeclarationList(
+          ) [NoDeclarationList]
+          ConstantDeclaration(
+            ConstDeclNoError(
+              Type(
+               int
+              ) [Type]
+              SingleConstDeclList(
+                ConstDeclVariable(
+                  ConstDeclName(
+                   jedan
+                  ) [ConstDeclName]
+                  ConstDeclValueInt(
+                   4
+                  ) [ConstDeclValueInt]
+                ) [ConstDeclVariable]
+              ) [SingleConstDeclList]
+            ) [ConstDeclNoError]
+          ) [ConstantDeclaration]
+        ) [YesDeclarationList]
+        ConstantDeclaration(
+          ConstDeclNoError(
+            Type(
+             bool
+            ) [Type]
+            SingleConstDeclList(
+              ConstDeclVariable(
+                ConstDeclName(
+                 tmp
+                ) [ConstDeclName]
+                ConstDeclValueBool(
+                 true
+                ) [ConstDeclValueBool]
+              ) [ConstDeclVariable]
+            ) [SingleConstDeclList]
+          ) [ConstDeclNoError]
+        ) [ConstantDeclaration]
+      ) [YesDeclarationList]
+      VariableDeclaration(
+        VarDeclNoError(
+          Type(
+           int
+          ) [Type]
+          PluralVarDeclList(
+            SingleVarDeclList(
+              DeclVariable(
+                VarDeclName(
+                 x
+                ) [VarDeclName]
+                NoVarDeclArrayOption(
+                ) [NoVarDeclArrayOption]
+              ) [DeclVariable]
+            ) [SingleVarDeclList]
+            DeclVariable(
+              VarDeclName(
+               z
+              ) [VarDeclName]
+              YesVarDeclArrayOption(
+              ) [YesVarDeclArrayOption]
+            ) [DeclVariable]
+          ) [PluralVarDeclList]
+        ) [VarDeclNoError]
+      ) [VariableDeclaration]
+    ) [YesDeclarationList]
+    VariableDeclaration(
+      VarDeclNoError(
+        Type(
+         int
+        ) [Type]
+        SingleVarDeclList(
+          DeclVariable(
+            VarDeclName(
+             y
+            ) [VarDeclName]
+            YesVarDeclArrayOption(
+            ) [YesVarDeclArrayOption]
+          ) [DeclVariable]
+        ) [SingleVarDeclList]
+      ) [VarDeclNoError]
+    ) [VariableDeclaration]
+  ) [YesDeclarationList]
+  YesMethodDeclarationList(
+    NoMethodDeclarationList(
+    ) [NoMethodDeclarationList]
+    MethodDeclaration(
+      VoidMethodReturnType(
+      ) [VoidMethodReturnType]
+      MethodName(
+       main
+      ) [MethodName]
+      NoMethodParameters(
+      ) [NoMethodParameters]
+      NoMethodVariables(
+      ) [NoMethodVariables]
+      NoMethodBody(
+      ) [NoMethodBody]
+    ) [MethodDeclaration]
+  ) [YesMethodDeclarationList]
+) [Program]
+INFO  19:45:49,909 - ===================================
+INFO  19:45:49,912 - Const variable jedan declared on line 3
+INFO  19:45:49,912 - Const variable tmp declared on line 4
+INFO  19:45:49,912 - Global variable x declared on line 6
+INFO  19:45:49,912 - Global array z declared on line 6
+INFO  19:45:49,912 - Global array y declared on line 7
+INFO  19:45:49,913 - ===================================

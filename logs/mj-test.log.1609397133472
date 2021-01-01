@@ -1,0 +1,301 @@
+INFO  07:41:02,411 - Compiling source file: C:\Users\Asus\Desktop\FAKS\PP1\MJCompiler\test\program.mj
+INFO  07:41:02,520 - #2 program
+INFO  07:41:02,520 - #9 prog
+INFO  07:41:02,520 - #5 const
+INFO  07:41:02,520 - #9 int
+INFO  07:41:02,520 - #9 jedan
+INFO  07:41:02,520 - #8 =
+INFO  07:41:02,520 - #10 4
+INFO  07:41:02,520 - #6 ;
+INFO  07:41:02,536 - #5 const
+INFO  07:41:02,536 - #9 bool
+INFO  07:41:02,536 - #9 tmp
+INFO  07:41:02,536 - #8 =
+INFO  07:41:02,536 - #11 true
+INFO  07:41:02,536 - #6 ;
+INFO  07:41:02,536 - #9 int
+INFO  07:41:02,536 - #9 x
+INFO  07:41:02,536 - #7 ,
+INFO  07:41:02,536 - #9 z
+INFO  07:41:02,536 - #20 [
+INFO  07:41:02,536 - #21 ]
+INFO  07:41:02,536 - #6 ;
+INFO  07:41:02,536 - #9 int
+INFO  07:41:02,536 - #9 y
+INFO  07:41:02,536 - #20 [
+INFO  07:41:02,536 - #21 ]
+INFO  07:41:02,536 - #6 ;
+INFO  07:41:02,536 - #9 bool
+INFO  07:41:02,536 - #9 array
+INFO  07:41:02,536 - #20 [
+INFO  07:41:02,536 - #21 ]
+INFO  07:41:02,536 - #6 ;
+INFO  07:41:02,536 - #9 bool
+INFO  07:41:02,536 - #9 a
+INFO  07:41:02,536 - #7 ,
+INFO  07:41:02,536 - #9 b
+INFO  07:41:02,536 - #7 ,
+INFO  07:41:02,536 - #9 c
+INFO  07:41:02,536 - #7 ,
+INFO  07:41:02,536 - #9 d
+INFO  07:41:02,536 - #6 ;
+INFO  07:41:02,536 - #3 {
+INFO  07:41:02,536 - #15 void
+INFO  07:41:02,536 - #9 main
+INFO  07:41:02,536 - #13 (
+INFO  07:41:02,536 - #14 )
+INFO  07:41:02,536 - #3 {
+INFO  07:41:02,551 - #24 if
+INFO  07:41:02,551 - #13 (
+INFO  07:41:02,551 - #9 a
+INFO  07:41:02,551 - #40 ==
+INFO  07:41:02,551 - #9 b
+INFO  07:41:02,551 - #32 &&
+INFO  07:41:02,551 - #9 c
+INFO  07:41:02,551 - #40 ==
+INFO  07:41:02,551 - #9 d
+INFO  07:41:02,551 - #31 ||
+INFO  07:41:02,551 - #9 a
+INFO  07:41:02,551 - #40 ==
+INFO  07:41:02,551 - #14 )
+ERROR 07:41:02,551 - Syntax error on line 13
+INFO  07:41:02,551 - #3 {
+INFO  07:41:02,551 - #30 print
+INFO  07:41:02,551 - #13 (
+ERROR 07:41:02,551 - Successful error recovery by parser on line 13 -> If Statement Condition
+INFO  07:41:02,551 - #9 a
+INFO  07:41:02,551 - #14 )
+INFO  07:41:02,551 - #6 ;
+INFO  07:41:02,551 - #4 }
+INFO  07:41:02,551 - #4 }
+INFO  07:41:02,551 - #4 }
+INFO  07:41:02,567 - Program(
+  ProgramName(
+   prog
+  ) [ProgramName]
+  YesDeclarationList(
+    YesDeclarationList(
+      YesDeclarationList(
+        YesDeclarationList(
+          YesDeclarationList(
+            YesDeclarationList(
+              NoDeclarationList(
+              ) [NoDeclarationList]
+              ConstantDeclaration(
+                ConstDeclNoError(
+                  Type(
+                   int
+                  ) [Type]
+                  SingleConstDeclList(
+                    ConstDeclVariable(
+                      ConstDeclName(
+                       jedan
+                      ) [ConstDeclName]
+                      ConstDeclValueInt(
+                       4
+                      ) [ConstDeclValueInt]
+                    ) [ConstDeclVariable]
+                  ) [SingleConstDeclList]
+                ) [ConstDeclNoError]
+              ) [ConstantDeclaration]
+            ) [YesDeclarationList]
+            ConstantDeclaration(
+              ConstDeclNoError(
+                Type(
+                 bool
+                ) [Type]
+                SingleConstDeclList(
+                  ConstDeclVariable(
+                    ConstDeclName(
+                     tmp
+                    ) [ConstDeclName]
+                    ConstDeclValueBool(
+                     true
+                    ) [ConstDeclValueBool]
+                  ) [ConstDeclVariable]
+                ) [SingleConstDeclList]
+              ) [ConstDeclNoError]
+            ) [ConstantDeclaration]
+          ) [YesDeclarationList]
+          VariableDeclaration(
+            VarDeclNoError(
+              Type(
+               int
+              ) [Type]
+              PluralVarDeclList(
+                SingleVarDeclList(
+                  DeclVariable(
+                    VarDeclName(
+                     x
+                    ) [VarDeclName]
+                    NoVarDeclArrayOption(
+                    ) [NoVarDeclArrayOption]
+                  ) [DeclVariable]
+                ) [SingleVarDeclList]
+                DeclVariable(
+                  VarDeclName(
+                   z
+                  ) [VarDeclName]
+                  YesVarDeclArrayOption(
+                  ) [YesVarDeclArrayOption]
+                ) [DeclVariable]
+              ) [PluralVarDeclList]
+            ) [VarDeclNoError]
+          ) [VariableDeclaration]
+        ) [YesDeclarationList]
+        VariableDeclaration(
+          VarDeclNoError(
+            Type(
+             int
+            ) [Type]
+            SingleVarDeclList(
+              DeclVariable(
+                VarDeclName(
+                 y
+                ) [VarDeclName]
+                YesVarDeclArrayOption(
+                ) [YesVarDeclArrayOption]
+              ) [DeclVariable]
+            ) [SingleVarDeclList]
+          ) [VarDeclNoError]
+        ) [VariableDeclaration]
+      ) [YesDeclarationList]
+      VariableDeclaration(
+        VarDeclNoError(
+          Type(
+           bool
+          ) [Type]
+          SingleVarDeclList(
+            DeclVariable(
+              VarDeclName(
+               array
+              ) [VarDeclName]
+              YesVarDeclArrayOption(
+              ) [YesVarDeclArrayOption]
+            ) [DeclVariable]
+          ) [SingleVarDeclList]
+        ) [VarDeclNoError]
+      ) [VariableDeclaration]
+    ) [YesDeclarationList]
+    VariableDeclaration(
+      VarDeclNoError(
+        Type(
+         bool
+        ) [Type]
+        PluralVarDeclList(
+          PluralVarDeclList(
+            PluralVarDeclList(
+              SingleVarDeclList(
+                DeclVariable(
+                  VarDeclName(
+                   a
+                  ) [VarDeclName]
+                  NoVarDeclArrayOption(
+                  ) [NoVarDeclArrayOption]
+                ) [DeclVariable]
+              ) [SingleVarDeclList]
+              DeclVariable(
+                VarDeclName(
+                 b
+                ) [VarDeclName]
+                NoVarDeclArrayOption(
+                ) [NoVarDeclArrayOption]
+              ) [DeclVariable]
+            ) [PluralVarDeclList]
+            DeclVariable(
+              VarDeclName(
+               c
+              ) [VarDeclName]
+              NoVarDeclArrayOption(
+              ) [NoVarDeclArrayOption]
+            ) [DeclVariable]
+          ) [PluralVarDeclList]
+          DeclVariable(
+            VarDeclName(
+             d
+            ) [VarDeclName]
+            NoVarDeclArrayOption(
+            ) [NoVarDeclArrayOption]
+          ) [DeclVariable]
+        ) [PluralVarDeclList]
+      ) [VarDeclNoError]
+    ) [VariableDeclaration]
+  ) [YesDeclarationList]
+  YesMethodDeclarationList(
+    NoMethodDeclarationList(
+    ) [NoMethodDeclarationList]
+    MethodDeclaration(
+      VoidMethodReturnType(
+      ) [VoidMethodReturnType]
+      MethodName(
+       main
+      ) [MethodName]
+      NoMethodParameters(
+      ) [NoMethodParameters]
+      NoMethodVariables(
+      ) [NoMethodVariables]
+      YesMethodBody(
+        NoMethodBody(
+        ) [NoMethodBody]
+        IfStatementDecl(
+          IfStatement(
+            IfConditionYesError(
+            ) [IfConditionYesError]
+            MultipleStatements(
+              YesMethodBody(
+                NoMethodBody(
+                ) [NoMethodBody]
+                PrintStatementDecl(
+                  PrintStatement(
+                    NoTernaryExpr(
+                      SingleCondition(
+                        SingleCondTerm(
+                          SingleCondFact(
+                            TermFiniteExpr(
+                              Term(
+                                DesignatorFactor(
+                                  Designator(
+                                    DesignatorName(
+                                     a
+                                    ) [DesignatorName]
+                                    NoOptionalDesignatorList(
+                                    ) [NoOptionalDesignatorList]
+                                  ) [Designator]
+                                ) [DesignatorFactor]
+                                NoOptionalFactors(
+                                ) [NoOptionalFactors]
+                              ) [Term]
+                              NoOptionalTermList(
+                              ) [NoOptionalTermList]
+                            ) [TermFiniteExpr]
+                          ) [SingleCondFact]
+                        ) [SingleCondTerm]
+                      ) [SingleCondition]
+                    ) [NoTernaryExpr]
+                    OptionalNoPrintNumber(
+                    ) [OptionalNoPrintNumber]
+                  ) [PrintStatement]
+                ) [PrintStatementDecl]
+              ) [YesMethodBody]
+            ) [MultipleStatements]
+            NoOptionalStatement(
+            ) [NoOptionalStatement]
+          ) [IfStatement]
+        ) [IfStatementDecl]
+      ) [YesMethodBody]
+    ) [MethodDeclaration]
+  ) [YesMethodDeclarationList]
+) [Program]
+INFO  07:41:02,567 - ===================================
+INFO  07:41:02,567 - Const variable jedan declared on line 3
+INFO  07:41:02,567 - Const variable tmp declared on line 4
+INFO  07:41:02,567 - Global variable x declared on line 6
+INFO  07:41:02,567 - Global array z declared on line 6
+INFO  07:41:02,567 - Global array y declared on line 7
+INFO  07:41:02,567 - Global array array declared on line 8
+INFO  07:41:02,567 - Global variable a declared on line 9
+INFO  07:41:02,567 - Global variable b declared on line 9
+INFO  07:41:02,567 - Global variable c declared on line 9
+INFO  07:41:02,567 - Global variable d declared on line 9
+INFO  07:41:02,567 - ===================================
+ERROR 07:41:02,567 - Parsing finished unsuccessfully
