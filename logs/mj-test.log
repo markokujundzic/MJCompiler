@@ -1,53 +1,67 @@
-INFO  13:58:26,202 - Compiling source file: C:\Users\Asus\Desktop\FAKS\PP1\MJCompiler\test\program.mj
-INFO  13:58:26,289 - #2 program
-INFO  13:58:26,290 - #9 prog
-INFO  13:58:26,290 - #5 const
-INFO  13:58:26,291 - #9 int
-INFO  13:58:26,291 - #9 jedan
-INFO  13:58:26,292 - #8 =
-INFO  13:58:26,293 - #10 4
-INFO  13:58:26,293 - #6 ;
-INFO  13:58:26,294 - #5 const
-INFO  13:58:26,295 - #9 bool
-INFO  13:58:26,295 - #9 tmp
-INFO  13:58:26,295 - #8 =
-INFO  13:58:26,295 - #11 true
-INFO  13:58:26,295 - #6 ;
-INFO  13:58:26,295 - #9 int
-INFO  13:58:26,295 - #9 x
-INFO  13:58:26,295 - #7 ,
-INFO  13:58:26,298 - #9 z
-INFO  13:58:26,298 - #20 [
-INFO  13:58:26,298 - #21 ]
-INFO  13:58:26,298 - #6 ;
-INFO  13:58:26,299 - #9 int
-INFO  13:58:26,305 - #9 y
-INFO  13:58:26,305 - #20 [
-INFO  13:58:26,305 - #21 ]
-INFO  13:58:26,305 - #6 ;
-INFO  13:58:26,305 - #9 bool
-INFO  13:58:26,305 - #9 array
-INFO  13:58:26,305 - #20 [
-INFO  13:58:26,305 - #21 ]
-INFO  13:58:26,305 - #6 ;
-INFO  13:58:26,305 - #9 bool
-INFO  13:58:26,305 - #9 a
-INFO  13:58:26,305 - #7 ,
-INFO  13:58:26,305 - #9 b
-INFO  13:58:26,305 - #7 ,
-INFO  13:58:26,306 - #9 c
-INFO  13:58:26,306 - #7 ,
-INFO  13:58:26,306 - #9 d
-INFO  13:58:26,306 - #6 ;
-INFO  13:58:26,306 - #3 {
-INFO  13:58:26,306 - #15 void
-INFO  13:58:26,307 - #9 main
-INFO  13:58:26,308 - #13 (
-INFO  13:58:26,309 - #14 )
-INFO  13:58:26,310 - #3 {
-INFO  13:58:26,313 - #4 }
-INFO  13:58:26,314 - #4 }
-INFO  13:58:26,326 - Program(
+INFO  19:26:02,425 - Compiling source file: C:\Users\Asus\Desktop\FAKS\PP1\MJCompiler\test\program.mj
+INFO  19:26:02,502 - #2 program
+INFO  19:26:02,503 - #9 prog
+INFO  19:26:02,503 - #5 const
+INFO  19:26:02,505 - #9 int
+INFO  19:26:02,505 - #9 jedan
+INFO  19:26:02,506 - #8 =
+INFO  19:26:02,507 - #10 1
+INFO  19:26:02,507 - #6 ;
+INFO  19:26:02,508 - #5 const
+INFO  19:26:02,508 - #9 bool
+INFO  19:26:02,508 - #9 tmp
+INFO  19:26:02,508 - #8 =
+INFO  19:26:02,508 - #11 true
+INFO  19:26:02,509 - #6 ;
+INFO  19:26:02,509 - #5 const
+INFO  19:26:02,509 - #9 char
+INFO  19:26:02,509 - #9 hh
+INFO  19:26:02,509 - #8 =
+INFO  19:26:02,509 - #12 f
+INFO  19:26:02,509 - #6 ;
+INFO  19:26:02,509 - #9 int
+INFO  19:26:02,509 - #9 x
+INFO  19:26:02,515 - #7 ,
+INFO  19:26:02,518 - #9 z
+INFO  19:26:02,518 - #20 [
+INFO  19:26:02,518 - #21 ]
+INFO  19:26:02,518 - #6 ;
+INFO  19:26:02,518 - #9 int
+INFO  19:26:02,519 - #9 y
+INFO  19:26:02,519 - #20 [
+INFO  19:26:02,519 - #21 ]
+INFO  19:26:02,519 - #6 ;
+INFO  19:26:02,519 - #9 bool
+INFO  19:26:02,519 - #9 array
+INFO  19:26:02,519 - #20 [
+INFO  19:26:02,519 - #21 ]
+INFO  19:26:02,519 - #6 ;
+INFO  19:26:02,519 - #9 bool
+INFO  19:26:02,519 - #9 a
+INFO  19:26:02,520 - #7 ,
+INFO  19:26:02,520 - #9 b
+INFO  19:26:02,520 - #7 ,
+INFO  19:26:02,520 - #9 c
+INFO  19:26:02,520 - #7 ,
+INFO  19:26:02,520 - #9 d
+INFO  19:26:02,520 - #6 ;
+INFO  19:26:02,520 - #3 {
+INFO  19:26:02,520 - #15 void
+INFO  19:26:02,521 - #9 main
+INFO  19:26:02,522 - #13 (
+INFO  19:26:02,523 - #14 )
+INFO  19:26:02,524 - #9 int
+INFO  19:26:02,525 - #9 w
+INFO  19:26:02,525 - #6 ;
+INFO  19:26:02,525 - #9 bool
+INFO  19:26:02,525 - #9 p
+INFO  19:26:02,525 - #20 [
+INFO  19:26:02,525 - #21 ]
+INFO  19:26:02,525 - #6 ;
+INFO  19:26:02,525 - #3 {
+INFO  19:26:02,525 - #4 }
+INFO  19:26:02,526 - #4 }
+INFO  19:26:02,536 - Program(
   ProgramName(
    prog
   ) [ProgramName]
@@ -57,21 +71,40 @@ INFO  13:58:26,326 - Program(
         YesDeclarationList(
           YesDeclarationList(
             YesDeclarationList(
-              NoDeclarationList(
-              ) [NoDeclarationList]
+              YesDeclarationList(
+                NoDeclarationList(
+                ) [NoDeclarationList]
+                ConstantDeclaration(
+                  ConstDeclNoError(
+                    Type(
+                     int
+                    ) [Type]
+                    SingleConstDeclList(
+                      ConstDeclVariable(
+                        ConstDeclName(
+                         jedan
+                        ) [ConstDeclName]
+                        ConstDeclValueInt(
+                         1
+                        ) [ConstDeclValueInt]
+                      ) [ConstDeclVariable]
+                    ) [SingleConstDeclList]
+                  ) [ConstDeclNoError]
+                ) [ConstantDeclaration]
+              ) [YesDeclarationList]
               ConstantDeclaration(
                 ConstDeclNoError(
                   Type(
-                   int
+                   bool
                   ) [Type]
                   SingleConstDeclList(
                     ConstDeclVariable(
                       ConstDeclName(
-                       jedan
+                       tmp
                       ) [ConstDeclName]
-                      ConstDeclValueInt(
-                       4
-                      ) [ConstDeclValueInt]
+                      ConstDeclValueBool(
+                       true
+                      ) [ConstDeclValueBool]
                     ) [ConstDeclVariable]
                   ) [SingleConstDeclList]
                 ) [ConstDeclNoError]
@@ -80,16 +113,16 @@ INFO  13:58:26,326 - Program(
             ConstantDeclaration(
               ConstDeclNoError(
                 Type(
-                 bool
+                 char
                 ) [Type]
                 SingleConstDeclList(
                   ConstDeclVariable(
                     ConstDeclName(
-                     tmp
+                     hh
                     ) [ConstDeclName]
-                    ConstDeclValueBool(
-                     true
-                    ) [ConstDeclValueBool]
+                    ConstDeclValueChar(
+                     f
+                    ) [ConstDeclValueChar]
                   ) [ConstDeclVariable]
                 ) [SingleConstDeclList]
               ) [ConstDeclNoError]
@@ -210,23 +243,58 @@ INFO  13:58:26,326 - Program(
       ) [MethodName]
       NoMethodParameters(
       ) [NoMethodParameters]
-      NoMethodVariables(
-      ) [NoMethodVariables]
+      YesMethodVariables(
+        YesMethodVariables(
+          NoMethodVariables(
+          ) [NoMethodVariables]
+          VarDeclNoError(
+            Type(
+             int
+            ) [Type]
+            SingleVarDeclList(
+              DeclVariable(
+                VarDeclName(
+                 w
+                ) [VarDeclName]
+                NoVarDeclArrayOption(
+                ) [NoVarDeclArrayOption]
+              ) [DeclVariable]
+            ) [SingleVarDeclList]
+          ) [VarDeclNoError]
+        ) [YesMethodVariables]
+        VarDeclNoError(
+          Type(
+           bool
+          ) [Type]
+          SingleVarDeclList(
+            DeclVariable(
+              VarDeclName(
+               p
+              ) [VarDeclName]
+              YesVarDeclArrayOption(
+              ) [YesVarDeclArrayOption]
+            ) [DeclVariable]
+          ) [SingleVarDeclList]
+        ) [VarDeclNoError]
+      ) [YesMethodVariables]
       NoMethodBody(
       ) [NoMethodBody]
     ) [MethodDeclaration]
   ) [YesMethodDeclarationList]
 ) [Program]
-INFO  13:58:26,327 - ===================================
-INFO  13:58:26,330 - Const variable jedan declared on line 3
-INFO  13:58:26,331 - Const variable tmp declared on line 4
-INFO  13:58:26,331 - Global variable x declared on line 6
-INFO  13:58:26,331 - Global array z declared on line 6
-INFO  13:58:26,331 - Global array y declared on line 7
-INFO  13:58:26,331 - Global array array declared on line 8
-INFO  13:58:26,331 - Global variable a declared on line 9
-INFO  13:58:26,331 - Global variable b declared on line 9
-INFO  13:58:26,331 - Global variable c declared on line 9
-INFO  13:58:26,331 - Global variable d declared on line 9
-INFO  13:58:26,331 - Method main declared on line 11
-INFO  13:58:26,332 - Parsing finished successfully
+INFO  19:26:02,536 - ===================================
+INFO  19:26:02,539 - Const variable jedan declared on line 3
+INFO  19:26:02,539 - Const variable tmp declared on line 4
+INFO  19:26:02,540 - Const variable hh declared on line 5
+INFO  19:26:02,540 - Global variable x declared on line 7
+INFO  19:26:02,540 - Global array z declared on line 7
+INFO  19:26:02,540 - Global array y declared on line 8
+INFO  19:26:02,540 - Global array array declared on line 9
+INFO  19:26:02,540 - Global variable a declared on line 10
+INFO  19:26:02,540 - Global variable b declared on line 10
+INFO  19:26:02,540 - Global variable c declared on line 10
+INFO  19:26:02,540 - Global variable d declared on line 10
+INFO  19:26:02,540 - Method main declared on line 12
+INFO  19:26:02,540 - Local variable w declared on line 12
+INFO  19:26:02,540 - Local array p declared on line 12
+INFO  19:26:02,541 - Parsing finished successfully

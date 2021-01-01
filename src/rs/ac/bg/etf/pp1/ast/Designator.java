@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 1/0/2021 12:6:58
+// 1/0/2021 19:51:0
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -10,13 +10,13 @@ public class Designator implements SyntaxNode {
     private SyntaxNode parent;
     private int line;
     private DesignatorName DesignatorName;
-    private OptionalDesignatorList OptionalDesignatorList;
+    private OptionalDesignator OptionalDesignator;
 
-    public Designator (DesignatorName DesignatorName, OptionalDesignatorList OptionalDesignatorList) {
+    public Designator (DesignatorName DesignatorName, OptionalDesignator OptionalDesignator) {
         this.DesignatorName=DesignatorName;
         if(DesignatorName!=null) DesignatorName.setParent(this);
-        this.OptionalDesignatorList=OptionalDesignatorList;
-        if(OptionalDesignatorList!=null) OptionalDesignatorList.setParent(this);
+        this.OptionalDesignator=OptionalDesignator;
+        if(OptionalDesignator!=null) OptionalDesignator.setParent(this);
     }
 
     public DesignatorName getDesignatorName() {
@@ -27,12 +27,12 @@ public class Designator implements SyntaxNode {
         this.DesignatorName=DesignatorName;
     }
 
-    public OptionalDesignatorList getOptionalDesignatorList() {
-        return OptionalDesignatorList;
+    public OptionalDesignator getOptionalDesignator() {
+        return OptionalDesignator;
     }
 
-    public void setOptionalDesignatorList(OptionalDesignatorList OptionalDesignatorList) {
-        this.OptionalDesignatorList=OptionalDesignatorList;
+    public void setOptionalDesignator(OptionalDesignator OptionalDesignator) {
+        this.OptionalDesignator=OptionalDesignator;
     }
 
     public SyntaxNode getParent() {
@@ -57,18 +57,18 @@ public class Designator implements SyntaxNode {
 
     public void childrenAccept(Visitor visitor) {
         if(DesignatorName!=null) DesignatorName.accept(visitor);
-        if(OptionalDesignatorList!=null) OptionalDesignatorList.accept(visitor);
+        if(OptionalDesignator!=null) OptionalDesignator.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
         if(DesignatorName!=null) DesignatorName.traverseTopDown(visitor);
-        if(OptionalDesignatorList!=null) OptionalDesignatorList.traverseTopDown(visitor);
+        if(OptionalDesignator!=null) OptionalDesignator.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
         if(DesignatorName!=null) DesignatorName.traverseBottomUp(visitor);
-        if(OptionalDesignatorList!=null) OptionalDesignatorList.traverseBottomUp(visitor);
+        if(OptionalDesignator!=null) OptionalDesignator.traverseBottomUp(visitor);
         accept(visitor);
     }
 
@@ -83,8 +83,8 @@ public class Designator implements SyntaxNode {
             buffer.append(tab+"  null");
         buffer.append("\n");
 
-        if(OptionalDesignatorList!=null)
-            buffer.append(OptionalDesignatorList.toString("  "+tab));
+        if(OptionalDesignator!=null)
+            buffer.append(OptionalDesignator.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");

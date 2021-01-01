@@ -14,6 +14,7 @@ public class SemanticAnalyzer extends VisitorAdaptor
     private boolean errorDetected = false;
     private boolean returnFound = false;
     private boolean mainFound = false;
+    private boolean localVariables = false;
 
     private Obj currentMethod = null;
 
@@ -108,12 +109,26 @@ public class SemanticAnalyzer extends VisitorAdaptor
             if (declVariable.getVarDeclArrayOption() instanceof YesVarDeclArrayOption)
             {
                 SymTab.insert(Obj.Var, declVariable.getVarDeclName().getName(), new Struct(Struct.Array, currentType));
-                report_info("Global array " + declVariable.getVarDeclName().getName() + " declared", declVariable);
+                if (!localVariables)
+                {
+                    report_info("Global array " + declVariable.getVarDeclName().getName() + " declared", declVariable);
+                }
+                else
+                {
+                    report_info("Local array " + declVariable.getVarDeclName().getName() + " declared", declVariable);
+                }
             }
             else if (declVariable.getVarDeclArrayOption() instanceof NoVarDeclArrayOption)
             {
                 SymTab.insert(Obj.Var, declVariable.getVarDeclName().getName(), currentType);
-                report_info("Global variable " + declVariable.getVarDeclName().getName() + " declared", declVariable);
+                if (!localVariables)
+                {
+                    report_info("Global variable " + declVariable.getVarDeclName().getName() + " declared", declVariable);
+                }
+                else
+                {
+                    report_info("Local variable " + declVariable.getVarDeclName().getName() + " declared", declVariable);
+                }
             }
         }
         else
@@ -147,7 +162,7 @@ public class SemanticAnalyzer extends VisitorAdaptor
 
         if (constNode == SymTab.noObj)
         {
-            if (currentType.compatibleWith(constDeclVariable.getConstDeclValue().struct))
+            if (currentType.assignableTo(constDeclVariable.getConstDeclValue().struct))
             {
                 Obj constant = SymTab.insert(Obj.Con, constDeclVariable.getConstDeclName().getName(), constDeclVariable.getConstDeclValue().struct);
                 constant.setAdr(currentConstValue);
@@ -188,6 +203,7 @@ public class SemanticAnalyzer extends VisitorAdaptor
 
             if (methodName.getName().equals("main"))
             {
+                localVariables = true;
                 mainFound = true;
             }
 
@@ -221,8 +237,24 @@ public class SemanticAnalyzer extends VisitorAdaptor
         returnFound = false;
     }
 
-    public void visit()
+    /* Designator */
+    public void visit(DesignatorName designatorName)
     {
+        Obj obj = SymTab.find(designatorName.getName());
 
+        if (obj == SymTab.noObj)
+        {
+            report_error("Semantic Error: Variable " + designatorName.getName() + " used on line " + designatorName.getLine() + " has not been declared", null);
+        }
+
+        designatorName.obj = obj;
+    }
+
+    public void visit(OptionalDesignator optionalDesignator)
+    {
+        if (optionalDesignator instanceof YesOptionalDesignator)
+        {
+
+        }
     }
 }

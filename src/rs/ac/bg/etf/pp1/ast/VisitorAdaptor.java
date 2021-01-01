@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 1/0/2021 12:6:58
+// 1/0/2021 19:51:0
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -39,8 +39,8 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(VarDecl VarDecl) { }
     public void visit(FormParArrayOption FormParArrayOption) { }
     public void visit(ConstDecl ConstDecl) { }
-    public void visit(CondFact CondFact) { }
     public void visit(FormPar FormPar) { }
+    public void visit(CondFact CondFact) { }
     public void visit(Declaration Declaration) { }
     public void visit(PossibleErrorCondition PossibleErrorCondition) { }
     public void visit(PossibleErrorDesignatorAddition PossibleErrorDesignatorAddition) { }
@@ -110,10 +110,8 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(ActParsDesignatorAddition ActParsDesignatorAddition) { visit(); }
     public void visit(PossibleErrorAssignOpDesignatorAddition PossibleErrorAssignOpDesignatorAddition) { visit(); }
     public void visit(OptionalDesignatorName OptionalDesignatorName) { visit(); }
-    public void visit(ExprOptionalDesignator ExprOptionalDesignator) { visit(); }
-    public void visit(PeriodOptionalDesignator PeriodOptionalDesignator) { visit(); }
-    public void visit(NoOptionalDesignatorList NoOptionalDesignatorList) { visit(); }
-    public void visit(YesOptionalDesignatorList YesOptionalDesignatorList) { visit(); }
+    public void visit(NoOptionalDesignator NoOptionalDesignator) { visit(); }
+    public void visit(YesOptionalDesignator YesOptionalDesignator) { visit(); }
     public void visit(DesignatorName DesignatorName) { visit(); }
     public void visit(Designator Designator) { visit(); }
     public void visit(DesignatorStatement DesignatorStatement) { visit(); }

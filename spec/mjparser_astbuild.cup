@@ -80,9 +80,10 @@ terminal GREATER_OR_EQUAL;
 terminal LESS_OR_EQUAL;
 
 /* NONTERMINALS */
-nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgramName, Program, MethodName;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgramName, Program, MethodName, DesignatorName;
 
 nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, MethodReturnType, ConstDeclValue;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct Expr, FiniteExpr, Term, Factor;
 
 nonterminal DeclarationList DeclarationList;
 nonterminal Declaration Declaration;
@@ -118,13 +119,11 @@ nonterminal PrintStatement PrintStatement;
 nonterminal ReadStatement ReadStatement;
 nonterminal Designator Designator;
 nonterminal DesignatorAddition DesignatorAddition;
-nonterminal DesignatorName DesignatorName;
 nonterminal OptionalDesignatorList OptionalDesignatorList;
 nonterminal OptionalDesignator OptionalDesignator;
 nonterminal OptionalDesignatorName OptionalDesignatorName;
 nonterminal DesignatorActPars DesignatorActPars;
 nonterminal Assignop Assignop;
-nonterminal Expr Expr;
 nonterminal ActPars ActPars;
 nonterminal OptionalStatement OptionalStatement;
 nonterminal ElseStatement ElseStatement;
@@ -135,10 +134,7 @@ nonterminal OptionalPrintNumber OptionalPrintNumber;
 nonterminal PrintNumber PrintNumber;
 nonterminal OptionalExpressions OptionalExpressions;
 nonterminal OptionalExpr OptionalExpr;
-nonterminal FiniteExpr FiniteExpr;
-nonterminal Term Term;
 nonterminal Addop Addop;
-nonterminal Factor Factor;
 nonterminal OptionalFactors OptionalFactors;
 nonterminal OptionalFactor OptionalFactor;
 nonterminal Mulop Mulop;
@@ -346,20 +342,15 @@ DesignatorStatement ::=
 		(DesignatorStatement) Designator:D1 DesignatorAddition:D2 {: RESULT=new DesignatorStatement(D1, D2); RESULT.setLine(D1left); :}
 		;
 Designator ::=
-		(Designator) DesignatorName:D1 OptionalDesignatorList:O2 {: RESULT=new Designator(D1, O2); RESULT.setLine(D1left); :}
+		(Designator) DesignatorName:D1 OptionalDesignator:O2 {: RESULT=new Designator(D1, O2); RESULT.setLine(D1left); :}
 		;
 DesignatorName ::=
 		(DesignatorName) IDENTIFIER:name {: RESULT=new DesignatorName(name); RESULT.setLine(nameleft); :}
 		;
-OptionalDesignatorList ::=
-		(YesOptionalDesignatorList) OptionalDesignatorList:O1 OptionalDesignator:O2 {: RESULT=new YesOptionalDesignatorList(O1, O2); RESULT.setLine(O1left); :}
-		|
-		(NoOptionalDesignatorList) {: RESULT=new NoOptionalDesignatorList(); :} /* epsilon */
-		;
 OptionalDesignator ::=
-		(PeriodOptionalDesignator) PERIOD OptionalDesignatorName:O1 {: RESULT=new PeriodOptionalDesignator(O1); RESULT.setLine(O1left); :}
+		(YesOptionalDesignator) LEFT_SQUARE Expr:E1 RIGHT_SQUARE {: RESULT=new YesOptionalDesignator(E1); RESULT.setLine(E1left); :}
 		|
-		(ExprOptionalDesignator) LEFT_SQUARE Expr:E1 RIGHT_SQUARE {: RESULT=new ExprOptionalDesignator(E1); RESULT.setLine(E1left); :}
+		(NoOptionalDesignator) {: RESULT=new NoOptionalDesignator(); :} /* epsilon */
 		;
 OptionalDesignatorName ::=
 		(OptionalDesignatorName) IDENTIFIER:name {: RESULT=new OptionalDesignatorName(name); RESULT.setLine(nameleft); :}

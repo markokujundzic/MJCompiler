@@ -80,9 +80,10 @@ terminal GREATER_OR_EQUAL;
 terminal LESS_OR_EQUAL;
 
 /* NONTERMINALS */
-nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgramName, Program, MethodName;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgramName, Program, MethodName, DesignatorName;
 
 nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, MethodReturnType, ConstDeclValue;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct Expr, FiniteExpr, Term, Factor;
 
 nonterminal DeclarationList, Declaration, MethodDeclarationList;
 nonterminal ConstDecl, VarDecl, ConstDeclList, ConstDeclVariable;
@@ -91,11 +92,11 @@ nonterminal VarDeclList, DeclVariable, VarDeclName, VarDeclArrayOption;
 nonterminal MethodDeclaration, MethodParameters, MethodVariables, MethodBody;
 nonterminal FormPars, Statement, FormParList, FormPar, FormParName, FormParArrayOption;
 nonterminal DesignatorStatement, IfStatement, DoWhileStatement, ReturnStatement;
-nonterminal PrintStatement, ReadStatement, Designator, DesignatorAddition, DesignatorName, OptionalDesignatorList;
+nonterminal PrintStatement, ReadStatement, Designator, DesignatorAddition, OptionalDesignatorList;
 nonterminal OptionalDesignator, OptionalDesignatorName, DesignatorActPars, Assignop;
-nonterminal Expr, ActPars, OptionalStatement, ElseStatement, Condition, OptionalTermList;
-nonterminal ReturnExpr, OptionalPrintNumber, PrintNumber, OptionalExpressions, OptionalExpr, FiniteExpr;
-nonterminal Term, Addop, Factor, OptionalFactors, OptionalFactor, Mulop, PossibleErrorDesignatorAddition;
+nonterminal ActPars, OptionalStatement, ElseStatement, Condition, OptionalTermList;
+nonterminal ReturnExpr, OptionalPrintNumber, PrintNumber, OptionalExpressions, OptionalExpr;
+nonterminal Addop, OptionalFactors, OptionalFactor, Mulop, PossibleErrorDesignatorAddition;
 
 /* PRECEDENCE */
 precedence left ELSE;
@@ -299,20 +300,15 @@ DesignatorStatement ::=
 		(DesignatorStatement) Designator DesignatorAddition
 		;
 Designator ::=
-		(Designator) DesignatorName OptionalDesignatorList
+		(Designator) DesignatorName OptionalDesignator
 		;
 DesignatorName ::=
 		(DesignatorName) IDENTIFIER:name
 		;
-OptionalDesignatorList ::=
-		(YesOptionalDesignatorList) OptionalDesignatorList OptionalDesignator
-		|
-		(NoOptionalDesignatorList) /* epsilon */
-		;
 OptionalDesignator ::=
-		(PeriodOptionalDesignator) PERIOD OptionalDesignatorName
+		(YesOptionalDesignator) LEFT_SQUARE Expr RIGHT_SQUARE
 		|
-		(ExprOptionalDesignator) LEFT_SQUARE Expr RIGHT_SQUARE
+		(NoOptionalDesignator) /* epsilon */
 		;
 OptionalDesignatorName ::=
 		(OptionalDesignatorName) IDENTIFIER:name

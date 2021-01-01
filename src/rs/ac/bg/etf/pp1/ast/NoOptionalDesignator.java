@@ -1,13 +1,13 @@
 // generated with ast extension for cup
 // version 0.8
-// 1/0/2021 12:6:58
+// 1/0/2021 19:51:0
 
 
 package rs.ac.bg.etf.pp1.ast;
 
-public class NoOptionalDesignatorList extends OptionalDesignatorList {
+public class NoOptionalDesignator extends OptionalDesignator {
 
-    public NoOptionalDesignatorList () {
+    public NoOptionalDesignator () {
     }
 
     public void accept(Visitor visitor) {
@@ -28,10 +28,10 @@ public class NoOptionalDesignatorList extends OptionalDesignatorList {
     public String toString(String tab) {
         StringBuffer buffer=new StringBuffer();
         buffer.append(tab);
-        buffer.append("NoOptionalDesignatorList(\n");
+        buffer.append("NoOptionalDesignator(\n");
 
         buffer.append(tab);
-        buffer.append(") [NoOptionalDesignatorList]");
+        buffer.append(") [NoOptionalDesignator]");
         return buffer.toString();
     }
 }

@@ -1,15 +1,15 @@
 // generated with ast extension for cup
 // version 0.8
-// 1/0/2021 12:6:58
+// 1/0/2021 19:51:0
 
 
 package rs.ac.bg.etf.pp1.ast;
 
-public class ExprOptionalDesignator extends OptionalDesignator {
+public class YesOptionalDesignator extends OptionalDesignator {
 
     private Expr Expr;
 
-    public ExprOptionalDesignator (Expr Expr) {
+    public YesOptionalDesignator (Expr Expr) {
         this.Expr=Expr;
         if(Expr!=null) Expr.setParent(this);
     }
@@ -43,7 +43,7 @@ public class ExprOptionalDesignator extends OptionalDesignator {
     public String toString(String tab) {
         StringBuffer buffer=new StringBuffer();
         buffer.append(tab);
-        buffer.append("ExprOptionalDesignator(\n");
+        buffer.append("YesOptionalDesignator(\n");
 
         if(Expr!=null)
             buffer.append(Expr.toString("  "+tab));
@@ -52,7 +52,7 @@ public class ExprOptionalDesignator extends OptionalDesignator {
         buffer.append("\n");
 
         buffer.append(tab);
-        buffer.append(") [ExprOptionalDesignator]");
+        buffer.append(") [YesOptionalDesignator]");
         return buffer.toString();
     }
 }
