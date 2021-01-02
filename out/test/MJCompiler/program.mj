@@ -4,7 +4,7 @@ const int jedan = 1;
 const bool tmp = true;
 const char hh = 'f';
 
-int x, z[];
+int x;
 int y[];
 bool array[];
 bool a, b, c, d;
@@ -12,6 +12,7 @@ char r;
 {
 	void main() int w; bool p[];
 	{
+		y[0] = 1;
 		x++;
 	}
 }

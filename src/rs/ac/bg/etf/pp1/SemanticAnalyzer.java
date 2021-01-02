@@ -108,6 +108,20 @@ public class SemanticAnalyzer extends VisitorAdaptor
         {
             if (declVariable.getVarDeclArrayOption() instanceof YesVarDeclArrayOption)
             {
+                /*Struct tmp = null;
+                if (currentType.getKind() == Struct.Int)
+                {
+                    tmp = SymTab.intType;
+                }
+                else if (currentType.getKind() == Struct.Bool)
+                {
+                    tmp = SymTab.boolType;
+                }
+                else if (currentType.getKind() == Struct.Char)
+                {
+                    tmp = SymTab.charType;
+                }*/
+
                 SymTab.insert(Obj.Var, declVariable.getVarDeclName().getName(), new Struct(Struct.Array, currentType));
                 if (!localVariables)
                 {
@@ -238,6 +252,11 @@ public class SemanticAnalyzer extends VisitorAdaptor
     }
 
     /* Designator */
+
+    /*
+     * Ako je niz,   KIND objektnog cvora je ELEM
+     * Ako nije niz, KIND objektnog cvora je VAR
+     */
     public void visit(Designator designator)
     {
         Obj obj = SymTab.find(designator.getDesignatorName().getName());
@@ -246,7 +265,7 @@ public class SemanticAnalyzer extends VisitorAdaptor
         {
             report_error("Semantic Error: Variable " + designator.getDesignatorName().getName() + " used on line " + designator.getDesignatorName().getLine() + " has not been declared", null);
         }
-        else
+        else if (obj.getType().getKind() != Struct.Array)
         {
             report_info("Variable " + designator.getDesignatorName().getName() + " used", designator.getDesignatorName());
         }
@@ -257,14 +276,16 @@ public class SemanticAnalyzer extends VisitorAdaptor
         {
             if (obj.getType().getKind() == Struct.Array)
             {
-                if (((YesOptionalDesignator) designator.getOptionalDesignator()).getExpr().struct != SymTab.intType)
-                {
-                    report_error("Semantic Error: Expression for array indexing used on line " + designator.getDesignatorName().getLine() + " must be of int type", null);
-                }
-                else if (true)
-                {
+                //if (((YesOptionalDesignator) designator.getOptionalDesignator()).getExpr().struct != SymTab.intType)
+                //{
+                //report_error("Semantic Error: Expression for array indexing used on line " + designator.getDesignatorName().getLine() + " must be of int type", null);
+                //}
+                //else
+                //{
                     // dodati obradu za koriscenje konstante u indeksiranju niza
-                }
+                    designator.getDesignatorName().obj = new Obj(Obj.Elem, designator.getDesignatorName().getName(), designator.getDesignatorName().obj.getType().getElemType());
+                    report_info("Element of array " + designator.getDesignatorName().getName() + " used", designator.getDesignatorName());
+                //}
             }
             else
             {
@@ -323,5 +344,24 @@ public class SemanticAnalyzer extends VisitorAdaptor
         }
 
         newArrayFactor.struct = new Struct(Struct.Array, currentType);
+    }
+
+    /* Term */
+    public void visit(FactorTerm factorTerm)
+    {
+        factorTerm.struct = factorTerm.getFactor().struct;
+    }
+
+    public void visit(MulopTerm mulopTerm)
+    {
+        if (mulopTerm.getTerm().struct == SymTab.intType && mulopTerm.getFactor().struct == SymTab.intType)
+        {
+            mulopTerm.struct = SymTab.intType;
+        }
+        else
+        {
+            mulopTerm.struct = SymTab.noType;
+            report_error("Semantic Error: Operands of *, /, % operations on line " + mulopTerm.getLine() + " must be of int type", null);
+        }
     }
 }
