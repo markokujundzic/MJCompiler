@@ -275,6 +275,10 @@ Type ::=
 Statement ::=
 		(DesignatorStatementDecl) DesignatorStatement SEMICOLON
 		|
+		(ReadStatementDecl) ReadStatement
+		|
+		(PrintStatementDecl) PrintStatement
+		|
 		(IfStatementDecl) IfStatement
 		|
 		(DoWhileStatementDecl) DoWhileStatement
@@ -284,10 +288,6 @@ Statement ::=
 		(ContinueStatement) CONTINUE SEMICOLON
 		|
 		(ReturnStatementDecl) ReturnStatement
-		|
-		(ReadStatementDecl) ReadStatement
-		|
-		(PrintStatementDecl) PrintStatement
 		|
 		(MultipleStatements) LEFT_BRACE MethodBody RIGHT_BRACE
 		;
@@ -465,15 +465,9 @@ OptionalTermList ::=
 /* TERM - START */
 
 Term ::=
-		(Term) Factor OptionalFactors
-		;
-OptionalFactors ::=
-		(YesOptionalFactors) OptionalFactors OptionalFactor
+		(FactorTerm) Factor
 		|
-		(NoOptionalFactors) /* epsilon */
-		;
-OptionalFactor ::=
-		(OptionalFactor) Mulop Factor
+		(MulopTerm) Term Mulop Factor
 		;
 
 /* TERM - END */

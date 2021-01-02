@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 1/0/2021 19:51:0
+// 2/0/2021 16:0:33
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -22,10 +22,12 @@ public interface Visitor {
     public void visit(Factor Factor);
     public void visit(CondTerm CondTerm);
     public void visit(DesignatorActPars DesignatorActPars);
+    public void visit(Term Term);
     public void visit(Condition Condition);
     public void visit(OptionalFactors OptionalFactors);
     public void visit(ConstDeclList ConstDeclList);
     public void visit(OptionalDesignator OptionalDesignator);
+    public void visit(OptionalFactor OptionalFactor);
     public void visit(MethodBody MethodBody);
     public void visit(ConstDeclValue ConstDeclValue);
     public void visit(VarDeclList VarDeclList);
@@ -66,10 +68,8 @@ public interface Visitor {
     public void visit(IntFactor IntFactor);
     public void visit(FunctionCallFactor FunctionCallFactor);
     public void visit(DesignatorFactor DesignatorFactor);
-    public void visit(OptionalFactor OptionalFactor);
-    public void visit(NoOptionalFactors NoOptionalFactors);
-    public void visit(YesOptionalFactors YesOptionalFactors);
-    public void visit(Term Term);
+    public void visit(MulopTerm MulopTerm);
+    public void visit(FactorTerm FactorTerm);
     public void visit(NoOptionalTermList NoOptionalTermList);
     public void visit(YesOptionalTermList YesOptionalTermList);
     public void visit(MinusTermFiniteExpr MinusTermFiniteExpr);
@@ -116,13 +116,13 @@ public interface Visitor {
     public void visit(Designator Designator);
     public void visit(DesignatorStatement DesignatorStatement);
     public void visit(MultipleStatements MultipleStatements);
-    public void visit(PrintStatementDecl PrintStatementDecl);
-    public void visit(ReadStatementDecl ReadStatementDecl);
     public void visit(ReturnStatementDecl ReturnStatementDecl);
     public void visit(ContinueStatement ContinueStatement);
     public void visit(BreakStatement BreakStatement);
     public void visit(DoWhileStatementDecl DoWhileStatementDecl);
     public void visit(IfStatementDecl IfStatementDecl);
+    public void visit(PrintStatementDecl PrintStatementDecl);
+    public void visit(ReadStatementDecl ReadStatementDecl);
     public void visit(DesignatorStatementDecl DesignatorStatementDecl);
     public void visit(Type Type);
     public void visit(NoFormParArrayOption NoFormParArrayOption);

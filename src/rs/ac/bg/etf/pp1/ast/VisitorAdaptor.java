@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 1/0/2021 19:51:0
+// 2/0/2021 16:0:33
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -22,10 +22,12 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(Factor Factor) { }
     public void visit(CondTerm CondTerm) { }
     public void visit(DesignatorActPars DesignatorActPars) { }
+    public void visit(Term Term) { }
     public void visit(Condition Condition) { }
     public void visit(OptionalFactors OptionalFactors) { }
     public void visit(ConstDeclList ConstDeclList) { }
     public void visit(OptionalDesignator OptionalDesignator) { }
+    public void visit(OptionalFactor OptionalFactor) { }
     public void visit(MethodBody MethodBody) { }
     public void visit(ConstDeclValue ConstDeclValue) { }
     public void visit(VarDeclList VarDeclList) { }
@@ -66,10 +68,8 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(IntFactor IntFactor) { visit(); }
     public void visit(FunctionCallFactor FunctionCallFactor) { visit(); }
     public void visit(DesignatorFactor DesignatorFactor) { visit(); }
-    public void visit(OptionalFactor OptionalFactor) { visit(); }
-    public void visit(NoOptionalFactors NoOptionalFactors) { visit(); }
-    public void visit(YesOptionalFactors YesOptionalFactors) { visit(); }
-    public void visit(Term Term) { visit(); }
+    public void visit(MulopTerm MulopTerm) { visit(); }
+    public void visit(FactorTerm FactorTerm) { visit(); }
     public void visit(NoOptionalTermList NoOptionalTermList) { visit(); }
     public void visit(YesOptionalTermList YesOptionalTermList) { visit(); }
     public void visit(MinusTermFiniteExpr MinusTermFiniteExpr) { visit(); }
@@ -116,13 +116,13 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(Designator Designator) { visit(); }
     public void visit(DesignatorStatement DesignatorStatement) { visit(); }
     public void visit(MultipleStatements MultipleStatements) { visit(); }
-    public void visit(PrintStatementDecl PrintStatementDecl) { visit(); }
-    public void visit(ReadStatementDecl ReadStatementDecl) { visit(); }
     public void visit(ReturnStatementDecl ReturnStatementDecl) { visit(); }
     public void visit(ContinueStatement ContinueStatement) { visit(); }
     public void visit(BreakStatement BreakStatement) { visit(); }
     public void visit(DoWhileStatementDecl DoWhileStatementDecl) { visit(); }
     public void visit(IfStatementDecl IfStatementDecl) { visit(); }
+    public void visit(PrintStatementDecl PrintStatementDecl) { visit(); }
+    public void visit(ReadStatementDecl ReadStatementDecl) { visit(); }
     public void visit(DesignatorStatementDecl DesignatorStatementDecl) { visit(); }
     public void visit(Type Type) { visit(); }
     public void visit(NoFormParArrayOption NoFormParArrayOption) { visit(); }

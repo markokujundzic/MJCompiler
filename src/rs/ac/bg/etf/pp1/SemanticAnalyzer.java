@@ -238,23 +238,90 @@ public class SemanticAnalyzer extends VisitorAdaptor
     }
 
     /* Designator */
-    public void visit(DesignatorName designatorName)
+    public void visit(Designator designator)
     {
-        Obj obj = SymTab.find(designatorName.getName());
+        Obj obj = SymTab.find(designator.getDesignatorName().getName());
 
         if (obj == SymTab.noObj)
         {
-            report_error("Semantic Error: Variable " + designatorName.getName() + " used on line " + designatorName.getLine() + " has not been declared", null);
+            report_error("Semantic Error: Variable " + designator.getDesignatorName().getName() + " used on line " + designator.getDesignatorName().getLine() + " has not been declared", null);
+        }
+        else
+        {
+            report_info("Variable " + designator.getDesignatorName().getName() + " used", designator.getDesignatorName());
         }
 
-        designatorName.obj = obj;
+        designator.getDesignatorName().obj = obj;
+
+        if (designator.getOptionalDesignator() instanceof YesOptionalDesignator)
+        {
+            if (obj.getType().getKind() == Struct.Array)
+            {
+                if (((YesOptionalDesignator) designator.getOptionalDesignator()).getExpr().struct != SymTab.intType)
+                {
+                    report_error("Semantic Error: Expression for array indexing used on line " + designator.getDesignatorName().getLine() + " must be of int type", null);
+                }
+                else if (true)
+                {
+                    // dodati obradu za koriscenje konstante u indeksiranju niza
+                }
+            }
+            else
+            {
+                report_error("Semantic Error: Attempted indexing of non-array variable " + designator.getDesignatorName().getName() + " used on line " + designator.getDesignatorName().getLine(), null);
+            }
+        }
     }
 
-    public void visit(OptionalDesignator optionalDesignator)
+    public void visit(DesignatorStatement d)
     {
-        if (optionalDesignator instanceof YesOptionalDesignator)
+        if (d.getDesignatorAddition() instanceof IncrementDesignatorAddition || d.getDesignatorAddition() instanceof DecrementDesignatorAddition)
         {
-
+            if (d.getDesignator().getDesignatorName().obj.getType() != SymTab.intType)
+            {
+                report_error("Semantic Error: post-increment and post-decrement operators can only be used with int types on line " + d.getDesignator().getDesignatorName().getLine(), null);
+            }
         }
+    }
+
+    /* Factor */
+    public void visit(DesignatorFactor designatorFactor)
+    {
+        designatorFactor.struct = designatorFactor.getDesignator().getDesignatorName().obj.getType();
+    }
+
+    public void visit(IntFactor intFactor)
+    {
+        intFactor.struct = SymTab.intType;
+    }
+
+    public void visit(BoolFactor boolFactor)
+    {
+        boolFactor.struct = SymTab.boolType;
+    }
+
+    public void visit(CharFactor charFactor)
+    {
+        charFactor.struct = SymTab.charType;
+    }
+
+    public void visit(ExprFactor exprFactor)
+    {
+        exprFactor.struct = exprFactor.getExpr().struct;
+    }
+
+    public void visit(NewFactor newFactor)
+    {
+        newFactor.struct = currentType;
+    }
+
+    public void visit(NewArrayFactor newArrayFactor)
+    {
+        if (newArrayFactor.getExpr().struct != SymTab.intType)
+        {
+            report_error("Semantic Error: Expression for array indexing used on line " + newArrayFactor.getLine() + " must be of int type", null);
+        }
+
+        newArrayFactor.struct = new Struct(Struct.Array, currentType);
     }
 }

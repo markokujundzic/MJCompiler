@@ -317,6 +317,10 @@ Type ::=
 Statement ::=
 		(DesignatorStatementDecl) DesignatorStatement:D1 SEMICOLON {: RESULT=new DesignatorStatementDecl(D1); RESULT.setLine(D1left); :}
 		|
+		(ReadStatementDecl) ReadStatement:R1 {: RESULT=new ReadStatementDecl(R1); RESULT.setLine(R1left); :}
+		|
+		(PrintStatementDecl) PrintStatement:P1 {: RESULT=new PrintStatementDecl(P1); RESULT.setLine(P1left); :}
+		|
 		(IfStatementDecl) IfStatement:I1 {: RESULT=new IfStatementDecl(I1); RESULT.setLine(I1left); :}
 		|
 		(DoWhileStatementDecl) DoWhileStatement:D1 {: RESULT=new DoWhileStatementDecl(D1); RESULT.setLine(D1left); :}
@@ -326,10 +330,6 @@ Statement ::=
 		(ContinueStatement) CONTINUE SEMICOLON {: RESULT=new ContinueStatement(); :}
 		|
 		(ReturnStatementDecl) ReturnStatement:R1 {: RESULT=new ReturnStatementDecl(R1); RESULT.setLine(R1left); :}
-		|
-		(ReadStatementDecl) ReadStatement:R1 {: RESULT=new ReadStatementDecl(R1); RESULT.setLine(R1left); :}
-		|
-		(PrintStatementDecl) PrintStatement:P1 {: RESULT=new PrintStatementDecl(P1); RESULT.setLine(P1left); :}
 		|
 		(MultipleStatements) LEFT_BRACE MethodBody:M1 RIGHT_BRACE {: RESULT=new MultipleStatements(M1); RESULT.setLine(M1left); :}
 		;
@@ -507,15 +507,9 @@ OptionalTermList ::=
 /* TERM - START */
 
 Term ::=
-		(Term) Factor:F1 OptionalFactors:O2 {: RESULT=new Term(F1, O2); RESULT.setLine(F1left); :}
-		;
-OptionalFactors ::=
-		(YesOptionalFactors) OptionalFactors:O1 OptionalFactor:O2 {: RESULT=new YesOptionalFactors(O1, O2); RESULT.setLine(O1left); :}
+		(FactorTerm) Factor:F1 {: RESULT=new FactorTerm(F1); RESULT.setLine(F1left); :}
 		|
-		(NoOptionalFactors) {: RESULT=new NoOptionalFactors(); :} /* epsilon */
-		;
-OptionalFactor ::=
-		(OptionalFactor) Mulop:M1 Factor:F2 {: RESULT=new OptionalFactor(M1, F2); RESULT.setLine(M1left); :}
+		(MulopTerm) Term:T1 Mulop:M2 Factor:F3 {: RESULT=new MulopTerm(T1, M2, F3); RESULT.setLine(T1left); :}
 		;
 
 /* TERM - END */

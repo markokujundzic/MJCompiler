@@ -54,11 +54,11 @@ public class Compiler
 
 			if (!parser.errorDetected && semanticAnalyzer.passed())
 			{
-				log.info("Parsing finished successfully");
+				log.info("Parsing finished SUCCESSFULLY!");
 			}
 			else
 			{
-				log.error("Parsing finished unsuccessfully");
+				log.error("Parsing finished UNSUCCESSFULLY!");
 			}
 		} 
 		finally
