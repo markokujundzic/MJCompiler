@@ -260,12 +260,12 @@ public class SemanticAnalyzer extends VisitorAdaptor
         returnFound = false;
     }
 
-    /* Designator */
-
     /*
      * Ako je polje niza,   KIND objektnog cvora je ELEM
      * Ako nije polje niza, KIND objektnog cvora je VAR
      */
+
+    /* Designator */
     public void visit(Designator designator)
     {
         Obj obj = SymTab.find(designator.getDesignatorName().getName());
@@ -278,6 +278,12 @@ public class SemanticAnalyzer extends VisitorAdaptor
         else if (obj.getType().getKind() != Struct.Array)
         {
             report_info("Variable " + designator.getDesignatorName().getName() +
+            " used", designator.getDesignatorName());
+        }
+        else if (obj.getType().getKind() == Struct.Array &&
+                 !(designator.getOptionalDesignator() instanceof YesOptionalDesignator))
+        {
+            report_info("Array " + designator.getDesignatorName().getName() +
             " used", designator.getDesignatorName());
         }
 
@@ -296,7 +302,6 @@ public class SemanticAnalyzer extends VisitorAdaptor
                 }
                 else
                 {
-                    // dodati obradu za koriscenje konstante u indeksiranju niza
                     designator.getDesignatorName().obj = new Obj(Obj.Elem, designator.getDesignatorName().getName(),
                     designator.getDesignatorName().obj.getType().getElemType());
 
@@ -312,11 +317,6 @@ public class SemanticAnalyzer extends VisitorAdaptor
 
                 designator.getDesignatorName().obj = SymTab.noObj;
             }
-        }
-        else if (designator.getOptionalDesignator() instanceof NoOptionalDesignator)
-        {
-            report_info("Array " + designator.getDesignatorName().getName() +
-            " used", designator.getDesignatorName());
         }
     }
 
@@ -625,5 +625,10 @@ public class SemanticAnalyzer extends VisitorAdaptor
     public void visit(NoTernaryExpr noTernaryExpr)
     {
         noTernaryExpr.struct = noTernaryExpr.getCondFact().struct;
+    }
+
+    public void visit(YesTernaryExpr yesTernaryExpr)
+    {
+
     }
 }
