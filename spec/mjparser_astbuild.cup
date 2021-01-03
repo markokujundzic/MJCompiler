@@ -84,6 +84,7 @@ nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgramName, Program, MethodName
 
 nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, MethodReturnType, ConstDeclValue;
 nonterminal rs.etf.pp1.symboltable.concepts.Struct Expr, FiniteExpr, Term, Factor, CondFact;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct OptionalTermList, PossibleErrorDesignatorAddition, DesignatorAddition;
 
 nonterminal DeclarationList DeclarationList;
 nonterminal Declaration Declaration;
@@ -117,7 +118,6 @@ nonterminal ReturnStatement ReturnStatement;
 nonterminal PrintStatement PrintStatement;
 nonterminal ReadStatement ReadStatement;
 nonterminal Designator Designator;
-nonterminal DesignatorAddition DesignatorAddition;
 nonterminal OptionalDesignatorList OptionalDesignatorList;
 nonterminal OptionalDesignator OptionalDesignator;
 nonterminal OptionalDesignatorName OptionalDesignatorName;
@@ -127,7 +127,6 @@ nonterminal ActPars ActPars;
 nonterminal OptionalStatement OptionalStatement;
 nonterminal ElseStatement ElseStatement;
 nonterminal Condition Condition;
-nonterminal OptionalTermList OptionalTermList;
 nonterminal ReturnExpr ReturnExpr;
 nonterminal OptionalPrintNumber OptionalPrintNumber;
 nonterminal PrintNumber PrintNumber;
@@ -137,7 +136,6 @@ nonterminal Addop Addop;
 nonterminal OptionalFactors OptionalFactors;
 nonterminal OptionalFactor OptionalFactor;
 nonterminal Mulop Mulop;
-nonterminal PossibleErrorDesignatorAddition PossibleErrorDesignatorAddition;
 
 /* PRECEDENCE */
 precedence left ELSE;

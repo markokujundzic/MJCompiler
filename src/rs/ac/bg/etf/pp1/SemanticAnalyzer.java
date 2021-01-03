@@ -287,27 +287,47 @@ public class SemanticAnalyzer extends VisitorAdaptor
         {
             if (obj.getType().getKind() == Struct.Array)
             {
-                //if (((YesOptionalDesignator) designator.getOptionalDesignator()).getExpr().struct != SymTab.intType)
-                //{
-                //report_error("Semantic Error: Expression for array indexing used on line " + designator.getDesignatorName().getLine() + " must be of int type", null);
-                //}
-                //else
-                //{
+                if (((YesOptionalDesignator) designator.getOptionalDesignator()).getExpr().struct != SymTab.intType)
+                {
+                    report_error("Semantic Error: Expression for array indexing used on line " +
+                    designator.getDesignatorName().getLine() + " must be of int type", null);
+
+                    designator.getDesignatorName().obj = SymTab.noObj;
+                }
+                else
+                {
                     // dodati obradu za koriscenje konstante u indeksiranju niza
                     designator.getDesignatorName().obj = new Obj(Obj.Elem, designator.getDesignatorName().getName(),
                     designator.getDesignatorName().obj.getType().getElemType());
 
                     report_info("Element of array " + designator.getDesignatorName().getName() +
                     " used", designator.getDesignatorName());
-                //}
+                }
             }
             else
             {
                 report_error("Semantic Error: Attempted indexing of non-array variable " +
                 designator.getDesignatorName().getName() + " used on line " +
                 designator.getDesignatorName().getLine(), null);
+
+                designator.getDesignatorName().obj = SymTab.noObj;
             }
         }
+        else if (designator.getOptionalDesignator() instanceof NoOptionalDesignator)
+        {
+            report_info("Array " + designator.getDesignatorName().getName() +
+            " used", designator.getDesignatorName());
+        }
+    }
+
+    public void visit(AssignOpExprDesignatorAdditionNoError op)
+    {
+        op.struct = op.getExpr().struct;
+    }
+
+    public void visit(PossibleErrorAssignOpDesignatorAddition error)
+    {
+        error.struct = error.getPossibleErrorDesignatorAddition().struct;
     }
 
     public void visit(DesignatorStatement d)
@@ -320,6 +340,26 @@ public class SemanticAnalyzer extends VisitorAdaptor
                 report_error("Semantic Error: post-increment and post-decrement " +
                 "operators can only be used with int types on line " +
                 d.getDesignator().getDesignatorName().getLine(), null);
+            }
+        }
+        else if (d.getDesignatorAddition() instanceof PossibleErrorAssignOpDesignatorAddition)
+        {
+            Struct expr = d.getDesignatorAddition().struct;
+            Obj designator = d.getDesignator().getDesignatorName().obj;
+            if (designator.getKind() != Obj.Var && designator.getKind() != Obj.Elem)
+            {
+                report_error("Semantic Error: Designator where Expr is assigned to " +
+                "Designator must be a variable or an element type on line " +
+                d.getDesignator().getDesignatorName().getLine(), null);
+            }
+            else
+            {
+                if (!expr.compatibleWith(designator.getType()))
+                {
+                    report_error("Semantic Error: Incompatible types where " +
+                    "Expr is assigned to Designator on line " +
+                    d.getDesignator().getDesignatorName().getLine(), null);
+                }
             }
         }
     }
@@ -458,14 +498,132 @@ public class SemanticAnalyzer extends VisitorAdaptor
             }
             else
             {
-                pluralCondFact.struct = expr1;
+                pluralCondFact.struct = SymTab.boolType;
             }
         }
     }
 
     /* Finite expression */
-    public void visit()
+    public void visit(TermFiniteExpr termFiniteExpr)
     {
+        Struct term = termFiniteExpr.getTerm().struct;
+        Struct list = termFiniteExpr.getOptionalTermList().struct;
+        if (list == null)
+        {
+            termFiniteExpr.struct = term;
+        }
+        else
+        {
+            if (term.compatibleWith(list))
+            {
+                if (term == SymTab.intType &&
+                    list == SymTab.intType)
+                {
+                    termFiniteExpr.struct = term;
+                }
+                else
+                {
+                    report_error("Semantic Error: Types used in FinalExpr on line " +
+                    termFiniteExpr.getLine() + " must be of int type", null);
 
+                    termFiniteExpr.struct = SymTab.noType;
+                }
+            }
+            else
+            {
+                report_error("Semantic Error: Types used in FinalExpr on line " +
+                termFiniteExpr.getLine() + " must be compatible", null);
+
+                termFiniteExpr.struct = SymTab.noType;
+            }
+        }
+    }
+
+    public void visit(MinusTermFiniteExpr minusTermFiniteExpr)
+    {
+        Struct term = minusTermFiniteExpr.getTerm().struct;
+        if (term != SymTab.intType)
+        {
+            report_error("Semantic Error: Term used behind - sign on line " +
+            minusTermFiniteExpr.getLine() + " inside of FinalExpr must be of int type", null);
+
+            minusTermFiniteExpr.struct = SymTab.noType;
+        }
+        Struct list = minusTermFiniteExpr.getOptionalTermList().struct;
+        if (list == null)
+        {
+            minusTermFiniteExpr.struct = term;
+        }
+        else
+        {
+            if (term.compatibleWith(list))
+            {
+                if (term == SymTab.intType &&
+                    list == SymTab.intType)
+                {
+                    minusTermFiniteExpr.struct = term;
+                }
+                else
+                {
+                    report_error("Semantic Error: Types used in FinalExpr on line " +
+                    minusTermFiniteExpr.getLine() + " must be of int type", null);
+
+                    minusTermFiniteExpr.struct = SymTab.noType;
+                }
+            }
+            else
+            {
+                report_error("Semantic Error: Types used in FinalExpr on line " +
+                minusTermFiniteExpr.getLine() + " must be compatible", null);
+
+                minusTermFiniteExpr.struct = SymTab.noType;
+            }
+        }
+    }
+
+    public void visit(NoOptionalTermList noOptionalTermList)
+    {
+        noOptionalTermList.struct = null;
+    }
+
+    public void visit(YesOptionalTermList yesOptionalTermList)
+    {
+        Struct term = yesOptionalTermList.getTerm().struct;
+        Struct list = yesOptionalTermList.getOptionalTermList().struct;
+        if (list == null)
+        {
+            yesOptionalTermList.struct = term;
+        }
+        else
+        {
+            if (term.compatibleWith(list))
+            {
+                if (term == SymTab.intType &&
+                    list == SymTab.intType)
+                {
+                    yesOptionalTermList.struct = term;
+                }
+                else
+                {
+                    report_error("Semantic Error: Types used in FinalExpr on line " +
+                    yesOptionalTermList.getLine() + " must be of int type", null);
+
+                    yesOptionalTermList.struct = SymTab.noType;
+                }
+            }
+            else
+            {
+                report_error("Semantic Error: Types used in FinalExpr on line " +
+                yesOptionalTermList.getLine() + " must be compatible", null);
+
+                yesOptionalTermList.struct = SymTab.noType;
+            }
+        }
+    }
+
+    /* Expr */
+    public void visit(NoTernaryExpr noTernaryExpr)
+    {
+        noTernaryExpr.struct = noTernaryExpr.getCondFact().struct;
     }
 }
