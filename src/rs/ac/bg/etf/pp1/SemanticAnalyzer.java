@@ -407,7 +407,7 @@ public class SemanticAnalyzer extends VisitorAdaptor
         Obj designator = readStatement.getDesignator().getDesignatorName().obj;
         if (designator.getKind() != Obj.Var && designator.getKind() != Obj.Elem)
         {
-            report_error("Semantic Error: Operand of print method on line " +
+            report_error("Semantic Error: Operand of read method on line " +
             readStatement.getLine() + " must be a variable or an array element", null);
         }
         else
@@ -416,7 +416,7 @@ public class SemanticAnalyzer extends VisitorAdaptor
                 designator.getType() != SymTab.boolType &&
                 designator.getType() != SymTab.charType)
             {
-                report_error("Semantic Error: Operand of print method on line " +
+                report_error("Semantic Error: Operand of read method on line " +
                 readStatement.getLine() + " must be of int, bool or char type", null);
             }
         }
@@ -425,6 +425,13 @@ public class SemanticAnalyzer extends VisitorAdaptor
     /* Print statement */
     public void visit(PrintStatement printStatement)
     {
-
+        Struct expr = printStatement.getExpr().struct;
+        if (expr != SymTab.intType &&
+            expr != SymTab.boolType &&
+            expr != SymTab.charType)
+        {
+            report_error("Semantic Error: Operand of print method on line " +
+            printStatement.getLine() + " must be of int, bool or char type", null);
+        }
     }
 }
