@@ -111,20 +111,6 @@ public class SemanticAnalyzer extends VisitorAdaptor
         {
             if (declVariable.getVarDeclArrayOption() instanceof YesVarDeclArrayOption)
             {
-                /*Struct tmp = null;
-                if (currentType.getKind() == Struct.Int)
-                {
-                    tmp = SymTab.intType;
-                }
-                else if (currentType.getKind() == Struct.Bool)
-                {
-                    tmp = SymTab.boolType;
-                }
-                else if (currentType.getKind() == Struct.Char)
-                {
-                    tmp = SymTab.charType;
-                }*/
-
                 SymTab.insert(Obj.Var, declVariable.getVarDeclName().getName(),
                 new Struct(Struct.Array, currentType));
 
@@ -433,5 +419,53 @@ public class SemanticAnalyzer extends VisitorAdaptor
             report_error("Semantic Error: Operand of print method on line " +
             printStatement.getLine() + " must be of int, bool or char type", null);
         }
+    }
+
+    /* CondFact */
+    public void visit(SingleCondFact singleCondFact)
+    {
+        singleCondFact.struct = singleCondFact.getFiniteExpr().struct;
+    }
+
+    public void visit(PluralCondFact pluralCondFact)
+    {
+        Struct expr1 = pluralCondFact.getFiniteExpr().struct;
+        Struct expr2 = pluralCondFact.getFiniteExpr1().struct;
+        if (!expr1.compatibleWith(expr2))
+        {
+            report_error("Semantic Error: CondFact operand types on line " +
+            pluralCondFact.getLine() + " are not compatible", null);
+
+            pluralCondFact.struct = SymTab.noType;
+        }
+        else
+        {
+            if (expr1.getKind() == Struct.Array &&
+                expr2.getKind() == Struct.Array)
+            {
+                if (pluralCondFact.getRelop() instanceof RelopEqual ||
+                    pluralCondFact.getRelop() instanceof RelopNotEqual)
+                {
+                    pluralCondFact.struct = expr1;
+                }
+                else
+                {
+                    report_error("Semantic Error: CondFact operands of array type on line " +
+                    pluralCondFact.getLine() + " can only be compared for equality or non-equality", null);
+
+                    pluralCondFact.struct = SymTab.noType;
+                }
+            }
+            else
+            {
+                pluralCondFact.struct = expr1;
+            }
+        }
+    }
+
+    /* Finite expression */
+    public void visit()
+    {
+
     }
 }

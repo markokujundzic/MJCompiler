@@ -83,11 +83,11 @@ terminal LESS_OR_EQUAL;
 nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgramName, Program, MethodName, DesignatorName;
 
 nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, MethodReturnType, ConstDeclValue;
-nonterminal rs.etf.pp1.symboltable.concepts.Struct Expr, FiniteExpr, Term, Factor;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct Expr, FiniteExpr, Term, Factor, CondFact;
 
 nonterminal DeclarationList, Declaration, MethodDeclarationList;
 nonterminal ConstDecl, VarDecl, ConstDeclList, ConstDeclVariable;
-nonterminal ConstDeclName, CondTerm, CondFact, Relop, PossibleErrorCondition;
+nonterminal ConstDeclName, CondTerm, Relop, PossibleErrorCondition;
 nonterminal VarDeclList, DeclVariable, VarDeclName, VarDeclArrayOption;
 nonterminal MethodDeclaration, MethodParameters, MethodVariables, MethodBody;
 nonterminal FormPars, Statement, FormParList, FormPar, FormParName, FormParArrayOption;
@@ -445,9 +445,9 @@ CondFact ::=
 /* EXPR - START */
 
 Expr ::=
-        (YesTernaryExpr) CondFact QUESTION_MARK Expr COLON Expr
-        |
-        (NoTernaryExpr) CondFact
+		(YesTernaryExpr) CondFact QUESTION_MARK Expr COLON Expr
+		|
+		(NoTernaryExpr) CondFact
 		;
 FiniteExpr ::=
 		(TermFiniteExpr) Term OptionalTermList

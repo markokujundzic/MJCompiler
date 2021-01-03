@@ -83,7 +83,7 @@ terminal LESS_OR_EQUAL;
 nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgramName, Program, MethodName, DesignatorName;
 
 nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, MethodReturnType, ConstDeclValue;
-nonterminal rs.etf.pp1.symboltable.concepts.Struct Expr, FiniteExpr, Term, Factor;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct Expr, FiniteExpr, Term, Factor, CondFact;
 
 nonterminal DeclarationList DeclarationList;
 nonterminal Declaration Declaration;
@@ -94,7 +94,6 @@ nonterminal ConstDeclList ConstDeclList;
 nonterminal ConstDeclVariable ConstDeclVariable;
 nonterminal ConstDeclName ConstDeclName;
 nonterminal CondTerm CondTerm;
-nonterminal CondFact CondFact;
 nonterminal Relop Relop;
 nonterminal PossibleErrorCondition PossibleErrorCondition;
 nonterminal VarDeclList VarDeclList;
@@ -487,9 +486,9 @@ CondFact ::=
 /* EXPR - START */
 
 Expr ::=
-        (YesTernaryExpr) CondFact:C1 QUESTION_MARK Expr:E2 COLON Expr:E3 {: RESULT=new YesTernaryExpr(C1, E2, E3); RESULT.setLine(C1left); :}
-        |
-        (NoTernaryExpr) CondFact:C1 {: RESULT=new NoTernaryExpr(C1); RESULT.setLine(C1left); :}
+		(YesTernaryExpr) CondFact:C1 QUESTION_MARK Expr:E2 COLON Expr:E3 {: RESULT=new YesTernaryExpr(C1, E2, E3); RESULT.setLine(C1left); :}
+		|
+		(NoTernaryExpr) CondFact:C1 {: RESULT=new NoTernaryExpr(C1); RESULT.setLine(C1left); :}
 		;
 FiniteExpr ::=
 		(TermFiniteExpr) Term:T1 OptionalTermList:O2 {: RESULT=new TermFiniteExpr(T1, O2); RESULT.setLine(T1left); :}
