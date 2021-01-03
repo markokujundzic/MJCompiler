@@ -486,7 +486,7 @@ public class SemanticAnalyzer extends VisitorAdaptor
                 if (pluralCondFact.getRelop() instanceof RelopEqual ||
                     pluralCondFact.getRelop() instanceof RelopNotEqual)
                 {
-                    pluralCondFact.struct = expr1;
+                    pluralCondFact.struct = SymTab.boolType;
                 }
                 else
                 {
