@@ -437,7 +437,7 @@ CondTerm ::=
 CondFact ::=
 		(SingleCondFact) FiniteExpr
 		|
-		(PluralCondFact) CondFact Relop FiniteExpr
+		(PluralCondFact) FiniteExpr Relop FiniteExpr
 		;
 
 /* CONDITIONS - END */
@@ -445,9 +445,9 @@ CondFact ::=
 /* EXPR - START */
 
 Expr ::=
-        (YesTernaryExpr) Condition QUESTION_MARK Expr COLON Expr
+        (YesTernaryExpr) CondFact QUESTION_MARK Expr COLON Expr
         |
-        (NoTernaryExpr) Condition
+        (NoTernaryExpr) CondFact
 		;
 FiniteExpr ::=
 		(TermFiniteExpr) Term OptionalTermList

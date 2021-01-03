@@ -1,39 +1,23 @@
 // generated with ast extension for cup
 // version 0.8
-// 2/0/2021 16:0:33
+// 3/0/2021 10:5:0
 
 
 package rs.ac.bg.etf.pp1.ast;
 
 public class PluralCondFact extends CondFact {
 
-    private CondFact CondFact;
-    private Relop Relop;
     private FiniteExpr FiniteExpr;
+    private Relop Relop;
+    private FiniteExpr FiniteExpr1;
 
-    public PluralCondFact (CondFact CondFact, Relop Relop, FiniteExpr FiniteExpr) {
-        this.CondFact=CondFact;
-        if(CondFact!=null) CondFact.setParent(this);
-        this.Relop=Relop;
-        if(Relop!=null) Relop.setParent(this);
+    public PluralCondFact (FiniteExpr FiniteExpr, Relop Relop, FiniteExpr FiniteExpr1) {
         this.FiniteExpr=FiniteExpr;
         if(FiniteExpr!=null) FiniteExpr.setParent(this);
-    }
-
-    public CondFact getCondFact() {
-        return CondFact;
-    }
-
-    public void setCondFact(CondFact CondFact) {
-        this.CondFact=CondFact;
-    }
-
-    public Relop getRelop() {
-        return Relop;
-    }
-
-    public void setRelop(Relop Relop) {
         this.Relop=Relop;
+        if(Relop!=null) Relop.setParent(this);
+        this.FiniteExpr1=FiniteExpr1;
+        if(FiniteExpr1!=null) FiniteExpr1.setParent(this);
     }
 
     public FiniteExpr getFiniteExpr() {
@@ -44,27 +28,43 @@ public class PluralCondFact extends CondFact {
         this.FiniteExpr=FiniteExpr;
     }
 
+    public Relop getRelop() {
+        return Relop;
+    }
+
+    public void setRelop(Relop Relop) {
+        this.Relop=Relop;
+    }
+
+    public FiniteExpr getFiniteExpr1() {
+        return FiniteExpr1;
+    }
+
+    public void setFiniteExpr1(FiniteExpr FiniteExpr1) {
+        this.FiniteExpr1=FiniteExpr1;
+    }
+
     public void accept(Visitor visitor) {
         visitor.visit(this);
     }
 
     public void childrenAccept(Visitor visitor) {
-        if(CondFact!=null) CondFact.accept(visitor);
-        if(Relop!=null) Relop.accept(visitor);
         if(FiniteExpr!=null) FiniteExpr.accept(visitor);
+        if(Relop!=null) Relop.accept(visitor);
+        if(FiniteExpr1!=null) FiniteExpr1.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
-        if(CondFact!=null) CondFact.traverseTopDown(visitor);
-        if(Relop!=null) Relop.traverseTopDown(visitor);
         if(FiniteExpr!=null) FiniteExpr.traverseTopDown(visitor);
+        if(Relop!=null) Relop.traverseTopDown(visitor);
+        if(FiniteExpr1!=null) FiniteExpr1.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
-        if(CondFact!=null) CondFact.traverseBottomUp(visitor);
-        if(Relop!=null) Relop.traverseBottomUp(visitor);
         if(FiniteExpr!=null) FiniteExpr.traverseBottomUp(visitor);
+        if(Relop!=null) Relop.traverseBottomUp(visitor);
+        if(FiniteExpr1!=null) FiniteExpr1.traverseBottomUp(visitor);
         accept(visitor);
     }
 
@@ -73,8 +73,8 @@ public class PluralCondFact extends CondFact {
         buffer.append(tab);
         buffer.append("PluralCondFact(\n");
 
-        if(CondFact!=null)
-            buffer.append(CondFact.toString("  "+tab));
+        if(FiniteExpr!=null)
+            buffer.append(FiniteExpr.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");
@@ -85,8 +85,8 @@ public class PluralCondFact extends CondFact {
             buffer.append(tab+"  null");
         buffer.append("\n");
 
-        if(FiniteExpr!=null)
-            buffer.append(FiniteExpr.toString("  "+tab));
+        if(FiniteExpr1!=null)
+            buffer.append(FiniteExpr1.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");

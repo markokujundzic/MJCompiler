@@ -84,7 +84,8 @@ public class SemanticAnalyzer extends VisitorAdaptor
 
         if (typeNode == SymTab.noObj)
         {
-            report_error("Type " + type.getName() + " not found in Symbol Table on line " + type.getLine(), null);
+            report_error("Type " + type.getName() +
+            " not found in Symbol Table on line " + type.getLine(), null);
             type.struct = currentType = SymTab.noType;
         }
         else if (typeNode.getKind() == Obj.Type)
@@ -93,7 +94,9 @@ public class SemanticAnalyzer extends VisitorAdaptor
         }
         else
         {
-            report_error("Semantic Error: Identifier " + type.getName() + " does not represent a type on line " + type.getLine(), null);
+            report_error("Semantic Error: Identifier " + type.getName() +
+            " does not represent a type on line " + type.getLine(), null);
+
             type.struct = currentType = SymTab.noType;
         }
     }
@@ -122,14 +125,18 @@ public class SemanticAnalyzer extends VisitorAdaptor
                     tmp = SymTab.charType;
                 }*/
 
-                SymTab.insert(Obj.Var, declVariable.getVarDeclName().getName(), new Struct(Struct.Array, currentType));
+                SymTab.insert(Obj.Var, declVariable.getVarDeclName().getName(),
+                new Struct(Struct.Array, currentType));
+
                 if (!localVariables)
                 {
-                    report_info("Global array " + declVariable.getVarDeclName().getName() + " declared", declVariable);
+                    report_info("Global array " + declVariable.getVarDeclName().getName() +
+                    " declared", declVariable);
                 }
                 else
                 {
-                    report_info("Local array " + declVariable.getVarDeclName().getName() + " declared", declVariable);
+                    report_info("Local array " + declVariable.getVarDeclName().getName() +
+                    " declared", declVariable);
                 }
             }
             else if (declVariable.getVarDeclArrayOption() instanceof NoVarDeclArrayOption)
@@ -137,17 +144,21 @@ public class SemanticAnalyzer extends VisitorAdaptor
                 SymTab.insert(Obj.Var, declVariable.getVarDeclName().getName(), currentType);
                 if (!localVariables)
                 {
-                    report_info("Global variable " + declVariable.getVarDeclName().getName() + " declared", declVariable);
+                    report_info("Global variable " + declVariable.getVarDeclName().getName() +
+                    " declared", declVariable);
                 }
                 else
                 {
-                    report_info("Local variable " + declVariable.getVarDeclName().getName() + " declared", declVariable);
+                    report_info("Local variable " + declVariable.getVarDeclName().getName() +
+                    " declared", declVariable);
                 }
             }
         }
         else
         {
-            report_error("Semantic Error: Global variable " + declVariable.getVarDeclName().getName() + " has already been declared on line " + declVariable.getVarDeclName().getLine(), null);
+            report_error("Semantic Error: Global variable " +
+            declVariable.getVarDeclName().getName() + " has already been declared on line " +
+            declVariable.getVarDeclName().getLine(), null);
         }
     }
 
@@ -178,18 +189,26 @@ public class SemanticAnalyzer extends VisitorAdaptor
         {
             if (currentType.assignableTo(constDeclVariable.getConstDeclValue().struct))
             {
-                Obj constant = SymTab.insert(Obj.Con, constDeclVariable.getConstDeclName().getName(), constDeclVariable.getConstDeclValue().struct);
+                Obj constant = SymTab.insert(Obj.Con, constDeclVariable.getConstDeclName().getName(),
+                constDeclVariable.getConstDeclValue().struct);
+
                 constant.setAdr(currentConstValue);
-                report_info("Const variable " + constDeclVariable.getConstDeclName().getName() + " declared", constDeclVariable);
+
+                report_info("Const variable " + constDeclVariable.getConstDeclName().getName() +
+                " declared", constDeclVariable);
             }
             else
             {
-                report_error("Semantic Error: Const variable " + constDeclVariable.getConstDeclName().getName() + " is not compatible with assigning value on line " + constDeclVariable.getConstDeclName().getLine(), null);
+                report_error("Semantic Error: Const variable " +
+                constDeclVariable.getConstDeclName().getName() + " is not compatible with assigning value on line " +
+                constDeclVariable.getConstDeclName().getLine(), null);
             }
         }
         else
         {
-            report_error("Semantic Error: Const variable " + constDeclVariable.getConstDeclName().getName() + " has already been declared on line " + constDeclVariable.getConstDeclName().getLine(), null);
+            report_error("Semantic Error: Const variable " +
+            constDeclVariable.getConstDeclName().getName() + " has already been declared on line " +
+            constDeclVariable.getConstDeclName().getLine(), null);
         }
     }
 
@@ -223,12 +242,14 @@ public class SemanticAnalyzer extends VisitorAdaptor
 
             if (methodName.getName().equals("main") && curerntMethodReturnType != SymTab.noType)
             {
-                report_error("Semantic Error: Method " + methodName.getName() + " must return void on line " + methodName.getLine(), null);
+                report_error("Semantic Error: Method " + methodName.getName() +
+                " must return void on line " + methodName.getLine(), null);
             }
         }
         else
         {
-            report_error("Semantic Error: Method " + methodName.getName() + " has already been declared on line " + methodName.getLine(), null);
+            report_error("Semantic Error: Method " + methodName.getName() +
+            " has already been declared on line " + methodName.getLine(), null);
         }
     }
 
@@ -236,11 +257,13 @@ public class SemanticAnalyzer extends VisitorAdaptor
     {
         if (!methodDeclaration.getMethodName().getName().equals("main") && !returnFound && curerntMethodReturnType != SymTab.noType)
         {
-            report_error("Semantic Error: Method " + currentMethod.getName() + " does not have a return statement on line " + methodDeclaration.getLine(), null);
+            report_error("Semantic Error: Method " + currentMethod.getName() +
+            " does not have a return statement on line " + methodDeclaration.getLine(), null);
         }
         else if (returnFound && curerntMethodReturnType == SymTab.noType)
         {
-            report_error("Semantic Error: Method " + currentMethod.getName() + " of type void has a return statement on line " + methodDeclaration.getLine(), null);
+            report_error("Semantic Error: Method " + currentMethod.getName() +
+            " of type void has a return statement on line " + methodDeclaration.getLine(), null);
         }
 
         SymTab.chainLocalSymbols(currentMethod);
@@ -254,8 +277,8 @@ public class SemanticAnalyzer extends VisitorAdaptor
     /* Designator */
 
     /*
-     * Ako je niz,   KIND objektnog cvora je ELEM
-     * Ako nije niz, KIND objektnog cvora je VAR
+     * Ako je polje niza,   KIND objektnog cvora je ELEM
+     * Ako nije polje niza, KIND objektnog cvora je VAR
      */
     public void visit(Designator designator)
     {
@@ -263,11 +286,13 @@ public class SemanticAnalyzer extends VisitorAdaptor
 
         if (obj == SymTab.noObj)
         {
-            report_error("Semantic Error: Variable " + designator.getDesignatorName().getName() + " used on line " + designator.getDesignatorName().getLine() + " has not been declared", null);
+            report_error("Semantic Error: Variable " + designator.getDesignatorName().getName() +
+            " used on line " + designator.getDesignatorName().getLine() + " has not been declared", null);
         }
         else if (obj.getType().getKind() != Struct.Array)
         {
-            report_info("Variable " + designator.getDesignatorName().getName() + " used", designator.getDesignatorName());
+            report_info("Variable " + designator.getDesignatorName().getName() +
+            " used", designator.getDesignatorName());
         }
 
         designator.getDesignatorName().obj = obj;
@@ -283,24 +308,32 @@ public class SemanticAnalyzer extends VisitorAdaptor
                 //else
                 //{
                     // dodati obradu za koriscenje konstante u indeksiranju niza
-                    designator.getDesignatorName().obj = new Obj(Obj.Elem, designator.getDesignatorName().getName(), designator.getDesignatorName().obj.getType().getElemType());
-                    report_info("Element of array " + designator.getDesignatorName().getName() + " used", designator.getDesignatorName());
+                    designator.getDesignatorName().obj = new Obj(Obj.Elem, designator.getDesignatorName().getName(),
+                    designator.getDesignatorName().obj.getType().getElemType());
+
+                    report_info("Element of array " + designator.getDesignatorName().getName() +
+                    " used", designator.getDesignatorName());
                 //}
             }
             else
             {
-                report_error("Semantic Error: Attempted indexing of non-array variable " + designator.getDesignatorName().getName() + " used on line " + designator.getDesignatorName().getLine(), null);
+                report_error("Semantic Error: Attempted indexing of non-array variable " +
+                designator.getDesignatorName().getName() + " used on line " +
+                designator.getDesignatorName().getLine(), null);
             }
         }
     }
 
     public void visit(DesignatorStatement d)
     {
-        if (d.getDesignatorAddition() instanceof IncrementDesignatorAddition || d.getDesignatorAddition() instanceof DecrementDesignatorAddition)
+        if (d.getDesignatorAddition() instanceof IncrementDesignatorAddition ||
+            d.getDesignatorAddition() instanceof DecrementDesignatorAddition)
         {
             if (d.getDesignator().getDesignatorName().obj.getType() != SymTab.intType)
             {
-                report_error("Semantic Error: post-increment and post-decrement operators can only be used with int types on line " + d.getDesignator().getDesignatorName().getLine(), null);
+                report_error("Semantic Error: post-increment and post-decrement " +
+                "operators can only be used with int types on line " +
+                d.getDesignator().getDesignatorName().getLine(), null);
             }
         }
     }
@@ -340,7 +373,8 @@ public class SemanticAnalyzer extends VisitorAdaptor
     {
         if (newArrayFactor.getExpr().struct != SymTab.intType)
         {
-            report_error("Semantic Error: Expression for array indexing used on line " + newArrayFactor.getLine() + " must be of int type", null);
+            report_error("Semantic Error: Expression for array indexing used on line " +
+            newArrayFactor.getLine() + " must be of int type", null);
         }
 
         newArrayFactor.struct = new Struct(Struct.Array, currentType);
@@ -354,14 +388,43 @@ public class SemanticAnalyzer extends VisitorAdaptor
 
     public void visit(MulopTerm mulopTerm)
     {
-        if (mulopTerm.getTerm().struct == SymTab.intType && mulopTerm.getFactor().struct == SymTab.intType)
+        if (mulopTerm.getTerm().struct == SymTab.intType &&
+            mulopTerm.getFactor().struct == SymTab.intType)
         {
             mulopTerm.struct = SymTab.intType;
         }
         else
         {
             mulopTerm.struct = SymTab.noType;
-            report_error("Semantic Error: Operands of *, /, % operations on line " + mulopTerm.getLine() + " must be of int type", null);
+            report_error("Semantic Error: Operands of *, /, % operations on line " +
+            mulopTerm.getLine() + " must be of int type", null);
         }
+    }
+
+    /* Read statement */
+    public void visit(ReadStatement readStatement)
+    {
+        Obj designator = readStatement.getDesignator().getDesignatorName().obj;
+        if (designator.getKind() != Obj.Var && designator.getKind() != Obj.Elem)
+        {
+            report_error("Semantic Error: Operand of print method on line " +
+            readStatement.getLine() + " must be a variable or an array element", null);
+        }
+        else
+        {
+            if (designator.getType() != SymTab.intType &&
+                designator.getType() != SymTab.boolType &&
+                designator.getType() != SymTab.charType)
+            {
+                report_error("Semantic Error: Operand of print method on line " +
+                readStatement.getLine() + " must be of int, bool or char type", null);
+            }
+        }
+    }
+
+    /* Print statement */
+    public void visit(PrintStatement printStatement)
+    {
+
     }
 }

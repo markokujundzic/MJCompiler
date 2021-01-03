@@ -479,7 +479,7 @@ CondTerm ::=
 CondFact ::=
 		(SingleCondFact) FiniteExpr:F1 {: RESULT=new SingleCondFact(F1); RESULT.setLine(F1left); :}
 		|
-		(PluralCondFact) CondFact:C1 Relop:R2 FiniteExpr:F3 {: RESULT=new PluralCondFact(C1, R2, F3); RESULT.setLine(C1left); :}
+		(PluralCondFact) FiniteExpr:F1 Relop:R2 FiniteExpr:F3 {: RESULT=new PluralCondFact(F1, R2, F3); RESULT.setLine(F1left); :}
 		;
 
 /* CONDITIONS - END */
@@ -487,9 +487,9 @@ CondFact ::=
 /* EXPR - START */
 
 Expr ::=
-        (YesTernaryExpr) Condition:C1 QUESTION_MARK Expr:E2 COLON Expr:E3 {: RESULT=new YesTernaryExpr(C1, E2, E3); RESULT.setLine(C1left); :}
+        (YesTernaryExpr) CondFact:C1 QUESTION_MARK Expr:E2 COLON Expr:E3 {: RESULT=new YesTernaryExpr(C1, E2, E3); RESULT.setLine(C1left); :}
         |
-        (NoTernaryExpr) Condition:C1 {: RESULT=new NoTernaryExpr(C1); RESULT.setLine(C1left); :}
+        (NoTernaryExpr) CondFact:C1 {: RESULT=new NoTernaryExpr(C1); RESULT.setLine(C1left); :}
 		;
 FiniteExpr ::=
 		(TermFiniteExpr) Term:T1 OptionalTermList:O2 {: RESULT=new TermFiniteExpr(T1, O2); RESULT.setLine(T1left); :}
