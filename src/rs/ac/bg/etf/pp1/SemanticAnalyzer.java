@@ -348,8 +348,8 @@ public class SemanticAnalyzer extends VisitorAdaptor
             Obj designator = d.getDesignator().getDesignatorName().obj;
             if (designator.getKind() != Obj.Var && designator.getKind() != Obj.Elem)
             {
-                report_error("Semantic Error: Designator where Expr is assigned to " +
-                "Designator must be a variable or an element type on line " +
+                report_error("Semantic Error: Designator in expression " +
+                "assignment must be a variable or an element type on line " +
                 d.getDesignator().getDesignatorName().getLine(), null);
             }
             else
@@ -438,9 +438,9 @@ public class SemanticAnalyzer extends VisitorAdaptor
         }
         else
         {
-            if (designator.getType() != SymTab.intType &&
+            if (designator.getType() != SymTab.charType &&
                 designator.getType() != SymTab.boolType &&
-                designator.getType() != SymTab.charType)
+                designator.getType() != SymTab.intType)
             {
                 report_error("Semantic Error: Operand of read method on line " +
                 readStatement.getLine() + " must be of int, bool or char type", null);
@@ -452,9 +452,9 @@ public class SemanticAnalyzer extends VisitorAdaptor
     public void visit(PrintStatement printStatement)
     {
         Struct expr = printStatement.getExpr().struct;
-        if (expr != SymTab.intType &&
+        if (expr != SymTab.charType &&
             expr != SymTab.boolType &&
-            expr != SymTab.charType)
+            expr != SymTab.intType)
         {
             report_error("Semantic Error: Operand of print method on line " +
             printStatement.getLine() + " must be of int, bool or char type", null);
@@ -629,6 +629,32 @@ public class SemanticAnalyzer extends VisitorAdaptor
 
     public void visit(YesTernaryExpr yesTernaryExpr)
     {
+        Struct condFact = yesTernaryExpr.getCondFact().struct;
+        Struct expr1 = yesTernaryExpr.getExpr().struct;
+        Struct expr2 = yesTernaryExpr.getExpr1().struct;
 
+        if (condFact != SymTab.boolType)
+        {
+            report_error("Semantic Error: CondFact used in Ternary Expression on line " +
+            yesTernaryExpr.getLine() + " must be of type bool", null);
+
+            yesTernaryExpr.struct = SymTab.noType;
+        }
+        else
+        {
+            if (expr1 == SymTab.charType && expr2 == SymTab.charType ||
+                expr1 == SymTab.boolType && expr2 == SymTab.boolType ||
+                expr1 == SymTab.intType && expr2 == SymTab.intType)
+            {
+                yesTernaryExpr.struct = expr1;
+            }
+            else
+            {
+                report_error("Semantic Error: Operands used in Ternary Expression on line " +
+                yesTernaryExpr.getLine() + " must be of the same type", null);
+
+                yesTernaryExpr.struct = SymTab.noType;
+            }
+        }
     }
 }
