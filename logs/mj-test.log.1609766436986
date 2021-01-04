@@ -1,0 +1,116 @@
+INFO  14:19:58,620 - Compiling source file: C:\Users\Asus\Desktop\FAKS\PP1\MJCompiler\test\semanticErrors.mj
+INFO  14:19:58,698 - #2 program
+INFO  14:19:58,698 - #9 semanticErrors
+INFO  14:19:58,714 - #5 const
+INFO  14:19:58,714 - #9 int
+INFO  14:19:58,714 - #9 constInt
+INFO  14:19:58,714 - #8 =
+INFO  14:19:58,714 - #10 1
+INFO  14:19:58,714 - #6 ;
+INFO  14:19:58,714 - #5 const
+INFO  14:19:58,714 - #9 char
+INFO  14:19:58,714 - #9 constChar
+INFO  14:19:58,714 - #8 =
+INFO  14:19:58,714 - #12 x
+INFO  14:19:58,714 - #6 ;
+INFO  14:19:58,714 - #5 const
+INFO  14:19:58,714 - #9 bool
+INFO  14:19:58,714 - #9 constBool
+INFO  14:19:58,714 - #8 =
+INFO  14:19:58,714 - #11 true
+INFO  14:19:58,714 - #6 ;
+INFO  14:19:58,714 - #3 {
+INFO  14:19:58,714 - #15 void
+INFO  14:19:58,714 - #9 main
+INFO  14:19:58,714 - #13 (
+INFO  14:19:58,714 - #14 )
+INFO  14:19:58,714 - #3 {
+INFO  14:19:58,714 - #4 }
+INFO  14:19:58,729 - #4 }
+INFO  14:19:58,729 - Program(
+  ProgramName(
+   semanticErrors
+  ) [ProgramName]
+  YesDeclarationList(
+    YesDeclarationList(
+      YesDeclarationList(
+        NoDeclarationList(
+        ) [NoDeclarationList]
+        ConstantDeclaration(
+          ConstDeclNoError(
+            Type(
+             int
+            ) [Type]
+            SingleConstDeclList(
+              ConstDeclVariable(
+                ConstDeclName(
+                 constInt
+                ) [ConstDeclName]
+                ConstDeclValueInt(
+                 1
+                ) [ConstDeclValueInt]
+              ) [ConstDeclVariable]
+            ) [SingleConstDeclList]
+          ) [ConstDeclNoError]
+        ) [ConstantDeclaration]
+      ) [YesDeclarationList]
+      ConstantDeclaration(
+        ConstDeclNoError(
+          Type(
+           char
+          ) [Type]
+          SingleConstDeclList(
+            ConstDeclVariable(
+              ConstDeclName(
+               constChar
+              ) [ConstDeclName]
+              ConstDeclValueChar(
+               x
+              ) [ConstDeclValueChar]
+            ) [ConstDeclVariable]
+          ) [SingleConstDeclList]
+        ) [ConstDeclNoError]
+      ) [ConstantDeclaration]
+    ) [YesDeclarationList]
+    ConstantDeclaration(
+      ConstDeclNoError(
+        Type(
+         bool
+        ) [Type]
+        SingleConstDeclList(
+          ConstDeclVariable(
+            ConstDeclName(
+             constBool
+            ) [ConstDeclName]
+            ConstDeclValueBool(
+             true
+            ) [ConstDeclValueBool]
+          ) [ConstDeclVariable]
+        ) [SingleConstDeclList]
+      ) [ConstDeclNoError]
+    ) [ConstantDeclaration]
+  ) [YesDeclarationList]
+  YesMethodDeclarationList(
+    NoMethodDeclarationList(
+    ) [NoMethodDeclarationList]
+    MethodDeclaration(
+      VoidMethodReturnType(
+      ) [VoidMethodReturnType]
+      MethodName(
+       main
+      ) [MethodName]
+      NoMethodParameters(
+      ) [NoMethodParameters]
+      NoMethodVariables(
+      ) [NoMethodVariables]
+      NoMethodBody(
+      ) [NoMethodBody]
+    ) [MethodDeclaration]
+  ) [YesMethodDeclarationList]
+) [Program]
+INFO  14:19:58,729 - ===================================
+INFO  14:19:58,745 - Const variable constInt declared on line 3
+INFO  14:19:58,745 - Const variable constChar declared on line 4
+INFO  14:19:58,745 - Const variable constBool declared on line 5
+INFO  14:19:58,745 - Method main declared on line 8
+INFO  14:19:58,745 - Parsing finished SUCCESSFULLY!

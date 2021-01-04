@@ -1,0 +1,836 @@
+INFO  14:32:04,168 - Compiling source file: C:\Users\Asus\Desktop\FAKS\PP1\MJCompiler\test\semanticErrors.mj
+INFO  14:32:04,246 - #2 program
+INFO  14:32:04,246 - #9 semanticErrors
+INFO  14:32:04,246 - #5 const
+INFO  14:32:04,246 - #9 int
+INFO  14:32:04,246 - #9 constInt
+INFO  14:32:04,246 - #8 =
+INFO  14:32:04,246 - #10 1
+INFO  14:32:04,246 - #6 ;
+INFO  14:32:04,246 - #5 const
+INFO  14:32:04,246 - #9 char
+INFO  14:32:04,246 - #9 constChar
+INFO  14:32:04,246 - #8 =
+INFO  14:32:04,246 - #12 x
+INFO  14:32:04,246 - #6 ;
+INFO  14:32:04,246 - #5 const
+INFO  14:32:04,246 - #9 bool
+INFO  14:32:04,246 - #9 constBool
+INFO  14:32:04,246 - #8 =
+INFO  14:32:04,246 - #11 true
+INFO  14:32:04,246 - #6 ;
+INFO  14:32:04,246 - #5 const
+INFO  14:32:04,262 - #9 int
+INFO  14:32:04,262 - #9 constErrorInt
+INFO  14:32:04,262 - #8 =
+INFO  14:32:04,262 - #11 true
+INFO  14:32:04,262 - #6 ;
+INFO  14:32:04,262 - #5 const
+INFO  14:32:04,262 - #9 char
+INFO  14:32:04,262 - #9 constErrorChar
+INFO  14:32:04,262 - #8 =
+INFO  14:32:04,262 - #10 5
+INFO  14:32:04,262 - #6 ;
+INFO  14:32:04,262 - #5 const
+INFO  14:32:04,262 - #9 bool
+INFO  14:32:04,262 - #9 constErrorBool
+INFO  14:32:04,262 - #8 =
+INFO  14:32:04,262 - #12 h
+INFO  14:32:04,262 - #6 ;
+INFO  14:32:04,262 - #5 const
+INFO  14:32:04,262 - #9 int
+INFO  14:32:04,262 - #9 constInt
+INFO  14:32:04,262 - #8 =
+INFO  14:32:04,262 - #10 3
+INFO  14:32:04,262 - #6 ;
+INFO  14:32:04,262 - #9 int
+INFO  14:32:04,262 - #9 x
+INFO  14:32:04,262 - #20 [
+INFO  14:32:04,262 - #21 ]
+INFO  14:32:04,262 - #7 ,
+INFO  14:32:04,262 - #9 y
+INFO  14:32:04,262 - #20 [
+INFO  14:32:04,262 - #21 ]
+INFO  14:32:04,262 - #6 ;
+INFO  14:32:04,262 - #9 bool
+INFO  14:32:04,262 - #9 b
+INFO  14:32:04,262 - #6 ;
+INFO  14:32:04,262 - #9 char
+INFO  14:32:04,262 - #9 c
+INFO  14:32:04,262 - #6 ;
+INFO  14:32:04,262 - #9 string
+INFO  14:32:04,262 - #9 s
+INFO  14:32:04,262 - #6 ;
+INFO  14:32:04,262 - #3 {
+INFO  14:32:04,262 - #15 void
+INFO  14:32:04,262 - #9 main
+INFO  14:32:04,262 - #13 (
+INFO  14:32:04,262 - #14 )
+INFO  14:32:04,262 - #9 int
+INFO  14:32:04,262 - #9 tmp
+INFO  14:32:04,262 - #6 ;
+INFO  14:32:04,262 - #3 {
+INFO  14:32:04,262 - #9 b
+INFO  14:32:04,262 - #8 =
+INFO  14:32:04,278 - #9 c
+INFO  14:32:04,278 - #6 ;
+INFO  14:32:04,278 - #9 b
+INFO  14:32:04,278 - #8 =
+INFO  14:32:04,278 - #11 true
+INFO  14:32:04,278 - #6 ;
+INFO  14:32:04,278 - #9 c
+INFO  14:32:04,278 - #22 ++
+INFO  14:32:04,278 - #6 ;
+INFO  14:32:04,278 - #9 x
+INFO  14:32:04,278 - #20 [
+INFO  14:32:04,278 - #10 0
+INFO  14:32:04,278 - #21 ]
+INFO  14:32:04,278 - #22 ++
+INFO  14:32:04,278 - #6 ;
+INFO  14:32:04,278 - #29 read
+INFO  14:32:04,278 - #13 (
+INFO  14:32:04,278 - #9 x
+INFO  14:32:04,278 - #14 )
+INFO  14:32:04,278 - #6 ;
+INFO  14:32:04,278 - #30 print
+INFO  14:32:04,278 - #13 (
+INFO  14:32:04,278 - #9 x
+INFO  14:32:04,278 - #7 ,
+INFO  14:32:04,278 - #10 5
+INFO  14:32:04,278 - #14 )
+INFO  14:32:04,278 - #6 ;
+INFO  14:32:04,278 - #30 print
+INFO  14:32:04,278 - #13 (
+INFO  14:32:04,278 - #9 tmp
+INFO  14:32:04,278 - #7 ,
+INFO  14:32:04,278 - #10 7
+INFO  14:32:04,278 - #14 )
+INFO  14:32:04,278 - #6 ;
+INFO  14:32:04,278 - #9 c
+INFO  14:32:04,278 - #8 =
+INFO  14:32:04,278 - #9 x
+INFO  14:32:04,278 - #20 [
+INFO  14:32:04,278 - #10 0
+INFO  14:32:04,278 - #21 ]
+INFO  14:32:04,278 - #44 >=
+INFO  14:32:04,278 - #9 x
+INFO  14:32:04,278 - #20 [
+INFO  14:32:04,278 - #10 1
+INFO  14:32:04,278 - #21 ]
+INFO  14:32:04,278 - #6 ;
+INFO  14:32:04,278 - #9 b
+INFO  14:32:04,278 - #8 =
+INFO  14:32:04,278 - #9 x
+INFO  14:32:04,278 - #20 [
+INFO  14:32:04,278 - #10 0
+INFO  14:32:04,278 - #21 ]
+INFO  14:32:04,278 - #45 <=
+INFO  14:32:04,278 - #9 x
+INFO  14:32:04,278 - #20 [
+INFO  14:32:04,278 - #10 1
+INFO  14:32:04,278 - #21 ]
+INFO  14:32:04,278 - #6 ;
+INFO  14:32:04,293 - #9 b
+INFO  14:32:04,293 - #8 =
+INFO  14:32:04,293 - #9 x
+INFO  14:32:04,293 - #41 !=
+INFO  14:32:04,293 - #9 y
+INFO  14:32:04,293 - #6 ;
+INFO  14:32:04,293 - #4 }
+INFO  14:32:04,293 - #4 }
+INFO  14:32:04,293 - Program(
+  ProgramName(
+   semanticErrors
+  ) [ProgramName]
+  YesDeclarationList(
+    YesDeclarationList(
+      YesDeclarationList(
+        YesDeclarationList(
+          YesDeclarationList(
+            YesDeclarationList(
+              YesDeclarationList(
+                YesDeclarationList(
+                  YesDeclarationList(
+                    YesDeclarationList(
+                      YesDeclarationList(
+                        NoDeclarationList(
+                        ) [NoDeclarationList]
+                        ConstantDeclaration(
+                          ConstDeclNoError(
+                            Type(
+                             int
+                            ) [Type]
+                            SingleConstDeclList(
+                              ConstDeclVariable(
+                                ConstDeclName(
+                                 constInt
+                                ) [ConstDeclName]
+                                ConstDeclValueInt(
+                                 1
+                                ) [ConstDeclValueInt]
+                              ) [ConstDeclVariable]
+                            ) [SingleConstDeclList]
+                          ) [ConstDeclNoError]
+                        ) [ConstantDeclaration]
+                      ) [YesDeclarationList]
+                      ConstantDeclaration(
+                        ConstDeclNoError(
+                          Type(
+                           char
+                          ) [Type]
+                          SingleConstDeclList(
+                            ConstDeclVariable(
+                              ConstDeclName(
+                               constChar
+                              ) [ConstDeclName]
+                              ConstDeclValueChar(
+                               x
+                              ) [ConstDeclValueChar]
+                            ) [ConstDeclVariable]
+                          ) [SingleConstDeclList]
+                        ) [ConstDeclNoError]
+                      ) [ConstantDeclaration]
+                    ) [YesDeclarationList]
+                    ConstantDeclaration(
+                      ConstDeclNoError(
+                        Type(
+                         bool
+                        ) [Type]
+                        SingleConstDeclList(
+                          ConstDeclVariable(
+                            ConstDeclName(
+                             constBool
+                            ) [ConstDeclName]
+                            ConstDeclValueBool(
+                             true
+                            ) [ConstDeclValueBool]
+                          ) [ConstDeclVariable]
+                        ) [SingleConstDeclList]
+                      ) [ConstDeclNoError]
+                    ) [ConstantDeclaration]
+                  ) [YesDeclarationList]
+                  ConstantDeclaration(
+                    ConstDeclNoError(
+                      Type(
+                       int
+                      ) [Type]
+                      SingleConstDeclList(
+                        ConstDeclVariable(
+                          ConstDeclName(
+                           constErrorInt
+                          ) [ConstDeclName]
+                          ConstDeclValueBool(
+                           true
+                          ) [ConstDeclValueBool]
+                        ) [ConstDeclVariable]
+                      ) [SingleConstDeclList]
+                    ) [ConstDeclNoError]
+                  ) [ConstantDeclaration]
+                ) [YesDeclarationList]
+                ConstantDeclaration(
+                  ConstDeclNoError(
+                    Type(
+                     char
+                    ) [Type]
+                    SingleConstDeclList(
+                      ConstDeclVariable(
+                        ConstDeclName(
+                         constErrorChar
+                        ) [ConstDeclName]
+                        ConstDeclValueInt(
+                         5
+                        ) [ConstDeclValueInt]
+                      ) [ConstDeclVariable]
+                    ) [SingleConstDeclList]
+                  ) [ConstDeclNoError]
+                ) [ConstantDeclaration]
+              ) [YesDeclarationList]
+              ConstantDeclaration(
+                ConstDeclNoError(
+                  Type(
+                   bool
+                  ) [Type]
+                  SingleConstDeclList(
+                    ConstDeclVariable(
+                      ConstDeclName(
+                       constErrorBool
+                      ) [ConstDeclName]
+                      ConstDeclValueChar(
+                       h
+                      ) [ConstDeclValueChar]
+                    ) [ConstDeclVariable]
+                  ) [SingleConstDeclList]
+                ) [ConstDeclNoError]
+              ) [ConstantDeclaration]
+            ) [YesDeclarationList]
+            ConstantDeclaration(
+              ConstDeclNoError(
+                Type(
+                 int
+                ) [Type]
+                SingleConstDeclList(
+                  ConstDeclVariable(
+                    ConstDeclName(
+                     constInt
+                    ) [ConstDeclName]
+                    ConstDeclValueInt(
+                     3
+                    ) [ConstDeclValueInt]
+                  ) [ConstDeclVariable]
+                ) [SingleConstDeclList]
+              ) [ConstDeclNoError]
+            ) [ConstantDeclaration]
+          ) [YesDeclarationList]
+          VariableDeclaration(
+            VarDeclNoError(
+              Type(
+               int
+              ) [Type]
+              PluralVarDeclList(
+                SingleVarDeclList(
+                  DeclVariable(
+                    VarDeclName(
+                     x
+                    ) [VarDeclName]
+                    YesVarDeclArrayOption(
+                    ) [YesVarDeclArrayOption]
+                  ) [DeclVariable]
+                ) [SingleVarDeclList]
+                DeclVariable(
+                  VarDeclName(
+                   y
+                  ) [VarDeclName]
+                  YesVarDeclArrayOption(
+                  ) [YesVarDeclArrayOption]
+                ) [DeclVariable]
+              ) [PluralVarDeclList]
+            ) [VarDeclNoError]
+          ) [VariableDeclaration]
+        ) [YesDeclarationList]
+        VariableDeclaration(
+          VarDeclNoError(
+            Type(
+             bool
+            ) [Type]
+            SingleVarDeclList(
+              DeclVariable(
+                VarDeclName(
+                 b
+                ) [VarDeclName]
+                NoVarDeclArrayOption(
+                ) [NoVarDeclArrayOption]
+              ) [DeclVariable]
+            ) [SingleVarDeclList]
+          ) [VarDeclNoError]
+        ) [VariableDeclaration]
+      ) [YesDeclarationList]
+      VariableDeclaration(
+        VarDeclNoError(
+          Type(
+           char
+          ) [Type]
+          SingleVarDeclList(
+            DeclVariable(
+              VarDeclName(
+               c
+              ) [VarDeclName]
+              NoVarDeclArrayOption(
+              ) [NoVarDeclArrayOption]
+            ) [DeclVariable]
+          ) [SingleVarDeclList]
+        ) [VarDeclNoError]
+      ) [VariableDeclaration]
+    ) [YesDeclarationList]
+    VariableDeclaration(
+      VarDeclNoError(
+        Type(
+         string
+        ) [Type]
+        SingleVarDeclList(
+          DeclVariable(
+            VarDeclName(
+             s
+            ) [VarDeclName]
+            NoVarDeclArrayOption(
+            ) [NoVarDeclArrayOption]
+          ) [DeclVariable]
+        ) [SingleVarDeclList]
+      ) [VarDeclNoError]
+    ) [VariableDeclaration]
+  ) [YesDeclarationList]
+  YesMethodDeclarationList(
+    NoMethodDeclarationList(
+    ) [NoMethodDeclarationList]
+    MethodDeclaration(
+      VoidMethodReturnType(
+      ) [VoidMethodReturnType]
+      MethodName(
+       main
+      ) [MethodName]
+      NoMethodParameters(
+      ) [NoMethodParameters]
+      YesMethodVariables(
+        NoMethodVariables(
+        ) [NoMethodVariables]
+        VarDeclNoError(
+          Type(
+           int
+          ) [Type]
+          SingleVarDeclList(
+            DeclVariable(
+              VarDeclName(
+               tmp
+              ) [VarDeclName]
+              NoVarDeclArrayOption(
+              ) [NoVarDeclArrayOption]
+            ) [DeclVariable]
+          ) [SingleVarDeclList]
+        ) [VarDeclNoError]
+      ) [YesMethodVariables]
+      YesMethodBody(
+        YesMethodBody(
+          YesMethodBody(
+            YesMethodBody(
+              YesMethodBody(
+                YesMethodBody(
+                  YesMethodBody(
+                    YesMethodBody(
+                      YesMethodBody(
+                        YesMethodBody(
+                          NoMethodBody(
+                          ) [NoMethodBody]
+                          DesignatorStatementDecl(
+                            DesignatorStatement(
+                              Designator(
+                                DesignatorName(
+                                 b
+                                ) [DesignatorName]
+                                NoOptionalDesignator(
+                                ) [NoOptionalDesignator]
+                              ) [Designator]
+                              PossibleErrorAssignOpDesignatorAddition(
+                                AssignOpExprDesignatorAdditionNoError(
+                                  Assignop(
+                                  ) [Assignop]
+                                  NoTernaryExpr(
+                                    SingleCondFact(
+                                      TermFiniteExpr(
+                                        FactorTerm(
+                                          DesignatorFactor(
+                                            Designator(
+                                              DesignatorName(
+                                               c
+                                              ) [DesignatorName]
+                                              NoOptionalDesignator(
+                                              ) [NoOptionalDesignator]
+                                            ) [Designator]
+                                          ) [DesignatorFactor]
+                                        ) [FactorTerm]
+                                        NoOptionalTermList(
+                                        ) [NoOptionalTermList]
+                                      ) [TermFiniteExpr]
+                                    ) [SingleCondFact]
+                                  ) [NoTernaryExpr]
+                                ) [AssignOpExprDesignatorAdditionNoError]
+                              ) [PossibleErrorAssignOpDesignatorAddition]
+                            ) [DesignatorStatement]
+                          ) [DesignatorStatementDecl]
+                        ) [YesMethodBody]
+                        DesignatorStatementDecl(
+                          DesignatorStatement(
+                            Designator(
+                              DesignatorName(
+                               b
+                              ) [DesignatorName]
+                              NoOptionalDesignator(
+                              ) [NoOptionalDesignator]
+                            ) [Designator]
+                            PossibleErrorAssignOpDesignatorAddition(
+                              AssignOpExprDesignatorAdditionNoError(
+                                Assignop(
+                                ) [Assignop]
+                                NoTernaryExpr(
+                                  SingleCondFact(
+                                    TermFiniteExpr(
+                                      FactorTerm(
+                                        BoolFactor(
+                                         true
+                                        ) [BoolFactor]
+                                      ) [FactorTerm]
+                                      NoOptionalTermList(
+                                      ) [NoOptionalTermList]
+                                    ) [TermFiniteExpr]
+                                  ) [SingleCondFact]
+                                ) [NoTernaryExpr]
+                              ) [AssignOpExprDesignatorAdditionNoError]
+                            ) [PossibleErrorAssignOpDesignatorAddition]
+                          ) [DesignatorStatement]
+                        ) [DesignatorStatementDecl]
+                      ) [YesMethodBody]
+                      DesignatorStatementDecl(
+                        DesignatorStatement(
+                          Designator(
+                            DesignatorName(
+                             c
+                            ) [DesignatorName]
+                            NoOptionalDesignator(
+                            ) [NoOptionalDesignator]
+                          ) [Designator]
+                          IncrementDesignatorAddition(
+                          ) [IncrementDesignatorAddition]
+                        ) [DesignatorStatement]
+                      ) [DesignatorStatementDecl]
+                    ) [YesMethodBody]
+                    DesignatorStatementDecl(
+                      DesignatorStatement(
+                        Designator(
+                          DesignatorName(
+                           x
+                          ) [DesignatorName]
+                          YesOptionalDesignator(
+                            NoTernaryExpr(
+                              SingleCondFact(
+                                TermFiniteExpr(
+                                  FactorTerm(
+                                    IntFactor(
+                                     0
+                                    ) [IntFactor]
+                                  ) [FactorTerm]
+                                  NoOptionalTermList(
+                                  ) [NoOptionalTermList]
+                                ) [TermFiniteExpr]
+                              ) [SingleCondFact]
+                            ) [NoTernaryExpr]
+                          ) [YesOptionalDesignator]
+                        ) [Designator]
+                        IncrementDesignatorAddition(
+                        ) [IncrementDesignatorAddition]
+                      ) [DesignatorStatement]
+                    ) [DesignatorStatementDecl]
+                  ) [YesMethodBody]
+                  ReadStatementDecl(
+                    ReadStatement(
+                      Designator(
+                        DesignatorName(
+                         x
+                        ) [DesignatorName]
+                        NoOptionalDesignator(
+                        ) [NoOptionalDesignator]
+                      ) [Designator]
+                    ) [ReadStatement]
+                  ) [ReadStatementDecl]
+                ) [YesMethodBody]
+                PrintStatementDecl(
+                  PrintStatement(
+                    NoTernaryExpr(
+                      SingleCondFact(
+                        TermFiniteExpr(
+                          FactorTerm(
+                            DesignatorFactor(
+                              Designator(
+                                DesignatorName(
+                                 x
+                                ) [DesignatorName]
+                                NoOptionalDesignator(
+                                ) [NoOptionalDesignator]
+                              ) [Designator]
+                            ) [DesignatorFactor]
+                          ) [FactorTerm]
+                          NoOptionalTermList(
+                          ) [NoOptionalTermList]
+                        ) [TermFiniteExpr]
+                      ) [SingleCondFact]
+                    ) [NoTernaryExpr]
+                    OptionalYesPrintNumber(
+                      PrintInt(
+                       5
+                      ) [PrintInt]
+                    ) [OptionalYesPrintNumber]
+                  ) [PrintStatement]
+                ) [PrintStatementDecl]
+              ) [YesMethodBody]
+              PrintStatementDecl(
+                PrintStatement(
+                  NoTernaryExpr(
+                    SingleCondFact(
+                      TermFiniteExpr(
+                        FactorTerm(
+                          DesignatorFactor(
+                            Designator(
+                              DesignatorName(
+                               tmp
+                              ) [DesignatorName]
+                              NoOptionalDesignator(
+                              ) [NoOptionalDesignator]
+                            ) [Designator]
+                          ) [DesignatorFactor]
+                        ) [FactorTerm]
+                        NoOptionalTermList(
+                        ) [NoOptionalTermList]
+                      ) [TermFiniteExpr]
+                    ) [SingleCondFact]
+                  ) [NoTernaryExpr]
+                  OptionalYesPrintNumber(
+                    PrintInt(
+                     7
+                    ) [PrintInt]
+                  ) [OptionalYesPrintNumber]
+                ) [PrintStatement]
+              ) [PrintStatementDecl]
+            ) [YesMethodBody]
+            DesignatorStatementDecl(
+              DesignatorStatement(
+                Designator(
+                  DesignatorName(
+                   c
+                  ) [DesignatorName]
+                  NoOptionalDesignator(
+                  ) [NoOptionalDesignator]
+                ) [Designator]
+                PossibleErrorAssignOpDesignatorAddition(
+                  AssignOpExprDesignatorAdditionNoError(
+                    Assignop(
+                    ) [Assignop]
+                    NoTernaryExpr(
+                      PluralCondFact(
+                        TermFiniteExpr(
+                          FactorTerm(
+                            DesignatorFactor(
+                              Designator(
+                                DesignatorName(
+                                 x
+                                ) [DesignatorName]
+                                YesOptionalDesignator(
+                                  NoTernaryExpr(
+                                    SingleCondFact(
+                                      TermFiniteExpr(
+                                        FactorTerm(
+                                          IntFactor(
+                                           0
+                                          ) [IntFactor]
+                                        ) [FactorTerm]
+                                        NoOptionalTermList(
+                                        ) [NoOptionalTermList]
+                                      ) [TermFiniteExpr]
+                                    ) [SingleCondFact]
+                                  ) [NoTernaryExpr]
+                                ) [YesOptionalDesignator]
+                              ) [Designator]
+                            ) [DesignatorFactor]
+                          ) [FactorTerm]
+                          NoOptionalTermList(
+                          ) [NoOptionalTermList]
+                        ) [TermFiniteExpr]
+                        RelopGreaterOrEqual(
+                        ) [RelopGreaterOrEqual]
+                        TermFiniteExpr(
+                          FactorTerm(
+                            DesignatorFactor(
+                              Designator(
+                                DesignatorName(
+                                 x
+                                ) [DesignatorName]
+                                YesOptionalDesignator(
+                                  NoTernaryExpr(
+                                    SingleCondFact(
+                                      TermFiniteExpr(
+                                        FactorTerm(
+                                          IntFactor(
+                                           1
+                                          ) [IntFactor]
+                                        ) [FactorTerm]
+                                        NoOptionalTermList(
+                                        ) [NoOptionalTermList]
+                                      ) [TermFiniteExpr]
+                                    ) [SingleCondFact]
+                                  ) [NoTernaryExpr]
+                                ) [YesOptionalDesignator]
+                              ) [Designator]
+                            ) [DesignatorFactor]
+                          ) [FactorTerm]
+                          NoOptionalTermList(
+                          ) [NoOptionalTermList]
+                        ) [TermFiniteExpr]
+                      ) [PluralCondFact]
+                    ) [NoTernaryExpr]
+                  ) [AssignOpExprDesignatorAdditionNoError]
+                ) [PossibleErrorAssignOpDesignatorAddition]
+              ) [DesignatorStatement]
+            ) [DesignatorStatementDecl]
+          ) [YesMethodBody]
+          DesignatorStatementDecl(
+            DesignatorStatement(
+              Designator(
+                DesignatorName(
+                 b
+                ) [DesignatorName]
+                NoOptionalDesignator(
+                ) [NoOptionalDesignator]
+              ) [Designator]
+              PossibleErrorAssignOpDesignatorAddition(
+                AssignOpExprDesignatorAdditionNoError(
+                  Assignop(
+                  ) [Assignop]
+                  NoTernaryExpr(
+                    PluralCondFact(
+                      TermFiniteExpr(
+                        FactorTerm(
+                          DesignatorFactor(
+                            Designator(
+                              DesignatorName(
+                               x
+                              ) [DesignatorName]
+                              YesOptionalDesignator(
+                                NoTernaryExpr(
+                                  SingleCondFact(
+                                    TermFiniteExpr(
+                                      FactorTerm(
+                                        IntFactor(
+                                         0
+                                        ) [IntFactor]
+                                      ) [FactorTerm]
+                                      NoOptionalTermList(
+                                      ) [NoOptionalTermList]
+                                    ) [TermFiniteExpr]
+                                  ) [SingleCondFact]
+                                ) [NoTernaryExpr]
+                              ) [YesOptionalDesignator]
+                            ) [Designator]
+                          ) [DesignatorFactor]
+                        ) [FactorTerm]
+                        NoOptionalTermList(
+                        ) [NoOptionalTermList]
+                      ) [TermFiniteExpr]
+                      RelopLessOrEqual(
+                      ) [RelopLessOrEqual]
+                      TermFiniteExpr(
+                        FactorTerm(
+                          DesignatorFactor(
+                            Designator(
+                              DesignatorName(
+                               x
+                              ) [DesignatorName]
+                              YesOptionalDesignator(
+                                NoTernaryExpr(
+                                  SingleCondFact(
+                                    TermFiniteExpr(
+                                      FactorTerm(
+                                        IntFactor(
+                                         1
+                                        ) [IntFactor]
+                                      ) [FactorTerm]
+                                      NoOptionalTermList(
+                                      ) [NoOptionalTermList]
+                                    ) [TermFiniteExpr]
+                                  ) [SingleCondFact]
+                                ) [NoTernaryExpr]
+                              ) [YesOptionalDesignator]
+                            ) [Designator]
+                          ) [DesignatorFactor]
+                        ) [FactorTerm]
+                        NoOptionalTermList(
+                        ) [NoOptionalTermList]
+                      ) [TermFiniteExpr]
+                    ) [PluralCondFact]
+                  ) [NoTernaryExpr]
+                ) [AssignOpExprDesignatorAdditionNoError]
+              ) [PossibleErrorAssignOpDesignatorAddition]
+            ) [DesignatorStatement]
+          ) [DesignatorStatementDecl]
+        ) [YesMethodBody]
+        DesignatorStatementDecl(
+          DesignatorStatement(
+            Designator(
+              DesignatorName(
+               b
+              ) [DesignatorName]
+              NoOptionalDesignator(
+              ) [NoOptionalDesignator]
+            ) [Designator]
+            PossibleErrorAssignOpDesignatorAddition(
+              AssignOpExprDesignatorAdditionNoError(
+                Assignop(
+                ) [Assignop]
+                NoTernaryExpr(
+                  PluralCondFact(
+                    TermFiniteExpr(
+                      FactorTerm(
+                        DesignatorFactor(
+                          Designator(
+                            DesignatorName(
+                             x
+                            ) [DesignatorName]
+                            NoOptionalDesignator(
+                            ) [NoOptionalDesignator]
+                          ) [Designator]
+                        ) [DesignatorFactor]
+                      ) [FactorTerm]
+                      NoOptionalTermList(
+                      ) [NoOptionalTermList]
+                    ) [TermFiniteExpr]
+                    RelopNotEqual(
+                    ) [RelopNotEqual]
+                    TermFiniteExpr(
+                      FactorTerm(
+                        DesignatorFactor(
+                          Designator(
+                            DesignatorName(
+                             y
+                            ) [DesignatorName]
+                            NoOptionalDesignator(
+                            ) [NoOptionalDesignator]
+                          ) [Designator]
+                        ) [DesignatorFactor]
+                      ) [FactorTerm]
+                      NoOptionalTermList(
+                      ) [NoOptionalTermList]
+                    ) [TermFiniteExpr]
+                  ) [PluralCondFact]
+                ) [NoTernaryExpr]
+              ) [AssignOpExprDesignatorAdditionNoError]
+            ) [PossibleErrorAssignOpDesignatorAddition]
+          ) [DesignatorStatement]
+        ) [DesignatorStatementDecl]
+      ) [YesMethodBody]
+    ) [MethodDeclaration]
+  ) [YesMethodDeclarationList]
+) [Program]
+INFO  14:32:04,293 - ===================================
+INFO  14:32:04,309 - Const variable constInt declared on line 3
+INFO  14:32:04,309 - Const variable constChar declared on line 4
+INFO  14:32:04,309 - Const variable constBool declared on line 5
+ERROR 14:32:04,309 - Semantic Error: Const variable constErrorInt is not compatible with assigning value on line 7
+ERROR 14:32:04,309 - Semantic Error: Const variable constErrorChar is not compatible with assigning value on line 8
+ERROR 14:32:04,309 - Semantic Error: Const variable constErrorBool is not compatible with assigning value on line 9
+ERROR 14:32:04,309 - Semantic Error: Const variable constInt has already been declared on line 11
+INFO  14:32:04,309 - Global array x declared on line 13
+INFO  14:32:04,309 - Global array y declared on line 13
+INFO  14:32:04,309 - Global variable b declared on line 14
+INFO  14:32:04,309 - Global variable c declared on line 15
+ERROR 14:32:04,309 - Type string not found in Symbol Table on line 17
+INFO  14:32:04,309 - Global variable s declared on line 17
+INFO  14:32:04,309 - Method main declared on line 20
+INFO  14:32:04,309 - Local variable tmp declared on line 20
+INFO  14:32:04,309 - Variable b used on line 22
+INFO  14:32:04,309 - Variable c used on line 22
+ERROR 14:32:04,309 - Semantic Error: Incompatible types where Expr is assigned to Designator on line 22
+INFO  14:32:04,309 - Variable b used on line 23
+INFO  14:32:04,309 - Variable c used on line 25
+ERROR 14:32:04,309 - Semantic Error: post-increment and post-decrement operators can only be used with int types on line 25
+INFO  14:32:04,309 - Element of array x used on line 26
+INFO  14:32:04,309 - Array x used on line 28
+ERROR 14:32:04,309 - Semantic Error: Operand of read method on line 28 must be of int, bool or char type
+INFO  14:32:04,309 - Array x used on line 29
+ERROR 14:32:04,309 - Semantic Error: Operand of print method on line 29 must be of int, bool or char type
+INFO  14:32:04,309 - Variable tmp used on line 30
+INFO  14:32:04,309 - Variable c used on line 32
+INFO  14:32:04,309 - Element of array x used on line 32
+INFO  14:32:04,309 - Element of array x used on line 32
+ERROR 14:32:04,309 - Semantic Error: Incompatible types where Expr is assigned to Designator on line 32
+INFO  14:32:04,309 - Variable b used on line 33
+INFO  14:32:04,309 - Element of array x used on line 33
+INFO  14:32:04,309 - Element of array x used on line 33
+INFO  14:32:04,309 - Variable b used on line 35
+INFO  14:32:04,309 - Array x used on line 35
+INFO  14:32:04,309 - Array y used on line 35
+ERROR 14:32:04,309 - Parsing finished UNSUCCESSFULLY!

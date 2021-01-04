@@ -1,0 +1,64 @@
+INFO  14:18:49,066 - Compiling source file: C:\Users\Asus\Desktop\FAKS\PP1\MJCompiler\test\semanticErrors.mj
+INFO  14:18:49,160 - #2 program
+INFO  14:18:49,160 - #9 semanticErrors
+INFO  14:18:49,160 - #5 const
+INFO  14:18:49,160 - #9 int
+INFO  14:18:49,160 - #9 constInt
+INFO  14:18:49,160 - #8 =
+INFO  14:18:49,160 - #10 5
+INFO  14:18:49,160 - #6 ;
+INFO  14:18:49,160 - #3 {
+INFO  14:18:49,160 - #15 void
+INFO  14:18:49,160 - #9 main
+INFO  14:18:49,160 - #13 (
+INFO  14:18:49,160 - #14 )
+INFO  14:18:49,160 - #3 {
+INFO  14:18:49,160 - #4 }
+INFO  14:18:49,160 - #4 }
+INFO  14:18:49,175 - Program(
+  ProgramName(
+   semanticErrors
+  ) [ProgramName]
+  YesDeclarationList(
+    NoDeclarationList(
+    ) [NoDeclarationList]
+    ConstantDeclaration(
+      ConstDeclNoError(
+        Type(
+         int
+        ) [Type]
+        SingleConstDeclList(
+          ConstDeclVariable(
+            ConstDeclName(
+             constInt
+            ) [ConstDeclName]
+            ConstDeclValueInt(
+             5
+            ) [ConstDeclValueInt]
+          ) [ConstDeclVariable]
+        ) [SingleConstDeclList]
+      ) [ConstDeclNoError]
+    ) [ConstantDeclaration]
+  ) [YesDeclarationList]
+  YesMethodDeclarationList(
+    NoMethodDeclarationList(
+    ) [NoMethodDeclarationList]
+    MethodDeclaration(
+      VoidMethodReturnType(
+      ) [VoidMethodReturnType]
+      MethodName(
+       main
+      ) [MethodName]
+      NoMethodParameters(
+      ) [NoMethodParameters]
+      NoMethodVariables(
+      ) [NoMethodVariables]
+      NoMethodBody(
+      ) [NoMethodBody]
+    ) [MethodDeclaration]
+  ) [YesMethodDeclarationList]
+) [Program]
+INFO  14:18:49,175 - ===================================
+INFO  14:18:49,191 - Const variable constInt declared on line 3
+INFO  14:18:49,191 - Method main declared on line 6
+INFO  14:18:49,191 - Parsing finished SUCCESSFULLY!

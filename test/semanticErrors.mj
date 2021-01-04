@@ -1,0 +1,63 @@
+program semanticErrors
+
+const int constInt = 1;
+const char constChar = 'x';
+const bool constBool = true;
+
+const int constErrorInt = true; // error, cannot assign bool to int
+const char constErrorChar = 5; // error, cannot assign int to char
+const bool constErrorBool = 'h'; // error, cannot assign char to bool
+
+const int constInt = 3; // error, double declaration od variable constInt
+
+int x[], y[];
+bool b;
+char c;
+
+string s; // error, non-existing type
+
+{
+	void main() int tmp;
+	{
+		b = c; // error, cannot assign char to bool
+		b = true; // OK
+
+		c++; // error, operand of ++ must be an int
+		x[0]++; // OK
+
+		read(x); // error, operand of read method must be a variable or an array element, not an array
+		print(x, 5); // error, operand of print method must be a variable or an array element, not an array
+		print(tmp, 7); // OK
+
+		c = x[0] >= x[1]; // error, return value of comparison must be a bool
+		b = x[0] <= x[1]; // OK
+
+		b = x < y; // error, array types can only be compared for equality or non-equality
+		b = x != y; // OK
+
+		c = null; // error, null can only be assigned to array type
+		x = null; // OK
+
+		p = new bool[5]; // error, variable p has not been declared
+		x = new char[constInt * 2]; // error, cannot assign char array to int array
+		x = new int[4]; // OK
+
+		tmp = y; // error, cannot assign array to int
+
+		x[constChar]--; // error, cannot index an array with non-int value
+		x[3 * 7 - 4 / 2 + constInt]--; // OK
+
+		tmp = new int; // OK
+
+		print(-b); // error, minus sign can only be used with int types
+		print(-1); // OK
+
+		print(5 ? 1 : 2); // error, CondFact used in Ternary Expression must be a bool
+		print(true ? 1 : 2); // OK
+
+		tmp = (true != false) ? 1 : 0; // OK
+
+		print('c' * 'd'); // error, operands of *, /, % must be of int type
+		print(missing); // error, use of undeclared variable
+	}
+}

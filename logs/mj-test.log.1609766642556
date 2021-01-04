@@ -1,0 +1,302 @@
+INFO  14:23:29,749 - Compiling source file: C:\Users\Asus\Desktop\FAKS\PP1\MJCompiler\test\semanticErrors.mj
+INFO  14:23:29,843 - #2 program
+INFO  14:23:29,843 - #9 semanticErrors
+INFO  14:23:29,843 - #5 const
+INFO  14:23:29,843 - #9 int
+INFO  14:23:29,843 - #9 constInt
+INFO  14:23:29,843 - #8 =
+INFO  14:23:29,843 - #10 1
+INFO  14:23:29,843 - #6 ;
+INFO  14:23:29,843 - #5 const
+INFO  14:23:29,843 - #9 char
+INFO  14:23:29,843 - #9 constChar
+INFO  14:23:29,843 - #8 =
+INFO  14:23:29,843 - #12 x
+INFO  14:23:29,843 - #6 ;
+INFO  14:23:29,843 - #5 const
+INFO  14:23:29,843 - #9 bool
+INFO  14:23:29,843 - #9 constBool
+INFO  14:23:29,843 - #8 =
+INFO  14:23:29,843 - #11 true
+INFO  14:23:29,843 - #6 ;
+INFO  14:23:29,843 - #5 const
+INFO  14:23:29,843 - #9 int
+INFO  14:23:29,843 - #9 constErrorInt
+INFO  14:23:29,843 - #8 =
+INFO  14:23:29,843 - #11 true
+INFO  14:23:29,843 - #6 ;
+INFO  14:23:29,843 - #5 const
+INFO  14:23:29,843 - #9 char
+INFO  14:23:29,843 - #9 constErrorChar
+INFO  14:23:29,843 - #8 =
+INFO  14:23:29,843 - #10 5
+INFO  14:23:29,843 - #6 ;
+INFO  14:23:29,843 - #5 const
+INFO  14:23:29,843 - #9 bool
+INFO  14:23:29,843 - #9 constErrorBool
+INFO  14:23:29,843 - #8 =
+INFO  14:23:29,843 - #12 h
+INFO  14:23:29,843 - #6 ;
+INFO  14:23:29,843 - #5 const
+INFO  14:23:29,843 - #9 int
+INFO  14:23:29,843 - #9 constInt
+INFO  14:23:29,843 - #8 =
+INFO  14:23:29,843 - #10 3
+INFO  14:23:29,843 - #6 ;
+INFO  14:23:29,843 - #9 int
+INFO  14:23:29,843 - #9 x
+INFO  14:23:29,843 - #20 [
+INFO  14:23:29,843 - #21 ]
+INFO  14:23:29,843 - #7 ,
+INFO  14:23:29,858 - #9 y
+INFO  14:23:29,858 - #20 [
+INFO  14:23:29,858 - #21 ]
+INFO  14:23:29,858 - #6 ;
+INFO  14:23:29,858 - #9 bool
+INFO  14:23:29,858 - #9 b
+INFO  14:23:29,858 - #6 ;
+INFO  14:23:29,858 - #9 char
+INFO  14:23:29,858 - #9 c
+INFO  14:23:29,858 - #6 ;
+INFO  14:23:29,858 - #3 {
+INFO  14:23:29,858 - #15 void
+INFO  14:23:29,858 - #9 main
+INFO  14:23:29,858 - #13 (
+INFO  14:23:29,858 - #14 )
+INFO  14:23:29,858 - #3 {
+INFO  14:23:29,858 - #4 }
+INFO  14:23:29,858 - #4 }
+INFO  14:23:29,874 - Program(
+  ProgramName(
+   semanticErrors
+  ) [ProgramName]
+  YesDeclarationList(
+    YesDeclarationList(
+      YesDeclarationList(
+        YesDeclarationList(
+          YesDeclarationList(
+            YesDeclarationList(
+              YesDeclarationList(
+                YesDeclarationList(
+                  YesDeclarationList(
+                    YesDeclarationList(
+                      NoDeclarationList(
+                      ) [NoDeclarationList]
+                      ConstantDeclaration(
+                        ConstDeclNoError(
+                          Type(
+                           int
+                          ) [Type]
+                          SingleConstDeclList(
+                            ConstDeclVariable(
+                              ConstDeclName(
+                               constInt
+                              ) [ConstDeclName]
+                              ConstDeclValueInt(
+                               1
+                              ) [ConstDeclValueInt]
+                            ) [ConstDeclVariable]
+                          ) [SingleConstDeclList]
+                        ) [ConstDeclNoError]
+                      ) [ConstantDeclaration]
+                    ) [YesDeclarationList]
+                    ConstantDeclaration(
+                      ConstDeclNoError(
+                        Type(
+                         char
+                        ) [Type]
+                        SingleConstDeclList(
+                          ConstDeclVariable(
+                            ConstDeclName(
+                             constChar
+                            ) [ConstDeclName]
+                            ConstDeclValueChar(
+                             x
+                            ) [ConstDeclValueChar]
+                          ) [ConstDeclVariable]
+                        ) [SingleConstDeclList]
+                      ) [ConstDeclNoError]
+                    ) [ConstantDeclaration]
+                  ) [YesDeclarationList]
+                  ConstantDeclaration(
+                    ConstDeclNoError(
+                      Type(
+                       bool
+                      ) [Type]
+                      SingleConstDeclList(
+                        ConstDeclVariable(
+                          ConstDeclName(
+                           constBool
+                          ) [ConstDeclName]
+                          ConstDeclValueBool(
+                           true
+                          ) [ConstDeclValueBool]
+                        ) [ConstDeclVariable]
+                      ) [SingleConstDeclList]
+                    ) [ConstDeclNoError]
+                  ) [ConstantDeclaration]
+                ) [YesDeclarationList]
+                ConstantDeclaration(
+                  ConstDeclNoError(
+                    Type(
+                     int
+                    ) [Type]
+                    SingleConstDeclList(
+                      ConstDeclVariable(
+                        ConstDeclName(
+                         constErrorInt
+                        ) [ConstDeclName]
+                        ConstDeclValueBool(
+                         true
+                        ) [ConstDeclValueBool]
+                      ) [ConstDeclVariable]
+                    ) [SingleConstDeclList]
+                  ) [ConstDeclNoError]
+                ) [ConstantDeclaration]
+              ) [YesDeclarationList]
+              ConstantDeclaration(
+                ConstDeclNoError(
+                  Type(
+                   char
+                  ) [Type]
+                  SingleConstDeclList(
+                    ConstDeclVariable(
+                      ConstDeclName(
+                       constErrorChar
+                      ) [ConstDeclName]
+                      ConstDeclValueInt(
+                       5
+                      ) [ConstDeclValueInt]
+                    ) [ConstDeclVariable]
+                  ) [SingleConstDeclList]
+                ) [ConstDeclNoError]
+              ) [ConstantDeclaration]
+            ) [YesDeclarationList]
+            ConstantDeclaration(
+              ConstDeclNoError(
+                Type(
+                 bool
+                ) [Type]
+                SingleConstDeclList(
+                  ConstDeclVariable(
+                    ConstDeclName(
+                     constErrorBool
+                    ) [ConstDeclName]
+                    ConstDeclValueChar(
+                     h
+                    ) [ConstDeclValueChar]
+                  ) [ConstDeclVariable]
+                ) [SingleConstDeclList]
+              ) [ConstDeclNoError]
+            ) [ConstantDeclaration]
+          ) [YesDeclarationList]
+          ConstantDeclaration(
+            ConstDeclNoError(
+              Type(
+               int
+              ) [Type]
+              SingleConstDeclList(
+                ConstDeclVariable(
+                  ConstDeclName(
+                   constInt
+                  ) [ConstDeclName]
+                  ConstDeclValueInt(
+                   3
+                  ) [ConstDeclValueInt]
+                ) [ConstDeclVariable]
+              ) [SingleConstDeclList]
+            ) [ConstDeclNoError]
+          ) [ConstantDeclaration]
+        ) [YesDeclarationList]
+        VariableDeclaration(
+          VarDeclNoError(
+            Type(
+             int
+            ) [Type]
+            PluralVarDeclList(
+              SingleVarDeclList(
+                DeclVariable(
+                  VarDeclName(
+                   x
+                  ) [VarDeclName]
+                  YesVarDeclArrayOption(
+                  ) [YesVarDeclArrayOption]
+                ) [DeclVariable]
+              ) [SingleVarDeclList]
+              DeclVariable(
+                VarDeclName(
+                 y
+                ) [VarDeclName]
+                YesVarDeclArrayOption(
+                ) [YesVarDeclArrayOption]
+              ) [DeclVariable]
+            ) [PluralVarDeclList]
+          ) [VarDeclNoError]
+        ) [VariableDeclaration]
+      ) [YesDeclarationList]
+      VariableDeclaration(
+        VarDeclNoError(
+          Type(
+           bool
+          ) [Type]
+          SingleVarDeclList(
+            DeclVariable(
+              VarDeclName(
+               b
+              ) [VarDeclName]
+              NoVarDeclArrayOption(
+              ) [NoVarDeclArrayOption]
+            ) [DeclVariable]
+          ) [SingleVarDeclList]
+        ) [VarDeclNoError]
+      ) [VariableDeclaration]
+    ) [YesDeclarationList]
+    VariableDeclaration(
+      VarDeclNoError(
+        Type(
+         char
+        ) [Type]
+        SingleVarDeclList(
+          DeclVariable(
+            VarDeclName(
+             c
+            ) [VarDeclName]
+            NoVarDeclArrayOption(
+            ) [NoVarDeclArrayOption]
+          ) [DeclVariable]
+        ) [SingleVarDeclList]
+      ) [VarDeclNoError]
+    ) [VariableDeclaration]
+  ) [YesDeclarationList]
+  YesMethodDeclarationList(
+    NoMethodDeclarationList(
+    ) [NoMethodDeclarationList]
+    MethodDeclaration(
+      VoidMethodReturnType(
+      ) [VoidMethodReturnType]
+      MethodName(
+       main
+      ) [MethodName]
+      NoMethodParameters(
+      ) [NoMethodParameters]
+      NoMethodVariables(
+      ) [NoMethodVariables]
+      NoMethodBody(
+      ) [NoMethodBody]
+    ) [MethodDeclaration]
+  ) [YesMethodDeclarationList]
+) [Program]
+INFO  14:23:29,874 - ===================================
+INFO  14:23:29,874 - Const variable constInt declared on line 3
+INFO  14:23:29,874 - Const variable constChar declared on line 4
+INFO  14:23:29,874 - Const variable constBool declared on line 5
+ERROR 14:23:29,874 - Semantic Error: Const variable constErrorInt is not compatible with assigning value on line 7
+ERROR 14:23:29,874 - Semantic Error: Const variable constErrorChar is not compatible with assigning value on line 8
+ERROR 14:23:29,874 - Semantic Error: Const variable constErrorBool is not compatible with assigning value on line 9
+ERROR 14:23:29,874 - Semantic Error: Const variable constInt has already been declared on line 11
+INFO  14:23:29,874 - Global array x declared on line 13
+INFO  14:23:29,874 - Global array y declared on line 13
+INFO  14:23:29,874 - Global variable b declared on line 14
+INFO  14:23:29,874 - Global variable c declared on line 15
+INFO  14:23:29,874 - Method main declared on line 18
+ERROR 14:23:29,874 - Parsing finished UNSUCCESSFULLY!

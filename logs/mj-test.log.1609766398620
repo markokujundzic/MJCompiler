@@ -1,0 +1,64 @@
+INFO  14:18:59,177 - Compiling source file: C:\Users\Asus\Desktop\FAKS\PP1\MJCompiler\test\semanticErrors.mj
+INFO  14:18:59,255 - #2 program
+INFO  14:18:59,255 - #9 semanticErrors
+INFO  14:18:59,255 - #5 const
+INFO  14:18:59,255 - #9 int
+INFO  14:18:59,255 - #9 constInt
+INFO  14:18:59,255 - #8 =
+INFO  14:18:59,255 - #12 d
+INFO  14:18:59,255 - #6 ;
+INFO  14:18:59,271 - #3 {
+INFO  14:18:59,271 - #15 void
+INFO  14:18:59,271 - #9 main
+INFO  14:18:59,271 - #13 (
+INFO  14:18:59,271 - #14 )
+INFO  14:18:59,271 - #3 {
+INFO  14:18:59,271 - #4 }
+INFO  14:18:59,271 - #4 }
+INFO  14:18:59,286 - Program(
+  ProgramName(
+   semanticErrors
+  ) [ProgramName]
+  YesDeclarationList(
+    NoDeclarationList(
+    ) [NoDeclarationList]
+    ConstantDeclaration(
+      ConstDeclNoError(
+        Type(
+         int
+        ) [Type]
+        SingleConstDeclList(
+          ConstDeclVariable(
+            ConstDeclName(
+             constInt
+            ) [ConstDeclName]
+            ConstDeclValueChar(
+             d
+            ) [ConstDeclValueChar]
+          ) [ConstDeclVariable]
+        ) [SingleConstDeclList]
+      ) [ConstDeclNoError]
+    ) [ConstantDeclaration]
+  ) [YesDeclarationList]
+  YesMethodDeclarationList(
+    NoMethodDeclarationList(
+    ) [NoMethodDeclarationList]
+    MethodDeclaration(
+      VoidMethodReturnType(
+      ) [VoidMethodReturnType]
+      MethodName(
+       main
+      ) [MethodName]
+      NoMethodParameters(
+      ) [NoMethodParameters]
+      NoMethodVariables(
+      ) [NoMethodVariables]
+      NoMethodBody(
+      ) [NoMethodBody]
+    ) [MethodDeclaration]
+  ) [YesMethodDeclarationList]
+) [Program]
+INFO  14:18:59,286 - ===================================
+ERROR 14:18:59,286 - Semantic Error: Const variable constInt is not compatible with assigning value on line 3
+INFO  14:18:59,286 - Method main declared on line 6
+ERROR 14:18:59,286 - Parsing finished UNSUCCESSFULLY!

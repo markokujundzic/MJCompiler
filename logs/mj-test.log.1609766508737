@@ -1,0 +1,194 @@
+INFO  14:21:03,417 - Compiling source file: C:\Users\Asus\Desktop\FAKS\PP1\MJCompiler\test\semanticErrors.mj
+INFO  14:21:03,495 - #2 program
+INFO  14:21:03,495 - #9 semanticErrors
+INFO  14:21:03,495 - #5 const
+INFO  14:21:03,495 - #9 int
+INFO  14:21:03,495 - #9 constInt
+INFO  14:21:03,495 - #8 =
+INFO  14:21:03,495 - #10 1
+INFO  14:21:03,495 - #6 ;
+INFO  14:21:03,495 - #5 const
+INFO  14:21:03,495 - #9 char
+INFO  14:21:03,495 - #9 constChar
+INFO  14:21:03,495 - #8 =
+INFO  14:21:03,495 - #12 x
+INFO  14:21:03,495 - #6 ;
+INFO  14:21:03,495 - #5 const
+INFO  14:21:03,495 - #9 bool
+INFO  14:21:03,495 - #9 constBool
+INFO  14:21:03,495 - #8 =
+INFO  14:21:03,495 - #11 true
+INFO  14:21:03,495 - #6 ;
+INFO  14:21:03,495 - #5 const
+INFO  14:21:03,495 - #9 int
+INFO  14:21:03,495 - #9 constErrorInt
+INFO  14:21:03,495 - #8 =
+INFO  14:21:03,495 - #11 true
+INFO  14:21:03,495 - #6 ;
+INFO  14:21:03,495 - #5 const
+INFO  14:21:03,495 - #9 char
+INFO  14:21:03,495 - #9 constErrorChar
+INFO  14:21:03,495 - #8 =
+INFO  14:21:03,495 - #10 5
+INFO  14:21:03,495 - #6 ;
+INFO  14:21:03,495 - #5 const
+INFO  14:21:03,495 - #9 int
+INFO  14:21:03,495 - #9 constErrorInt
+INFO  14:21:03,495 - #8 =
+INFO  14:21:03,495 - #11 true
+INFO  14:21:03,495 - #6 ;
+INFO  14:21:03,495 - #3 {
+INFO  14:21:03,495 - #15 void
+INFO  14:21:03,495 - #9 main
+INFO  14:21:03,495 - #13 (
+INFO  14:21:03,510 - #14 )
+INFO  14:21:03,510 - #3 {
+INFO  14:21:03,510 - #4 }
+INFO  14:21:03,510 - #4 }
+INFO  14:21:03,526 - Program(
+  ProgramName(
+   semanticErrors
+  ) [ProgramName]
+  YesDeclarationList(
+    YesDeclarationList(
+      YesDeclarationList(
+        YesDeclarationList(
+          YesDeclarationList(
+            YesDeclarationList(
+              NoDeclarationList(
+              ) [NoDeclarationList]
+              ConstantDeclaration(
+                ConstDeclNoError(
+                  Type(
+                   int
+                  ) [Type]
+                  SingleConstDeclList(
+                    ConstDeclVariable(
+                      ConstDeclName(
+                       constInt
+                      ) [ConstDeclName]
+                      ConstDeclValueInt(
+                       1
+                      ) [ConstDeclValueInt]
+                    ) [ConstDeclVariable]
+                  ) [SingleConstDeclList]
+                ) [ConstDeclNoError]
+              ) [ConstantDeclaration]
+            ) [YesDeclarationList]
+            ConstantDeclaration(
+              ConstDeclNoError(
+                Type(
+                 char
+                ) [Type]
+                SingleConstDeclList(
+                  ConstDeclVariable(
+                    ConstDeclName(
+                     constChar
+                    ) [ConstDeclName]
+                    ConstDeclValueChar(
+                     x
+                    ) [ConstDeclValueChar]
+                  ) [ConstDeclVariable]
+                ) [SingleConstDeclList]
+              ) [ConstDeclNoError]
+            ) [ConstantDeclaration]
+          ) [YesDeclarationList]
+          ConstantDeclaration(
+            ConstDeclNoError(
+              Type(
+               bool
+              ) [Type]
+              SingleConstDeclList(
+                ConstDeclVariable(
+                  ConstDeclName(
+                   constBool
+                  ) [ConstDeclName]
+                  ConstDeclValueBool(
+                   true
+                  ) [ConstDeclValueBool]
+                ) [ConstDeclVariable]
+              ) [SingleConstDeclList]
+            ) [ConstDeclNoError]
+          ) [ConstantDeclaration]
+        ) [YesDeclarationList]
+        ConstantDeclaration(
+          ConstDeclNoError(
+            Type(
+             int
+            ) [Type]
+            SingleConstDeclList(
+              ConstDeclVariable(
+                ConstDeclName(
+                 constErrorInt
+                ) [ConstDeclName]
+                ConstDeclValueBool(
+                 true
+                ) [ConstDeclValueBool]
+              ) [ConstDeclVariable]
+            ) [SingleConstDeclList]
+          ) [ConstDeclNoError]
+        ) [ConstantDeclaration]
+      ) [YesDeclarationList]
+      ConstantDeclaration(
+        ConstDeclNoError(
+          Type(
+           char
+          ) [Type]
+          SingleConstDeclList(
+            ConstDeclVariable(
+              ConstDeclName(
+               constErrorChar
+              ) [ConstDeclName]
+              ConstDeclValueInt(
+               5
+              ) [ConstDeclValueInt]
+            ) [ConstDeclVariable]
+          ) [SingleConstDeclList]
+        ) [ConstDeclNoError]
+      ) [ConstantDeclaration]
+    ) [YesDeclarationList]
+    ConstantDeclaration(
+      ConstDeclNoError(
+        Type(
+         int
+        ) [Type]
+        SingleConstDeclList(
+          ConstDeclVariable(
+            ConstDeclName(
+             constErrorInt
+            ) [ConstDeclName]
+            ConstDeclValueBool(
+             true
+            ) [ConstDeclValueBool]
+          ) [ConstDeclVariable]
+        ) [SingleConstDeclList]
+      ) [ConstDeclNoError]
+    ) [ConstantDeclaration]
+  ) [YesDeclarationList]
+  YesMethodDeclarationList(
+    NoMethodDeclarationList(
+    ) [NoMethodDeclarationList]
+    MethodDeclaration(
+      VoidMethodReturnType(
+      ) [VoidMethodReturnType]
+      MethodName(
+       main
+      ) [MethodName]
+      NoMethodParameters(
+      ) [NoMethodParameters]
+      NoMethodVariables(
+      ) [NoMethodVariables]
+      NoMethodBody(
+      ) [NoMethodBody]
+    ) [MethodDeclaration]
+  ) [YesMethodDeclarationList]
+) [Program]
+INFO  14:21:03,526 - ===================================
+INFO  14:21:03,526 - Const variable constInt declared on line 3
+INFO  14:21:03,526 - Const variable constChar declared on line 4
+INFO  14:21:03,526 - Const variable constBool declared on line 5
+ERROR 14:21:03,526 - Semantic Error: Const variable constErrorInt is not compatible with assigning value on line 7
+ERROR 14:21:03,526 - Semantic Error: Const variable constErrorChar is not compatible with assigning value on line 8
+ERROR 14:21:03,526 - Semantic Error: Const variable constErrorInt is not compatible with assigning value on line 9
+INFO  14:21:03,526 - Method main declared on line 12
+ERROR 14:21:03,526 - Parsing finished UNSUCCESSFULLY!
