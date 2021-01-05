@@ -13,22 +13,23 @@ public class SemanticAnalyzer extends VisitorAdaptor
 
     private boolean errorDetected = false;
     private boolean returnFound = false;
-    public boolean mainFound = false;
+    private boolean mainFound = false;
     private boolean localVariables = false;
 
     private Obj currentMethod = null;
 
     private int currentConstValue = -1;
+    private int nVars = 0;
 
     private Struct currentType = null;
     private Struct curerntMethodReturnType = null;
 
-    public int constVariableDeclared = 0;
-    public int localArraysDeclared = 0;
-    public int globalArraysDeclared = 0;
-    public int globalVariablesDeclared = 0;
-    public int localVariablesDeclared = 0;
-    public int statementsInMain = 0;
+    private int constVariableDeclared = 0;
+    private int localArraysDeclared = 0;
+    private int globalArraysDeclared = 0;
+    private int globalVariablesDeclared = 0;
+    private int localVariablesDeclared = 0;
+    private int statementsInMain = 0;
 
     private String print(Obj o)
     {
@@ -91,6 +92,47 @@ public class SemanticAnalyzer extends VisitorAdaptor
         return s.toString();
     }
 
+    /* Getters */
+    public int getnVars()
+    {
+        return nVars;
+    }
+
+    public boolean isMainFound()
+    {
+        return mainFound;
+    }
+
+    public int getConstVariableDeclared()
+    {
+        return constVariableDeclared;
+    }
+
+    public int getLocalArraysDeclared()
+    {
+        return localArraysDeclared;
+    }
+
+    public int getGlobalArraysDeclared()
+    {
+        return globalArraysDeclared;
+    }
+
+    public int getGlobalVariablesDeclared()
+    {
+        return globalVariablesDeclared;
+    }
+
+    public int getLocalVariablesDeclared()
+    {
+        return localVariablesDeclared;
+    }
+
+    public int getStatementsInMain()
+    {
+        return statementsInMain;
+    }
+
     /* Error */
     public boolean passed()
     {
@@ -140,6 +182,9 @@ public class SemanticAnalyzer extends VisitorAdaptor
         {
             report_error("Semantic error: Method main has not been declared!", null);
         }
+
+        nVars = SymTab.currentScope().getnVars();
+
         SymTab.chainLocalSymbols(program.getProgramName().obj);
         SymTab.closeScope();
     }
@@ -503,7 +548,7 @@ public class SemanticAnalyzer extends VisitorAdaptor
         }
     }
 
-    /* Read statement */
+    /* Read Statement */
     public void visit(ReadStatement readStatement)
     {
         statementsInMain++;
@@ -526,7 +571,7 @@ public class SemanticAnalyzer extends VisitorAdaptor
         }
     }
 
-    /* Print statement */
+    /* Print Statement */
     public void visit(PrintStatement printStatement)
     {
         statementsInMain++;
