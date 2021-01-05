@@ -46,7 +46,6 @@ public class Compiler
 			log.info(program.toString(""));
 			log.info("===================================");
 
-
 			SemanticAnalyzer semanticAnalyzer = new SemanticAnalyzer();
 			program.traverseBottomUp(semanticAnalyzer);
 

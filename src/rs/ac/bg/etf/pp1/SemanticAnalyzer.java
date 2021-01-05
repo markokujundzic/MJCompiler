@@ -107,7 +107,7 @@ public class SemanticAnalyzer extends VisitorAdaptor
         varDeclCount++;
         Obj varNode = SymTab.find(declVariable.getVarDeclName().getName());
 
-        if (varNode == SymTab.noObj)
+        if (SymTab.currentScope().findSymbol(declVariable.getVarDeclName().getName()) == null)
         {
             if (declVariable.getVarDeclArrayOption() instanceof YesVarDeclArrayOption)
             {
@@ -218,6 +218,7 @@ public class SemanticAnalyzer extends VisitorAdaptor
             methodName.obj = currentMethod = SymTab.insert(Obj.Meth, methodName.getName(), curerntMethodReturnType);
 
             SymTab.openScope();
+
             report_info("Method " + currentMethod.getName() + " declared", methodName);
 
             if (methodName.getName().equals("main"))
@@ -241,7 +242,8 @@ public class SemanticAnalyzer extends VisitorAdaptor
 
     public void visit(MethodDeclaration methodDeclaration)
     {
-        if (!methodDeclaration.getMethodName().getName().equals("main") && !returnFound && curerntMethodReturnType != SymTab.noType)
+        if (!methodDeclaration.getMethodName().getName().equals("main") &&
+            !returnFound && curerntMethodReturnType != SymTab.noType)
         {
             report_error("Semantic Error: Method " + currentMethod.getName() +
             " does not have a return statement on line " + methodDeclaration.getLine(), null);

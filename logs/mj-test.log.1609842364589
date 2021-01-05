@@ -1,0 +1,80 @@
+INFO  11:24:51,895 - Compiling source file: C:\Users\Asus\Desktop\FAKS\PP1\MJCompiler\test\program.mj
+INFO  11:24:51,983 - #2 program
+INFO  11:24:51,983 - #9 test301
+INFO  11:24:51,984 - #9 int
+INFO  11:24:51,985 - #9 x
+INFO  11:24:51,987 - #6 ;
+INFO  11:24:51,990 - #3 {
+INFO  11:24:51,990 - #15 void
+INFO  11:24:51,991 - #9 main
+INFO  11:24:51,992 - #13 (
+INFO  11:24:51,992 - #14 )
+INFO  11:24:51,993 - #9 int
+INFO  11:24:51,994 - #9 y
+INFO  11:24:51,994 - #6 ;
+INFO  11:24:51,994 - #3 {
+INFO  11:24:51,994 - #4 }
+INFO  11:24:51,995 - #4 }
+INFO  11:24:52,005 - Program(
+  ProgramName(
+   test301
+  ) [ProgramName]
+  YesDeclarationList(
+    NoDeclarationList(
+    ) [NoDeclarationList]
+    VariableDeclaration(
+      VarDeclNoError(
+        Type(
+         int
+        ) [Type]
+        SingleVarDeclList(
+          DeclVariable(
+            VarDeclName(
+             x
+            ) [VarDeclName]
+            NoVarDeclArrayOption(
+            ) [NoVarDeclArrayOption]
+          ) [DeclVariable]
+        ) [SingleVarDeclList]
+      ) [VarDeclNoError]
+    ) [VariableDeclaration]
+  ) [YesDeclarationList]
+  YesMethodDeclarationList(
+    NoMethodDeclarationList(
+    ) [NoMethodDeclarationList]
+    MethodDeclaration(
+      VoidMethodReturnType(
+      ) [VoidMethodReturnType]
+      MethodName(
+       main
+      ) [MethodName]
+      NoMethodParameters(
+      ) [NoMethodParameters]
+      YesMethodVariables(
+        NoMethodVariables(
+        ) [NoMethodVariables]
+        VarDeclNoError(
+          Type(
+           int
+          ) [Type]
+          SingleVarDeclList(
+            DeclVariable(
+              VarDeclName(
+               y
+              ) [VarDeclName]
+              NoVarDeclArrayOption(
+              ) [NoVarDeclArrayOption]
+            ) [DeclVariable]
+          ) [SingleVarDeclList]
+        ) [VarDeclNoError]
+      ) [YesMethodVariables]
+      NoMethodBody(
+      ) [NoMethodBody]
+    ) [MethodDeclaration]
+  ) [YesMethodDeclarationList]
+) [Program]
+INFO  11:24:52,011 - ===================================
+INFO  11:24:52,015 - Global variable x declared on line 3
+INFO  11:24:52,015 - Method main declared on line 5
+INFO  11:24:52,015 - Local variable y declared on line 6
+INFO  11:24:52,016 - Parsing finished SUCCESSFULLY!
