@@ -16,6 +16,35 @@ public class CodeGenerator extends VisitorAdaptor
         return mainPC;
     }
 
+    /* Methods */
+    public void visit(MethodName methodName)
+    {
+        if (methodName.getName().equalsIgnoreCase("main"))
+        {
+            mainPC = Code.mainPc;
+        }
+
+        methodName.obj.setAdr(Code.pc);
+
+        SyntaxNode methodNode = methodName.getParent();
+
+        CounterVisitor.VarCounter varCounter = new CounterVisitor.VarCounter();
+        methodNode.traverseTopDown(varCounter);
+
+        CounterVisitor.FormParamCounter formParamCounter = new CounterVisitor.FormParamCounter();
+        methodNode.traverseTopDown(formParamCounter);
+
+        Code.put(Code.enter);
+        Code.put(formParamCounter.getCount());
+        Code.put(formParamCounter.getCount() + varCounter.getCount());
+    }
+
+    public void visit(MethodDeclaration methodDeclaration)
+    {
+        Code.put(Code.exit);
+        Code.put(Code.return_);
+    }
+
     /* Print Statement */
     public void visit(PrintInt printInt)
     {

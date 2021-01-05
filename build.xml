@@ -10,6 +10,7 @@
 				<exclude name="SymTab.java"/>
 				<exclude name="MyDumpSymbolTableVisitor.java"/>
 				<exclude name="CodeGenerator.java"/>
+				<exclude name="CounterVisitor.java"/>
 			</fileset>
 		</delete>
 		<delete>
