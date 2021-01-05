@@ -25,17 +25,16 @@ public class Compiler
 	
 	public static void main(String[] args) throws Exception
 	{
-		
 		Logger log = Logger.getLogger(Compiler.class);
-		
-		Reader br = null;
+		Reader bufferReader = null;
+
 		try
 		{
 			File sourceCode = new File("test/program.mj");
-			log.info("Compiling source file: " + sourceCode.getAbsolutePath());
-			
-			br = new BufferedReader(new FileReader(sourceCode));
-			Yylex lexer = new Yylex(br);
+
+			log.info("====================LEXICAL ANALYSIS========================");
+			bufferReader = new BufferedReader(new FileReader(sourceCode));
+			Yylex lexer = new Yylex(bufferReader);
 			
 			MJParser parser = new MJParser(lexer);
 	        Symbol symbol = parser.parse();
@@ -43,26 +42,36 @@ public class Compiler
 	        Program program = (Program)(symbol.value);
 	        SymTab.init();
 
+			log.info("=======================SYNTAX TREE===========================");
 			log.info(program.toString(""));
-			log.info("===================================");
 
+			log.info("====================SEMANTIC ANALYSIS========================");
 			SemanticAnalyzer semanticAnalyzer = new SemanticAnalyzer();
 			program.traverseBottomUp(semanticAnalyzer);
+
+			log.info("=====================SYNTAX ANALYSIS=========================");
+			log.info((semanticAnalyzer.mainFound ? 1 : 0) + " methods in the program");
+			log.info(semanticAnalyzer.constVariableDeclared + " constants declared");
+			log.info(semanticAnalyzer.globalVariablesDeclared + " global variables declared");
+			log.info(semanticAnalyzer.globalArraysDeclared + " global arrays declared");
+			log.info(semanticAnalyzer.localVariablesDeclared + " local variables declared");
+			log.info(semanticAnalyzer.localArraysDeclared + " local arrays declared");
+			log.info(semanticAnalyzer.statementsInMain + " statements in main");
 
 			SymTab.dump();
 
 			if (!parser.errorDetected && semanticAnalyzer.passed())
 			{
-				log.info("Parsing finished SUCCESSFULLY!");
+				log.info("=============PARSING FINISHED SUCCESSFULLY=================");
 			}
 			else
 			{
-				log.error("Parsing finished UNSUCCESSFULLY!");
+				log.error("============PARSING FINISHED UNSUCCESSFULLY================");
 			}
 		} 
 		finally
 		{
-			if (br != null) try { br.close(); } catch (IOException e1) { log.error(e1.getMessage(), e1); }
+			if (bufferReader != null) try { bufferReader.close(); } catch (IOException e1) { log.error(e1.getMessage(), e1); }
 		}
 	}
 }

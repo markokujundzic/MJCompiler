@@ -13,16 +13,83 @@ public class SemanticAnalyzer extends VisitorAdaptor
 
     private boolean errorDetected = false;
     private boolean returnFound = false;
-    private boolean mainFound = false;
+    public boolean mainFound = false;
     private boolean localVariables = false;
 
     private Obj currentMethod = null;
 
-    private int varDeclCount = 0;
     private int currentConstValue = -1;
 
     private Struct currentType = null;
     private Struct curerntMethodReturnType = null;
+
+    public int constVariableDeclared = 0;
+    public int localArraysDeclared = 0;
+    public int globalArraysDeclared = 0;
+    public int globalVariablesDeclared = 0;
+    public int localVariablesDeclared = 0;
+    public int statementsInMain = 0;
+
+    private String print(Obj o)
+    {
+        StringBuilder s = new StringBuilder();
+
+        switch (o.getKind())
+        {
+            case Obj.Con:  s.append("Con "); break;
+            case Obj.Elem: s.append("Elem "); break;
+            case Obj.Var:  s.append("Var "); break;
+            case Obj.Type: s.append("Type "); break;
+            case Obj.Meth: s.append("Meth "); break;
+            case Obj.Fld:  s.append("Fld "); break;
+            case Obj.Prog: s.append("Prog "); break;
+        }
+
+        s.append(o.getName());
+        s.append(": ");
+
+        switch (o.getType().getKind())
+        {
+            case Struct.None:
+                s.append("notype");
+                break;
+            case Struct.Int:
+                s.append("int");
+                break;
+            case Struct.Char:
+                s.append("char");
+                break;
+            case Struct.Array:
+                s.append("Array of ");
+
+                switch (o.getType().getElemType().getKind())
+                {
+                    case Struct.None:
+                        s.append("notype");
+                        break;
+                    case Struct.Int:
+                        s.append("int");
+                        break;
+                    case Struct.Char:
+                        s.append("char");
+                        break;
+                    case Struct.Bool:
+                        s.append("bool");
+                        break;
+                }
+                break;
+            case Struct.Bool:
+                s.append("bool");
+                break;
+        }
+
+        s.append(", ");
+        s.append(o.getAdr());
+        s.append(", ");
+        s.append(o.getLevel() + " ");
+
+        return s.toString();
+    }
 
     /* Error */
     public boolean passed()
@@ -104,9 +171,6 @@ public class SemanticAnalyzer extends VisitorAdaptor
     /* Global variables */
     public void visit(DeclVariable declVariable)
     {
-        varDeclCount++;
-        Obj varNode = SymTab.find(declVariable.getVarDeclName().getName());
-
         if (SymTab.currentScope().findSymbol(declVariable.getVarDeclName().getName()) == null)
         {
             if (declVariable.getVarDeclArrayOption() instanceof YesVarDeclArrayOption)
@@ -118,11 +182,15 @@ public class SemanticAnalyzer extends VisitorAdaptor
                 {
                     report_info("Global array " + declVariable.getVarDeclName().getName() +
                     " declared", declVariable);
+
+                    globalArraysDeclared++;
                 }
                 else
                 {
                     report_info("Local array " + declVariable.getVarDeclName().getName() +
                     " declared", declVariable);
+
+                    localArraysDeclared++;
                 }
             }
             else if (declVariable.getVarDeclArrayOption() instanceof NoVarDeclArrayOption)
@@ -132,11 +200,15 @@ public class SemanticAnalyzer extends VisitorAdaptor
                 {
                     report_info("Global variable " + declVariable.getVarDeclName().getName() +
                     " declared", declVariable);
+
+                    globalVariablesDeclared++;
                 }
                 else
                 {
                     report_info("Local variable " + declVariable.getVarDeclName().getName() +
                     " declared", declVariable);
+
+                    localVariablesDeclared++;
                 }
             }
         }
@@ -182,6 +254,8 @@ public class SemanticAnalyzer extends VisitorAdaptor
 
                 report_info("Const variable " + constDeclVariable.getConstDeclName().getName() +
                 " declared", constDeclVariable);
+
+                constVariableDeclared++;
             }
             else
             {
@@ -280,13 +354,13 @@ public class SemanticAnalyzer extends VisitorAdaptor
         else if (obj.getType().getKind() != Struct.Array)
         {
             report_info("Variable " + designator.getDesignatorName().getName() +
-            " used", designator.getDesignatorName());
+            " used: " + print(obj), designator.getDesignatorName());
         }
         else if (obj.getType().getKind() == Struct.Array &&
                  !(designator.getOptionalDesignator() instanceof YesOptionalDesignator))
         {
             report_info("Array " + designator.getDesignatorName().getName() +
-            " used", designator.getDesignatorName());
+            " used: " + print(obj), designator.getDesignatorName());
         }
 
         designator.getDesignatorName().obj = obj;
@@ -308,7 +382,7 @@ public class SemanticAnalyzer extends VisitorAdaptor
                     designator.getDesignatorName().obj.getType().getElemType());
 
                     report_info("Element of array " + designator.getDesignatorName().getName() +
-                    " used", designator.getDesignatorName());
+                    " used: " + print(designator.getDesignatorName().obj), designator.getDesignatorName());
                 }
             }
             else
@@ -432,6 +506,8 @@ public class SemanticAnalyzer extends VisitorAdaptor
     /* Read statement */
     public void visit(ReadStatement readStatement)
     {
+        statementsInMain++;
+
         Obj designator = readStatement.getDesignator().getDesignatorName().obj;
         if (designator.getKind() != Obj.Var && designator.getKind() != Obj.Elem)
         {
@@ -453,6 +529,8 @@ public class SemanticAnalyzer extends VisitorAdaptor
     /* Print statement */
     public void visit(PrintStatement printStatement)
     {
+        statementsInMain++;
+
         Struct expr = printStatement.getExpr().struct;
         if (expr != SymTab.charType &&
             expr != SymTab.boolType &&
@@ -510,6 +588,7 @@ public class SemanticAnalyzer extends VisitorAdaptor
     {
         Struct term = termFiniteExpr.getTerm().struct;
         Struct list = termFiniteExpr.getOptionalTermList().struct;
+
         if (list == null)
         {
             termFiniteExpr.struct = term;
@@ -544,6 +623,7 @@ public class SemanticAnalyzer extends VisitorAdaptor
     public void visit(MinusTermFiniteExpr minusTermFiniteExpr)
     {
         Struct term = minusTermFiniteExpr.getTerm().struct;
+
         if (term != SymTab.intType)
         {
             report_error("Semantic Error: Term used behind - sign on line " +
@@ -551,7 +631,9 @@ public class SemanticAnalyzer extends VisitorAdaptor
 
             minusTermFiniteExpr.struct = SymTab.noType;
         }
+
         Struct list = minusTermFiniteExpr.getOptionalTermList().struct;
+
         if (list == null)
         {
             minusTermFiniteExpr.struct = term;
@@ -592,6 +674,7 @@ public class SemanticAnalyzer extends VisitorAdaptor
     {
         Struct term = yesOptionalTermList.getTerm().struct;
         Struct list = yesOptionalTermList.getOptionalTermList().struct;
+
         if (list == null)
         {
             yesOptionalTermList.struct = term;
@@ -658,5 +741,10 @@ public class SemanticAnalyzer extends VisitorAdaptor
                 yesTernaryExpr.struct = SymTab.noType;
             }
         }
+    }
+
+    public void visit(DesignatorStatementDecl designatorStatementDecl)
+    {
+        statementsInMain++;
     }
 }

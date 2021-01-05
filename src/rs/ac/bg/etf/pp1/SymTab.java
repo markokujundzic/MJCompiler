@@ -15,7 +15,7 @@ public class SymTab extends Tab
     }
 
     public static void dump(SymbolTableVisitor stv) {
-        System.out.println("=====================SYMBOL TABLE DUMP=========================");
+        System.out.println("=================================SYMBOL TABLE=====================================");
         if (stv == null)
             stv = new MyDumpSymbolTableVisitor();
         for (Scope s = currentScope; s != null; s = s.getOuter()) {

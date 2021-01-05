@@ -1,266 +1,263 @@
-INFO  17:13:23,336 - ====================LEXICAL ANALYSIS========================
-INFO  17:13:23,424 - #2 program
-INFO  17:13:23,424 - #9 test301
-INFO  17:13:23,424 - #5 const
-INFO  17:13:23,425 - #9 int
-INFO  17:13:23,425 - #9 nula
-INFO  17:13:23,426 - #8 =
-INFO  17:13:23,427 - #10 0
-INFO  17:13:23,427 - #6 ;
-INFO  17:13:23,429 - #5 const
-INFO  17:13:23,429 - #9 int
-INFO  17:13:23,429 - #9 jedan
-INFO  17:13:23,429 - #8 =
-INFO  17:13:23,429 - #10 1
-INFO  17:13:23,429 - #6 ;
-INFO  17:13:23,429 - #5 const
-INFO  17:13:23,429 - #9 int
-INFO  17:13:23,429 - #9 pet
-INFO  17:13:23,429 - #8 =
-INFO  17:13:23,429 - #10 5
-INFO  17:13:23,429 - #6 ;
-INFO  17:13:23,430 - #9 int
-INFO  17:13:23,430 - #9 niz
-INFO  17:13:23,430 - #20 [
-INFO  17:13:23,437 - #21 ]
-INFO  17:13:23,437 - #6 ;
-INFO  17:13:23,439 - #9 char
-INFO  17:13:23,439 - #9 nizch
-INFO  17:13:23,439 - #20 [
-INFO  17:13:23,439 - #21 ]
-INFO  17:13:23,439 - #6 ;
-INFO  17:13:23,440 - #3 {
-INFO  17:13:23,440 - #15 void
-INFO  17:13:23,440 - #9 main
-INFO  17:13:23,441 - #13 (
-INFO  17:13:23,442 - #14 )
-INFO  17:13:23,443 - #9 int
-INFO  17:13:23,444 - #9 bodovi
-INFO  17:13:23,444 - #6 ;
-INFO  17:13:23,445 - #9 bool
-INFO  17:13:23,445 - #9 bt
-INFO  17:13:23,445 - #6 ;
-INFO  17:13:23,445 - #3 {
-INFO  17:13:23,445 - #9 bodovi
-INFO  17:13:23,446 - #8 =
-INFO  17:13:23,448 - #10 0
-INFO  17:13:23,449 - #6 ;
-INFO  17:13:23,455 - #9 bodovi
-INFO  17:13:23,455 - #22 ++
-INFO  17:13:23,455 - #6 ;
-INFO  17:13:23,456 - #9 bodovi
-INFO  17:13:23,456 - #8 =
-INFO  17:13:23,456 - #9 bodovi
-INFO  17:13:23,456 - #36 +
-INFO  17:13:23,456 - #9 jedan
-INFO  17:13:23,457 - #6 ;
-INFO  17:13:23,458 - #9 bodovi
-INFO  17:13:23,458 - #8 =
-INFO  17:13:23,458 - #9 bodovi
-INFO  17:13:23,458 - #37 *
-INFO  17:13:23,458 - #9 pet
-INFO  17:13:23,459 - #6 ;
-INFO  17:13:23,459 - #9 bodovi
-INFO  17:13:23,459 - #23 --
-INFO  17:13:23,460 - #6 ;
-INFO  17:13:23,460 - #30 print
-INFO  17:13:23,460 - #13 (
-INFO  17:13:23,460 - #9 bodovi
-INFO  17:13:23,460 - #14 )
-INFO  17:13:23,461 - #6 ;
-INFO  17:13:23,461 - #9 niz
-INFO  17:13:23,462 - #8 =
-INFO  17:13:23,462 - #35 new
-INFO  17:13:23,462 - #9 int
-INFO  17:13:23,462 - #20 [
-INFO  17:13:23,462 - #10 3
-INFO  17:13:23,462 - #21 ]
-INFO  17:13:23,463 - #6 ;
-INFO  17:13:23,463 - #9 niz
-INFO  17:13:23,463 - #20 [
-INFO  17:13:23,463 - #9 nula
-INFO  17:13:23,463 - #21 ]
-INFO  17:13:23,463 - #8 =
-INFO  17:13:23,463 - #9 jedan
-INFO  17:13:23,463 - #6 ;
-INFO  17:13:23,463 - #9 niz
-INFO  17:13:23,463 - #20 [
-INFO  17:13:23,463 - #10 1
-INFO  17:13:23,463 - #21 ]
-INFO  17:13:23,463 - #8 =
-INFO  17:13:23,463 - #10 2
-INFO  17:13:23,463 - #6 ;
-INFO  17:13:23,463 - #9 niz
-INFO  17:13:23,464 - #20 [
-INFO  17:13:23,464 - #9 niz
-INFO  17:13:23,464 - #20 [
-INFO  17:13:23,464 - #9 jedan
-INFO  17:13:23,464 - #21 ]
-INFO  17:13:23,464 - #21 ]
-INFO  17:13:23,464 - #8 =
-INFO  17:13:23,464 - #9 niz
-INFO  17:13:23,464 - #20 [
-INFO  17:13:23,464 - #9 niz
-INFO  17:13:23,464 - #20 [
-INFO  17:13:23,464 - #10 0
-INFO  17:13:23,464 - #21 ]
-INFO  17:13:23,464 - #21 ]
-INFO  17:13:23,464 - #37 *
-INFO  17:13:23,464 - #10 3
-INFO  17:13:23,464 - #6 ;
-INFO  17:13:23,464 - #9 bodovi
-INFO  17:13:23,464 - #8 =
-INFO  17:13:23,464 - #9 niz
-INFO  17:13:23,464 - #20 [
-INFO  17:13:23,464 - #10 2
-INFO  17:13:23,464 - #21 ]
-INFO  17:13:23,465 - #38 /
-INFO  17:13:23,465 - #9 niz
-INFO  17:13:23,465 - #20 [
-INFO  17:13:23,465 - #10 0
-INFO  17:13:23,465 - #21 ]
-INFO  17:13:23,465 - #6 ;
-INFO  17:13:23,466 - #30 print
-INFO  17:13:23,466 - #13 (
-INFO  17:13:23,466 - #9 bodovi
-INFO  17:13:23,466 - #14 )
-INFO  17:13:23,466 - #6 ;
-INFO  17:13:23,466 - #30 print
-INFO  17:13:23,466 - #13 (
-INFO  17:13:23,466 - #9 niz
-INFO  17:13:23,466 - #20 [
-INFO  17:13:23,466 - #10 2
-INFO  17:13:23,466 - #21 ]
-INFO  17:13:23,466 - #14 )
-INFO  17:13:23,466 - #6 ;
-INFO  17:13:23,466 - #9 nizch
-INFO  17:13:23,466 - #8 =
-INFO  17:13:23,466 - #35 new
-INFO  17:13:23,467 - #9 char
-INFO  17:13:23,467 - #20 [
-INFO  17:13:23,467 - #10 3
-INFO  17:13:23,467 - #21 ]
-INFO  17:13:23,467 - #6 ;
-INFO  17:13:23,467 - #9 nizch
-INFO  17:13:23,467 - #20 [
-INFO  17:13:23,467 - #10 0
-INFO  17:13:23,467 - #21 ]
-INFO  17:13:23,467 - #8 =
-INFO  17:13:23,467 - #12 a
-INFO  17:13:23,467 - #6 ;
-INFO  17:13:23,468 - #9 nizch
-INFO  17:13:23,468 - #20 [
-INFO  17:13:23,468 - #9 jedan
-INFO  17:13:23,468 - #21 ]
-INFO  17:13:23,468 - #8 =
-INFO  17:13:23,468 - #12 b
-INFO  17:13:23,468 - #6 ;
-INFO  17:13:23,468 - #9 nizch
-INFO  17:13:23,468 - #20 [
-INFO  17:13:23,468 - #9 pet
-INFO  17:13:23,468 - #34 -
-INFO  17:13:23,468 - #10 3
-INFO  17:13:23,469 - #21 ]
-INFO  17:13:23,469 - #8 =
-INFO  17:13:23,469 - #12 c
-INFO  17:13:23,469 - #6 ;
-INFO  17:13:23,469 - #30 print
-INFO  17:13:23,469 - #13 (
-INFO  17:13:23,469 - #9 nizch
-INFO  17:13:23,469 - #20 [
-INFO  17:13:23,469 - #10 1
-INFO  17:13:23,470 - #21 ]
-INFO  17:13:23,470 - #14 )
-INFO  17:13:23,470 - #6 ;
-INFO  17:13:23,470 - #30 print
-INFO  17:13:23,470 - #13 (
-INFO  17:13:23,470 - #9 nizch
-INFO  17:13:23,470 - #20 [
-INFO  17:13:23,470 - #9 jedan
-INFO  17:13:23,470 - #37 *
-INFO  17:13:23,470 - #10 2
-INFO  17:13:23,470 - #21 ]
-INFO  17:13:23,470 - #14 )
-INFO  17:13:23,470 - #6 ;
-INFO  17:13:23,470 - #9 bodovi
-INFO  17:13:23,470 - #8 =
-INFO  17:13:23,470 - #9 bodovi
-INFO  17:13:23,470 - #36 +
-INFO  17:13:23,470 - #13 (
-INFO  17:13:23,470 - #9 pet
-INFO  17:13:23,470 - #37 *
-INFO  17:13:23,470 - #9 jedan
-INFO  17:13:23,471 - #34 -
-INFO  17:13:23,471 - #10 1
-INFO  17:13:23,471 - #14 )
-INFO  17:13:23,471 - #37 *
-INFO  17:13:23,471 - #9 bodovi
-INFO  17:13:23,471 - #34 -
-INFO  17:13:23,471 - #13 (
-INFO  17:13:23,471 - #10 3
-INFO  17:13:23,471 - #39 %
-INFO  17:13:23,471 - #10 2
-INFO  17:13:23,472 - #36 +
-INFO  17:13:23,472 - #10 3
-INFO  17:13:23,472 - #37 *
-INFO  17:13:23,472 - #10 2
-INFO  17:13:23,472 - #34 -
-INFO  17:13:23,472 - #10 3
-INFO  17:13:23,472 - #14 )
-INFO  17:13:23,472 - #6 ;
-INFO  17:13:23,472 - #30 print
-INFO  17:13:23,472 - #13 (
-INFO  17:13:23,472 - #9 bodovi
-INFO  17:13:23,472 - #14 )
-INFO  17:13:23,473 - #6 ;
-INFO  17:13:23,473 - #29 read
-INFO  17:13:23,473 - #13 (
-INFO  17:13:23,473 - #9 bodovi
-INFO  17:13:23,473 - #14 )
-INFO  17:13:23,473 - #6 ;
-INFO  17:13:23,473 - #9 bt
-INFO  17:13:23,473 - #8 =
-INFO  17:13:23,474 - #11 true
-INFO  17:13:23,474 - #6 ;
-INFO  17:13:23,474 - #30 print
-INFO  17:13:23,474 - #13 (
-INFO  17:13:23,474 - #9 bt
-INFO  17:13:23,474 - #33 ?
-INFO  17:13:23,474 - #9 bodovi
-INFO  17:13:23,474 - #18 :
-INFO  17:13:23,474 - #9 bodovi
-INFO  17:13:23,474 - #36 +
-INFO  17:13:23,474 - #10 10
-INFO  17:13:23,474 - #14 )
-INFO  17:13:23,474 - #6 ;
-INFO  17:13:23,474 - #30 print
-INFO  17:13:23,474 - #13 (
-INFO  17:13:23,474 - #11 false
-INFO  17:13:23,474 - #33 ?
-INFO  17:13:23,474 - #9 bodovi
-INFO  17:13:23,474 - #36 +
-INFO  17:13:23,474 - #10 20
-INFO  17:13:23,474 - #18 :
-INFO  17:13:23,474 - #9 bodovi
-INFO  17:13:23,474 - #36 +
-INFO  17:13:23,475 - #10 30
-INFO  17:13:23,475 - #14 )
-INFO  17:13:23,475 - #6 ;
-INFO  17:13:23,475 - #30 print
-INFO  17:13:23,475 - #13 (
-INFO  17:13:23,475 - #9 bodovi
-INFO  17:13:23,475 - #42 >
-INFO  17:13:23,475 - #10 10
-INFO  17:13:23,476 - #33 ?
-INFO  17:13:23,476 - #12 +
-INFO  17:13:23,476 - #18 :
-INFO  17:13:23,476 - #12 -
-INFO  17:13:23,477 - #14 )
-INFO  17:13:23,477 - #6 ;
-INFO  17:13:23,477 - #4 }
-INFO  17:13:23,477 - #4 }
-INFO  17:13:23,483 - =======================SYNTAX TREE===========================
-INFO  17:13:23,491 - Program(
+INFO  16:46:33,718 - ====================LEXICAL ANALYSIS========================
+INFO  16:46:33,797 - #2 program
+INFO  16:46:33,797 - #9 test301
+INFO  16:46:33,797 - #5 const
+INFO  16:46:33,798 - #9 int
+INFO  16:46:33,798 - #9 nula
+INFO  16:46:33,799 - #8 =
+INFO  16:46:33,800 - #10 0
+INFO  16:46:33,800 - #6 ;
+INFO  16:46:33,801 - #5 const
+INFO  16:46:33,802 - #9 int
+INFO  16:46:33,802 - #9 jedan
+INFO  16:46:33,802 - #8 =
+INFO  16:46:33,802 - #10 1
+INFO  16:46:33,802 - #6 ;
+INFO  16:46:33,802 - #5 const
+INFO  16:46:33,803 - #9 int
+INFO  16:46:33,803 - #9 pet
+INFO  16:46:33,803 - #8 =
+INFO  16:46:33,803 - #10 5
+INFO  16:46:33,803 - #6 ;
+INFO  16:46:33,803 - #9 int
+INFO  16:46:33,803 - #9 niz
+INFO  16:46:33,803 - #20 [
+INFO  16:46:33,810 - #21 ]
+INFO  16:46:33,810 - #6 ;
+INFO  16:46:33,812 - #9 char
+INFO  16:46:33,812 - #9 nizch
+INFO  16:46:33,812 - #20 [
+INFO  16:46:33,812 - #21 ]
+INFO  16:46:33,812 - #6 ;
+INFO  16:46:33,812 - #3 {
+INFO  16:46:33,812 - #15 void
+INFO  16:46:33,813 - #9 main
+INFO  16:46:33,814 - #13 (
+INFO  16:46:33,814 - #14 )
+INFO  16:46:33,815 - #9 bool
+INFO  16:46:33,816 - #9 bt
+INFO  16:46:33,816 - #6 ;
+INFO  16:46:33,817 - #3 {
+INFO  16:46:33,817 - #9 bodovi
+INFO  16:46:33,818 - #8 =
+INFO  16:46:33,820 - #10 0
+INFO  16:46:33,821 - #6 ;
+INFO  16:46:33,823 - #9 bodovi
+INFO  16:46:33,824 - #22 ++
+INFO  16:46:33,824 - #6 ;
+INFO  16:46:33,827 - #9 bodovi
+INFO  16:46:33,828 - #8 =
+INFO  16:46:33,828 - #9 bodovi
+INFO  16:46:33,828 - #36 +
+INFO  16:46:33,828 - #9 jedan
+INFO  16:46:33,829 - #6 ;
+INFO  16:46:33,829 - #9 bodovi
+INFO  16:46:33,830 - #8 =
+INFO  16:46:33,830 - #9 bodovi
+INFO  16:46:33,830 - #37 *
+INFO  16:46:33,830 - #9 pet
+INFO  16:46:33,831 - #6 ;
+INFO  16:46:33,832 - #9 bodovi
+INFO  16:46:33,832 - #23 --
+INFO  16:46:33,832 - #6 ;
+INFO  16:46:33,832 - #30 print
+INFO  16:46:33,832 - #13 (
+INFO  16:46:33,833 - #9 bodovi
+INFO  16:46:33,833 - #14 )
+INFO  16:46:33,833 - #6 ;
+INFO  16:46:33,833 - #9 niz
+INFO  16:46:33,834 - #8 =
+INFO  16:46:33,834 - #35 new
+INFO  16:46:33,834 - #9 int
+INFO  16:46:33,834 - #20 [
+INFO  16:46:33,834 - #10 3
+INFO  16:46:33,834 - #21 ]
+INFO  16:46:33,834 - #6 ;
+INFO  16:46:33,834 - #9 niz
+INFO  16:46:33,834 - #20 [
+INFO  16:46:33,835 - #9 nula
+INFO  16:46:33,835 - #21 ]
+INFO  16:46:33,835 - #8 =
+INFO  16:46:33,835 - #9 jedan
+INFO  16:46:33,835 - #6 ;
+INFO  16:46:33,835 - #9 niz
+INFO  16:46:33,835 - #20 [
+INFO  16:46:33,835 - #10 1
+INFO  16:46:33,835 - #21 ]
+INFO  16:46:33,835 - #8 =
+INFO  16:46:33,835 - #10 2
+INFO  16:46:33,835 - #6 ;
+INFO  16:46:33,835 - #9 niz
+INFO  16:46:33,835 - #20 [
+INFO  16:46:33,836 - #9 niz
+INFO  16:46:33,836 - #20 [
+INFO  16:46:33,836 - #9 jedan
+INFO  16:46:33,836 - #21 ]
+INFO  16:46:33,836 - #21 ]
+INFO  16:46:33,836 - #8 =
+INFO  16:46:33,836 - #9 niz
+INFO  16:46:33,836 - #20 [
+INFO  16:46:33,836 - #9 niz
+INFO  16:46:33,836 - #20 [
+INFO  16:46:33,836 - #10 0
+INFO  16:46:33,836 - #21 ]
+INFO  16:46:33,836 - #21 ]
+INFO  16:46:33,836 - #37 *
+INFO  16:46:33,836 - #10 3
+INFO  16:46:33,837 - #6 ;
+INFO  16:46:33,837 - #9 bodovi
+INFO  16:46:33,837 - #8 =
+INFO  16:46:33,837 - #9 niz
+INFO  16:46:33,837 - #20 [
+INFO  16:46:33,837 - #10 2
+INFO  16:46:33,837 - #21 ]
+INFO  16:46:33,837 - #38 /
+INFO  16:46:33,837 - #9 niz
+INFO  16:46:33,838 - #20 [
+INFO  16:46:33,838 - #10 0
+INFO  16:46:33,838 - #21 ]
+INFO  16:46:33,838 - #6 ;
+INFO  16:46:33,838 - #30 print
+INFO  16:46:33,838 - #13 (
+INFO  16:46:33,838 - #9 bodovi
+INFO  16:46:33,838 - #14 )
+INFO  16:46:33,838 - #6 ;
+INFO  16:46:33,838 - #30 print
+INFO  16:46:33,839 - #13 (
+INFO  16:46:33,839 - #9 niz
+INFO  16:46:33,839 - #20 [
+INFO  16:46:33,839 - #10 2
+INFO  16:46:33,839 - #21 ]
+INFO  16:46:33,839 - #14 )
+INFO  16:46:33,839 - #6 ;
+INFO  16:46:33,839 - #9 nizch
+INFO  16:46:33,839 - #8 =
+INFO  16:46:33,839 - #35 new
+INFO  16:46:33,839 - #9 char
+INFO  16:46:33,839 - #20 [
+INFO  16:46:33,839 - #10 3
+INFO  16:46:33,839 - #21 ]
+INFO  16:46:33,839 - #6 ;
+INFO  16:46:33,840 - #9 nizch
+INFO  16:46:33,840 - #20 [
+INFO  16:46:33,840 - #10 0
+INFO  16:46:33,840 - #21 ]
+INFO  16:46:33,840 - #8 =
+INFO  16:46:33,840 - #12 a
+INFO  16:46:33,840 - #6 ;
+INFO  16:46:33,840 - #9 nizch
+INFO  16:46:33,840 - #20 [
+INFO  16:46:33,840 - #9 jedan
+INFO  16:46:33,840 - #21 ]
+INFO  16:46:33,840 - #8 =
+INFO  16:46:33,840 - #12 b
+INFO  16:46:33,840 - #6 ;
+INFO  16:46:33,841 - #9 nizch
+INFO  16:46:33,841 - #20 [
+INFO  16:46:33,841 - #9 pet
+INFO  16:46:33,841 - #34 -
+INFO  16:46:33,841 - #10 3
+INFO  16:46:33,842 - #21 ]
+INFO  16:46:33,842 - #8 =
+INFO  16:46:33,842 - #12 c
+INFO  16:46:33,842 - #6 ;
+INFO  16:46:33,842 - #30 print
+INFO  16:46:33,842 - #13 (
+INFO  16:46:33,842 - #9 nizch
+INFO  16:46:33,842 - #20 [
+INFO  16:46:33,842 - #10 1
+INFO  16:46:33,842 - #21 ]
+INFO  16:46:33,842 - #14 )
+INFO  16:46:33,842 - #6 ;
+INFO  16:46:33,842 - #30 print
+INFO  16:46:33,842 - #13 (
+INFO  16:46:33,842 - #9 nizch
+INFO  16:46:33,842 - #20 [
+INFO  16:46:33,842 - #9 jedan
+INFO  16:46:33,842 - #37 *
+INFO  16:46:33,842 - #10 2
+INFO  16:46:33,842 - #21 ]
+INFO  16:46:33,842 - #14 )
+INFO  16:46:33,842 - #6 ;
+INFO  16:46:33,842 - #9 bodovi
+INFO  16:46:33,843 - #8 =
+INFO  16:46:33,843 - #9 bodovi
+INFO  16:46:33,843 - #36 +
+INFO  16:46:33,843 - #13 (
+INFO  16:46:33,843 - #9 pet
+INFO  16:46:33,843 - #37 *
+INFO  16:46:33,843 - #9 jedan
+INFO  16:46:33,843 - #34 -
+INFO  16:46:33,843 - #10 1
+INFO  16:46:33,843 - #14 )
+INFO  16:46:33,843 - #37 *
+INFO  16:46:33,843 - #9 bodovi
+INFO  16:46:33,843 - #34 -
+INFO  16:46:33,843 - #13 (
+INFO  16:46:33,843 - #10 3
+INFO  16:46:33,843 - #39 %
+INFO  16:46:33,843 - #10 2
+INFO  16:46:33,844 - #36 +
+INFO  16:46:33,844 - #10 3
+INFO  16:46:33,844 - #37 *
+INFO  16:46:33,844 - #10 2
+INFO  16:46:33,844 - #34 -
+INFO  16:46:33,844 - #10 3
+INFO  16:46:33,844 - #14 )
+INFO  16:46:33,844 - #6 ;
+INFO  16:46:33,844 - #30 print
+INFO  16:46:33,844 - #13 (
+INFO  16:46:33,844 - #9 bodovi
+INFO  16:46:33,845 - #14 )
+INFO  16:46:33,845 - #6 ;
+INFO  16:46:33,845 - #29 read
+INFO  16:46:33,845 - #13 (
+INFO  16:46:33,845 - #9 bodovi
+INFO  16:46:33,845 - #14 )
+INFO  16:46:33,845 - #6 ;
+INFO  16:46:33,845 - #9 bt
+INFO  16:46:33,846 - #8 =
+INFO  16:46:33,846 - #11 true
+INFO  16:46:33,846 - #6 ;
+INFO  16:46:33,846 - #30 print
+INFO  16:46:33,846 - #13 (
+INFO  16:46:33,846 - #9 bt
+INFO  16:46:33,846 - #33 ?
+INFO  16:46:33,846 - #9 bodovi
+INFO  16:46:33,846 - #18 :
+INFO  16:46:33,846 - #9 bodovi
+INFO  16:46:33,846 - #36 +
+INFO  16:46:33,846 - #10 10
+INFO  16:46:33,846 - #14 )
+INFO  16:46:33,846 - #6 ;
+INFO  16:46:33,846 - #30 print
+INFO  16:46:33,846 - #13 (
+INFO  16:46:33,846 - #11 false
+INFO  16:46:33,846 - #33 ?
+INFO  16:46:33,846 - #9 bodovi
+INFO  16:46:33,846 - #36 +
+INFO  16:46:33,846 - #10 20
+INFO  16:46:33,846 - #18 :
+INFO  16:46:33,846 - #9 bodovi
+INFO  16:46:33,846 - #36 +
+INFO  16:46:33,847 - #10 30
+INFO  16:46:33,847 - #14 )
+INFO  16:46:33,847 - #6 ;
+INFO  16:46:33,847 - #30 print
+INFO  16:46:33,847 - #13 (
+INFO  16:46:33,847 - #9 bodovi
+INFO  16:46:33,847 - #42 >
+INFO  16:46:33,847 - #10 10
+INFO  16:46:33,848 - #33 ?
+INFO  16:46:33,848 - #12 +
+INFO  16:46:33,848 - #18 :
+INFO  16:46:33,848 - #12 -
+INFO  16:46:33,848 - #14 )
+INFO  16:46:33,849 - #6 ;
+INFO  16:46:33,849 - #4 }
+INFO  16:46:33,849 - #4 }
+INFO  16:46:33,856 - =====================SYNTAX ANALYSIS=========================
+INFO  16:46:33,866 - Program(
   ProgramName(
    test301
   ) [ProgramName]
@@ -371,24 +368,8 @@ INFO  17:13:23,491 - Program(
       NoMethodParameters(
       ) [NoMethodParameters]
       YesMethodVariables(
-        YesMethodVariables(
-          NoMethodVariables(
-          ) [NoMethodVariables]
-          VarDeclNoError(
-            Type(
-             int
-            ) [Type]
-            SingleVarDeclList(
-              DeclVariable(
-                VarDeclName(
-                 bodovi
-                ) [VarDeclName]
-                NoVarDeclArrayOption(
-                ) [NoVarDeclArrayOption]
-              ) [DeclVariable]
-            ) [SingleVarDeclList]
-          ) [VarDeclNoError]
-        ) [YesMethodVariables]
+        NoMethodVariables(
+        ) [NoMethodVariables]
         VarDeclNoError(
           Type(
            bool
@@ -1746,69 +1727,83 @@ INFO  17:13:23,491 - Program(
     ) [MethodDeclaration]
   ) [YesMethodDeclarationList]
 ) [Program]
-INFO  17:13:23,494 - ====================SEMANTIC ANALYSIS========================
-INFO  17:13:23,498 - Const variable nula declared on line 3
-INFO  17:13:23,498 - Const variable jedan declared on line 4
-INFO  17:13:23,498 - Const variable pet declared on line 5
-INFO  17:13:23,498 - Global array niz declared on line 7
-INFO  17:13:23,498 - Global array nizch declared on line 8
-INFO  17:13:23,498 - Method main declared on line 11
-INFO  17:13:23,498 - Local variable bodovi declared on line 12
-INFO  17:13:23,498 - Local variable bt declared on line 13
-INFO  17:13:23,499 - Variable bodovi used: Var bodovi: int, 0, 1  on line 15
-INFO  17:13:23,499 - Variable bodovi used: Var bodovi: int, 0, 1  on line 16
-INFO  17:13:23,499 - Variable bodovi used: Var bodovi: int, 0, 1  on line 17
-INFO  17:13:23,499 - Variable bodovi used: Var bodovi: int, 0, 1  on line 17
-INFO  17:13:23,499 - Variable jedan used: Con jedan: int, 1, 0  on line 17
-INFO  17:13:23,499 - Variable bodovi used: Var bodovi: int, 0, 1  on line 18
-INFO  17:13:23,499 - Variable bodovi used: Var bodovi: int, 0, 1  on line 18
-INFO  17:13:23,499 - Variable pet used: Con pet: int, 5, 0  on line 18
-INFO  17:13:23,499 - Variable bodovi used: Var bodovi: int, 0, 1  on line 19
-INFO  17:13:23,499 - Variable bodovi used: Var bodovi: int, 0, 1  on line 20
-INFO  17:13:23,499 - Array niz used: Var niz: Array of int, 0, 0  on line 23
-INFO  17:13:23,499 - Variable nula used: Con nula: int, 0, 0  on line 24
-INFO  17:13:23,499 - Element of array niz used: Elem niz: int, -1, -1  on line 24
-INFO  17:13:23,499 - Variable jedan used: Con jedan: int, 1, 0  on line 24
-INFO  17:13:23,499 - Element of array niz used: Elem niz: int, -1, -1  on line 25
-INFO  17:13:23,499 - Variable jedan used: Con jedan: int, 1, 0  on line 26
-INFO  17:13:23,499 - Element of array niz used: Elem niz: int, -1, -1  on line 26
-INFO  17:13:23,499 - Element of array niz used: Elem niz: int, -1, -1  on line 26
-INFO  17:13:23,499 - Element of array niz used: Elem niz: int, -1, -1  on line 26
-INFO  17:13:23,499 - Element of array niz used: Elem niz: int, -1, -1  on line 26
-INFO  17:13:23,499 - Variable bodovi used: Var bodovi: int, 0, 1  on line 27
-INFO  17:13:23,499 - Element of array niz used: Elem niz: int, -1, -1  on line 27
-INFO  17:13:23,499 - Element of array niz used: Elem niz: int, -1, -1  on line 27
-INFO  17:13:23,499 - Variable bodovi used: Var bodovi: int, 0, 1  on line 28
-INFO  17:13:23,499 - Element of array niz used: Elem niz: int, -1, -1  on line 29
-INFO  17:13:23,500 - Array nizch used: Var nizch: Array of char, 1, 0  on line 32
-INFO  17:13:23,500 - Element of array nizch used: Elem nizch: char, -1, -1  on line 33
-INFO  17:13:23,500 - Variable jedan used: Con jedan: int, 1, 0  on line 34
-INFO  17:13:23,500 - Element of array nizch used: Elem nizch: char, -1, -1  on line 34
-INFO  17:13:23,500 - Variable pet used: Con pet: int, 5, 0  on line 35
-INFO  17:13:23,500 - Element of array nizch used: Elem nizch: char, -1, -1  on line 35
-INFO  17:13:23,500 - Element of array nizch used: Elem nizch: char, -1, -1  on line 36
-INFO  17:13:23,500 - Variable jedan used: Con jedan: int, 1, 0  on line 37
-INFO  17:13:23,500 - Element of array nizch used: Elem nizch: char, -1, -1  on line 37
-INFO  17:13:23,500 - Variable bodovi used: Var bodovi: int, 0, 1  on line 40
-INFO  17:13:23,500 - Variable bodovi used: Var bodovi: int, 0, 1  on line 40
-INFO  17:13:23,500 - Variable pet used: Con pet: int, 5, 0  on line 40
-INFO  17:13:23,500 - Variable jedan used: Con jedan: int, 1, 0  on line 40
-INFO  17:13:23,500 - Variable bodovi used: Var bodovi: int, 0, 1  on line 40
-INFO  17:13:23,500 - Variable bodovi used: Var bodovi: int, 0, 1  on line 41
-INFO  17:13:23,500 - Variable bodovi used: Var bodovi: int, 0, 1  on line 43
-INFO  17:13:23,500 - Variable bt used: Var bt: bool, 1, 1  on line 44
-INFO  17:13:23,500 - Variable bt used: Var bt: bool, 1, 1  on line 46
-INFO  17:13:23,500 - Variable bodovi used: Var bodovi: int, 0, 1  on line 46
-INFO  17:13:23,500 - Variable bodovi used: Var bodovi: int, 0, 1  on line 46
-INFO  17:13:23,500 - Variable bodovi used: Var bodovi: int, 0, 1  on line 47
-INFO  17:13:23,500 - Variable bodovi used: Var bodovi: int, 0, 1  on line 47
-INFO  17:13:23,500 - Variable bodovi used: Var bodovi: int, 0, 1  on line 48
-INFO  17:13:23,501 - =====================SYNTAX ANALYSIS=========================
-INFO  17:13:23,501 - 1 methods in the program
-INFO  17:13:23,501 - 3 constants declared
-INFO  17:13:23,501 - 0 global variables declared
-INFO  17:13:23,501 - 2 global arrays declared
-INFO  17:13:23,501 - 2 local variables declared
-INFO  17:13:23,501 - 0 local arrays declared
-INFO  17:13:23,501 - 26 statements in main
-INFO  17:13:23,502 - =============PARSING FINISHED SUCCESSFULLY=================
+INFO  16:46:33,869 - ====================SEMANTIC ANALYSIS========================
+INFO  16:46:33,872 - Const variable nula declared on line 3
+INFO  16:46:33,872 - Const variable jedan declared on line 4
+INFO  16:46:33,872 - Const variable pet declared on line 5
+INFO  16:46:33,872 - Global array niz declared on line 7
+INFO  16:46:33,872 - Global array nizch declared on line 8
+INFO  16:46:33,872 - Method main declared on line 11
+INFO  16:46:33,872 - Local variable bt declared on line 13
+ERROR 16:46:33,873 - Semantic Error: Variable bodovi used on line 15 has not been declared
+ERROR 16:46:33,873 - Semantic Error: Incompatible types where Expr is assigned to Designator on line 15
+ERROR 16:46:33,873 - Semantic Error: Variable bodovi used on line 16 has not been declared
+ERROR 16:46:33,873 - Semantic Error: post-increment and post-decrement operators can only be used with int types on line 16
+ERROR 16:46:33,873 - Semantic Error: Variable bodovi used on line 17 has not been declared
+ERROR 16:46:33,873 - Semantic Error: Variable bodovi used on line 17 has not been declared
+INFO  16:46:33,873 - Variable jedan used: Con jedan: int, 1, 0  on line 17
+ERROR 16:46:33,873 - Semantic Error: Types used in FinalExpr on line 17 must be compatible
+ERROR 16:46:33,873 - Semantic Error: Variable bodovi used on line 18 has not been declared
+ERROR 16:46:33,873 - Semantic Error: Variable bodovi used on line 18 has not been declared
+INFO  16:46:33,873 - Variable pet used: Con pet: int, 5, 0  on line 18
+ERROR 16:46:33,873 - Semantic Error: Operands of *, /, % operations on line 18 must be of int type
+ERROR 16:46:33,873 - Semantic Error: Variable bodovi used on line 19 has not been declared
+ERROR 16:46:33,873 - Semantic Error: post-increment and post-decrement operators can only be used with int types on line 19
+ERROR 16:46:33,873 - Semantic Error: Variable bodovi used on line 20 has not been declared
+ERROR 16:46:33,873 - Semantic Error: Operand of print method on line 20 must be of int, bool or char type
+INFO  16:46:33,873 - Array niz used: Var niz: Array of int, 0, 0  on line 23
+INFO  16:46:33,873 - Variable nula used: Con nula: int, 0, 0  on line 24
+INFO  16:46:33,873 - Element of array niz used: Elem niz: int, -1, -1  on line 24
+INFO  16:46:33,873 - Variable jedan used: Con jedan: int, 1, 0  on line 24
+INFO  16:46:33,873 - Element of array niz used: Elem niz: int, -1, -1  on line 25
+INFO  16:46:33,873 - Variable jedan used: Con jedan: int, 1, 0  on line 26
+INFO  16:46:33,873 - Element of array niz used: Elem niz: int, -1, -1  on line 26
+INFO  16:46:33,873 - Element of array niz used: Elem niz: int, -1, -1  on line 26
+INFO  16:46:33,873 - Element of array niz used: Elem niz: int, -1, -1  on line 26
+INFO  16:46:33,874 - Element of array niz used: Elem niz: int, -1, -1  on line 26
+ERROR 16:46:33,874 - Semantic Error: Variable bodovi used on line 27 has not been declared
+INFO  16:46:33,874 - Element of array niz used: Elem niz: int, -1, -1  on line 27
+INFO  16:46:33,874 - Element of array niz used: Elem niz: int, -1, -1  on line 27
+ERROR 16:46:33,874 - Semantic Error: Incompatible types where Expr is assigned to Designator on line 27
+ERROR 16:46:33,874 - Semantic Error: Variable bodovi used on line 28 has not been declared
+ERROR 16:46:33,874 - Semantic Error: Operand of print method on line 28 must be of int, bool or char type
+INFO  16:46:33,874 - Element of array niz used: Elem niz: int, -1, -1  on line 29
+INFO  16:46:33,874 - Array nizch used: Var nizch: Array of char, 1, 0  on line 32
+INFO  16:46:33,874 - Element of array nizch used: Elem nizch: char, -1, -1  on line 33
+INFO  16:46:33,874 - Variable jedan used: Con jedan: int, 1, 0  on line 34
+INFO  16:46:33,874 - Element of array nizch used: Elem nizch: char, -1, -1  on line 34
+INFO  16:46:33,874 - Variable pet used: Con pet: int, 5, 0  on line 35
+INFO  16:46:33,874 - Element of array nizch used: Elem nizch: char, -1, -1  on line 35
+INFO  16:46:33,874 - Element of array nizch used: Elem nizch: char, -1, -1  on line 36
+INFO  16:46:33,874 - Variable jedan used: Con jedan: int, 1, 0  on line 37
+INFO  16:46:33,874 - Element of array nizch used: Elem nizch: char, -1, -1  on line 37
+ERROR 16:46:33,874 - Semantic Error: Variable bodovi used on line 40 has not been declared
+ERROR 16:46:33,874 - Semantic Error: Variable bodovi used on line 40 has not been declared
+INFO  16:46:33,874 - Variable pet used: Con pet: int, 5, 0  on line 40
+INFO  16:46:33,874 - Variable jedan used: Con jedan: int, 1, 0  on line 40
+ERROR 16:46:33,874 - Semantic Error: Variable bodovi used on line 40 has not been declared
+ERROR 16:46:33,874 - Semantic Error: Operands of *, /, % operations on line 40 must be of int type
+ERROR 16:46:33,874 - Semantic Error: Types used in FinalExpr on line 11 must be compatible
+ERROR 16:46:33,874 - Semantic Error: Types used in FinalExpr on line 40 must be of int type
+ERROR 16:46:33,874 - Semantic Error: Variable bodovi used on line 41 has not been declared
+ERROR 16:46:33,874 - Semantic Error: Operand of print method on line 41 must be of int, bool or char type
+ERROR 16:46:33,875 - Semantic Error: Variable bodovi used on line 43 has not been declared
+ERROR 16:46:33,875 - Semantic Error: Operand of read method on line 43 must be of int, bool or char type
+INFO  16:46:33,875 - Variable bt used: Var bt: bool, 0, 1  on line 44
+INFO  16:46:33,875 - Variable bt used: Var bt: bool, 0, 1  on line 46
+ERROR 16:46:33,875 - Semantic Error: Variable bodovi used on line 46 has not been declared
+ERROR 16:46:33,875 - Semantic Error: Variable bodovi used on line 46 has not been declared
+ERROR 16:46:33,875 - Semantic Error: Types used in FinalExpr on line 46 must be compatible
+ERROR 16:46:33,875 - Semantic Error: Operands used in Ternary Expression on line 46 must be of the same type
+ERROR 16:46:33,875 - Semantic Error: Operand of print method on line 46 must be of int, bool or char type
+ERROR 16:46:33,875 - Semantic Error: Variable bodovi used on line 47 has not been declared
+ERROR 16:46:33,875 - Semantic Error: Types used in FinalExpr on line 47 must be compatible
+ERROR 16:46:33,875 - Semantic Error: Variable bodovi used on line 47 has not been declared
+ERROR 16:46:33,875 - Semantic Error: Types used in FinalExpr on line 47 must be compatible
+ERROR 16:46:33,875 - Semantic Error: Operands used in Ternary Expression on line 47 must be of the same type
+ERROR 16:46:33,875 - Semantic Error: Operand of print method on line 47 must be of int, bool or char type
+ERROR 16:46:33,875 - Semantic Error: Variable bodovi used on line 48 has not been declared
+ERROR 16:46:33,875 - Semantic Error: CondFact operand types on line 48 are not compatible
+ERROR 16:46:33,875 - Semantic Error: CondFact used in Ternary Expression on line 48 must be of type bool
+ERROR 16:46:33,875 - Semantic Error: Operand of print method on line 48 must be of int, bool or char type
+ERROR 16:46:33,876 - ============PARSING FINISHED UNSUCCESSFULLY================
