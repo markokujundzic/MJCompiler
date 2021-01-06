@@ -1,0 +1,90 @@
+INFO  12:36:44,207 - ====================LEXICAL ANALYSIS========================
+INFO  12:36:44,280 - #2 program
+INFO  12:36:44,280 - #9 test301
+INFO  12:36:44,280 - #9 int
+INFO  12:36:44,282 - #9 x
+INFO  12:36:44,283 - #6 ;
+INFO  12:36:44,285 - #3 {
+INFO  12:36:44,286 - #15 void
+INFO  12:36:44,286 - #9 main
+INFO  12:36:44,287 - #13 (
+INFO  12:36:44,288 - #14 )
+INFO  12:36:44,289 - #3 {
+INFO  12:36:44,290 - #9 x
+INFO  12:36:44,291 - #8 =
+INFO  12:36:44,294 - #13 (
+INFO  12:36:44,294 - #11 true
+INFO  12:36:44,294 - #41 !=
+INFO  12:36:44,295 - #11 false
+INFO  12:36:44,297 - #14 )
+INFO  12:36:44,297 - #18 :
+ERROR 12:36:44,297 - Syntax error on line 8
+INFO  12:36:44,297 - #33 ?
+INFO  12:36:44,297 - #10 1
+INFO  12:36:44,297 - #18 :
+INFO  12:36:44,301 - #10 0
+INFO  12:36:44,301 - #6 ;
+INFO  12:36:44,301 - #4 }
+INFO  12:36:44,301 - #4 }
+ERROR 12:36:44,301 - Successful error recovery by parser on line 8 -> Designator Assignment
+INFO  12:36:44,310 - =======================SYNTAX TREE===========================
+INFO  12:36:44,311 - Program(
+  ProgramName(
+   test301
+  ) [ProgramName]
+  YesDeclarationList(
+    NoDeclarationList(
+    ) [NoDeclarationList]
+    VariableDeclaration(
+      VarDeclNoError(
+        Type(
+         int
+        ) [Type]
+        SingleVarDeclList(
+          DeclVariable(
+            VarDeclName(
+             x
+            ) [VarDeclName]
+            NoVarDeclArrayOption(
+            ) [NoVarDeclArrayOption]
+          ) [DeclVariable]
+        ) [SingleVarDeclList]
+      ) [VarDeclNoError]
+    ) [VariableDeclaration]
+  ) [YesDeclarationList]
+  YesMethodDeclarationList(
+    NoMethodDeclarationList(
+    ) [NoMethodDeclarationList]
+    MethodDeclaration(
+      VoidMethodReturnType(
+      ) [VoidMethodReturnType]
+      MethodName(
+       main
+      ) [MethodName]
+      NoMethodParameters(
+      ) [NoMethodParameters]
+      NoMethodVariables(
+      ) [NoMethodVariables]
+      YesMethodBody(
+        NoMethodBody(
+        ) [NoMethodBody]
+        DesignatorStatementDecl(
+          DesignatorStatement(
+            Designator(
+              DesignatorName(
+               x
+              ) [DesignatorName]
+              NoOptionalDesignator(
+              ) [NoOptionalDesignator]
+            ) [Designator]
+            PossibleErrorAssignOpDesignatorAddition(
+              AssignOpExprDesignatorAdditionYesError(
+              ) [AssignOpExprDesignatorAdditionYesError]
+            ) [PossibleErrorAssignOpDesignatorAddition]
+          ) [DesignatorStatement]
+        ) [DesignatorStatementDecl]
+      ) [YesMethodBody]
+    ) [MethodDeclaration]
+  ) [YesMethodDeclarationList]
+) [Program]
+ERROR 12:36:44,311 - ==============ERROR ENCOUNTERED WHILE PARSING==================

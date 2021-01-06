@@ -621,6 +621,22 @@ public class SemanticAnalyzer extends VisitorAdaptor
                     pluralCondFact.struct = SymTab.noType;
                 }
             }
+            else if (expr1.getKind() == Struct.Bool &&
+                     expr2.getKind() == Struct.Bool)
+            {
+                if (pluralCondFact.getRelop() instanceof RelopEqual ||
+                    pluralCondFact.getRelop() instanceof RelopNotEqual)
+                {
+                    pluralCondFact.struct = SymTab.boolType;
+                }
+                else
+                {
+                    report_error("Semantic Error: CondFact operands of bool type on line " +
+                    pluralCondFact.getLine() + " can only be compared for equality or non-equality", null);
+
+                    pluralCondFact.struct = SymTab.noType;
+                }
+            }
             else
             {
                 pluralCondFact.struct = SymTab.boolType;
