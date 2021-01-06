@@ -297,6 +297,8 @@ public class SemanticAnalyzer extends VisitorAdaptor
 
                 constant.setAdr(currentConstValue);
 
+                currentConstValue = -1;
+
                 report_info("Const variable " + constDeclVariable.getConstDeclName().getName() +
                 " declared", constDeclVariable);
 

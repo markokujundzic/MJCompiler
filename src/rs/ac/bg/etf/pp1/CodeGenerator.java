@@ -21,7 +21,7 @@ public class CodeGenerator extends VisitorAdaptor
     {
         if (methodName.getName().equalsIgnoreCase("main"))
         {
-            mainPC = Code.mainPc;
+            mainPC = Code.pc;
         }
 
         methodName.obj.setAdr(Code.pc);
