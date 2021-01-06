@@ -1,11 +1,17 @@
 program prog
 
+const int y = 1;
+int arr[];
 {
-	void main()
+	void main() int x; bool b; int z;
 	{
-		print(1);
-		print(2);
+		read(z);
+		print(z);
+
+		x = y;
+		b = false;
+
+		print(b);
+		print(x);
 	}
 }
-
-

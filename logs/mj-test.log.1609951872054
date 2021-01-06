@@ -1,0 +1,133 @@
+INFO  17:20:58,480 - ====================LEXICAL ANALYSIS========================
+INFO  17:20:58,564 - #2 program
+INFO  17:20:58,564 - #9 prog
+INFO  17:20:58,564 - #9 int
+INFO  17:20:58,565 - #9 x
+INFO  17:20:58,566 - #20 [
+INFO  17:20:58,567 - #21 ]
+INFO  17:20:58,567 - #6 ;
+INFO  17:20:58,569 - #3 {
+INFO  17:20:58,569 - #15 void
+INFO  17:20:58,570 - #9 main
+INFO  17:20:58,570 - #13 (
+INFO  17:20:58,571 - #14 )
+INFO  17:20:58,572 - #3 {
+INFO  17:20:58,573 - #9 x
+INFO  17:20:58,573 - #20 [
+INFO  17:20:58,574 - #10 0
+INFO  17:20:58,574 - #21 ]
+INFO  17:20:58,575 - #22 ++
+INFO  17:20:58,576 - #6 ;
+INFO  17:20:58,578 - #30 print
+INFO  17:20:58,578 - #13 (
+INFO  17:20:58,578 - #11 true
+INFO  17:20:58,578 - #14 )
+INFO  17:20:58,585 - #6 ;
+INFO  17:20:58,585 - #4 }
+INFO  17:20:58,586 - #4 }
+INFO  17:20:58,597 - =======================SYNTAX TREE===========================
+INFO  17:20:58,598 - Program(
+  ProgramName(
+   prog
+  ) [ProgramName]
+  YesDeclarationList(
+    NoDeclarationList(
+    ) [NoDeclarationList]
+    VariableDeclaration(
+      VarDeclNoError(
+        Type(
+         int
+        ) [Type]
+        SingleVarDeclList(
+          DeclVariable(
+            VarDeclName(
+             x
+            ) [VarDeclName]
+            YesVarDeclArrayOption(
+            ) [YesVarDeclArrayOption]
+          ) [DeclVariable]
+        ) [SingleVarDeclList]
+      ) [VarDeclNoError]
+    ) [VariableDeclaration]
+  ) [YesDeclarationList]
+  YesMethodDeclarationList(
+    NoMethodDeclarationList(
+    ) [NoMethodDeclarationList]
+    MethodDeclaration(
+      VoidMethodReturnType(
+      ) [VoidMethodReturnType]
+      MethodName(
+       main
+      ) [MethodName]
+      NoMethodParameters(
+      ) [NoMethodParameters]
+      NoMethodVariables(
+      ) [NoMethodVariables]
+      YesMethodBody(
+        YesMethodBody(
+          NoMethodBody(
+          ) [NoMethodBody]
+          DesignatorStatementDecl(
+            DesignatorStatement(
+              Designator(
+                DesignatorName(
+                 x
+                ) [DesignatorName]
+                YesOptionalDesignator(
+                  NoTernaryExpr(
+                    SingleCondFact(
+                      TermFiniteExpr(
+                        FactorTerm(
+                          IntFactor(
+                           0
+                          ) [IntFactor]
+                        ) [FactorTerm]
+                        NoOptionalTermList(
+                        ) [NoOptionalTermList]
+                      ) [TermFiniteExpr]
+                    ) [SingleCondFact]
+                  ) [NoTernaryExpr]
+                ) [YesOptionalDesignator]
+              ) [Designator]
+              IncrementDesignatorAddition(
+              ) [IncrementDesignatorAddition]
+            ) [DesignatorStatement]
+          ) [DesignatorStatementDecl]
+        ) [YesMethodBody]
+        PrintStatementDecl(
+          PrintStatement(
+            NoTernaryExpr(
+              SingleCondFact(
+                TermFiniteExpr(
+                  FactorTerm(
+                    BoolFactor(
+                     true
+                    ) [BoolFactor]
+                  ) [FactorTerm]
+                  NoOptionalTermList(
+                  ) [NoOptionalTermList]
+                ) [TermFiniteExpr]
+              ) [SingleCondFact]
+            ) [NoTernaryExpr]
+            OptionalNoPrintNumber(
+            ) [OptionalNoPrintNumber]
+          ) [PrintStatement]
+        ) [PrintStatementDecl]
+      ) [YesMethodBody]
+    ) [MethodDeclaration]
+  ) [YesMethodDeclarationList]
+) [Program]
+INFO  17:20:58,598 - ======================SEMANTIC ANALYSIS======================
+INFO  17:20:58,602 - Global array x declared on line 3
+INFO  17:20:58,602 - Method main declared on line 6
+INFO  17:20:58,602 - Element of array x used: Elem x: int, -1, -1  on line 8
+INFO  17:20:58,602 - =======================SYNTAX ANALYSIS=======================
+INFO  17:20:58,602 - 1 methods in the program
+INFO  17:20:58,602 - 0 constants declared
+INFO  17:20:58,602 - 0 global variables declared
+INFO  17:20:58,602 - 1 global arrays declared
+INFO  17:20:58,602 - 0 local variables declared
+INFO  17:20:58,603 - 0 local arrays declared
+INFO  17:20:58,603 - 2 statements in main
+INFO  17:20:58,603 - ================SEMANTIC ANALYSIS SUCCESSFUL================
+INFO  17:20:58,610 - ==============COMPILATION FINISHED SUCCESSFULLY==============

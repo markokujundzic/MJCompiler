@@ -66,7 +66,7 @@ public class Compiler
 				}
 				else
 				{
-					log.info("================SEMANTIC ANALYSIS SUCCESSFUL================");
+					log.info("================SEMANTIC ANALYSIS SUCCESSFUL=================");
 
 					File objectFile = new File("test/program.obj");
 

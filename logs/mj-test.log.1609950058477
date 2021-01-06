@@ -1,0 +1,74 @@
+INFO  16:55:56,598 - ====================LEXICAL ANALYSIS========================
+INFO  16:55:56,678 - #2 program
+INFO  16:55:56,678 - #9 prog
+INFO  16:55:56,678 - #3 {
+INFO  16:55:56,679 - #15 void
+INFO  16:55:56,680 - #9 main
+INFO  16:55:56,681 - #13 (
+INFO  16:55:56,682 - #14 )
+INFO  16:55:56,682 - #3 {
+INFO  16:55:56,683 - #30 print
+INFO  16:55:56,683 - #13 (
+INFO  16:55:56,684 - #11 true
+INFO  16:55:56,684 - #14 )
+INFO  16:55:56,685 - #6 ;
+INFO  16:55:56,685 - #4 }
+INFO  16:55:56,686 - #4 }
+INFO  16:55:56,695 - =======================SYNTAX TREE===========================
+INFO  16:55:56,696 - Program(
+  ProgramName(
+   prog
+  ) [ProgramName]
+  NoDeclarationList(
+  ) [NoDeclarationList]
+  YesMethodDeclarationList(
+    NoMethodDeclarationList(
+    ) [NoMethodDeclarationList]
+    MethodDeclaration(
+      VoidMethodReturnType(
+      ) [VoidMethodReturnType]
+      MethodName(
+       main
+      ) [MethodName]
+      NoMethodParameters(
+      ) [NoMethodParameters]
+      NoMethodVariables(
+      ) [NoMethodVariables]
+      YesMethodBody(
+        NoMethodBody(
+        ) [NoMethodBody]
+        PrintStatementDecl(
+          PrintStatement(
+            NoTernaryExpr(
+              SingleCondFact(
+                TermFiniteExpr(
+                  FactorTerm(
+                    BoolFactor(
+                     true
+                    ) [BoolFactor]
+                  ) [FactorTerm]
+                  NoOptionalTermList(
+                  ) [NoOptionalTermList]
+                ) [TermFiniteExpr]
+              ) [SingleCondFact]
+            ) [NoTernaryExpr]
+            OptionalNoPrintNumber(
+            ) [OptionalNoPrintNumber]
+          ) [PrintStatement]
+        ) [PrintStatementDecl]
+      ) [YesMethodBody]
+    ) [MethodDeclaration]
+  ) [YesMethodDeclarationList]
+) [Program]
+INFO  16:55:56,702 - ======================SEMANTIC ANALYSIS======================
+INFO  16:55:56,706 - Method main declared on line 4
+INFO  16:55:56,706 - =======================SYNTAX ANALYSIS=======================
+INFO  16:55:56,706 - 1 methods in the program
+INFO  16:55:56,706 - 0 constants declared
+INFO  16:55:56,706 - 0 global variables declared
+INFO  16:55:56,706 - 0 global arrays declared
+INFO  16:55:56,706 - 0 local variables declared
+INFO  16:55:56,706 - 0 local arrays declared
+INFO  16:55:56,706 - 1 statements in main
+INFO  16:55:56,707 - ================SEMANTIC ANALYSIS SUCCESSFUL================
+INFO  16:55:56,711 - ==============COMPILATION FINISHED SUCCESSFULLY==============

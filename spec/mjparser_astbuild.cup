@@ -524,8 +524,8 @@ Factor ::=
 		|
 		(BoolFactor) BOOL:value {: RESULT=new BoolFactor(value); RESULT.setLine(valueleft); :}
 		|
-		(NewFactor) NEW Type:T1 {: RESULT=new NewFactor(T1); RESULT.setLine(T1left); :}
-		|
+		//(NewFactor) NEW Type
+		//|
 		(NewArrayFactor) NEW Type:T1 LEFT_SQUARE Expr:E2 RIGHT_SQUARE {: RESULT=new NewArrayFactor(T1, E2); RESULT.setLine(T1left); :}
 		|
 		(ExprFactor) LEFT_PARENTHESIS Expr:E1 RIGHT_PARENTHESIS {: RESULT=new ExprFactor(E1); RESULT.setLine(E1left); :}

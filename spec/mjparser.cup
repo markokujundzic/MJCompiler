@@ -486,8 +486,8 @@ Factor ::=
 		|
 		(BoolFactor) BOOL:value
 		|
-		(NewFactor) NEW Type
-		|
+		//(NewFactor) NEW Type
+		//|
 		(NewArrayFactor) NEW Type LEFT_SQUARE Expr RIGHT_SQUARE
 		|
 		(ExprFactor) LEFT_PARENTHESIS Expr RIGHT_PARENTHESIS

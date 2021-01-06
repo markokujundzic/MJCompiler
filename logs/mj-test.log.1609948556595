@@ -1,0 +1,79 @@
+INFO  16:55:26,758 - ====================LEXICAL ANALYSIS========================
+INFO  16:55:26,836 - #2 program
+INFO  16:55:26,836 - #9 prog
+INFO  16:55:26,836 - #3 {
+INFO  16:55:26,838 - #15 void
+INFO  16:55:26,839 - #9 main
+INFO  16:55:26,839 - #13 (
+INFO  16:55:26,840 - #14 )
+INFO  16:55:26,841 - #3 {
+INFO  16:55:26,841 - #30 print
+INFO  16:55:26,842 - #13 (
+INFO  16:55:26,842 - #11 true
+INFO  16:55:26,842 - #7 ,
+INFO  16:55:26,843 - #10 2
+INFO  16:55:26,843 - #14 )
+INFO  16:55:26,843 - #6 ;
+INFO  16:55:26,844 - #4 }
+INFO  16:55:26,844 - #4 }
+INFO  16:55:26,855 - =======================SYNTAX TREE===========================
+INFO  16:55:26,856 - Program(
+  ProgramName(
+   prog
+  ) [ProgramName]
+  NoDeclarationList(
+  ) [NoDeclarationList]
+  YesMethodDeclarationList(
+    NoMethodDeclarationList(
+    ) [NoMethodDeclarationList]
+    MethodDeclaration(
+      VoidMethodReturnType(
+      ) [VoidMethodReturnType]
+      MethodName(
+       main
+      ) [MethodName]
+      NoMethodParameters(
+      ) [NoMethodParameters]
+      NoMethodVariables(
+      ) [NoMethodVariables]
+      YesMethodBody(
+        NoMethodBody(
+        ) [NoMethodBody]
+        PrintStatementDecl(
+          PrintStatement(
+            NoTernaryExpr(
+              SingleCondFact(
+                TermFiniteExpr(
+                  FactorTerm(
+                    BoolFactor(
+                     true
+                    ) [BoolFactor]
+                  ) [FactorTerm]
+                  NoOptionalTermList(
+                  ) [NoOptionalTermList]
+                ) [TermFiniteExpr]
+              ) [SingleCondFact]
+            ) [NoTernaryExpr]
+            OptionalYesPrintNumber(
+              PrintInt(
+               2
+              ) [PrintInt]
+            ) [OptionalYesPrintNumber]
+          ) [PrintStatement]
+        ) [PrintStatementDecl]
+      ) [YesMethodBody]
+    ) [MethodDeclaration]
+  ) [YesMethodDeclarationList]
+) [Program]
+INFO  16:55:26,862 - ======================SEMANTIC ANALYSIS======================
+INFO  16:55:26,865 - Method main declared on line 4
+INFO  16:55:26,866 - =======================SYNTAX ANALYSIS=======================
+INFO  16:55:26,866 - 1 methods in the program
+INFO  16:55:26,866 - 0 constants declared
+INFO  16:55:26,866 - 0 global variables declared
+INFO  16:55:26,866 - 0 global arrays declared
+INFO  16:55:26,866 - 0 local variables declared
+INFO  16:55:26,866 - 0 local arrays declared
+INFO  16:55:26,866 - 1 statements in main
+INFO  16:55:26,867 - ================SEMANTIC ANALYSIS SUCCESSFUL================
+INFO  16:55:26,872 - ==============COMPILATION FINISHED SUCCESSFULLY==============

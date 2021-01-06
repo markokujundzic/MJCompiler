@@ -2,7 +2,7 @@ package rs.ac.bg.etf.pp1;
 
 import rs.ac.bg.etf.pp1.ast.*;
 import rs.etf.pp1.mj.runtime.Code;
-import rs.etf.pp1.symboltable.concepts.Obj;
+import rs.etf.pp1.symboltable.concepts.*;
 
 public class CodeGenerator extends VisitorAdaptor
 {
@@ -81,6 +81,23 @@ public class CodeGenerator extends VisitorAdaptor
         currentPrintInt = -1;
     }
 
+    /* Read Statement */
+    public void visit(ReadStatement readStatement)
+    {
+        Obj o = readStatement.getDesignator().getDesignatorName().obj;
+        Struct s = o.getType();
+        if (s == SymTab.intType ||
+            s == SymTab.boolType)
+        {
+            Code.put(Code.read);
+        }
+        else if (s == SymTab.charType)
+        {
+            Code.put(Code.bread);
+        }
+        Code.store(o);
+    }
+
     /* Factor */
     public void visit(IntFactor intFactor)
     {
@@ -101,5 +118,38 @@ public class CodeGenerator extends VisitorAdaptor
         Obj constFactor = new Obj(Obj.Con, "$", boolFactor.struct);
         constFactor.setAdr(boolFactor.getValue() ? 1 : 0);
         Code.load(constFactor);
+    }
+
+    /* Designator */
+    public void visit(Designator designator)
+    {
+        SyntaxNode parent = designator.getParent();
+        boolean assignOP = false;
+
+        if (parent.getClass() == DesignatorStatement.class)
+        {
+            DesignatorStatement statement = (DesignatorStatement) parent;
+            if (statement.getDesignatorAddition() instanceof PossibleErrorAssignOpDesignatorAddition)
+            {
+                assignOP = true;
+            }
+        }
+        else if (parent.getClass() == ReadStatement.class)
+        {
+            assignOP = true;
+        }
+
+        if (!assignOP)
+        {
+            Code.load(designator.getDesignatorName().obj);
+        }
+    }
+
+    public void visit(DesignatorStatement designatorStatement)
+    {
+        if (designatorStatement.getDesignatorAddition() instanceof PossibleErrorAssignOpDesignatorAddition)
+        {
+            Code.store(designatorStatement.getDesignator().getDesignatorName().obj);
+        }
     }
 }

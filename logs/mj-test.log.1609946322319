@@ -1,0 +1,100 @@
+INFO  16:16:25,350 - ====================LEXICAL ANALYSIS========================
+INFO  16:16:25,425 - #2 program
+INFO  16:16:25,425 - #9 prog
+INFO  16:16:25,425 - #3 {
+INFO  16:16:25,426 - #15 void
+INFO  16:16:25,427 - #9 main
+INFO  16:16:25,428 - #13 (
+INFO  16:16:25,428 - #14 )
+INFO  16:16:25,429 - #3 {
+INFO  16:16:25,430 - #30 print
+INFO  16:16:25,431 - #13 (
+INFO  16:16:25,431 - #10 1
+INFO  16:16:25,431 - #14 )
+INFO  16:16:25,434 - #6 ;
+INFO  16:16:25,434 - #30 print
+INFO  16:16:25,435 - #13 (
+INFO  16:16:25,436 - #10 2
+INFO  16:16:25,436 - #14 )
+INFO  16:16:25,436 - #6 ;
+INFO  16:16:25,436 - #4 }
+INFO  16:16:25,436 - #4 }
+INFO  16:16:25,446 - =======================SYNTAX TREE===========================
+INFO  16:16:25,452 - Program(
+  ProgramName(
+   prog
+  ) [ProgramName]
+  NoDeclarationList(
+  ) [NoDeclarationList]
+  YesMethodDeclarationList(
+    NoMethodDeclarationList(
+    ) [NoMethodDeclarationList]
+    MethodDeclaration(
+      VoidMethodReturnType(
+      ) [VoidMethodReturnType]
+      MethodName(
+       main
+      ) [MethodName]
+      NoMethodParameters(
+      ) [NoMethodParameters]
+      NoMethodVariables(
+      ) [NoMethodVariables]
+      YesMethodBody(
+        YesMethodBody(
+          NoMethodBody(
+          ) [NoMethodBody]
+          PrintStatementDecl(
+            PrintStatement(
+              NoTernaryExpr(
+                SingleCondFact(
+                  TermFiniteExpr(
+                    FactorTerm(
+                      IntFactor(
+                       1
+                      ) [IntFactor]
+                    ) [FactorTerm]
+                    NoOptionalTermList(
+                    ) [NoOptionalTermList]
+                  ) [TermFiniteExpr]
+                ) [SingleCondFact]
+              ) [NoTernaryExpr]
+              OptionalNoPrintNumber(
+              ) [OptionalNoPrintNumber]
+            ) [PrintStatement]
+          ) [PrintStatementDecl]
+        ) [YesMethodBody]
+        PrintStatementDecl(
+          PrintStatement(
+            NoTernaryExpr(
+              SingleCondFact(
+                TermFiniteExpr(
+                  FactorTerm(
+                    IntFactor(
+                     2
+                    ) [IntFactor]
+                  ) [FactorTerm]
+                  NoOptionalTermList(
+                  ) [NoOptionalTermList]
+                ) [TermFiniteExpr]
+              ) [SingleCondFact]
+            ) [NoTernaryExpr]
+            OptionalNoPrintNumber(
+            ) [OptionalNoPrintNumber]
+          ) [PrintStatement]
+        ) [PrintStatementDecl]
+      ) [YesMethodBody]
+    ) [MethodDeclaration]
+  ) [YesMethodDeclarationList]
+) [Program]
+INFO  16:16:25,452 - ======================SEMANTIC ANALYSIS======================
+INFO  16:16:25,456 - Method main declared on line 4
+INFO  16:16:25,456 - =======================SYNTAX ANALYSIS=======================
+INFO  16:16:25,456 - 1 methods in the program
+INFO  16:16:25,456 - 0 constants declared
+INFO  16:16:25,457 - 0 global variables declared
+INFO  16:16:25,457 - 0 global arrays declared
+INFO  16:16:25,457 - 0 local variables declared
+INFO  16:16:25,457 - 0 local arrays declared
+INFO  16:16:25,457 - 2 statements in main
+INFO  16:16:25,458 - ================SEMANTIC ANALYSIS SUCCESSFUL================
+INFO  16:17:26,100 - ==============COMPILATION FINISHED SUCCESSFULLY==============
