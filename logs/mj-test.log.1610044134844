@@ -1,0 +1,331 @@
+INFO  18:57:25,764 - ====================LEXICAL ANALYSIS========================
+INFO  18:57:25,835 - #2 program
+INFO  18:57:25,835 - #9 prog
+INFO  18:57:25,835 - #5 const
+INFO  18:57:25,837 - #9 int
+INFO  18:57:25,837 - #9 konstanta
+INFO  18:57:25,838 - #8 =
+INFO  18:57:25,840 - #10 5
+INFO  18:57:25,840 - #6 ;
+INFO  18:57:25,841 - #9 int
+INFO  18:57:25,842 - #9 x
+INFO  18:57:25,842 - #6 ;
+INFO  18:57:25,845 - #9 int
+INFO  18:57:25,845 - #9 y
+INFO  18:57:25,845 - #6 ;
+INFO  18:57:25,845 - #9 int
+INFO  18:57:25,845 - #9 z
+INFO  18:57:25,845 - #6 ;
+INFO  18:57:25,845 - #3 {
+INFO  18:57:25,845 - #15 void
+INFO  18:57:25,846 - #9 main
+INFO  18:57:25,847 - #13 (
+INFO  18:57:25,848 - #14 )
+INFO  18:57:25,849 - #9 char
+INFO  18:57:25,855 - #9 niz
+INFO  18:57:25,855 - #20 [
+INFO  18:57:25,855 - #21 ]
+INFO  18:57:25,855 - #6 ;
+INFO  18:57:25,856 - #3 {
+INFO  18:57:25,856 - #9 x
+INFO  18:57:25,857 - #8 =
+INFO  18:57:25,859 - #10 3
+INFO  18:57:25,860 - #6 ;
+INFO  18:57:25,863 - #9 niz
+INFO  18:57:25,863 - #8 =
+INFO  18:57:25,863 - #35 new
+INFO  18:57:25,863 - #9 char
+INFO  18:57:25,863 - #20 [
+INFO  18:57:25,863 - #9 x
+INFO  18:57:25,863 - #37 *
+INFO  18:57:25,864 - #10 2
+INFO  18:57:25,865 - #36 +
+INFO  18:57:25,866 - #9 konstanta
+INFO  18:57:25,867 - #21 ]
+INFO  18:57:25,867 - #6 ;
+INFO  18:57:25,867 - #30 print
+INFO  18:57:25,867 - #13 (
+INFO  18:57:25,867 - #9 x
+INFO  18:57:25,867 - #14 )
+INFO  18:57:25,868 - #6 ;
+INFO  18:57:25,871 - #4 }
+INFO  18:57:25,872 - #4 }
+INFO  18:57:25,880 - =======================SYNTAX TREE===========================
+INFO  18:57:25,881 - Program(
+  ProgramName(
+   prog
+  ) [ProgramName]
+  YesDeclarationList(
+    YesDeclarationList(
+      YesDeclarationList(
+        YesDeclarationList(
+          NoDeclarationList(
+          ) [NoDeclarationList]
+          ConstantDeclaration(
+            ConstDeclNoError(
+              Type(
+               int
+              ) [Type]
+              SingleConstDeclList(
+                ConstDeclVariable(
+                  ConstDeclName(
+                   konstanta
+                  ) [ConstDeclName]
+                  ConstDeclValueInt(
+                   5
+                  ) [ConstDeclValueInt]
+                ) [ConstDeclVariable]
+              ) [SingleConstDeclList]
+            ) [ConstDeclNoError]
+          ) [ConstantDeclaration]
+        ) [YesDeclarationList]
+        VariableDeclaration(
+          VarDeclNoError(
+            Type(
+             int
+            ) [Type]
+            SingleVarDeclList(
+              DeclVariable(
+                VarDeclName(
+                 x
+                ) [VarDeclName]
+                NoVarDeclArrayOption(
+                ) [NoVarDeclArrayOption]
+              ) [DeclVariable]
+            ) [SingleVarDeclList]
+          ) [VarDeclNoError]
+        ) [VariableDeclaration]
+      ) [YesDeclarationList]
+      VariableDeclaration(
+        VarDeclNoError(
+          Type(
+           int
+          ) [Type]
+          SingleVarDeclList(
+            DeclVariable(
+              VarDeclName(
+               y
+              ) [VarDeclName]
+              NoVarDeclArrayOption(
+              ) [NoVarDeclArrayOption]
+            ) [DeclVariable]
+          ) [SingleVarDeclList]
+        ) [VarDeclNoError]
+      ) [VariableDeclaration]
+    ) [YesDeclarationList]
+    VariableDeclaration(
+      VarDeclNoError(
+        Type(
+         int
+        ) [Type]
+        SingleVarDeclList(
+          DeclVariable(
+            VarDeclName(
+             z
+            ) [VarDeclName]
+            NoVarDeclArrayOption(
+            ) [NoVarDeclArrayOption]
+          ) [DeclVariable]
+        ) [SingleVarDeclList]
+      ) [VarDeclNoError]
+    ) [VariableDeclaration]
+  ) [YesDeclarationList]
+  YesMethodDeclarationList(
+    NoMethodDeclarationList(
+    ) [NoMethodDeclarationList]
+    MethodDeclaration(
+      VoidMethodReturnType(
+      ) [VoidMethodReturnType]
+      MethodName(
+       main
+      ) [MethodName]
+      NoMethodParameters(
+      ) [NoMethodParameters]
+      YesMethodVariables(
+        NoMethodVariables(
+        ) [NoMethodVariables]
+        VarDeclNoError(
+          Type(
+           char
+          ) [Type]
+          SingleVarDeclList(
+            DeclVariable(
+              VarDeclName(
+               niz
+              ) [VarDeclName]
+              YesVarDeclArrayOption(
+              ) [YesVarDeclArrayOption]
+            ) [DeclVariable]
+          ) [SingleVarDeclList]
+        ) [VarDeclNoError]
+      ) [YesMethodVariables]
+      YesMethodBody(
+        YesMethodBody(
+          YesMethodBody(
+            NoMethodBody(
+            ) [NoMethodBody]
+            DesignatorStatementDecl(
+              DesignatorStatement(
+                Designator(
+                  DesignatorName(
+                   x
+                  ) [DesignatorName]
+                  NoOptionalDesignator(
+                  ) [NoOptionalDesignator]
+                ) [Designator]
+                PossibleErrorAssignOpDesignatorAddition(
+                  AssignOpExprDesignatorAdditionNoError(
+                    Assignop(
+                    ) [Assignop]
+                    NoTernaryExpr(
+                      SingleCondFact(
+                        TermFiniteExpr(
+                          FiniteTerm(
+                            FactorTerm(
+                              IntFactor(
+                               3
+                              ) [IntFactor]
+                            ) [FactorTerm]
+                          ) [FiniteTerm]
+                          NoOptionalTermList(
+                          ) [NoOptionalTermList]
+                        ) [TermFiniteExpr]
+                      ) [SingleCondFact]
+                    ) [NoTernaryExpr]
+                  ) [AssignOpExprDesignatorAdditionNoError]
+                ) [PossibleErrorAssignOpDesignatorAddition]
+              ) [DesignatorStatement]
+            ) [DesignatorStatementDecl]
+          ) [YesMethodBody]
+          DesignatorStatementDecl(
+            DesignatorStatement(
+              Designator(
+                DesignatorName(
+                 niz
+                ) [DesignatorName]
+                NoOptionalDesignator(
+                ) [NoOptionalDesignator]
+              ) [Designator]
+              PossibleErrorAssignOpDesignatorAddition(
+                AssignOpExprDesignatorAdditionNoError(
+                  Assignop(
+                  ) [Assignop]
+                  NoTernaryExpr(
+                    SingleCondFact(
+                      TermFiniteExpr(
+                        FiniteTerm(
+                          FactorTerm(
+                            NewArrayFactor(
+                              Type(
+                               char
+                              ) [Type]
+                              NoTernaryExpr(
+                                SingleCondFact(
+                                  TermFiniteExpr(
+                                    FiniteTerm(
+                                      MulopTerm(
+                                        FactorTerm(
+                                          DesignatorFactor(
+                                            Designator(
+                                              DesignatorName(
+                                               x
+                                              ) [DesignatorName]
+                                              NoOptionalDesignator(
+                                              ) [NoOptionalDesignator]
+                                            ) [Designator]
+                                          ) [DesignatorFactor]
+                                        ) [FactorTerm]
+                                        MulopMul(
+                                        ) [MulopMul]
+                                        IntFactor(
+                                         2
+                                        ) [IntFactor]
+                                      ) [MulopTerm]
+                                    ) [FiniteTerm]
+                                    YesOptionalTermList(
+                                      NoOptionalTermList(
+                                      ) [NoOptionalTermList]
+                                      AddopPlus(
+                                      ) [AddopPlus]
+                                      FiniteTerm(
+                                        FactorTerm(
+                                          DesignatorFactor(
+                                            Designator(
+                                              DesignatorName(
+                                               konstanta
+                                              ) [DesignatorName]
+                                              NoOptionalDesignator(
+                                              ) [NoOptionalDesignator]
+                                            ) [Designator]
+                                          ) [DesignatorFactor]
+                                        ) [FactorTerm]
+                                      ) [FiniteTerm]
+                                    ) [YesOptionalTermList]
+                                  ) [TermFiniteExpr]
+                                ) [SingleCondFact]
+                              ) [NoTernaryExpr]
+                            ) [NewArrayFactor]
+                          ) [FactorTerm]
+                        ) [FiniteTerm]
+                        NoOptionalTermList(
+                        ) [NoOptionalTermList]
+                      ) [TermFiniteExpr]
+                    ) [SingleCondFact]
+                  ) [NoTernaryExpr]
+                ) [AssignOpExprDesignatorAdditionNoError]
+              ) [PossibleErrorAssignOpDesignatorAddition]
+            ) [DesignatorStatement]
+          ) [DesignatorStatementDecl]
+        ) [YesMethodBody]
+        PrintStatementDecl(
+          PrintStatement(
+            NoTernaryExpr(
+              SingleCondFact(
+                TermFiniteExpr(
+                  FiniteTerm(
+                    FactorTerm(
+                      DesignatorFactor(
+                        Designator(
+                          DesignatorName(
+                           x
+                          ) [DesignatorName]
+                          NoOptionalDesignator(
+                          ) [NoOptionalDesignator]
+                        ) [Designator]
+                      ) [DesignatorFactor]
+                    ) [FactorTerm]
+                  ) [FiniteTerm]
+                  NoOptionalTermList(
+                  ) [NoOptionalTermList]
+                ) [TermFiniteExpr]
+              ) [SingleCondFact]
+            ) [NoTernaryExpr]
+            OptionalNoPrintNumber(
+            ) [OptionalNoPrintNumber]
+          ) [PrintStatement]
+        ) [PrintStatementDecl]
+      ) [YesMethodBody]
+    ) [MethodDeclaration]
+  ) [YesMethodDeclarationList]
+) [Program]
+INFO  18:57:25,882 - ======================SEMANTIC ANALYSIS======================
+INFO  18:57:25,886 - Const variable konstanta declared on line 3
+INFO  18:57:25,886 - Global variable x declared on line 5
+INFO  18:57:25,886 - Global variable y declared on line 5
+INFO  18:57:25,886 - Global variable z declared on line 5
+INFO  18:57:25,886 - Method main declared on line 8
+INFO  18:57:25,886 - Local array niz declared on line 8
+INFO  18:57:25,887 - Variable x used: Var x: int, 0, 0 on line 10
+INFO  18:57:25,888 - Array niz used: Var niz: Array of char, 0, 1 on line 11
+INFO  18:57:25,888 - Variable x used: Var x: int, 0, 0 on line 11
+INFO  18:57:25,888 - Variable konstanta used: Con konstanta: int, 5, 0 on line 11
+INFO  18:57:25,888 - Variable x used: Var x: int, 0, 0 on line 12
+INFO  18:57:25,888 - =======================SYNTAX ANALYSIS=======================
+INFO  18:57:25,889 - 1 methods in the program
+INFO  18:57:25,889 - 1 constants declared
+INFO  18:57:25,889 - 3 global variables declared
+INFO  18:57:25,889 - 0 global arrays declared
+INFO  18:57:25,889 - 0 local variables declared
+INFO  18:57:25,889 - 1 local arrays declared
+INFO  18:57:25,889 - 3 statements in main
+INFO  18:59:09,078 - ================SEMANTIC ANALYSIS SUCCESSFUL=================

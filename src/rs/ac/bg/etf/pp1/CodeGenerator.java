@@ -123,12 +123,12 @@ public class CodeGenerator extends VisitorAdaptor
     public void visit(NewArrayFactor newArrayFactor)
     {
         Code.put(Code.newarray);
-        if (newArrayFactor.getType().struct == SymTab.boolType ||
-            newArrayFactor.getType().struct == SymTab.intType)
+        if (newArrayFactor.getType().getName().equals("bool") ||
+            newArrayFactor.getType().getName().equals("int"))
         {
             Code.put(1);
         }
-        else if (newArrayFactor.getType().struct == SymTab.charType)
+        else if (newArrayFactor.getType().getName().equals("char"))
         {
             Code.put(0);
         }
@@ -181,6 +181,30 @@ public class CodeGenerator extends VisitorAdaptor
         if (!assignOP)
         {
             Code.load(designator.getDesignatorName().obj);
+        }
+    }
+
+    public void visit(DesignatorName designatorName)
+    {
+        if (designatorName.obj.getKind() == Obj.Elem)
+        {
+            if (designatorName.obj.getLevel() == 0)
+            {
+                Code.put(Code.getstatic);
+                Code.put2(designatorName.obj.getAdr());
+            }
+            else
+            {
+                if (designatorName.obj.getAdr() >= 0 &&
+                    designatorName.obj.getAdr() <= 3)
+                {
+                    Code.put(Code.load_n + designatorName.obj.getAdr());
+                }
+                else
+                {
+                    Code.put(Code.load); Code.put(designatorName.obj.getAdr());
+                }
+            }
         }
     }
 

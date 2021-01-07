@@ -425,8 +425,12 @@ public class SemanticAnalyzer extends VisitorAdaptor
                 }
                 else
                 {
-                    designator.getDesignatorName().obj = new Obj(Obj.Elem, designator.getDesignatorName().getName(),
-                    designator.getDesignatorName().obj.getType().getElemType());
+                    designator.getDesignatorName().obj = new Obj(
+                            Obj.Elem,
+                            designator.getDesignatorName().getName(),
+                            designator.getDesignatorName().obj.getType().getElemType(),
+                            designator.getDesignatorName().obj.getAdr(),
+                            designator.getDesignatorName().obj.getLevel());
 
                     report_info("Element of array " + designator.getDesignatorName().getName() +
                     " used: " + print(designator.getDesignatorName().obj), designator.getDesignatorName());

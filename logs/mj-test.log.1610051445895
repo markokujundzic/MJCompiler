@@ -1,0 +1,695 @@
+INFO  21:28:44,373 - ====================LEXICAL ANALYSIS========================
+INFO  21:28:44,456 - #2 program
+INFO  21:28:44,456 - #9 prog
+INFO  21:28:44,456 - #5 const
+INFO  21:28:44,458 - #9 int
+INFO  21:28:44,458 - #9 konstanta
+INFO  21:28:44,459 - #8 =
+INFO  21:28:44,460 - #10 5
+INFO  21:28:44,460 - #6 ;
+INFO  21:28:44,461 - #9 int
+INFO  21:28:44,461 - #9 x
+INFO  21:28:44,461 - #6 ;
+INFO  21:28:44,464 - #9 int
+INFO  21:28:44,464 - #9 y
+INFO  21:28:44,464 - #6 ;
+INFO  21:28:44,464 - #9 int
+INFO  21:28:44,464 - #9 z
+INFO  21:28:44,464 - #6 ;
+INFO  21:28:44,464 - #3 {
+INFO  21:28:44,464 - #15 void
+INFO  21:28:44,465 - #9 main
+INFO  21:28:44,466 - #13 (
+INFO  21:28:44,467 - #14 )
+INFO  21:28:44,467 - #9 int
+INFO  21:28:44,468 - #9 niz
+INFO  21:28:44,468 - #20 [
+INFO  21:28:44,468 - #21 ]
+INFO  21:28:44,468 - #6 ;
+INFO  21:28:44,469 - #3 {
+INFO  21:28:44,469 - #9 niz
+INFO  21:28:44,469 - #8 =
+INFO  21:28:44,472 - #35 new
+INFO  21:28:44,473 - #9 int
+INFO  21:28:44,473 - #20 [
+INFO  21:28:44,473 - #10 5
+INFO  21:28:44,473 - #21 ]
+INFO  21:28:44,475 - #6 ;
+INFO  21:28:44,477 - #9 niz
+INFO  21:28:44,477 - #20 [
+INFO  21:28:44,477 - #10 1
+INFO  21:28:44,477 - #21 ]
+INFO  21:28:44,477 - #8 =
+INFO  21:28:44,477 - #10 7
+INFO  21:28:44,477 - #6 ;
+INFO  21:28:44,477 - #9 x
+INFO  21:28:44,477 - #8 =
+INFO  21:28:44,477 - #9 konstanta
+INFO  21:28:44,478 - #37 *
+INFO  21:28:44,478 - #10 3
+INFO  21:28:44,480 - #6 ;
+INFO  21:28:44,480 - #30 print
+INFO  21:28:44,480 - #13 (
+INFO  21:28:44,480 - #9 x
+INFO  21:28:44,480 - #14 )
+INFO  21:28:44,481 - #6 ;
+INFO  21:28:44,481 - #30 print
+INFO  21:28:44,482 - #13 (
+INFO  21:28:44,482 - #9 niz
+INFO  21:28:44,483 - #20 [
+INFO  21:28:44,483 - #10 1
+INFO  21:28:44,483 - #21 ]
+INFO  21:28:44,483 - #14 )
+INFO  21:28:44,483 - #6 ;
+INFO  21:28:44,483 - #9 niz
+INFO  21:28:44,483 - #20 [
+INFO  21:28:44,483 - #10 1
+INFO  21:28:44,483 - #21 ]
+INFO  21:28:44,483 - #8 =
+INFO  21:28:44,483 - #9 x
+INFO  21:28:44,483 - #36 +
+INFO  21:28:44,483 - #10 1
+INFO  21:28:44,485 - #6 ;
+INFO  21:28:44,485 - #30 print
+INFO  21:28:44,485 - #13 (
+INFO  21:28:44,485 - #9 niz
+INFO  21:28:44,485 - #20 [
+INFO  21:28:44,485 - #10 1
+INFO  21:28:44,485 - #21 ]
+INFO  21:28:44,486 - #14 )
+INFO  21:28:44,486 - #6 ;
+INFO  21:28:44,486 - #9 niz
+INFO  21:28:44,486 - #20 [
+INFO  21:28:44,486 - #10 2
+INFO  21:28:44,486 - #21 ]
+INFO  21:28:44,486 - #8 =
+INFO  21:28:44,486 - #9 niz
+INFO  21:28:44,486 - #20 [
+INFO  21:28:44,486 - #10 1
+INFO  21:28:44,487 - #21 ]
+INFO  21:28:44,487 - #38 /
+INFO  21:28:44,487 - #10 2
+INFO  21:28:44,488 - #6 ;
+INFO  21:28:44,488 - #30 print
+INFO  21:28:44,488 - #13 (
+INFO  21:28:44,488 - #9 niz
+INFO  21:28:44,488 - #20 [
+INFO  21:28:44,488 - #10 2
+INFO  21:28:44,488 - #21 ]
+INFO  21:28:44,488 - #14 )
+INFO  21:28:44,488 - #6 ;
+INFO  21:28:44,488 - #4 }
+INFO  21:28:44,489 - #4 }
+INFO  21:28:44,502 - =======================SYNTAX TREE===========================
+INFO  21:28:44,505 - Program(
+  ProgramName(
+   prog
+  ) [ProgramName]
+  YesDeclarationList(
+    YesDeclarationList(
+      YesDeclarationList(
+        YesDeclarationList(
+          NoDeclarationList(
+          ) [NoDeclarationList]
+          ConstantDeclaration(
+            ConstDeclNoError(
+              Type(
+               int
+              ) [Type]
+              SingleConstDeclList(
+                ConstDeclVariable(
+                  ConstDeclName(
+                   konstanta
+                  ) [ConstDeclName]
+                  ConstDeclValueInt(
+                   5
+                  ) [ConstDeclValueInt]
+                ) [ConstDeclVariable]
+              ) [SingleConstDeclList]
+            ) [ConstDeclNoError]
+          ) [ConstantDeclaration]
+        ) [YesDeclarationList]
+        VariableDeclaration(
+          VarDeclNoError(
+            Type(
+             int
+            ) [Type]
+            SingleVarDeclList(
+              DeclVariable(
+                VarDeclName(
+                 x
+                ) [VarDeclName]
+                NoVarDeclArrayOption(
+                ) [NoVarDeclArrayOption]
+              ) [DeclVariable]
+            ) [SingleVarDeclList]
+          ) [VarDeclNoError]
+        ) [VariableDeclaration]
+      ) [YesDeclarationList]
+      VariableDeclaration(
+        VarDeclNoError(
+          Type(
+           int
+          ) [Type]
+          SingleVarDeclList(
+            DeclVariable(
+              VarDeclName(
+               y
+              ) [VarDeclName]
+              NoVarDeclArrayOption(
+              ) [NoVarDeclArrayOption]
+            ) [DeclVariable]
+          ) [SingleVarDeclList]
+        ) [VarDeclNoError]
+      ) [VariableDeclaration]
+    ) [YesDeclarationList]
+    VariableDeclaration(
+      VarDeclNoError(
+        Type(
+         int
+        ) [Type]
+        SingleVarDeclList(
+          DeclVariable(
+            VarDeclName(
+             z
+            ) [VarDeclName]
+            NoVarDeclArrayOption(
+            ) [NoVarDeclArrayOption]
+          ) [DeclVariable]
+        ) [SingleVarDeclList]
+      ) [VarDeclNoError]
+    ) [VariableDeclaration]
+  ) [YesDeclarationList]
+  YesMethodDeclarationList(
+    NoMethodDeclarationList(
+    ) [NoMethodDeclarationList]
+    MethodDeclaration(
+      VoidMethodReturnType(
+      ) [VoidMethodReturnType]
+      MethodName(
+       main
+      ) [MethodName]
+      NoMethodParameters(
+      ) [NoMethodParameters]
+      YesMethodVariables(
+        NoMethodVariables(
+        ) [NoMethodVariables]
+        VarDeclNoError(
+          Type(
+           int
+          ) [Type]
+          SingleVarDeclList(
+            DeclVariable(
+              VarDeclName(
+               niz
+              ) [VarDeclName]
+              YesVarDeclArrayOption(
+              ) [YesVarDeclArrayOption]
+            ) [DeclVariable]
+          ) [SingleVarDeclList]
+        ) [VarDeclNoError]
+      ) [YesMethodVariables]
+      YesMethodBody(
+        YesMethodBody(
+          YesMethodBody(
+            YesMethodBody(
+              YesMethodBody(
+                YesMethodBody(
+                  YesMethodBody(
+                    YesMethodBody(
+                      YesMethodBody(
+                        NoMethodBody(
+                        ) [NoMethodBody]
+                        DesignatorStatementDecl(
+                          DesignatorStatement(
+                            Designator(
+                              DesignatorName(
+                               niz
+                              ) [DesignatorName]
+                              NoOptionalDesignator(
+                              ) [NoOptionalDesignator]
+                            ) [Designator]
+                            PossibleErrorAssignOpDesignatorAddition(
+                              AssignOpExprDesignatorAdditionNoError(
+                                Assignop(
+                                ) [Assignop]
+                                NoTernaryExpr(
+                                  SingleCondFact(
+                                    TermFiniteExpr(
+                                      FiniteTerm(
+                                        FactorTerm(
+                                          NewArrayFactor(
+                                            Type(
+                                             int
+                                            ) [Type]
+                                            NoTernaryExpr(
+                                              SingleCondFact(
+                                                TermFiniteExpr(
+                                                  FiniteTerm(
+                                                    FactorTerm(
+                                                      IntFactor(
+                                                       5
+                                                      ) [IntFactor]
+                                                    ) [FactorTerm]
+                                                  ) [FiniteTerm]
+                                                  NoOptionalTermList(
+                                                  ) [NoOptionalTermList]
+                                                ) [TermFiniteExpr]
+                                              ) [SingleCondFact]
+                                            ) [NoTernaryExpr]
+                                          ) [NewArrayFactor]
+                                        ) [FactorTerm]
+                                      ) [FiniteTerm]
+                                      NoOptionalTermList(
+                                      ) [NoOptionalTermList]
+                                    ) [TermFiniteExpr]
+                                  ) [SingleCondFact]
+                                ) [NoTernaryExpr]
+                              ) [AssignOpExprDesignatorAdditionNoError]
+                            ) [PossibleErrorAssignOpDesignatorAddition]
+                          ) [DesignatorStatement]
+                        ) [DesignatorStatementDecl]
+                      ) [YesMethodBody]
+                      DesignatorStatementDecl(
+                        DesignatorStatement(
+                          Designator(
+                            DesignatorName(
+                             niz
+                            ) [DesignatorName]
+                            YesOptionalDesignator(
+                              NoTernaryExpr(
+                                SingleCondFact(
+                                  TermFiniteExpr(
+                                    FiniteTerm(
+                                      FactorTerm(
+                                        IntFactor(
+                                         1
+                                        ) [IntFactor]
+                                      ) [FactorTerm]
+                                    ) [FiniteTerm]
+                                    NoOptionalTermList(
+                                    ) [NoOptionalTermList]
+                                  ) [TermFiniteExpr]
+                                ) [SingleCondFact]
+                              ) [NoTernaryExpr]
+                            ) [YesOptionalDesignator]
+                          ) [Designator]
+                          PossibleErrorAssignOpDesignatorAddition(
+                            AssignOpExprDesignatorAdditionNoError(
+                              Assignop(
+                              ) [Assignop]
+                              NoTernaryExpr(
+                                SingleCondFact(
+                                  TermFiniteExpr(
+                                    FiniteTerm(
+                                      FactorTerm(
+                                        IntFactor(
+                                         7
+                                        ) [IntFactor]
+                                      ) [FactorTerm]
+                                    ) [FiniteTerm]
+                                    NoOptionalTermList(
+                                    ) [NoOptionalTermList]
+                                  ) [TermFiniteExpr]
+                                ) [SingleCondFact]
+                              ) [NoTernaryExpr]
+                            ) [AssignOpExprDesignatorAdditionNoError]
+                          ) [PossibleErrorAssignOpDesignatorAddition]
+                        ) [DesignatorStatement]
+                      ) [DesignatorStatementDecl]
+                    ) [YesMethodBody]
+                    DesignatorStatementDecl(
+                      DesignatorStatement(
+                        Designator(
+                          DesignatorName(
+                           x
+                          ) [DesignatorName]
+                          NoOptionalDesignator(
+                          ) [NoOptionalDesignator]
+                        ) [Designator]
+                        PossibleErrorAssignOpDesignatorAddition(
+                          AssignOpExprDesignatorAdditionNoError(
+                            Assignop(
+                            ) [Assignop]
+                            NoTernaryExpr(
+                              SingleCondFact(
+                                TermFiniteExpr(
+                                  FiniteTerm(
+                                    MulopTerm(
+                                      FactorTerm(
+                                        DesignatorFactor(
+                                          Designator(
+                                            DesignatorName(
+                                             konstanta
+                                            ) [DesignatorName]
+                                            NoOptionalDesignator(
+                                            ) [NoOptionalDesignator]
+                                          ) [Designator]
+                                        ) [DesignatorFactor]
+                                      ) [FactorTerm]
+                                      MulopMul(
+                                      ) [MulopMul]
+                                      IntFactor(
+                                       3
+                                      ) [IntFactor]
+                                    ) [MulopTerm]
+                                  ) [FiniteTerm]
+                                  NoOptionalTermList(
+                                  ) [NoOptionalTermList]
+                                ) [TermFiniteExpr]
+                              ) [SingleCondFact]
+                            ) [NoTernaryExpr]
+                          ) [AssignOpExprDesignatorAdditionNoError]
+                        ) [PossibleErrorAssignOpDesignatorAddition]
+                      ) [DesignatorStatement]
+                    ) [DesignatorStatementDecl]
+                  ) [YesMethodBody]
+                  PrintStatementDecl(
+                    PrintStatement(
+                      NoTernaryExpr(
+                        SingleCondFact(
+                          TermFiniteExpr(
+                            FiniteTerm(
+                              FactorTerm(
+                                DesignatorFactor(
+                                  Designator(
+                                    DesignatorName(
+                                     x
+                                    ) [DesignatorName]
+                                    NoOptionalDesignator(
+                                    ) [NoOptionalDesignator]
+                                  ) [Designator]
+                                ) [DesignatorFactor]
+                              ) [FactorTerm]
+                            ) [FiniteTerm]
+                            NoOptionalTermList(
+                            ) [NoOptionalTermList]
+                          ) [TermFiniteExpr]
+                        ) [SingleCondFact]
+                      ) [NoTernaryExpr]
+                      OptionalNoPrintNumber(
+                      ) [OptionalNoPrintNumber]
+                    ) [PrintStatement]
+                  ) [PrintStatementDecl]
+                ) [YesMethodBody]
+                PrintStatementDecl(
+                  PrintStatement(
+                    NoTernaryExpr(
+                      SingleCondFact(
+                        TermFiniteExpr(
+                          FiniteTerm(
+                            FactorTerm(
+                              DesignatorFactor(
+                                Designator(
+                                  DesignatorName(
+                                   niz
+                                  ) [DesignatorName]
+                                  YesOptionalDesignator(
+                                    NoTernaryExpr(
+                                      SingleCondFact(
+                                        TermFiniteExpr(
+                                          FiniteTerm(
+                                            FactorTerm(
+                                              IntFactor(
+                                               1
+                                              ) [IntFactor]
+                                            ) [FactorTerm]
+                                          ) [FiniteTerm]
+                                          NoOptionalTermList(
+                                          ) [NoOptionalTermList]
+                                        ) [TermFiniteExpr]
+                                      ) [SingleCondFact]
+                                    ) [NoTernaryExpr]
+                                  ) [YesOptionalDesignator]
+                                ) [Designator]
+                              ) [DesignatorFactor]
+                            ) [FactorTerm]
+                          ) [FiniteTerm]
+                          NoOptionalTermList(
+                          ) [NoOptionalTermList]
+                        ) [TermFiniteExpr]
+                      ) [SingleCondFact]
+                    ) [NoTernaryExpr]
+                    OptionalNoPrintNumber(
+                    ) [OptionalNoPrintNumber]
+                  ) [PrintStatement]
+                ) [PrintStatementDecl]
+              ) [YesMethodBody]
+              DesignatorStatementDecl(
+                DesignatorStatement(
+                  Designator(
+                    DesignatorName(
+                     niz
+                    ) [DesignatorName]
+                    YesOptionalDesignator(
+                      NoTernaryExpr(
+                        SingleCondFact(
+                          TermFiniteExpr(
+                            FiniteTerm(
+                              FactorTerm(
+                                IntFactor(
+                                 1
+                                ) [IntFactor]
+                              ) [FactorTerm]
+                            ) [FiniteTerm]
+                            NoOptionalTermList(
+                            ) [NoOptionalTermList]
+                          ) [TermFiniteExpr]
+                        ) [SingleCondFact]
+                      ) [NoTernaryExpr]
+                    ) [YesOptionalDesignator]
+                  ) [Designator]
+                  PossibleErrorAssignOpDesignatorAddition(
+                    AssignOpExprDesignatorAdditionNoError(
+                      Assignop(
+                      ) [Assignop]
+                      NoTernaryExpr(
+                        SingleCondFact(
+                          TermFiniteExpr(
+                            FiniteTerm(
+                              FactorTerm(
+                                DesignatorFactor(
+                                  Designator(
+                                    DesignatorName(
+                                     x
+                                    ) [DesignatorName]
+                                    NoOptionalDesignator(
+                                    ) [NoOptionalDesignator]
+                                  ) [Designator]
+                                ) [DesignatorFactor]
+                              ) [FactorTerm]
+                            ) [FiniteTerm]
+                            YesOptionalTermList(
+                              NoOptionalTermList(
+                              ) [NoOptionalTermList]
+                              AddopPlus(
+                              ) [AddopPlus]
+                              FiniteTerm(
+                                FactorTerm(
+                                  IntFactor(
+                                   1
+                                  ) [IntFactor]
+                                ) [FactorTerm]
+                              ) [FiniteTerm]
+                            ) [YesOptionalTermList]
+                          ) [TermFiniteExpr]
+                        ) [SingleCondFact]
+                      ) [NoTernaryExpr]
+                    ) [AssignOpExprDesignatorAdditionNoError]
+                  ) [PossibleErrorAssignOpDesignatorAddition]
+                ) [DesignatorStatement]
+              ) [DesignatorStatementDecl]
+            ) [YesMethodBody]
+            PrintStatementDecl(
+              PrintStatement(
+                NoTernaryExpr(
+                  SingleCondFact(
+                    TermFiniteExpr(
+                      FiniteTerm(
+                        FactorTerm(
+                          DesignatorFactor(
+                            Designator(
+                              DesignatorName(
+                               niz
+                              ) [DesignatorName]
+                              YesOptionalDesignator(
+                                NoTernaryExpr(
+                                  SingleCondFact(
+                                    TermFiniteExpr(
+                                      FiniteTerm(
+                                        FactorTerm(
+                                          IntFactor(
+                                           1
+                                          ) [IntFactor]
+                                        ) [FactorTerm]
+                                      ) [FiniteTerm]
+                                      NoOptionalTermList(
+                                      ) [NoOptionalTermList]
+                                    ) [TermFiniteExpr]
+                                  ) [SingleCondFact]
+                                ) [NoTernaryExpr]
+                              ) [YesOptionalDesignator]
+                            ) [Designator]
+                          ) [DesignatorFactor]
+                        ) [FactorTerm]
+                      ) [FiniteTerm]
+                      NoOptionalTermList(
+                      ) [NoOptionalTermList]
+                    ) [TermFiniteExpr]
+                  ) [SingleCondFact]
+                ) [NoTernaryExpr]
+                OptionalNoPrintNumber(
+                ) [OptionalNoPrintNumber]
+              ) [PrintStatement]
+            ) [PrintStatementDecl]
+          ) [YesMethodBody]
+          DesignatorStatementDecl(
+            DesignatorStatement(
+              Designator(
+                DesignatorName(
+                 niz
+                ) [DesignatorName]
+                YesOptionalDesignator(
+                  NoTernaryExpr(
+                    SingleCondFact(
+                      TermFiniteExpr(
+                        FiniteTerm(
+                          FactorTerm(
+                            IntFactor(
+                             2
+                            ) [IntFactor]
+                          ) [FactorTerm]
+                        ) [FiniteTerm]
+                        NoOptionalTermList(
+                        ) [NoOptionalTermList]
+                      ) [TermFiniteExpr]
+                    ) [SingleCondFact]
+                  ) [NoTernaryExpr]
+                ) [YesOptionalDesignator]
+              ) [Designator]
+              PossibleErrorAssignOpDesignatorAddition(
+                AssignOpExprDesignatorAdditionNoError(
+                  Assignop(
+                  ) [Assignop]
+                  NoTernaryExpr(
+                    SingleCondFact(
+                      TermFiniteExpr(
+                        FiniteTerm(
+                          MulopTerm(
+                            FactorTerm(
+                              DesignatorFactor(
+                                Designator(
+                                  DesignatorName(
+                                   niz
+                                  ) [DesignatorName]
+                                  YesOptionalDesignator(
+                                    NoTernaryExpr(
+                                      SingleCondFact(
+                                        TermFiniteExpr(
+                                          FiniteTerm(
+                                            FactorTerm(
+                                              IntFactor(
+                                               1
+                                              ) [IntFactor]
+                                            ) [FactorTerm]
+                                          ) [FiniteTerm]
+                                          NoOptionalTermList(
+                                          ) [NoOptionalTermList]
+                                        ) [TermFiniteExpr]
+                                      ) [SingleCondFact]
+                                    ) [NoTernaryExpr]
+                                  ) [YesOptionalDesignator]
+                                ) [Designator]
+                              ) [DesignatorFactor]
+                            ) [FactorTerm]
+                            MulopDiv(
+                            ) [MulopDiv]
+                            IntFactor(
+                             2
+                            ) [IntFactor]
+                          ) [MulopTerm]
+                        ) [FiniteTerm]
+                        NoOptionalTermList(
+                        ) [NoOptionalTermList]
+                      ) [TermFiniteExpr]
+                    ) [SingleCondFact]
+                  ) [NoTernaryExpr]
+                ) [AssignOpExprDesignatorAdditionNoError]
+              ) [PossibleErrorAssignOpDesignatorAddition]
+            ) [DesignatorStatement]
+          ) [DesignatorStatementDecl]
+        ) [YesMethodBody]
+        PrintStatementDecl(
+          PrintStatement(
+            NoTernaryExpr(
+              SingleCondFact(
+                TermFiniteExpr(
+                  FiniteTerm(
+                    FactorTerm(
+                      DesignatorFactor(
+                        Designator(
+                          DesignatorName(
+                           niz
+                          ) [DesignatorName]
+                          YesOptionalDesignator(
+                            NoTernaryExpr(
+                              SingleCondFact(
+                                TermFiniteExpr(
+                                  FiniteTerm(
+                                    FactorTerm(
+                                      IntFactor(
+                                       2
+                                      ) [IntFactor]
+                                    ) [FactorTerm]
+                                  ) [FiniteTerm]
+                                  NoOptionalTermList(
+                                  ) [NoOptionalTermList]
+                                ) [TermFiniteExpr]
+                              ) [SingleCondFact]
+                            ) [NoTernaryExpr]
+                          ) [YesOptionalDesignator]
+                        ) [Designator]
+                      ) [DesignatorFactor]
+                    ) [FactorTerm]
+                  ) [FiniteTerm]
+                  NoOptionalTermList(
+                  ) [NoOptionalTermList]
+                ) [TermFiniteExpr]
+              ) [SingleCondFact]
+            ) [NoTernaryExpr]
+            OptionalNoPrintNumber(
+            ) [OptionalNoPrintNumber]
+          ) [PrintStatement]
+        ) [PrintStatementDecl]
+      ) [YesMethodBody]
+    ) [MethodDeclaration]
+  ) [YesMethodDeclarationList]
+) [Program]
+INFO  21:28:44,506 - ======================SEMANTIC ANALYSIS======================
+INFO  21:28:44,511 - Const variable konstanta declared on line 3
+INFO  21:28:44,511 - Global variable x declared on line 5
+INFO  21:28:44,511 - Global variable y declared on line 5
+INFO  21:28:44,511 - Global variable z declared on line 5
+INFO  21:28:44,511 - Method main declared on line 8
+INFO  21:28:44,514 - Local array niz declared on line 8
+INFO  21:28:44,514 - Array niz used: Var niz: Array of int, 0, 1 on line 10
+INFO  21:28:44,516 - Element of array niz used: Elem niz: int, 0, 1 on line 11
+INFO  21:28:44,516 - Variable x used: Var x: int, 0, 0 on line 12
+INFO  21:28:44,516 - Variable konstanta used: Con konstanta: int, 5, 0 on line 12
+INFO  21:28:44,516 - Variable x used: Var x: int, 0, 0 on line 13
+INFO  21:28:44,516 - Element of array niz used: Elem niz: int, 0, 1 on line 14
+INFO  21:28:44,516 - Element of array niz used: Elem niz: int, 0, 1 on line 15
+INFO  21:28:44,516 - Variable x used: Var x: int, 0, 0 on line 15
+INFO  21:28:44,516 - Element of array niz used: Elem niz: int, 0, 1 on line 16
+INFO  21:28:44,516 - Element of array niz used: Elem niz: int, 0, 1 on line 17
+INFO  21:28:44,516 - Element of array niz used: Elem niz: int, 0, 1 on line 17
+INFO  21:28:44,516 - Element of array niz used: Elem niz: int, 0, 1 on line 18
+INFO  21:28:44,517 - =======================SYNTAX ANALYSIS=======================
+INFO  21:28:44,517 - 1 methods in the program
+INFO  21:28:44,517 - 1 constants declared
+INFO  21:28:44,517 - 3 global variables declared
+INFO  21:28:44,517 - 0 global arrays declared
+INFO  21:28:44,517 - 0 local variables declared
+INFO  21:28:44,517 - 1 local arrays declared
+INFO  21:28:44,517 - 9 statements in main
+INFO  21:28:44,523 - ================SEMANTIC ANALYSIS SUCCESSFUL=================

@@ -1,0 +1,202 @@
+INFO  19:47:48,135 - ====================LEXICAL ANALYSIS========================
+INFO  19:47:48,219 - #2 program
+INFO  19:47:48,219 - #9 prog
+INFO  19:47:48,219 - #5 const
+INFO  19:47:48,221 - #9 int
+INFO  19:47:48,221 - #9 konstanta
+INFO  19:47:48,222 - #8 =
+INFO  19:47:48,223 - #10 5
+INFO  19:47:48,223 - #6 ;
+INFO  19:47:48,224 - #9 int
+INFO  19:47:48,224 - #9 x
+INFO  19:47:48,224 - #6 ;
+INFO  19:47:48,227 - #9 int
+INFO  19:47:48,227 - #9 y
+INFO  19:47:48,227 - #6 ;
+INFO  19:47:48,227 - #9 int
+INFO  19:47:48,227 - #9 z
+INFO  19:47:48,227 - #6 ;
+INFO  19:47:48,227 - #3 {
+INFO  19:47:48,227 - #15 void
+INFO  19:47:48,228 - #9 main
+INFO  19:47:48,229 - #13 (
+INFO  19:47:48,229 - #14 )
+INFO  19:47:48,230 - #9 int
+INFO  19:47:48,237 - #9 niz
+INFO  19:47:48,237 - #20 [
+INFO  19:47:48,237 - #21 ]
+INFO  19:47:48,237 - #6 ;
+INFO  19:47:48,238 - #3 {
+INFO  19:47:48,238 - #30 print
+INFO  19:47:48,239 - #13 (
+INFO  19:47:48,239 - #10 2
+INFO  19:47:48,239 - #36 +
+INFO  19:47:48,241 - #10 3
+INFO  19:47:48,242 - #14 )
+INFO  19:47:48,243 - #6 ;
+INFO  19:47:48,243 - #4 }
+INFO  19:47:48,245 - #4 }
+INFO  19:47:48,255 - =======================SYNTAX TREE===========================
+INFO  19:47:48,256 - Program(
+  ProgramName(
+   prog
+  ) [ProgramName]
+  YesDeclarationList(
+    YesDeclarationList(
+      YesDeclarationList(
+        YesDeclarationList(
+          NoDeclarationList(
+          ) [NoDeclarationList]
+          ConstantDeclaration(
+            ConstDeclNoError(
+              Type(
+               int
+              ) [Type]
+              SingleConstDeclList(
+                ConstDeclVariable(
+                  ConstDeclName(
+                   konstanta
+                  ) [ConstDeclName]
+                  ConstDeclValueInt(
+                   5
+                  ) [ConstDeclValueInt]
+                ) [ConstDeclVariable]
+              ) [SingleConstDeclList]
+            ) [ConstDeclNoError]
+          ) [ConstantDeclaration]
+        ) [YesDeclarationList]
+        VariableDeclaration(
+          VarDeclNoError(
+            Type(
+             int
+            ) [Type]
+            SingleVarDeclList(
+              DeclVariable(
+                VarDeclName(
+                 x
+                ) [VarDeclName]
+                NoVarDeclArrayOption(
+                ) [NoVarDeclArrayOption]
+              ) [DeclVariable]
+            ) [SingleVarDeclList]
+          ) [VarDeclNoError]
+        ) [VariableDeclaration]
+      ) [YesDeclarationList]
+      VariableDeclaration(
+        VarDeclNoError(
+          Type(
+           int
+          ) [Type]
+          SingleVarDeclList(
+            DeclVariable(
+              VarDeclName(
+               y
+              ) [VarDeclName]
+              NoVarDeclArrayOption(
+              ) [NoVarDeclArrayOption]
+            ) [DeclVariable]
+          ) [SingleVarDeclList]
+        ) [VarDeclNoError]
+      ) [VariableDeclaration]
+    ) [YesDeclarationList]
+    VariableDeclaration(
+      VarDeclNoError(
+        Type(
+         int
+        ) [Type]
+        SingleVarDeclList(
+          DeclVariable(
+            VarDeclName(
+             z
+            ) [VarDeclName]
+            NoVarDeclArrayOption(
+            ) [NoVarDeclArrayOption]
+          ) [DeclVariable]
+        ) [SingleVarDeclList]
+      ) [VarDeclNoError]
+    ) [VariableDeclaration]
+  ) [YesDeclarationList]
+  YesMethodDeclarationList(
+    NoMethodDeclarationList(
+    ) [NoMethodDeclarationList]
+    MethodDeclaration(
+      VoidMethodReturnType(
+      ) [VoidMethodReturnType]
+      MethodName(
+       main
+      ) [MethodName]
+      NoMethodParameters(
+      ) [NoMethodParameters]
+      YesMethodVariables(
+        NoMethodVariables(
+        ) [NoMethodVariables]
+        VarDeclNoError(
+          Type(
+           int
+          ) [Type]
+          SingleVarDeclList(
+            DeclVariable(
+              VarDeclName(
+               niz
+              ) [VarDeclName]
+              YesVarDeclArrayOption(
+              ) [YesVarDeclArrayOption]
+            ) [DeclVariable]
+          ) [SingleVarDeclList]
+        ) [VarDeclNoError]
+      ) [YesMethodVariables]
+      YesMethodBody(
+        NoMethodBody(
+        ) [NoMethodBody]
+        PrintStatementDecl(
+          PrintStatement(
+            NoTernaryExpr(
+              SingleCondFact(
+                TermFiniteExpr(
+                  FiniteTerm(
+                    FactorTerm(
+                      IntFactor(
+                       2
+                      ) [IntFactor]
+                    ) [FactorTerm]
+                  ) [FiniteTerm]
+                  YesOptionalTermList(
+                    NoOptionalTermList(
+                    ) [NoOptionalTermList]
+                    AddopPlus(
+                    ) [AddopPlus]
+                    FiniteTerm(
+                      FactorTerm(
+                        IntFactor(
+                         3
+                        ) [IntFactor]
+                      ) [FactorTerm]
+                    ) [FiniteTerm]
+                  ) [YesOptionalTermList]
+                ) [TermFiniteExpr]
+              ) [SingleCondFact]
+            ) [NoTernaryExpr]
+            OptionalNoPrintNumber(
+            ) [OptionalNoPrintNumber]
+          ) [PrintStatement]
+        ) [PrintStatementDecl]
+      ) [YesMethodBody]
+    ) [MethodDeclaration]
+  ) [YesMethodDeclarationList]
+) [Program]
+INFO  19:47:48,256 - ======================SEMANTIC ANALYSIS======================
+INFO  19:47:48,260 - Const variable konstanta declared on line 3
+INFO  19:47:48,260 - Global variable x declared on line 5
+INFO  19:47:48,261 - Global variable y declared on line 5
+INFO  19:47:48,261 - Global variable z declared on line 5
+INFO  19:47:48,261 - Method main declared on line 8
+INFO  19:47:48,261 - Local array niz declared on line 8
+INFO  19:47:48,261 - =======================SYNTAX ANALYSIS=======================
+INFO  19:47:48,261 - 1 methods in the program
+INFO  19:47:48,261 - 1 constants declared
+INFO  19:47:48,262 - 3 global variables declared
+INFO  19:47:48,262 - 0 global arrays declared
+INFO  19:47:48,262 - 0 local variables declared
+INFO  19:47:48,262 - 1 local arrays declared
+INFO  19:47:48,262 - 1 statements in main
+INFO  19:47:48,270 - ================SEMANTIC ANALYSIS SUCCESSFUL=================

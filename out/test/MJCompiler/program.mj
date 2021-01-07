@@ -3,10 +3,23 @@ program prog
 const int konstanta = 5;
 
 int x; int y; int z;
+int mojNiz[];
 
 {
-	void main() char niz[];
+	void main() int niz[];
 	{
-		niz = new char[5];
+		niz = new int[5];
+
+		niz[1] = 2;
+		print(niz[1]);
+
+		niz[niz[1]] = 7;
+		print(niz[2]);
+
+		print(-niz[2] + konstanta);
+
+		mojNiz = new int[konstanta - 2];
+		mojNiz[0] = 5 % 3;
+		print(mojNiz[0]);
 	}
 }
