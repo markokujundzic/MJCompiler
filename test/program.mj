@@ -1,17 +1,17 @@
 program prog
 
-const int y = 1;
-int arr[];
+const int konstanta = 2;
+
 {
-	void main() int x; bool b; int z;
+	void main() int x; int y; int z;
 	{
-		read(z);
-		print(z);
-
-		x = y;
-		b = false;
-
-		print(b);
+		x = 5;
 		print(x);
+
+		y = 3;
+		print(y);
+
+		z = x * y;
+		print(x * y / konstanta);
 	}
 }

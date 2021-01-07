@@ -120,6 +120,23 @@ public class CodeGenerator extends VisitorAdaptor
         Code.load(constFactor);
     }
 
+    /* Term */
+    public void visit(MulopTerm mulopTerm)
+    {
+        if (mulopTerm.getMulop() instanceof MulopMul)
+        {
+            Code.put(Code.mul);
+        }
+        else if (mulopTerm.getMulop() instanceof MulopDiv)
+        {
+            Code.put(Code.div);
+        }
+        else if (mulopTerm.getMulop() instanceof MulopMod)
+        {
+            Code.put(Code.rem);
+        }
+    }
+
     /* Designator */
     public void visit(Designator designator)
     {
