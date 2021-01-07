@@ -1,58 +1,55 @@
-INFO  13:27:54,567 - ====================LEXICAL ANALYSIS========================
-INFO  13:27:54,649 - #2 program
-INFO  13:27:54,649 - #9 prog
-INFO  13:27:54,650 - #5 const
-INFO  13:27:54,652 - #9 int
-INFO  13:27:54,652 - #9 konstanta
-INFO  13:27:54,653 - #8 =
-INFO  13:27:54,654 - #10 5
-INFO  13:27:54,654 - #6 ;
-INFO  13:27:54,655 - #3 {
-INFO  13:27:54,655 - #15 void
-INFO  13:27:54,657 - #9 main
-INFO  13:27:54,658 - #13 (
-INFO  13:27:54,659 - #14 )
-INFO  13:27:54,660 - #9 int
-INFO  13:27:54,661 - #9 x
-INFO  13:27:54,661 - #6 ;
-INFO  13:27:54,664 - #9 int
-INFO  13:27:54,665 - #9 y
-INFO  13:27:54,665 - #6 ;
-INFO  13:27:54,665 - #9 int
-INFO  13:27:54,665 - #9 z
-INFO  13:27:54,665 - #6 ;
-INFO  13:27:54,665 - #3 {
-INFO  13:27:54,671 - #9 x
-INFO  13:27:54,672 - #8 =
-INFO  13:27:54,674 - #34 -
-INFO  13:27:54,674 - #10 5
-INFO  13:27:54,674 - #6 ;
-INFO  13:27:54,677 - #30 print
-INFO  13:27:54,677 - #13 (
-INFO  13:27:54,677 - #9 x
-INFO  13:27:54,677 - #14 )
-INFO  13:27:54,678 - #6 ;
-INFO  13:27:54,679 - #9 y
-INFO  13:27:54,680 - #8 =
-INFO  13:27:54,680 - #10 4
-INFO  13:27:54,680 - #6 ;
-INFO  13:27:54,680 - #30 print
-INFO  13:27:54,680 - #13 (
-INFO  13:27:54,680 - #34 -
-INFO  13:27:54,680 - #9 y
-INFO  13:27:54,680 - #37 *
-INFO  13:27:54,680 - #13 (
-INFO  13:27:54,681 - #34 -
-INFO  13:27:54,682 - #9 konstanta
-INFO  13:27:54,682 - #14 )
-INFO  13:27:54,684 - #38 /
-INFO  13:27:54,684 - #10 2
-INFO  13:27:54,684 - #14 )
-INFO  13:27:54,684 - #6 ;
-INFO  13:27:54,684 - #4 }
-INFO  13:27:54,684 - #4 }
-INFO  13:27:54,694 - =======================SYNTAX TREE===========================
-INFO  13:27:54,696 - Program(
+INFO  13:26:16,090 - ====================LEXICAL ANALYSIS========================
+INFO  13:26:16,181 - #2 program
+INFO  13:26:16,181 - #9 prog
+INFO  13:26:16,181 - #5 const
+INFO  13:26:16,184 - #9 int
+INFO  13:26:16,184 - #9 konstanta
+INFO  13:26:16,185 - #8 =
+INFO  13:26:16,186 - #10 2
+INFO  13:26:16,186 - #6 ;
+INFO  13:26:16,187 - #3 {
+INFO  13:26:16,188 - #15 void
+INFO  13:26:16,189 - #9 main
+INFO  13:26:16,189 - #13 (
+INFO  13:26:16,190 - #14 )
+INFO  13:26:16,191 - #9 int
+INFO  13:26:16,192 - #9 x
+INFO  13:26:16,192 - #6 ;
+INFO  13:26:16,196 - #9 int
+INFO  13:26:16,196 - #9 y
+INFO  13:26:16,196 - #6 ;
+INFO  13:26:16,196 - #9 int
+INFO  13:26:16,196 - #9 z
+INFO  13:26:16,196 - #6 ;
+INFO  13:26:16,196 - #3 {
+INFO  13:26:16,202 - #9 x
+INFO  13:26:16,203 - #8 =
+INFO  13:26:16,206 - #34 -
+INFO  13:26:16,206 - #10 5
+INFO  13:26:16,207 - #6 ;
+INFO  13:26:16,209 - #30 print
+INFO  13:26:16,209 - #13 (
+INFO  13:26:16,209 - #9 x
+INFO  13:26:16,209 - #14 )
+INFO  13:26:16,210 - #6 ;
+INFO  13:26:16,210 - #9 y
+INFO  13:26:16,212 - #8 =
+INFO  13:26:16,212 - #10 3
+INFO  13:26:16,212 - #6 ;
+INFO  13:26:16,212 - #30 print
+INFO  13:26:16,212 - #13 (
+INFO  13:26:16,212 - #34 -
+INFO  13:26:16,212 - #9 y
+INFO  13:26:16,212 - #37 *
+INFO  13:26:16,212 - #9 konstanta
+INFO  13:26:16,214 - #39 %
+INFO  13:26:16,215 - #10 2
+INFO  13:26:16,216 - #14 )
+INFO  13:26:16,219 - #6 ;
+INFO  13:26:16,219 - #4 }
+INFO  13:26:16,219 - #4 }
+INFO  13:26:16,232 - =======================SYNTAX TREE===========================
+INFO  13:26:16,234 - Program(
   ProgramName(
    prog
   ) [ProgramName]
@@ -70,7 +67,7 @@ INFO  13:27:54,696 - Program(
              konstanta
             ) [ConstDeclName]
             ConstDeclValueInt(
-             5
+             2
             ) [ConstDeclValueInt]
           ) [ConstDeclVariable]
         ) [SingleConstDeclList]
@@ -219,7 +216,7 @@ INFO  13:27:54,696 - Program(
                       TermFiniteExpr(
                         FactorTerm(
                           IntFactor(
-                           4
+                           3
                           ) [IntFactor]
                         ) [FactorTerm]
                         NoOptionalTermList(
@@ -252,30 +249,18 @@ INFO  13:27:54,696 - Program(
                       ) [FactorTerm]
                       MulopMul(
                       ) [MulopMul]
-                      ExprFactor(
-                        NoTernaryExpr(
-                          SingleCondFact(
-                            MinusTermFiniteExpr(
-                              FactorTerm(
-                                DesignatorFactor(
-                                  Designator(
-                                    DesignatorName(
-                                     konstanta
-                                    ) [DesignatorName]
-                                    NoOptionalDesignator(
-                                    ) [NoOptionalDesignator]
-                                  ) [Designator]
-                                ) [DesignatorFactor]
-                              ) [FactorTerm]
-                              NoOptionalTermList(
-                              ) [NoOptionalTermList]
-                            ) [MinusTermFiniteExpr]
-                          ) [SingleCondFact]
-                        ) [NoTernaryExpr]
-                      ) [ExprFactor]
+                      DesignatorFactor(
+                        Designator(
+                          DesignatorName(
+                           konstanta
+                          ) [DesignatorName]
+                          NoOptionalDesignator(
+                          ) [NoOptionalDesignator]
+                        ) [Designator]
+                      ) [DesignatorFactor]
                     ) [MulopTerm]
-                    MulopDiv(
-                    ) [MulopDiv]
+                    MulopMod(
+                    ) [MulopMod]
                     IntFactor(
                      2
                     ) [IntFactor]
@@ -293,24 +278,24 @@ INFO  13:27:54,696 - Program(
     ) [MethodDeclaration]
   ) [YesMethodDeclarationList]
 ) [Program]
-INFO  13:27:54,696 - ======================SEMANTIC ANALYSIS======================
-INFO  13:27:54,700 - Const variable konstanta declared on line 3
-INFO  13:27:54,700 - Method main declared on line 6
-INFO  13:27:54,701 - Local variable x declared on line 6
-INFO  13:27:54,701 - Local variable y declared on line 6
-INFO  13:27:54,701 - Local variable z declared on line 6
-INFO  13:27:54,701 - Variable x used: Var x: int, 0, 1  on line 8
-INFO  13:27:54,702 - Variable x used: Var x: int, 0, 1  on line 9
-INFO  13:27:54,702 - Variable y used: Var y: int, 1, 1  on line 11
-INFO  13:27:54,703 - Variable y used: Var y: int, 1, 1  on line 12
-INFO  13:27:54,703 - Variable konstanta used: Con konstanta: int, 5, 0  on line 12
-INFO  13:27:54,703 - =======================SYNTAX ANALYSIS=======================
-INFO  13:27:54,703 - 1 methods in the program
-INFO  13:27:54,703 - 1 constants declared
-INFO  13:27:54,703 - 0 global variables declared
-INFO  13:27:54,703 - 0 global arrays declared
-INFO  13:27:54,703 - 3 local variables declared
-INFO  13:27:54,703 - 0 local arrays declared
-INFO  13:27:54,703 - 4 statements in main
-INFO  13:27:54,704 - ================SEMANTIC ANALYSIS SUCCESSFUL=================
-INFO  13:27:54,709 - ==============COMPILATION FINISHED SUCCESSFULLY==============
+INFO  13:26:16,234 - ======================SEMANTIC ANALYSIS======================
+INFO  13:26:16,239 - Const variable konstanta declared on line 3
+INFO  13:26:16,239 - Method main declared on line 6
+INFO  13:26:16,241 - Local variable x declared on line 6
+INFO  13:26:16,241 - Local variable y declared on line 6
+INFO  13:26:16,241 - Local variable z declared on line 6
+INFO  13:26:16,241 - Variable x used: Var x: int, 0, 1  on line 8
+INFO  13:26:16,242 - Variable x used: Var x: int, 0, 1  on line 9
+INFO  13:26:16,243 - Variable y used: Var y: int, 1, 1  on line 11
+INFO  13:26:16,243 - Variable y used: Var y: int, 1, 1  on line 12
+INFO  13:26:16,243 - Variable konstanta used: Con konstanta: int, 2, 0  on line 12
+INFO  13:26:16,243 - =======================SYNTAX ANALYSIS=======================
+INFO  13:26:16,244 - 1 methods in the program
+INFO  13:26:16,244 - 1 constants declared
+INFO  13:26:16,244 - 0 global variables declared
+INFO  13:26:16,244 - 0 global arrays declared
+INFO  13:26:16,244 - 3 local variables declared
+INFO  13:26:16,244 - 0 local arrays declared
+INFO  13:26:16,244 - 4 statements in main
+INFO  13:26:16,245 - ================SEMANTIC ANALYSIS SUCCESSFUL=================
+INFO  13:26:16,252 - ==============COMPILATION FINISHED SUCCESSFULLY==============

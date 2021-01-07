@@ -169,4 +169,10 @@ public class CodeGenerator extends VisitorAdaptor
             Code.store(designatorStatement.getDesignator().getDesignatorName().obj);
         }
     }
+
+    /* Finite Expr */
+    public void visit(MinusTermFiniteExpr minusTermFiniteExpr)
+    {
+        Code.put(Code.neg);
+    }
 }
