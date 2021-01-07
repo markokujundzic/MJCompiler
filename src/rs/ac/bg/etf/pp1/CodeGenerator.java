@@ -137,6 +137,14 @@ public class CodeGenerator extends VisitorAdaptor
         }
     }
 
+    public void visit(FiniteTerm finiteTerm)
+    {
+        if (finiteTerm.getParent().getClass() == MinusTermFiniteExpr.class)
+        {
+            Code.put(Code.neg);
+        }
+    }
+
     /* Designator */
     public void visit(Designator designator)
     {
@@ -171,8 +179,15 @@ public class CodeGenerator extends VisitorAdaptor
     }
 
     /* Finite Expr */
-    public void visit(MinusTermFiniteExpr minusTermFiniteExpr)
+    public void visit(YesOptionalTermList yesOptionalTermList)
     {
-        Code.put(Code.neg);
+        if (yesOptionalTermList.getAddop() instanceof AddopPlus)
+        {
+            Code.put(Code.add);
+        }
+        else if (yesOptionalTermList.getAddop() instanceof AddopMinus)
+        {
+            Code.put(Code.sub);
+        }
     }
 }

@@ -83,7 +83,7 @@ terminal LESS_OR_EQUAL;
 nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgramName, Program, MethodName, DesignatorName;
 
 nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, MethodReturnType, ConstDeclValue;
-nonterminal rs.etf.pp1.symboltable.concepts.Struct Expr, FiniteExpr, Term, Factor, CondFact;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct Expr, FiniteExpr, Term, Factor, CondFact, FiniteTerm;
 nonterminal rs.etf.pp1.symboltable.concepts.Struct OptionalTermList, PossibleErrorDesignatorAddition, DesignatorAddition;
 
 nonterminal DeclarationList, Declaration, MethodDeclarationList;
@@ -451,12 +451,12 @@ Expr ::=
 		(NoTernaryExpr) CondFact
 		;
 FiniteExpr ::=
-		(TermFiniteExpr) Term OptionalTermList
+		(TermFiniteExpr) FiniteTerm OptionalTermList
 		|
-		(MinusTermFiniteExpr) MINUS Term OptionalTermList
+		(MinusTermFiniteExpr) MINUS FiniteTerm OptionalTermList
 		;
 OptionalTermList ::=
-		(YesOptionalTermList) OptionalTermList Addop Term
+		(YesOptionalTermList) OptionalTermList Addop FiniteTerm
 		|
 		(NoOptionalTermList) /* epsilon */
 		;
@@ -464,6 +464,10 @@ OptionalTermList ::=
 /* EXPR - END */
 
 /* TERM - START */
+
+FiniteTerm ::=
+		(FiniteTerm) Term
+		;
 
 Term ::=
 		(FactorTerm) Factor

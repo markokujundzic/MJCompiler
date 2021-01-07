@@ -649,7 +649,7 @@ public class SemanticAnalyzer extends VisitorAdaptor
     /* Finite expression */
     public void visit(TermFiniteExpr termFiniteExpr)
     {
-        Struct term = termFiniteExpr.getTerm().struct;
+        Struct term = termFiniteExpr.getFiniteTerm().getTerm().struct;
         Struct list = termFiniteExpr.getOptionalTermList().struct;
 
         if (list == null)
@@ -685,7 +685,7 @@ public class SemanticAnalyzer extends VisitorAdaptor
 
     public void visit(MinusTermFiniteExpr minusTermFiniteExpr)
     {
-        Struct term = minusTermFiniteExpr.getTerm().struct;
+        Struct term = minusTermFiniteExpr.getFiniteTerm().getTerm().struct;
 
         if (term != SymTab.intType)
         {
@@ -735,7 +735,7 @@ public class SemanticAnalyzer extends VisitorAdaptor
 
     public void visit(YesOptionalTermList yesOptionalTermList)
     {
-        Struct term = yesOptionalTermList.getTerm().struct;
+        Struct term = yesOptionalTermList.getFiniteTerm().getTerm().struct;
         Struct list = yesOptionalTermList.getOptionalTermList().struct;
 
         if (list == null)

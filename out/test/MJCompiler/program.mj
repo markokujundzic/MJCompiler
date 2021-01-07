@@ -2,13 +2,15 @@ program prog
 
 const int konstanta = 5;
 
-{
-	void main() int x; int y; int z;
-	{
-		x = -5;
-		print(x);
+int x; int y; int z;
 
-		y = 4;
-		print(-y * (-konstanta) / 2);
+{
+	void main()
+	{
+		x = -1 * (7 + 3 - konstanta) * (-1 * konstanta + 4);
+		print(x % 3);
+
+		y = -8 - 2 * 3;
+		print(y);
 	}
 }

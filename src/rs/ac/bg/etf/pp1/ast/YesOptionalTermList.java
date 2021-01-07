@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 6/0/2021 20:28:58
+// 7/0/2021 15:56:3
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -9,15 +9,15 @@ public class YesOptionalTermList extends OptionalTermList {
 
     private OptionalTermList OptionalTermList;
     private Addop Addop;
-    private Term Term;
+    private FiniteTerm FiniteTerm;
 
-    public YesOptionalTermList (OptionalTermList OptionalTermList, Addop Addop, Term Term) {
+    public YesOptionalTermList (OptionalTermList OptionalTermList, Addop Addop, FiniteTerm FiniteTerm) {
         this.OptionalTermList=OptionalTermList;
         if(OptionalTermList!=null) OptionalTermList.setParent(this);
         this.Addop=Addop;
         if(Addop!=null) Addop.setParent(this);
-        this.Term=Term;
-        if(Term!=null) Term.setParent(this);
+        this.FiniteTerm=FiniteTerm;
+        if(FiniteTerm!=null) FiniteTerm.setParent(this);
     }
 
     public OptionalTermList getOptionalTermList() {
@@ -36,12 +36,12 @@ public class YesOptionalTermList extends OptionalTermList {
         this.Addop=Addop;
     }
 
-    public Term getTerm() {
-        return Term;
+    public FiniteTerm getFiniteTerm() {
+        return FiniteTerm;
     }
 
-    public void setTerm(Term Term) {
-        this.Term=Term;
+    public void setFiniteTerm(FiniteTerm FiniteTerm) {
+        this.FiniteTerm=FiniteTerm;
     }
 
     public void accept(Visitor visitor) {
@@ -51,20 +51,20 @@ public class YesOptionalTermList extends OptionalTermList {
     public void childrenAccept(Visitor visitor) {
         if(OptionalTermList!=null) OptionalTermList.accept(visitor);
         if(Addop!=null) Addop.accept(visitor);
-        if(Term!=null) Term.accept(visitor);
+        if(FiniteTerm!=null) FiniteTerm.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
         if(OptionalTermList!=null) OptionalTermList.traverseTopDown(visitor);
         if(Addop!=null) Addop.traverseTopDown(visitor);
-        if(Term!=null) Term.traverseTopDown(visitor);
+        if(FiniteTerm!=null) FiniteTerm.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
         if(OptionalTermList!=null) OptionalTermList.traverseBottomUp(visitor);
         if(Addop!=null) Addop.traverseBottomUp(visitor);
-        if(Term!=null) Term.traverseBottomUp(visitor);
+        if(FiniteTerm!=null) FiniteTerm.traverseBottomUp(visitor);
         accept(visitor);
     }
 
@@ -85,8 +85,8 @@ public class YesOptionalTermList extends OptionalTermList {
             buffer.append(tab+"  null");
         buffer.append("\n");
 
-        if(Term!=null)
-            buffer.append(Term.toString("  "+tab));
+        if(FiniteTerm!=null)
+            buffer.append(FiniteTerm.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");
