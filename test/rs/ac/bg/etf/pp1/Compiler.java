@@ -25,9 +25,15 @@ public class Compiler
 		Logger log = Logger.getLogger(Compiler.class);
 		Reader bufferReader = null;
 
+		if (args.length < 2)
+		{
+			System.err.println("Error: Insufficient number of arguments supplied");
+			return;
+		}
+
 		try
 		{
-			File sourceCode = new File("test/program.mj");
+			File sourceCode = new File(args[0]);
 
 			log.info("====================LEXICAL ANALYSIS========================");
 			bufferReader = new BufferedReader(new FileReader(sourceCode));
@@ -66,9 +72,7 @@ public class Compiler
 				}
 				else
 				{
-					log.info("================SEMANTIC ANALYSIS SUCCESSFUL=================");
-
-					File objectFile = new File("test/program.obj");
+					File objectFile = new File(args[1]);
 
 					if (objectFile.exists())
 					{
@@ -82,7 +86,7 @@ public class Compiler
 					Code.mainPc = codeGenerator.getMainPC();
 					Code.write(new FileOutputStream(objectFile));
 
-					log.info("==============COMPILATION FINISHED SUCCESSFULLY==============");
+					log.info("================SEMANTIC ANALYSIS SUCCESSFUL=================");
 				}
 			}
 	        else

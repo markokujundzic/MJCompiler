@@ -5,12 +5,8 @@ const int konstanta = 5;
 int x; int y; int z;
 
 {
-	void main()
+	void main() char niz[];
 	{
-		x = -1 * (7 + 3 - konstanta) * (-1 * konstanta + 4);
-		print(x % 3);
-
-		y = -8 - 2 * 3;
-		print(y);
+		niz = new char[5];
 	}
 }

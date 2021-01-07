@@ -87,7 +87,7 @@ public class SemanticAnalyzer extends VisitorAdaptor
         s.append(", ");
         s.append(o.getAdr());
         s.append(", ");
-        s.append(o.getLevel() + " ");
+        s.append(o.getLevel());
 
         return s.toString();
     }

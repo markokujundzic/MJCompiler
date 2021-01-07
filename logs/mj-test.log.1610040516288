@@ -1,44 +1,44 @@
-INFO  18:28:36,292 - ====================LEXICAL ANALYSIS========================
-INFO  18:28:36,370 - #2 program
-INFO  18:28:36,370 - #9 prog
-INFO  18:28:36,370 - #5 const
-INFO  18:28:36,372 - #9 int
-INFO  18:28:36,372 - #9 konstanta
-INFO  18:28:36,373 - #8 =
-INFO  18:28:36,374 - #10 5
-INFO  18:28:36,374 - #6 ;
-INFO  18:28:36,376 - #9 int
-INFO  18:28:36,377 - #9 x
-INFO  18:28:36,377 - #6 ;
-INFO  18:28:36,380 - #9 int
-INFO  18:28:36,380 - #9 y
-INFO  18:28:36,380 - #6 ;
-INFO  18:28:36,381 - #9 int
-INFO  18:28:36,381 - #9 z
-INFO  18:28:36,381 - #6 ;
-INFO  18:28:36,381 - #3 {
-INFO  18:28:36,381 - #15 void
-INFO  18:28:36,382 - #9 main
-INFO  18:28:36,382 - #13 (
-INFO  18:28:36,383 - #14 )
-INFO  18:28:36,384 - #9 char
-INFO  18:28:36,391 - #9 niz
-INFO  18:28:36,391 - #20 [
-INFO  18:28:36,391 - #21 ]
-INFO  18:28:36,391 - #6 ;
-INFO  18:28:36,392 - #3 {
-INFO  18:28:36,392 - #9 niz
-INFO  18:28:36,393 - #8 =
-INFO  18:28:36,395 - #35 new
-INFO  18:28:36,396 - #9 char
-INFO  18:28:36,396 - #20 [
-INFO  18:28:36,396 - #10 5
-INFO  18:28:36,396 - #21 ]
-INFO  18:28:36,398 - #6 ;
-INFO  18:28:36,400 - #4 }
-INFO  18:28:36,400 - #4 }
-INFO  18:28:36,410 - =======================SYNTAX TREE===========================
-INFO  18:28:36,411 - Program(
+INFO  18:28:19,040 - ====================LEXICAL ANALYSIS========================
+INFO  18:28:19,124 - #2 program
+INFO  18:28:19,124 - #9 prog
+INFO  18:28:19,124 - #5 const
+INFO  18:28:19,125 - #9 int
+INFO  18:28:19,125 - #9 konstanta
+INFO  18:28:19,126 - #8 =
+INFO  18:28:19,127 - #10 5
+INFO  18:28:19,127 - #6 ;
+INFO  18:28:19,128 - #9 int
+INFO  18:28:19,128 - #9 x
+INFO  18:28:19,129 - #6 ;
+INFO  18:28:19,131 - #9 int
+INFO  18:28:19,131 - #9 y
+INFO  18:28:19,131 - #6 ;
+INFO  18:28:19,131 - #9 int
+INFO  18:28:19,131 - #9 z
+INFO  18:28:19,131 - #6 ;
+INFO  18:28:19,132 - #3 {
+INFO  18:28:19,132 - #15 void
+INFO  18:28:19,132 - #9 main
+INFO  18:28:19,133 - #13 (
+INFO  18:28:19,134 - #14 )
+INFO  18:28:19,135 - #9 char
+INFO  18:28:19,142 - #9 niz
+INFO  18:28:19,142 - #20 [
+INFO  18:28:19,142 - #21 ]
+INFO  18:28:19,142 - #6 ;
+INFO  18:28:19,143 - #3 {
+INFO  18:28:19,143 - #9 niz
+INFO  18:28:19,144 - #8 =
+INFO  18:28:19,146 - #35 new
+INFO  18:28:19,146 - #9 char
+INFO  18:28:19,146 - #20 [
+INFO  18:28:19,146 - #10 5
+INFO  18:28:19,146 - #21 ]
+INFO  18:28:19,148 - #6 ;
+INFO  18:28:19,149 - #4 }
+INFO  18:28:19,149 - #4 }
+INFO  18:28:19,162 - =======================SYNTAX TREE===========================
+INFO  18:28:19,163 - Program(
   ProgramName(
    prog
   ) [ProgramName]
@@ -202,20 +202,20 @@ INFO  18:28:36,411 - Program(
     ) [MethodDeclaration]
   ) [YesMethodDeclarationList]
 ) [Program]
-INFO  18:28:36,412 - ======================SEMANTIC ANALYSIS======================
-INFO  18:28:36,416 - Const variable konstanta declared on line 3
-INFO  18:28:36,416 - Global variable x declared on line 5
-INFO  18:28:36,416 - Global variable y declared on line 5
-INFO  18:28:36,416 - Global variable z declared on line 5
-INFO  18:28:36,416 - Method main declared on line 8
-INFO  18:28:36,416 - Local array niz declared on line 8
-INFO  18:28:36,416 - Array niz used: Var niz: Array of char, 0, 1 on line 10
-INFO  18:28:36,421 - =======================SYNTAX ANALYSIS=======================
-INFO  18:28:36,421 - 1 methods in the program
-INFO  18:28:36,421 - 1 constants declared
-INFO  18:28:36,421 - 3 global variables declared
-INFO  18:28:36,421 - 0 global arrays declared
-INFO  18:28:36,421 - 0 local variables declared
-INFO  18:28:36,421 - 1 local arrays declared
-INFO  18:28:36,421 - 1 statements in main
-INFO  18:30:01,578 - ================SEMANTIC ANALYSIS SUCCESSFUL=================
+INFO  18:28:19,164 - ======================SEMANTIC ANALYSIS======================
+INFO  18:28:19,167 - Const variable konstanta declared on line 3
+INFO  18:28:19,168 - Global variable x declared on line 5
+INFO  18:28:19,168 - Global variable y declared on line 5
+INFO  18:28:19,168 - Global variable z declared on line 5
+INFO  18:28:19,168 - Method main declared on line 8
+INFO  18:28:19,168 - Local array niz declared on line 8
+INFO  18:28:19,168 - Array niz used: Var niz: Array of char, 0, 1 on line 10
+INFO  18:28:19,170 - =======================SYNTAX ANALYSIS=======================
+INFO  18:28:19,170 - 1 methods in the program
+INFO  18:28:19,170 - 1 constants declared
+INFO  18:28:19,170 - 3 global variables declared
+INFO  18:28:19,170 - 0 global arrays declared
+INFO  18:28:19,170 - 0 local variables declared
+INFO  18:28:19,171 - 1 local arrays declared
+INFO  18:28:19,171 - 1 statements in main
+INFO  18:28:19,179 - ================SEMANTIC ANALYSIS SUCCESSFUL=================

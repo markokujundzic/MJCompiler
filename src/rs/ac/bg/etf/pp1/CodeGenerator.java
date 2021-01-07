@@ -120,6 +120,20 @@ public class CodeGenerator extends VisitorAdaptor
         Code.load(constFactor);
     }
 
+    public void visit(NewArrayFactor newArrayFactor)
+    {
+        Code.put(Code.newarray);
+        if (newArrayFactor.getType().struct == SymTab.boolType ||
+            newArrayFactor.getType().struct == SymTab.intType)
+        {
+            Code.put(1);
+        }
+        else if (newArrayFactor.getType().struct == SymTab.charType)
+        {
+            Code.put(0);
+        }
+    }
+
     /* Term */
     public void visit(MulopTerm mulopTerm)
     {
