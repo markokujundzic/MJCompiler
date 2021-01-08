@@ -1,25 +1,36 @@
 program prog
 
-const int konstanta = 5;
+const int jedan = 1;
+const int pet = 5;
 
-int x; int y; int z;
-int mojNiz[];
+int x;
+int y;
 
 {
-	void main() int niz[];
+	void main() int a[]; char c;
 	{
-		niz = new int[5];
+		a = new int[8];
+		
+		a[1] = 2;
+		a[2] = pet - a[1];
 
-		niz[1] = 2;
-		print(niz[1]);
+		a[3] = 1;
+		a[3]++;
+		print(a[3]);
 
-		niz[niz[1]] = 7;
-		print(niz[2]);
+		a[3]++;
+    	print(a[3]);
 
-		print(-niz[2] + konstanta);
+    	x = 4;
+    	print(x);
 
-		mojNiz = new int[konstanta - 2];
-		mojNiz[0] = 5 % 3;
-		print(mojNiz[0]);
+    	x++;
+    	print(x);
+
+    	x--;
+    	print(x);
+
+    	a[a[1]]--;
+    	print(a[a[1]]);
 	}
 }

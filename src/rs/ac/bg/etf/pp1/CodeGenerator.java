@@ -10,6 +10,8 @@ public class CodeGenerator extends VisitorAdaptor
     private int mainPC;
     private int currentPrintInt = -1;
 
+    private Obj currentDesignator = null;
+
     /* Getters */
     public int getMainPC()
     {
@@ -168,7 +170,9 @@ public class CodeGenerator extends VisitorAdaptor
         if (parent.getClass() == DesignatorStatement.class)
         {
             DesignatorStatement statement = (DesignatorStatement) parent;
-            if (statement.getDesignatorAddition() instanceof PossibleErrorAssignOpDesignatorAddition)
+            if (statement.getDesignatorAddition() instanceof PossibleErrorAssignOpDesignatorAddition ||
+                statement.getDesignatorAddition() instanceof IncrementDesignatorAddition ||
+                statement.getDesignatorAddition() instanceof DecrementDesignatorAddition)
             {
                 assignOP = true;
             }
@@ -182,10 +186,13 @@ public class CodeGenerator extends VisitorAdaptor
         {
             Code.load(designator.getDesignatorName().obj);
         }
+
+        currentDesignator = designator.getDesignatorName().obj;
     }
 
     public void visit(DesignatorName designatorName)
     {
+        /* If it is an array, push the array address to the expression stack */
         if (designatorName.obj.getKind() == Obj.Elem)
         {
             if (designatorName.obj.getLevel() == 0)
@@ -202,7 +209,8 @@ public class CodeGenerator extends VisitorAdaptor
                 }
                 else
                 {
-                    Code.put(Code.load); Code.put(designatorName.obj.getAdr());
+                    Code.put(Code.load);
+                    Code.put(designatorName.obj.getAdr());
                 }
             }
         }
@@ -213,6 +221,118 @@ public class CodeGenerator extends VisitorAdaptor
         if (designatorStatement.getDesignatorAddition() instanceof PossibleErrorAssignOpDesignatorAddition)
         {
             Code.store(designatorStatement.getDesignator().getDesignatorName().obj);
+        }
+    }
+
+    // a[3]++; -> 2 3 | (2 3) -> val | 1
+    // x++: -> val | 1
+    public void visit(IncrementDesignatorAddition incrementDesignatorAddition)
+    {
+        if (currentDesignator.getKind() == Obj.Elem)
+        {
+            Code.put(Code.dup2);
+            Code.put(Code.aload);
+            Code.put(Code.const_1);
+            Code.put(Code.add);
+            Code.put(Code.astore);
+        }
+        else
+        {
+            if (currentDesignator.getLevel() == 0)
+            {
+                Code.put(Code.getstatic);
+                Code.put2(currentDesignator.getAdr());
+            }
+            else
+            {
+                if (currentDesignator.getAdr() >= 0 &&
+                    currentDesignator.getAdr() <= 3)
+                {
+                    Code.put(Code.load_n + currentDesignator.getAdr());
+                }
+                else
+                {
+                    Code.put(Code.load);
+                    Code.put(currentDesignator.getAdr());
+                }
+            }
+
+            Code.put(Code.const_1);
+            Code.put(Code.add);
+
+            if (currentDesignator.getLevel() == 0)
+            {
+                Code.put(Code.putstatic);
+                Code.put2(currentDesignator.getAdr());
+            }
+            else
+            {
+                if (currentDesignator.getAdr() >= 0 &&
+                    currentDesignator.getAdr() <= 3)
+                {
+                    Code.put(Code.store_n + currentDesignator.getAdr());
+                }
+                else
+                {
+                    Code.put(Code.store);
+                    Code.put(currentDesignator.getAdr());
+                }
+            }
+        }
+    }
+
+    public void visit(DecrementDesignatorAddition decrementDesignatorAddition)
+    {
+        if (currentDesignator.getKind() == Obj.Elem)
+        {
+            Code.put(Code.dup2);
+            Code.put(Code.aload);
+            Code.put(Code.const_1);
+            Code.put(Code.sub);
+            Code.put(Code.astore);
+        }
+        else
+        {
+            if (currentDesignator.getLevel() == 0)
+            {
+                Code.put(Code.getstatic);
+                Code.put2(currentDesignator.getAdr());
+            }
+            else
+            {
+                if (currentDesignator.getAdr() >= 0 &&
+                        currentDesignator.getAdr() <= 3)
+                {
+                    Code.put(Code.load_n + currentDesignator.getAdr());
+                }
+                else
+                {
+                    Code.put(Code.load);
+                    Code.put(currentDesignator.getAdr());
+                }
+            }
+
+            Code.put(Code.const_1);
+            Code.put(Code.sub);
+
+            if (currentDesignator.getLevel() == 0)
+            {
+                Code.put(Code.putstatic);
+                Code.put2(currentDesignator.getAdr());
+            }
+            else
+            {
+                if (currentDesignator.getAdr() >= 0 &&
+                        currentDesignator.getAdr() <= 3)
+                {
+                    Code.put(Code.store_n + currentDesignator.getAdr());
+                }
+                else
+                {
+                    Code.put(Code.store);
+                    Code.put(currentDesignator.getAdr());
+                }
+            }
         }
     }
 

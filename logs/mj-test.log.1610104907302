@@ -1,0 +1,154 @@
+INFO  12:16:13,801 - ====================LEXICAL ANALYSIS========================
+INFO  12:16:13,923 - #2 program
+INFO  12:16:13,923 - #9 prog
+INFO  12:16:13,923 - #5 const
+INFO  12:16:13,923 - #9 int
+INFO  12:16:13,923 - #9 jedan
+INFO  12:16:13,923 - #8 =
+INFO  12:16:13,923 - #10 1
+INFO  12:16:13,923 - #6 ;
+INFO  12:16:13,923 - #5 const
+INFO  12:16:13,931 - #9 int
+INFO  12:16:13,931 - #9 pet
+INFO  12:16:13,931 - #8 =
+INFO  12:16:13,931 - #10 5
+INFO  12:16:13,931 - #6 ;
+INFO  12:16:13,931 - #9 int
+INFO  12:16:13,931 - #9 x
+INFO  12:16:13,931 - #6 ;
+INFO  12:16:13,931 - #9 int
+INFO  12:16:13,931 - #9 y
+INFO  12:16:13,931 - #6 ;
+INFO  12:16:13,931 - #3 {
+INFO  12:16:13,931 - #15 void
+INFO  12:16:13,939 - #9 main
+INFO  12:16:13,939 - #13 (
+INFO  12:16:13,939 - #14 )
+INFO  12:16:13,939 - #3 {
+INFO  12:16:13,939 - #9 x
+INFO  12:16:13,939 - #22 ++
+INFO  12:16:13,947 - #8 =
+ERROR 12:16:13,947 - Syntax error on line 12
+INFO  12:16:13,947 - #9 y
+INFO  12:16:13,947 - #23 --
+INFO  12:16:13,947 - #6 ;
+INFO  12:16:13,947 - #4 }
+INFO  12:16:13,947 - #4 }
+ERROR 12:16:13,955 - Successful error recovery by parser on line 12 -> Designator Assignment
+INFO  12:16:13,963 - =======================SYNTAX TREE===========================
+INFO  12:16:13,963 - Program(
+  ProgramName(
+   prog
+  ) [ProgramName]
+  YesDeclarationList(
+    YesDeclarationList(
+      YesDeclarationList(
+        YesDeclarationList(
+          NoDeclarationList(
+          ) [NoDeclarationList]
+          ConstantDeclaration(
+            ConstDeclNoError(
+              Type(
+               int
+              ) [Type]
+              SingleConstDeclList(
+                ConstDeclVariable(
+                  ConstDeclName(
+                   jedan
+                  ) [ConstDeclName]
+                  ConstDeclValueInt(
+                   1
+                  ) [ConstDeclValueInt]
+                ) [ConstDeclVariable]
+              ) [SingleConstDeclList]
+            ) [ConstDeclNoError]
+          ) [ConstantDeclaration]
+        ) [YesDeclarationList]
+        ConstantDeclaration(
+          ConstDeclNoError(
+            Type(
+             int
+            ) [Type]
+            SingleConstDeclList(
+              ConstDeclVariable(
+                ConstDeclName(
+                 pet
+                ) [ConstDeclName]
+                ConstDeclValueInt(
+                 5
+                ) [ConstDeclValueInt]
+              ) [ConstDeclVariable]
+            ) [SingleConstDeclList]
+          ) [ConstDeclNoError]
+        ) [ConstantDeclaration]
+      ) [YesDeclarationList]
+      VariableDeclaration(
+        VarDeclNoError(
+          Type(
+           int
+          ) [Type]
+          SingleVarDeclList(
+            DeclVariable(
+              VarDeclName(
+               x
+              ) [VarDeclName]
+              NoVarDeclArrayOption(
+              ) [NoVarDeclArrayOption]
+            ) [DeclVariable]
+          ) [SingleVarDeclList]
+        ) [VarDeclNoError]
+      ) [VariableDeclaration]
+    ) [YesDeclarationList]
+    VariableDeclaration(
+      VarDeclNoError(
+        Type(
+         int
+        ) [Type]
+        SingleVarDeclList(
+          DeclVariable(
+            VarDeclName(
+             y
+            ) [VarDeclName]
+            NoVarDeclArrayOption(
+            ) [NoVarDeclArrayOption]
+          ) [DeclVariable]
+        ) [SingleVarDeclList]
+      ) [VarDeclNoError]
+    ) [VariableDeclaration]
+  ) [YesDeclarationList]
+  YesMethodDeclarationList(
+    NoMethodDeclarationList(
+    ) [NoMethodDeclarationList]
+    MethodDeclaration(
+      VoidMethodReturnType(
+      ) [VoidMethodReturnType]
+      MethodName(
+       main
+      ) [MethodName]
+      NoMethodParameters(
+      ) [NoMethodParameters]
+      NoMethodVariables(
+      ) [NoMethodVariables]
+      YesMethodBody(
+        NoMethodBody(
+        ) [NoMethodBody]
+        DesignatorStatementDecl(
+          DesignatorStatement(
+            Designator(
+              DesignatorName(
+               x
+              ) [DesignatorName]
+              NoOptionalDesignator(
+              ) [NoOptionalDesignator]
+            ) [Designator]
+            PossibleErrorAssignOpDesignatorAddition(
+              AssignOpExprDesignatorAdditionYesError(
+              ) [AssignOpExprDesignatorAdditionYesError]
+            ) [PossibleErrorAssignOpDesignatorAddition]
+          ) [DesignatorStatement]
+        ) [DesignatorStatementDecl]
+      ) [YesMethodBody]
+    ) [MethodDeclaration]
+  ) [YesMethodDeclarationList]
+) [Program]
+ERROR 12:16:13,971 - ==============ERROR ENCOUNTERED WHILE PARSING==================
