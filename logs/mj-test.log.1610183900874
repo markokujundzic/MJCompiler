@@ -1,0 +1,121 @@
+INFO  16:30:54,209 - ====================LEXICAL ANALYSIS========================
+INFO  16:30:54,290 - #2 program
+INFO  16:30:54,291 - #9 test
+INFO  16:30:54,291 - #3 {
+INFO  16:30:54,292 - #15 void
+INFO  16:30:54,293 - #9 main
+INFO  16:30:54,293 - #13 (
+INFO  16:30:54,294 - #14 )
+INFO  16:30:54,295 - #9 bool
+INFO  16:30:54,295 - #9 x
+INFO  16:30:54,296 - #6 ;
+INFO  16:30:54,298 - #3 {
+INFO  16:30:54,299 - #29 read
+INFO  16:30:54,299 - #13 (
+INFO  16:30:54,299 - #9 x
+INFO  16:30:54,299 - #14 )
+INFO  16:30:54,301 - #6 ;
+INFO  16:30:54,301 - #30 print
+INFO  16:30:54,302 - #13 (
+INFO  16:30:54,302 - #9 x
+INFO  16:30:54,302 - #14 )
+INFO  16:30:54,304 - #6 ;
+INFO  16:30:54,304 - #4 }
+INFO  16:30:54,305 - #4 }
+INFO  16:30:54,322 - =======================SYNTAX TREE===========================
+INFO  16:30:54,323 - Program(
+  ProgramName(
+   test
+  ) [ProgramName]
+  NoDeclarationList(
+  ) [NoDeclarationList]
+  YesMethodDeclarationList(
+    NoMethodDeclarationList(
+    ) [NoMethodDeclarationList]
+    MethodDeclaration(
+      VoidMethodReturnType(
+      ) [VoidMethodReturnType]
+      MethodName(
+       main
+      ) [MethodName]
+      NoMethodParameters(
+      ) [NoMethodParameters]
+      YesMethodVariables(
+        NoMethodVariables(
+        ) [NoMethodVariables]
+        VarDeclNoError(
+          Type(
+           bool
+          ) [Type]
+          SingleVarDeclList(
+            DeclVariable(
+              VarDeclName(
+               x
+              ) [VarDeclName]
+              NoVarDeclArrayOption(
+              ) [NoVarDeclArrayOption]
+            ) [DeclVariable]
+          ) [SingleVarDeclList]
+        ) [VarDeclNoError]
+      ) [YesMethodVariables]
+      YesMethodBody(
+        YesMethodBody(
+          NoMethodBody(
+          ) [NoMethodBody]
+          ReadStatementDecl(
+            ReadStatement(
+              Designator(
+                DesignatorName(
+                 x
+                ) [DesignatorName]
+                NoOptionalDesignator(
+                ) [NoOptionalDesignator]
+              ) [Designator]
+            ) [ReadStatement]
+          ) [ReadStatementDecl]
+        ) [YesMethodBody]
+        PrintStatementDecl(
+          PrintStatement(
+            NoTernaryExpr(
+              SingleCondFact(
+                TermFiniteExpr(
+                  FiniteTerm(
+                    FactorTerm(
+                      DesignatorFactor(
+                        Designator(
+                          DesignatorName(
+                           x
+                          ) [DesignatorName]
+                          NoOptionalDesignator(
+                          ) [NoOptionalDesignator]
+                        ) [Designator]
+                      ) [DesignatorFactor]
+                    ) [FactorTerm]
+                  ) [FiniteTerm]
+                  NoOptionalTermList(
+                  ) [NoOptionalTermList]
+                ) [TermFiniteExpr]
+              ) [SingleCondFact]
+            ) [NoTernaryExpr]
+            OptionalNoPrintNumber(
+            ) [OptionalNoPrintNumber]
+          ) [PrintStatement]
+        ) [PrintStatementDecl]
+      ) [YesMethodBody]
+    ) [MethodDeclaration]
+  ) [YesMethodDeclarationList]
+) [Program]
+INFO  16:30:54,323 - ======================SEMANTIC ANALYSIS======================
+INFO  16:30:54,327 - Method main declared on line 5
+INFO  16:30:54,328 - Local variable x declared on line 6
+INFO  16:30:54,328 - Variable x used: Var x: bool, 0, 1 on line 8
+INFO  16:30:54,328 - Variable x used: Var x: bool, 0, 1 on line 9
+INFO  16:30:54,328 - =======================SYNTAX ANALYSIS=======================
+INFO  16:30:54,328 - 1 methods in the program
+INFO  16:30:54,328 - 0 constants declared
+INFO  16:30:54,328 - 0 global variables declared
+INFO  16:30:54,328 - 0 global arrays declared
+INFO  16:30:54,328 - 1 local variables declared
+INFO  16:30:54,328 - 0 local arrays declared
+INFO  16:30:54,328 - 2 statements in main
+INFO  16:30:54,336 - ================SEMANTIC ANALYSIS SUCCESSFUL=================

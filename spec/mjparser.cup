@@ -97,7 +97,7 @@ nonterminal PrintStatement, ReadStatement, Designator, OptionalDesignatorList;
 nonterminal OptionalDesignator, OptionalDesignatorName, DesignatorActPars, Assignop;
 nonterminal ActPars, OptionalStatement, ElseStatement, Condition;
 nonterminal ReturnExpr, OptionalPrintNumber, PrintNumber, OptionalExpressions, OptionalExpr;
-nonterminal Addop, OptionalFactors, OptionalFactor, Mulop;
+nonterminal Addop, OptionalFactors, OptionalFactor, Mulop, TernaryQuestionMark, TernaryColon, TernaryStart;
 
 /* PRECEDENCE */
 precedence left ELSE;
@@ -446,9 +446,15 @@ CondFact ::=
 /* EXPR - START */
 
 Expr ::=
-		(YesTernaryExpr) CondFact QUESTION_MARK Expr COLON Expr
+		(YesTernaryExpr) CondFact TernaryQuestionMark Expr TernaryColon Expr
 		|
 		(NoTernaryExpr) CondFact
+		;
+TernaryColon ::=
+		(TernaryColon) COLON
+		;
+TernaryQuestionMark::=
+		(TernaryQuestionMark) QUESTION_MARK
 		;
 FiniteExpr ::=
 		(TermFiniteExpr) FiniteTerm OptionalTermList
@@ -468,7 +474,6 @@ OptionalTermList ::=
 FiniteTerm ::=
 		(FiniteTerm) Term
 		;
-
 Term ::=
 		(FactorTerm) Factor
 		|
@@ -490,8 +495,6 @@ Factor ::=
 		|
 		(BoolFactor) BOOL:value
 		|
-		//(NewFactor) NEW Type
-		//|
 		(NewArrayFactor) NEW Type LEFT_SQUARE Expr RIGHT_SQUARE
 		|
 		(ExprFactor) LEFT_PARENTHESIS Expr RIGHT_PARENTHESIS

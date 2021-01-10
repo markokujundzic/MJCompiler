@@ -1,0 +1,191 @@
+INFO  14:35:40,907 - ====================LEXICAL ANALYSIS========================
+INFO  14:35:40,976 - #2 program
+INFO  14:35:40,976 - #9 test301
+INFO  14:35:40,976 - #3 {
+INFO  14:35:40,991 - #15 void
+INFO  14:35:40,991 - #9 main
+INFO  14:35:40,991 - #13 (
+INFO  14:35:40,991 - #14 )
+INFO  14:35:40,991 - #9 int
+INFO  14:35:40,991 - #9 bodovi
+INFO  14:35:40,991 - #6 ;
+INFO  14:35:40,991 - #9 bool
+INFO  14:35:40,991 - #9 bt
+INFO  14:35:40,991 - #6 ;
+INFO  14:35:40,991 - #3 {
+INFO  14:35:40,991 - #30 print
+INFO  14:35:40,991 - #13 (
+INFO  14:35:40,991 - #11 true
+INFO  14:35:40,991 - #33 ?
+INFO  14:35:40,991 - #9 bodovi
+INFO  14:35:40,991 - #36 +
+INFO  14:35:40,991 - #10 20
+INFO  14:35:40,991 - #18 :
+INFO  14:35:41,007 - #9 bodovi
+INFO  14:35:41,007 - #36 +
+INFO  14:35:41,007 - #10 30
+INFO  14:35:41,007 - #14 )
+INFO  14:35:41,007 - #6 ;
+INFO  14:35:41,007 - #4 }
+INFO  14:35:41,007 - #4 }
+INFO  14:35:41,022 - =======================SYNTAX TREE===========================
+INFO  14:35:41,022 - Program(
+  ProgramName(
+   test301
+  ) [ProgramName]
+  NoDeclarationList(
+  ) [NoDeclarationList]
+  YesMethodDeclarationList(
+    NoMethodDeclarationList(
+    ) [NoMethodDeclarationList]
+    MethodDeclaration(
+      VoidMethodReturnType(
+      ) [VoidMethodReturnType]
+      MethodName(
+       main
+      ) [MethodName]
+      NoMethodParameters(
+      ) [NoMethodParameters]
+      YesMethodVariables(
+        YesMethodVariables(
+          NoMethodVariables(
+          ) [NoMethodVariables]
+          VarDeclNoError(
+            Type(
+             int
+            ) [Type]
+            SingleVarDeclList(
+              DeclVariable(
+                VarDeclName(
+                 bodovi
+                ) [VarDeclName]
+                NoVarDeclArrayOption(
+                ) [NoVarDeclArrayOption]
+              ) [DeclVariable]
+            ) [SingleVarDeclList]
+          ) [VarDeclNoError]
+        ) [YesMethodVariables]
+        VarDeclNoError(
+          Type(
+           bool
+          ) [Type]
+          SingleVarDeclList(
+            DeclVariable(
+              VarDeclName(
+               bt
+              ) [VarDeclName]
+              NoVarDeclArrayOption(
+              ) [NoVarDeclArrayOption]
+            ) [DeclVariable]
+          ) [SingleVarDeclList]
+        ) [VarDeclNoError]
+      ) [YesMethodVariables]
+      YesMethodBody(
+        NoMethodBody(
+        ) [NoMethodBody]
+        PrintStatementDecl(
+          PrintStatement(
+            YesTernaryExpr(
+              SingleCondFact(
+                TermFiniteExpr(
+                  FiniteTerm(
+                    FactorTerm(
+                      BoolFactor(
+                       true
+                      ) [BoolFactor]
+                    ) [FactorTerm]
+                  ) [FiniteTerm]
+                  NoOptionalTermList(
+                  ) [NoOptionalTermList]
+                ) [TermFiniteExpr]
+              ) [SingleCondFact]
+              TernaryQuestionMark(
+              ) [TernaryQuestionMark]
+              NoTernaryExpr(
+                SingleCondFact(
+                  TermFiniteExpr(
+                    FiniteTerm(
+                      FactorTerm(
+                        DesignatorFactor(
+                          Designator(
+                            DesignatorName(
+                             bodovi
+                            ) [DesignatorName]
+                            NoOptionalDesignator(
+                            ) [NoOptionalDesignator]
+                          ) [Designator]
+                        ) [DesignatorFactor]
+                      ) [FactorTerm]
+                    ) [FiniteTerm]
+                    YesOptionalTermList(
+                      NoOptionalTermList(
+                      ) [NoOptionalTermList]
+                      AddopPlus(
+                      ) [AddopPlus]
+                      FiniteTerm(
+                        FactorTerm(
+                          IntFactor(
+                           20
+                          ) [IntFactor]
+                        ) [FactorTerm]
+                      ) [FiniteTerm]
+                    ) [YesOptionalTermList]
+                  ) [TermFiniteExpr]
+                ) [SingleCondFact]
+              ) [NoTernaryExpr]
+              NoTernaryExpr(
+                SingleCondFact(
+                  TermFiniteExpr(
+                    FiniteTerm(
+                      FactorTerm(
+                        DesignatorFactor(
+                          Designator(
+                            DesignatorName(
+                             bodovi
+                            ) [DesignatorName]
+                            NoOptionalDesignator(
+                            ) [NoOptionalDesignator]
+                          ) [Designator]
+                        ) [DesignatorFactor]
+                      ) [FactorTerm]
+                    ) [FiniteTerm]
+                    YesOptionalTermList(
+                      NoOptionalTermList(
+                      ) [NoOptionalTermList]
+                      AddopPlus(
+                      ) [AddopPlus]
+                      FiniteTerm(
+                        FactorTerm(
+                          IntFactor(
+                           30
+                          ) [IntFactor]
+                        ) [FactorTerm]
+                      ) [FiniteTerm]
+                    ) [YesOptionalTermList]
+                  ) [TermFiniteExpr]
+                ) [SingleCondFact]
+              ) [NoTernaryExpr]
+            ) [YesTernaryExpr]
+            OptionalNoPrintNumber(
+            ) [OptionalNoPrintNumber]
+          ) [PrintStatement]
+        ) [PrintStatementDecl]
+      ) [YesMethodBody]
+    ) [MethodDeclaration]
+  ) [YesMethodDeclarationList]
+) [Program]
+INFO  14:35:41,022 - ======================SEMANTIC ANALYSIS======================
+INFO  14:35:41,022 - Method main declared on line 4
+INFO  14:35:41,022 - Local variable bodovi declared on line 4
+INFO  14:35:41,022 - Local variable bt declared on line 4
+INFO  14:35:41,022 - Variable bodovi used: Var bodovi: int, 0, 1 on line 6
+INFO  14:35:41,022 - Variable bodovi used: Var bodovi: int, 0, 1 on line 6
+INFO  14:35:41,022 - =======================SYNTAX ANALYSIS=======================
+INFO  14:35:41,022 - 1 methods in the program
+INFO  14:35:41,022 - 0 constants declared
+INFO  14:35:41,022 - 0 global variables declared
+INFO  14:35:41,022 - 0 global arrays declared
+INFO  14:35:41,022 - 2 local variables declared
+INFO  14:35:41,022 - 0 local arrays declared
+INFO  14:35:41,022 - 1 statements in main
+INFO  14:35:41,038 - ================SEMANTIC ANALYSIS SUCCESSFUL=================

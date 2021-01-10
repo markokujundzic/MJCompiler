@@ -4,6 +4,10 @@ import rs.ac.bg.etf.pp1.ast.*;
 import rs.etf.pp1.mj.runtime.Code;
 import rs.etf.pp1.symboltable.concepts.*;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Stack;
+
 public class CodeGenerator extends VisitorAdaptor
 {
     /* Utils */
@@ -11,6 +15,9 @@ public class CodeGenerator extends VisitorAdaptor
     private int currentPrintInt = -1;
 
     private Obj currentDesignator = null;
+
+    private Stack<Integer> jumpOnElseBackpatch = new Stack<>();
+    private Stack<Integer> jumpAfterElseBackpatch = new Stack<>();
 
     /* Getters */
     public int getMainPC()
@@ -165,11 +172,13 @@ public class CodeGenerator extends VisitorAdaptor
     public void visit(Designator designator)
     {
         SyntaxNode parent = designator.getParent();
+
         boolean assignOP = false;
 
         if (parent.getClass() == DesignatorStatement.class)
         {
             DesignatorStatement statement = (DesignatorStatement) parent;
+
             if (statement.getDesignatorAddition() instanceof PossibleErrorAssignOpDesignatorAddition ||
                 statement.getDesignatorAddition() instanceof IncrementDesignatorAddition ||
                 statement.getDesignatorAddition() instanceof DecrementDesignatorAddition)
@@ -224,16 +233,15 @@ public class CodeGenerator extends VisitorAdaptor
         }
     }
 
-    // a[3]++; -> 2 3 | (2 3) -> val | 1
-    // x++: -> val | 1
-    public void visit(IncrementDesignatorAddition incrementDesignatorAddition)
+    /* Helper function */
+    private void processIncrementDecrement(int code)
     {
         if (currentDesignator.getKind() == Obj.Elem)
         {
             Code.put(Code.dup2);
             Code.put(Code.aload);
             Code.put(Code.const_1);
-            Code.put(Code.add);
+            Code.put(code); // add or sub
             Code.put(Code.astore);
         }
         else
@@ -258,7 +266,7 @@ public class CodeGenerator extends VisitorAdaptor
             }
 
             Code.put(Code.const_1);
-            Code.put(Code.add);
+            Code.put(code); // add or sub
 
             if (currentDesignator.getLevel() == 0)
             {
@@ -281,59 +289,16 @@ public class CodeGenerator extends VisitorAdaptor
         }
     }
 
+    // a[3]++; -> 2 3 | (2 3) -> val | 1
+    // x++: -> val | 1
+    public void visit(IncrementDesignatorAddition incrementDesignatorAddition)
+    {
+        processIncrementDecrement(Code.add);
+    }
+
     public void visit(DecrementDesignatorAddition decrementDesignatorAddition)
     {
-        if (currentDesignator.getKind() == Obj.Elem)
-        {
-            Code.put(Code.dup2);
-            Code.put(Code.aload);
-            Code.put(Code.const_1);
-            Code.put(Code.sub);
-            Code.put(Code.astore);
-        }
-        else
-        {
-            if (currentDesignator.getLevel() == 0)
-            {
-                Code.put(Code.getstatic);
-                Code.put2(currentDesignator.getAdr());
-            }
-            else
-            {
-                if (currentDesignator.getAdr() >= 0 &&
-                        currentDesignator.getAdr() <= 3)
-                {
-                    Code.put(Code.load_n + currentDesignator.getAdr());
-                }
-                else
-                {
-                    Code.put(Code.load);
-                    Code.put(currentDesignator.getAdr());
-                }
-            }
-
-            Code.put(Code.const_1);
-            Code.put(Code.sub);
-
-            if (currentDesignator.getLevel() == 0)
-            {
-                Code.put(Code.putstatic);
-                Code.put2(currentDesignator.getAdr());
-            }
-            else
-            {
-                if (currentDesignator.getAdr() >= 0 &&
-                        currentDesignator.getAdr() <= 3)
-                {
-                    Code.put(Code.store_n + currentDesignator.getAdr());
-                }
-                else
-                {
-                    Code.put(Code.store);
-                    Code.put(currentDesignator.getAdr());
-                }
-            }
-        }
+       processIncrementDecrement(Code.sub);
     }
 
     /* Finite Expr */
@@ -347,5 +312,31 @@ public class CodeGenerator extends VisitorAdaptor
         {
             Code.put(Code.sub);
         }
+    }
+
+    /* Ternary Expression */
+    public void visit(SingleCondFact singleCondFact)
+    {
+        if (singleCondFact.getParent().getClass() == YesTernaryExpr.class)
+        {
+            Code.put(Code.const_1);
+            Code.putFalseJump(Code.eq, 0);
+            jumpOnElseBackpatch.push(Code.pc - 2);
+        }
+    }
+
+    public void visit(TernaryColon ternaryColon)
+    {
+        // Code.put(Code.const_1);
+        // Code.put(Code.const_1);
+        // Code.putFalseJump(Code.ne, 0);
+        Code.putJump(0);
+        jumpAfterElseBackpatch.push(Code.pc - 2);
+        Code.fixup(jumpOnElseBackpatch.pop());
+    }
+
+    public void visit(YesTernaryExpr yesTernaryExpr)
+    {
+        Code.fixup(jumpAfterElseBackpatch.pop());
     }
 }

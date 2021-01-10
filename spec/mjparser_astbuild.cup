@@ -136,6 +136,9 @@ nonterminal Addop Addop;
 nonterminal OptionalFactors OptionalFactors;
 nonterminal OptionalFactor OptionalFactor;
 nonterminal Mulop Mulop;
+nonterminal TernaryQuestionMark TernaryQuestionMark;
+nonterminal TernaryColon TernaryColon;
+nonterminal TernaryStart TernaryStart;
 
 /* PRECEDENCE */
 precedence left ELSE;
@@ -474,9 +477,12 @@ CondTerm ::=
 		(SingleCondTerm) CondFact:C1 {: RESULT=new SingleCondTerm(C1); RESULT.setLine(C1left); :}
 		;
 CondFact ::=
-		(SingleCondFact) FiniteExpr:F1 {: RESULT=new SingleCondFact(F1); RESULT.setLine(F1left); :}
+		(SingleCondFact) TernaryStart:T1 FiniteExpr:F2 {: RESULT=new SingleCondFact(T1, F2); RESULT.setLine(T1left); :}
 		|
-		(PluralCondFact) FiniteExpr:F1 Relop:R2 FiniteExpr:F3 {: RESULT=new PluralCondFact(F1, R2, F3); RESULT.setLine(F1left); :}
+		(PluralCondFact) TernaryStart:T1 FiniteExpr:F2 Relop:R3 FiniteExpr:F4 {: RESULT=new PluralCondFact(T1, F2, R3, F4); RESULT.setLine(T1left); :}
+		;
+TernaryStart ::=
+		(TernaryStart) {: RESULT=new TernaryStart(); :} /* epsilon */
 		;
 
 /* CONDITIONS - END */
@@ -484,9 +490,15 @@ CondFact ::=
 /* EXPR - START */
 
 Expr ::=
-		(YesTernaryExpr) CondFact:C1 QUESTION_MARK Expr:E2 COLON Expr:E3 {: RESULT=new YesTernaryExpr(C1, E2, E3); RESULT.setLine(C1left); :}
+		(YesTernaryExpr) CondFact:C1 TernaryQuestionMark:T2 Expr:E3 TernaryColon:T4 Expr:E5 {: RESULT=new YesTernaryExpr(C1, T2, E3, T4, E5); RESULT.setLine(C1left); :}
 		|
 		(NoTernaryExpr) CondFact:C1 {: RESULT=new NoTernaryExpr(C1); RESULT.setLine(C1left); :}
+		;
+TernaryColon ::=
+		(TernaryColon) COLON {: RESULT=new TernaryColon(); :}
+		;
+TernaryQuestionMark::=
+		(TernaryQuestionMark) QUESTION_MARK {: RESULT=new TernaryQuestionMark(); :}
 		;
 FiniteExpr ::=
 		(TermFiniteExpr) FiniteTerm:F1 OptionalTermList:O2 {: RESULT=new TermFiniteExpr(F1, O2); RESULT.setLine(F1left); :}
@@ -506,7 +518,6 @@ OptionalTermList ::=
 FiniteTerm ::=
 		(FiniteTerm) Term:T1 {: RESULT=new FiniteTerm(T1); RESULT.setLine(T1left); :}
 		;
-
 Term ::=
 		(FactorTerm) Factor:F1 {: RESULT=new FactorTerm(F1); RESULT.setLine(F1left); :}
 		|
@@ -528,8 +539,6 @@ Factor ::=
 		|
 		(BoolFactor) BOOL:value {: RESULT=new BoolFactor(value); RESULT.setLine(valueleft); :}
 		|
-		//(NewFactor) NEW Type
-		//|
 		(NewArrayFactor) NEW Type:T1 LEFT_SQUARE Expr:E2 RIGHT_SQUARE {: RESULT=new NewArrayFactor(T1, E2); RESULT.setLine(T1left); :}
 		|
 		(ExprFactor) LEFT_PARENTHESIS Expr:E1 RIGHT_PARENTHESIS {: RESULT=new ExprFactor(E1); RESULT.setLine(E1left); :}

@@ -1,0 +1,1861 @@
+INFO  19:02:29,525 - ====================LEXICAL ANALYSIS========================
+INFO  19:02:29,604 - #2 program
+INFO  19:02:29,605 - #9 test301
+INFO  19:02:29,605 - #5 const
+INFO  19:02:29,606 - #9 int
+INFO  19:02:29,606 - #9 nula
+INFO  19:02:29,607 - #8 =
+INFO  19:02:29,607 - #10 0
+INFO  19:02:29,607 - #6 ;
+INFO  19:02:29,608 - #5 const
+INFO  19:02:29,609 - #9 int
+INFO  19:02:29,609 - #9 jedan
+INFO  19:02:29,609 - #8 =
+INFO  19:02:29,609 - #10 1
+INFO  19:02:29,609 - #6 ;
+INFO  19:02:29,609 - #5 const
+INFO  19:02:29,609 - #9 int
+INFO  19:02:29,609 - #9 pet
+INFO  19:02:29,609 - #8 =
+INFO  19:02:29,609 - #10 5
+INFO  19:02:29,609 - #6 ;
+INFO  19:02:29,609 - #9 int
+INFO  19:02:29,609 - #9 niz
+INFO  19:02:29,609 - #20 [
+INFO  19:02:29,616 - #21 ]
+INFO  19:02:29,617 - #6 ;
+INFO  19:02:29,620 - #9 char
+INFO  19:02:29,620 - #9 nizch
+INFO  19:02:29,620 - #20 [
+INFO  19:02:29,620 - #21 ]
+INFO  19:02:29,620 - #6 ;
+INFO  19:02:29,621 - #3 {
+INFO  19:02:29,621 - #15 void
+INFO  19:02:29,622 - #9 main
+INFO  19:02:29,623 - #13 (
+INFO  19:02:29,624 - #14 )
+INFO  19:02:29,625 - #9 int
+INFO  19:02:29,626 - #9 bodovi
+INFO  19:02:29,626 - #6 ;
+INFO  19:02:29,626 - #9 bool
+INFO  19:02:29,626 - #9 bt
+INFO  19:02:29,626 - #6 ;
+INFO  19:02:29,626 - #3 {
+INFO  19:02:29,627 - #9 bodovi
+INFO  19:02:29,627 - #8 =
+INFO  19:02:29,629 - #10 0
+INFO  19:02:29,630 - #6 ;
+INFO  19:02:29,636 - #9 bodovi
+INFO  19:02:29,636 - #22 ++
+INFO  19:02:29,636 - #6 ;
+INFO  19:02:29,637 - #9 bodovi
+INFO  19:02:29,637 - #8 =
+INFO  19:02:29,637 - #9 bodovi
+INFO  19:02:29,637 - #36 +
+INFO  19:02:29,638 - #9 jedan
+INFO  19:02:29,639 - #6 ;
+INFO  19:02:29,639 - #9 bodovi
+INFO  19:02:29,639 - #8 =
+INFO  19:02:29,639 - #9 bodovi
+INFO  19:02:29,639 - #37 *
+INFO  19:02:29,640 - #9 pet
+INFO  19:02:29,641 - #6 ;
+INFO  19:02:29,642 - #9 bodovi
+INFO  19:02:29,642 - #23 --
+INFO  19:02:29,642 - #6 ;
+INFO  19:02:29,643 - #30 print
+INFO  19:02:29,643 - #13 (
+INFO  19:02:29,643 - #9 bodovi
+INFO  19:02:29,643 - #14 )
+INFO  19:02:29,644 - #6 ;
+INFO  19:02:29,644 - #9 niz
+INFO  19:02:29,645 - #8 =
+INFO  19:02:29,645 - #35 new
+INFO  19:02:29,645 - #9 int
+INFO  19:02:29,645 - #20 [
+INFO  19:02:29,646 - #10 3
+INFO  19:02:29,646 - #21 ]
+INFO  19:02:29,646 - #6 ;
+INFO  19:02:29,646 - #9 niz
+INFO  19:02:29,646 - #20 [
+INFO  19:02:29,646 - #9 nula
+INFO  19:02:29,646 - #21 ]
+INFO  19:02:29,646 - #8 =
+INFO  19:02:29,646 - #9 jedan
+INFO  19:02:29,646 - #6 ;
+INFO  19:02:29,647 - #9 niz
+INFO  19:02:29,647 - #20 [
+INFO  19:02:29,647 - #10 1
+INFO  19:02:29,647 - #21 ]
+INFO  19:02:29,647 - #8 =
+INFO  19:02:29,647 - #10 2
+INFO  19:02:29,647 - #6 ;
+INFO  19:02:29,647 - #9 niz
+INFO  19:02:29,647 - #20 [
+INFO  19:02:29,647 - #9 niz
+INFO  19:02:29,647 - #20 [
+INFO  19:02:29,647 - #9 jedan
+INFO  19:02:29,647 - #21 ]
+INFO  19:02:29,647 - #21 ]
+INFO  19:02:29,647 - #8 =
+INFO  19:02:29,647 - #9 niz
+INFO  19:02:29,647 - #20 [
+INFO  19:02:29,647 - #9 niz
+INFO  19:02:29,647 - #20 [
+INFO  19:02:29,647 - #10 0
+INFO  19:02:29,647 - #21 ]
+INFO  19:02:29,647 - #21 ]
+INFO  19:02:29,648 - #37 *
+INFO  19:02:29,648 - #10 3
+INFO  19:02:29,648 - #6 ;
+INFO  19:02:29,648 - #9 bodovi
+INFO  19:02:29,648 - #8 =
+INFO  19:02:29,648 - #9 niz
+INFO  19:02:29,648 - #20 [
+INFO  19:02:29,648 - #10 2
+INFO  19:02:29,648 - #21 ]
+INFO  19:02:29,648 - #38 /
+INFO  19:02:29,648 - #9 niz
+INFO  19:02:29,649 - #20 [
+INFO  19:02:29,649 - #10 0
+INFO  19:02:29,649 - #21 ]
+INFO  19:02:29,649 - #6 ;
+INFO  19:02:29,649 - #30 print
+INFO  19:02:29,649 - #13 (
+INFO  19:02:29,649 - #9 bodovi
+INFO  19:02:29,649 - #14 )
+INFO  19:02:29,649 - #6 ;
+INFO  19:02:29,649 - #30 print
+INFO  19:02:29,649 - #13 (
+INFO  19:02:29,649 - #9 niz
+INFO  19:02:29,649 - #20 [
+INFO  19:02:29,649 - #10 2
+INFO  19:02:29,649 - #21 ]
+INFO  19:02:29,650 - #14 )
+INFO  19:02:29,650 - #6 ;
+INFO  19:02:29,650 - #9 nizch
+INFO  19:02:29,650 - #8 =
+INFO  19:02:29,650 - #35 new
+INFO  19:02:29,650 - #9 char
+INFO  19:02:29,650 - #20 [
+INFO  19:02:29,650 - #10 3
+INFO  19:02:29,650 - #21 ]
+INFO  19:02:29,650 - #6 ;
+INFO  19:02:29,650 - #9 nizch
+INFO  19:02:29,650 - #20 [
+INFO  19:02:29,651 - #10 0
+INFO  19:02:29,651 - #21 ]
+INFO  19:02:29,651 - #8 =
+INFO  19:02:29,651 - #12 a
+INFO  19:02:29,651 - #6 ;
+INFO  19:02:29,651 - #9 nizch
+INFO  19:02:29,651 - #20 [
+INFO  19:02:29,651 - #9 jedan
+INFO  19:02:29,651 - #21 ]
+INFO  19:02:29,651 - #8 =
+INFO  19:02:29,651 - #12 b
+INFO  19:02:29,651 - #6 ;
+INFO  19:02:29,651 - #9 nizch
+INFO  19:02:29,651 - #20 [
+INFO  19:02:29,651 - #9 pet
+INFO  19:02:29,652 - #34 -
+INFO  19:02:29,652 - #10 3
+INFO  19:02:29,652 - #21 ]
+INFO  19:02:29,653 - #8 =
+INFO  19:02:29,653 - #12 c
+INFO  19:02:29,653 - #6 ;
+INFO  19:02:29,653 - #30 print
+INFO  19:02:29,653 - #13 (
+INFO  19:02:29,653 - #9 nizch
+INFO  19:02:29,653 - #20 [
+INFO  19:02:29,653 - #10 1
+INFO  19:02:29,653 - #21 ]
+INFO  19:02:29,653 - #14 )
+INFO  19:02:29,653 - #6 ;
+INFO  19:02:29,653 - #30 print
+INFO  19:02:29,653 - #13 (
+INFO  19:02:29,653 - #9 nizch
+INFO  19:02:29,653 - #20 [
+INFO  19:02:29,653 - #9 jedan
+INFO  19:02:29,653 - #37 *
+INFO  19:02:29,653 - #10 2
+INFO  19:02:29,653 - #21 ]
+INFO  19:02:29,653 - #14 )
+INFO  19:02:29,653 - #6 ;
+INFO  19:02:29,654 - #9 bodovi
+INFO  19:02:29,654 - #8 =
+INFO  19:02:29,654 - #9 bodovi
+INFO  19:02:29,654 - #36 +
+INFO  19:02:29,654 - #13 (
+INFO  19:02:29,654 - #9 pet
+INFO  19:02:29,654 - #37 *
+INFO  19:02:29,654 - #9 jedan
+INFO  19:02:29,654 - #34 -
+INFO  19:02:29,654 - #10 1
+INFO  19:02:29,654 - #14 )
+INFO  19:02:29,654 - #37 *
+INFO  19:02:29,654 - #9 bodovi
+INFO  19:02:29,654 - #34 -
+INFO  19:02:29,655 - #13 (
+INFO  19:02:29,655 - #10 3
+INFO  19:02:29,655 - #39 %
+INFO  19:02:29,655 - #10 2
+INFO  19:02:29,656 - #36 +
+INFO  19:02:29,656 - #10 3
+INFO  19:02:29,656 - #37 *
+INFO  19:02:29,656 - #10 2
+INFO  19:02:29,656 - #34 -
+INFO  19:02:29,656 - #10 3
+INFO  19:02:29,656 - #14 )
+INFO  19:02:29,656 - #6 ;
+INFO  19:02:29,656 - #30 print
+INFO  19:02:29,656 - #13 (
+INFO  19:02:29,656 - #9 bodovi
+INFO  19:02:29,656 - #14 )
+INFO  19:02:29,656 - #6 ;
+INFO  19:02:29,656 - #9 bt
+INFO  19:02:29,656 - #8 =
+INFO  19:02:29,656 - #11 true
+INFO  19:02:29,656 - #6 ;
+INFO  19:02:29,656 - #30 print
+INFO  19:02:29,656 - #13 (
+INFO  19:02:29,656 - #11 false
+INFO  19:02:29,656 - #33 ?
+INFO  19:02:29,656 - #11 false
+INFO  19:02:29,657 - #33 ?
+INFO  19:02:29,657 - #10 1
+INFO  19:02:29,657 - #18 :
+INFO  19:02:29,657 - #10 2
+INFO  19:02:29,658 - #18 :
+INFO  19:02:29,658 - #11 false
+INFO  19:02:29,659 - #33 ?
+INFO  19:02:29,659 - #10 3
+INFO  19:02:29,659 - #18 :
+INFO  19:02:29,659 - #10 4
+INFO  19:02:29,659 - #14 )
+INFO  19:02:29,659 - #6 ;
+INFO  19:02:29,659 - #4 }
+INFO  19:02:29,659 - #4 }
+INFO  19:02:29,670 - =======================SYNTAX TREE===========================
+INFO  19:02:29,679 - Program(
+  ProgramName(
+   test301
+  ) [ProgramName]
+  YesDeclarationList(
+    YesDeclarationList(
+      YesDeclarationList(
+        YesDeclarationList(
+          YesDeclarationList(
+            NoDeclarationList(
+            ) [NoDeclarationList]
+            ConstantDeclaration(
+              ConstDeclNoError(
+                Type(
+                 int
+                ) [Type]
+                SingleConstDeclList(
+                  ConstDeclVariable(
+                    ConstDeclName(
+                     nula
+                    ) [ConstDeclName]
+                    ConstDeclValueInt(
+                     0
+                    ) [ConstDeclValueInt]
+                  ) [ConstDeclVariable]
+                ) [SingleConstDeclList]
+              ) [ConstDeclNoError]
+            ) [ConstantDeclaration]
+          ) [YesDeclarationList]
+          ConstantDeclaration(
+            ConstDeclNoError(
+              Type(
+               int
+              ) [Type]
+              SingleConstDeclList(
+                ConstDeclVariable(
+                  ConstDeclName(
+                   jedan
+                  ) [ConstDeclName]
+                  ConstDeclValueInt(
+                   1
+                  ) [ConstDeclValueInt]
+                ) [ConstDeclVariable]
+              ) [SingleConstDeclList]
+            ) [ConstDeclNoError]
+          ) [ConstantDeclaration]
+        ) [YesDeclarationList]
+        ConstantDeclaration(
+          ConstDeclNoError(
+            Type(
+             int
+            ) [Type]
+            SingleConstDeclList(
+              ConstDeclVariable(
+                ConstDeclName(
+                 pet
+                ) [ConstDeclName]
+                ConstDeclValueInt(
+                 5
+                ) [ConstDeclValueInt]
+              ) [ConstDeclVariable]
+            ) [SingleConstDeclList]
+          ) [ConstDeclNoError]
+        ) [ConstantDeclaration]
+      ) [YesDeclarationList]
+      VariableDeclaration(
+        VarDeclNoError(
+          Type(
+           int
+          ) [Type]
+          SingleVarDeclList(
+            DeclVariable(
+              VarDeclName(
+               niz
+              ) [VarDeclName]
+              YesVarDeclArrayOption(
+              ) [YesVarDeclArrayOption]
+            ) [DeclVariable]
+          ) [SingleVarDeclList]
+        ) [VarDeclNoError]
+      ) [VariableDeclaration]
+    ) [YesDeclarationList]
+    VariableDeclaration(
+      VarDeclNoError(
+        Type(
+         char
+        ) [Type]
+        SingleVarDeclList(
+          DeclVariable(
+            VarDeclName(
+             nizch
+            ) [VarDeclName]
+            YesVarDeclArrayOption(
+            ) [YesVarDeclArrayOption]
+          ) [DeclVariable]
+        ) [SingleVarDeclList]
+      ) [VarDeclNoError]
+    ) [VariableDeclaration]
+  ) [YesDeclarationList]
+  YesMethodDeclarationList(
+    NoMethodDeclarationList(
+    ) [NoMethodDeclarationList]
+    MethodDeclaration(
+      VoidMethodReturnType(
+      ) [VoidMethodReturnType]
+      MethodName(
+       main
+      ) [MethodName]
+      NoMethodParameters(
+      ) [NoMethodParameters]
+      YesMethodVariables(
+        YesMethodVariables(
+          NoMethodVariables(
+          ) [NoMethodVariables]
+          VarDeclNoError(
+            Type(
+             int
+            ) [Type]
+            SingleVarDeclList(
+              DeclVariable(
+                VarDeclName(
+                 bodovi
+                ) [VarDeclName]
+                NoVarDeclArrayOption(
+                ) [NoVarDeclArrayOption]
+              ) [DeclVariable]
+            ) [SingleVarDeclList]
+          ) [VarDeclNoError]
+        ) [YesMethodVariables]
+        VarDeclNoError(
+          Type(
+           bool
+          ) [Type]
+          SingleVarDeclList(
+            DeclVariable(
+              VarDeclName(
+               bt
+              ) [VarDeclName]
+              NoVarDeclArrayOption(
+              ) [NoVarDeclArrayOption]
+            ) [DeclVariable]
+          ) [SingleVarDeclList]
+        ) [VarDeclNoError]
+      ) [YesMethodVariables]
+      YesMethodBody(
+        YesMethodBody(
+          YesMethodBody(
+            YesMethodBody(
+              YesMethodBody(
+                YesMethodBody(
+                  YesMethodBody(
+                    YesMethodBody(
+                      YesMethodBody(
+                        YesMethodBody(
+                          YesMethodBody(
+                            YesMethodBody(
+                              YesMethodBody(
+                                YesMethodBody(
+                                  YesMethodBody(
+                                    YesMethodBody(
+                                      YesMethodBody(
+                                        YesMethodBody(
+                                          YesMethodBody(
+                                            YesMethodBody(
+                                              YesMethodBody(
+                                                YesMethodBody(
+                                                  YesMethodBody(
+                                                    NoMethodBody(
+                                                    ) [NoMethodBody]
+                                                    DesignatorStatementDecl(
+                                                      DesignatorStatement(
+                                                        Designator(
+                                                          DesignatorName(
+                                                           bodovi
+                                                          ) [DesignatorName]
+                                                          NoOptionalDesignator(
+                                                          ) [NoOptionalDesignator]
+                                                        ) [Designator]
+                                                        PossibleErrorAssignOpDesignatorAddition(
+                                                          AssignOpExprDesignatorAdditionNoError(
+                                                            Assignop(
+                                                            ) [Assignop]
+                                                            NoTernaryExpr(
+                                                              SingleCondFact(
+                                                                TernaryStart(
+                                                                ) [TernaryStart]
+                                                                TermFiniteExpr(
+                                                                  FiniteTerm(
+                                                                    FactorTerm(
+                                                                      IntFactor(
+                                                                       0
+                                                                      ) [IntFactor]
+                                                                    ) [FactorTerm]
+                                                                  ) [FiniteTerm]
+                                                                  NoOptionalTermList(
+                                                                  ) [NoOptionalTermList]
+                                                                ) [TermFiniteExpr]
+                                                              ) [SingleCondFact]
+                                                            ) [NoTernaryExpr]
+                                                          ) [AssignOpExprDesignatorAdditionNoError]
+                                                        ) [PossibleErrorAssignOpDesignatorAddition]
+                                                      ) [DesignatorStatement]
+                                                    ) [DesignatorStatementDecl]
+                                                  ) [YesMethodBody]
+                                                  DesignatorStatementDecl(
+                                                    DesignatorStatement(
+                                                      Designator(
+                                                        DesignatorName(
+                                                         bodovi
+                                                        ) [DesignatorName]
+                                                        NoOptionalDesignator(
+                                                        ) [NoOptionalDesignator]
+                                                      ) [Designator]
+                                                      IncrementDesignatorAddition(
+                                                      ) [IncrementDesignatorAddition]
+                                                    ) [DesignatorStatement]
+                                                  ) [DesignatorStatementDecl]
+                                                ) [YesMethodBody]
+                                                DesignatorStatementDecl(
+                                                  DesignatorStatement(
+                                                    Designator(
+                                                      DesignatorName(
+                                                       bodovi
+                                                      ) [DesignatorName]
+                                                      NoOptionalDesignator(
+                                                      ) [NoOptionalDesignator]
+                                                    ) [Designator]
+                                                    PossibleErrorAssignOpDesignatorAddition(
+                                                      AssignOpExprDesignatorAdditionNoError(
+                                                        Assignop(
+                                                        ) [Assignop]
+                                                        NoTernaryExpr(
+                                                          SingleCondFact(
+                                                            TernaryStart(
+                                                            ) [TernaryStart]
+                                                            TermFiniteExpr(
+                                                              FiniteTerm(
+                                                                FactorTerm(
+                                                                  DesignatorFactor(
+                                                                    Designator(
+                                                                      DesignatorName(
+                                                                       bodovi
+                                                                      ) [DesignatorName]
+                                                                      NoOptionalDesignator(
+                                                                      ) [NoOptionalDesignator]
+                                                                    ) [Designator]
+                                                                  ) [DesignatorFactor]
+                                                                ) [FactorTerm]
+                                                              ) [FiniteTerm]
+                                                              YesOptionalTermList(
+                                                                NoOptionalTermList(
+                                                                ) [NoOptionalTermList]
+                                                                AddopPlus(
+                                                                ) [AddopPlus]
+                                                                FiniteTerm(
+                                                                  FactorTerm(
+                                                                    DesignatorFactor(
+                                                                      Designator(
+                                                                        DesignatorName(
+                                                                         jedan
+                                                                        ) [DesignatorName]
+                                                                        NoOptionalDesignator(
+                                                                        ) [NoOptionalDesignator]
+                                                                      ) [Designator]
+                                                                    ) [DesignatorFactor]
+                                                                  ) [FactorTerm]
+                                                                ) [FiniteTerm]
+                                                              ) [YesOptionalTermList]
+                                                            ) [TermFiniteExpr]
+                                                          ) [SingleCondFact]
+                                                        ) [NoTernaryExpr]
+                                                      ) [AssignOpExprDesignatorAdditionNoError]
+                                                    ) [PossibleErrorAssignOpDesignatorAddition]
+                                                  ) [DesignatorStatement]
+                                                ) [DesignatorStatementDecl]
+                                              ) [YesMethodBody]
+                                              DesignatorStatementDecl(
+                                                DesignatorStatement(
+                                                  Designator(
+                                                    DesignatorName(
+                                                     bodovi
+                                                    ) [DesignatorName]
+                                                    NoOptionalDesignator(
+                                                    ) [NoOptionalDesignator]
+                                                  ) [Designator]
+                                                  PossibleErrorAssignOpDesignatorAddition(
+                                                    AssignOpExprDesignatorAdditionNoError(
+                                                      Assignop(
+                                                      ) [Assignop]
+                                                      NoTernaryExpr(
+                                                        SingleCondFact(
+                                                          TernaryStart(
+                                                          ) [TernaryStart]
+                                                          TermFiniteExpr(
+                                                            FiniteTerm(
+                                                              MulopTerm(
+                                                                FactorTerm(
+                                                                  DesignatorFactor(
+                                                                    Designator(
+                                                                      DesignatorName(
+                                                                       bodovi
+                                                                      ) [DesignatorName]
+                                                                      NoOptionalDesignator(
+                                                                      ) [NoOptionalDesignator]
+                                                                    ) [Designator]
+                                                                  ) [DesignatorFactor]
+                                                                ) [FactorTerm]
+                                                                MulopMul(
+                                                                ) [MulopMul]
+                                                                DesignatorFactor(
+                                                                  Designator(
+                                                                    DesignatorName(
+                                                                     pet
+                                                                    ) [DesignatorName]
+                                                                    NoOptionalDesignator(
+                                                                    ) [NoOptionalDesignator]
+                                                                  ) [Designator]
+                                                                ) [DesignatorFactor]
+                                                              ) [MulopTerm]
+                                                            ) [FiniteTerm]
+                                                            NoOptionalTermList(
+                                                            ) [NoOptionalTermList]
+                                                          ) [TermFiniteExpr]
+                                                        ) [SingleCondFact]
+                                                      ) [NoTernaryExpr]
+                                                    ) [AssignOpExprDesignatorAdditionNoError]
+                                                  ) [PossibleErrorAssignOpDesignatorAddition]
+                                                ) [DesignatorStatement]
+                                              ) [DesignatorStatementDecl]
+                                            ) [YesMethodBody]
+                                            DesignatorStatementDecl(
+                                              DesignatorStatement(
+                                                Designator(
+                                                  DesignatorName(
+                                                   bodovi
+                                                  ) [DesignatorName]
+                                                  NoOptionalDesignator(
+                                                  ) [NoOptionalDesignator]
+                                                ) [Designator]
+                                                DecrementDesignatorAddition(
+                                                ) [DecrementDesignatorAddition]
+                                              ) [DesignatorStatement]
+                                            ) [DesignatorStatementDecl]
+                                          ) [YesMethodBody]
+                                          PrintStatementDecl(
+                                            PrintStatement(
+                                              NoTernaryExpr(
+                                                SingleCondFact(
+                                                  TernaryStart(
+                                                  ) [TernaryStart]
+                                                  TermFiniteExpr(
+                                                    FiniteTerm(
+                                                      FactorTerm(
+                                                        DesignatorFactor(
+                                                          Designator(
+                                                            DesignatorName(
+                                                             bodovi
+                                                            ) [DesignatorName]
+                                                            NoOptionalDesignator(
+                                                            ) [NoOptionalDesignator]
+                                                          ) [Designator]
+                                                        ) [DesignatorFactor]
+                                                      ) [FactorTerm]
+                                                    ) [FiniteTerm]
+                                                    NoOptionalTermList(
+                                                    ) [NoOptionalTermList]
+                                                  ) [TermFiniteExpr]
+                                                ) [SingleCondFact]
+                                              ) [NoTernaryExpr]
+                                              OptionalNoPrintNumber(
+                                              ) [OptionalNoPrintNumber]
+                                            ) [PrintStatement]
+                                          ) [PrintStatementDecl]
+                                        ) [YesMethodBody]
+                                        DesignatorStatementDecl(
+                                          DesignatorStatement(
+                                            Designator(
+                                              DesignatorName(
+                                               niz
+                                              ) [DesignatorName]
+                                              NoOptionalDesignator(
+                                              ) [NoOptionalDesignator]
+                                            ) [Designator]
+                                            PossibleErrorAssignOpDesignatorAddition(
+                                              AssignOpExprDesignatorAdditionNoError(
+                                                Assignop(
+                                                ) [Assignop]
+                                                NoTernaryExpr(
+                                                  SingleCondFact(
+                                                    TernaryStart(
+                                                    ) [TernaryStart]
+                                                    TermFiniteExpr(
+                                                      FiniteTerm(
+                                                        FactorTerm(
+                                                          NewArrayFactor(
+                                                            Type(
+                                                             int
+                                                            ) [Type]
+                                                            NoTernaryExpr(
+                                                              SingleCondFact(
+                                                                TernaryStart(
+                                                                ) [TernaryStart]
+                                                                TermFiniteExpr(
+                                                                  FiniteTerm(
+                                                                    FactorTerm(
+                                                                      IntFactor(
+                                                                       3
+                                                                      ) [IntFactor]
+                                                                    ) [FactorTerm]
+                                                                  ) [FiniteTerm]
+                                                                  NoOptionalTermList(
+                                                                  ) [NoOptionalTermList]
+                                                                ) [TermFiniteExpr]
+                                                              ) [SingleCondFact]
+                                                            ) [NoTernaryExpr]
+                                                          ) [NewArrayFactor]
+                                                        ) [FactorTerm]
+                                                      ) [FiniteTerm]
+                                                      NoOptionalTermList(
+                                                      ) [NoOptionalTermList]
+                                                    ) [TermFiniteExpr]
+                                                  ) [SingleCondFact]
+                                                ) [NoTernaryExpr]
+                                              ) [AssignOpExprDesignatorAdditionNoError]
+                                            ) [PossibleErrorAssignOpDesignatorAddition]
+                                          ) [DesignatorStatement]
+                                        ) [DesignatorStatementDecl]
+                                      ) [YesMethodBody]
+                                      DesignatorStatementDecl(
+                                        DesignatorStatement(
+                                          Designator(
+                                            DesignatorName(
+                                             niz
+                                            ) [DesignatorName]
+                                            YesOptionalDesignator(
+                                              NoTernaryExpr(
+                                                SingleCondFact(
+                                                  TernaryStart(
+                                                  ) [TernaryStart]
+                                                  TermFiniteExpr(
+                                                    FiniteTerm(
+                                                      FactorTerm(
+                                                        DesignatorFactor(
+                                                          Designator(
+                                                            DesignatorName(
+                                                             nula
+                                                            ) [DesignatorName]
+                                                            NoOptionalDesignator(
+                                                            ) [NoOptionalDesignator]
+                                                          ) [Designator]
+                                                        ) [DesignatorFactor]
+                                                      ) [FactorTerm]
+                                                    ) [FiniteTerm]
+                                                    NoOptionalTermList(
+                                                    ) [NoOptionalTermList]
+                                                  ) [TermFiniteExpr]
+                                                ) [SingleCondFact]
+                                              ) [NoTernaryExpr]
+                                            ) [YesOptionalDesignator]
+                                          ) [Designator]
+                                          PossibleErrorAssignOpDesignatorAddition(
+                                            AssignOpExprDesignatorAdditionNoError(
+                                              Assignop(
+                                              ) [Assignop]
+                                              NoTernaryExpr(
+                                                SingleCondFact(
+                                                  TernaryStart(
+                                                  ) [TernaryStart]
+                                                  TermFiniteExpr(
+                                                    FiniteTerm(
+                                                      FactorTerm(
+                                                        DesignatorFactor(
+                                                          Designator(
+                                                            DesignatorName(
+                                                             jedan
+                                                            ) [DesignatorName]
+                                                            NoOptionalDesignator(
+                                                            ) [NoOptionalDesignator]
+                                                          ) [Designator]
+                                                        ) [DesignatorFactor]
+                                                      ) [FactorTerm]
+                                                    ) [FiniteTerm]
+                                                    NoOptionalTermList(
+                                                    ) [NoOptionalTermList]
+                                                  ) [TermFiniteExpr]
+                                                ) [SingleCondFact]
+                                              ) [NoTernaryExpr]
+                                            ) [AssignOpExprDesignatorAdditionNoError]
+                                          ) [PossibleErrorAssignOpDesignatorAddition]
+                                        ) [DesignatorStatement]
+                                      ) [DesignatorStatementDecl]
+                                    ) [YesMethodBody]
+                                    DesignatorStatementDecl(
+                                      DesignatorStatement(
+                                        Designator(
+                                          DesignatorName(
+                                           niz
+                                          ) [DesignatorName]
+                                          YesOptionalDesignator(
+                                            NoTernaryExpr(
+                                              SingleCondFact(
+                                                TernaryStart(
+                                                ) [TernaryStart]
+                                                TermFiniteExpr(
+                                                  FiniteTerm(
+                                                    FactorTerm(
+                                                      IntFactor(
+                                                       1
+                                                      ) [IntFactor]
+                                                    ) [FactorTerm]
+                                                  ) [FiniteTerm]
+                                                  NoOptionalTermList(
+                                                  ) [NoOptionalTermList]
+                                                ) [TermFiniteExpr]
+                                              ) [SingleCondFact]
+                                            ) [NoTernaryExpr]
+                                          ) [YesOptionalDesignator]
+                                        ) [Designator]
+                                        PossibleErrorAssignOpDesignatorAddition(
+                                          AssignOpExprDesignatorAdditionNoError(
+                                            Assignop(
+                                            ) [Assignop]
+                                            NoTernaryExpr(
+                                              SingleCondFact(
+                                                TernaryStart(
+                                                ) [TernaryStart]
+                                                TermFiniteExpr(
+                                                  FiniteTerm(
+                                                    FactorTerm(
+                                                      IntFactor(
+                                                       2
+                                                      ) [IntFactor]
+                                                    ) [FactorTerm]
+                                                  ) [FiniteTerm]
+                                                  NoOptionalTermList(
+                                                  ) [NoOptionalTermList]
+                                                ) [TermFiniteExpr]
+                                              ) [SingleCondFact]
+                                            ) [NoTernaryExpr]
+                                          ) [AssignOpExprDesignatorAdditionNoError]
+                                        ) [PossibleErrorAssignOpDesignatorAddition]
+                                      ) [DesignatorStatement]
+                                    ) [DesignatorStatementDecl]
+                                  ) [YesMethodBody]
+                                  DesignatorStatementDecl(
+                                    DesignatorStatement(
+                                      Designator(
+                                        DesignatorName(
+                                         niz
+                                        ) [DesignatorName]
+                                        YesOptionalDesignator(
+                                          NoTernaryExpr(
+                                            SingleCondFact(
+                                              TernaryStart(
+                                              ) [TernaryStart]
+                                              TermFiniteExpr(
+                                                FiniteTerm(
+                                                  FactorTerm(
+                                                    DesignatorFactor(
+                                                      Designator(
+                                                        DesignatorName(
+                                                         niz
+                                                        ) [DesignatorName]
+                                                        YesOptionalDesignator(
+                                                          NoTernaryExpr(
+                                                            SingleCondFact(
+                                                              TernaryStart(
+                                                              ) [TernaryStart]
+                                                              TermFiniteExpr(
+                                                                FiniteTerm(
+                                                                  FactorTerm(
+                                                                    DesignatorFactor(
+                                                                      Designator(
+                                                                        DesignatorName(
+                                                                         jedan
+                                                                        ) [DesignatorName]
+                                                                        NoOptionalDesignator(
+                                                                        ) [NoOptionalDesignator]
+                                                                      ) [Designator]
+                                                                    ) [DesignatorFactor]
+                                                                  ) [FactorTerm]
+                                                                ) [FiniteTerm]
+                                                                NoOptionalTermList(
+                                                                ) [NoOptionalTermList]
+                                                              ) [TermFiniteExpr]
+                                                            ) [SingleCondFact]
+                                                          ) [NoTernaryExpr]
+                                                        ) [YesOptionalDesignator]
+                                                      ) [Designator]
+                                                    ) [DesignatorFactor]
+                                                  ) [FactorTerm]
+                                                ) [FiniteTerm]
+                                                NoOptionalTermList(
+                                                ) [NoOptionalTermList]
+                                              ) [TermFiniteExpr]
+                                            ) [SingleCondFact]
+                                          ) [NoTernaryExpr]
+                                        ) [YesOptionalDesignator]
+                                      ) [Designator]
+                                      PossibleErrorAssignOpDesignatorAddition(
+                                        AssignOpExprDesignatorAdditionNoError(
+                                          Assignop(
+                                          ) [Assignop]
+                                          NoTernaryExpr(
+                                            SingleCondFact(
+                                              TernaryStart(
+                                              ) [TernaryStart]
+                                              TermFiniteExpr(
+                                                FiniteTerm(
+                                                  MulopTerm(
+                                                    FactorTerm(
+                                                      DesignatorFactor(
+                                                        Designator(
+                                                          DesignatorName(
+                                                           niz
+                                                          ) [DesignatorName]
+                                                          YesOptionalDesignator(
+                                                            NoTernaryExpr(
+                                                              SingleCondFact(
+                                                                TernaryStart(
+                                                                ) [TernaryStart]
+                                                                TermFiniteExpr(
+                                                                  FiniteTerm(
+                                                                    FactorTerm(
+                                                                      DesignatorFactor(
+                                                                        Designator(
+                                                                          DesignatorName(
+                                                                           niz
+                                                                          ) [DesignatorName]
+                                                                          YesOptionalDesignator(
+                                                                            NoTernaryExpr(
+                                                                              SingleCondFact(
+                                                                                TernaryStart(
+                                                                                ) [TernaryStart]
+                                                                                TermFiniteExpr(
+                                                                                  FiniteTerm(
+                                                                                    FactorTerm(
+                                                                                      IntFactor(
+                                                                                       0
+                                                                                      ) [IntFactor]
+                                                                                    ) [FactorTerm]
+                                                                                  ) [FiniteTerm]
+                                                                                  NoOptionalTermList(
+                                                                                  ) [NoOptionalTermList]
+                                                                                ) [TermFiniteExpr]
+                                                                              ) [SingleCondFact]
+                                                                            ) [NoTernaryExpr]
+                                                                          ) [YesOptionalDesignator]
+                                                                        ) [Designator]
+                                                                      ) [DesignatorFactor]
+                                                                    ) [FactorTerm]
+                                                                  ) [FiniteTerm]
+                                                                  NoOptionalTermList(
+                                                                  ) [NoOptionalTermList]
+                                                                ) [TermFiniteExpr]
+                                                              ) [SingleCondFact]
+                                                            ) [NoTernaryExpr]
+                                                          ) [YesOptionalDesignator]
+                                                        ) [Designator]
+                                                      ) [DesignatorFactor]
+                                                    ) [FactorTerm]
+                                                    MulopMul(
+                                                    ) [MulopMul]
+                                                    IntFactor(
+                                                     3
+                                                    ) [IntFactor]
+                                                  ) [MulopTerm]
+                                                ) [FiniteTerm]
+                                                NoOptionalTermList(
+                                                ) [NoOptionalTermList]
+                                              ) [TermFiniteExpr]
+                                            ) [SingleCondFact]
+                                          ) [NoTernaryExpr]
+                                        ) [AssignOpExprDesignatorAdditionNoError]
+                                      ) [PossibleErrorAssignOpDesignatorAddition]
+                                    ) [DesignatorStatement]
+                                  ) [DesignatorStatementDecl]
+                                ) [YesMethodBody]
+                                DesignatorStatementDecl(
+                                  DesignatorStatement(
+                                    Designator(
+                                      DesignatorName(
+                                       bodovi
+                                      ) [DesignatorName]
+                                      NoOptionalDesignator(
+                                      ) [NoOptionalDesignator]
+                                    ) [Designator]
+                                    PossibleErrorAssignOpDesignatorAddition(
+                                      AssignOpExprDesignatorAdditionNoError(
+                                        Assignop(
+                                        ) [Assignop]
+                                        NoTernaryExpr(
+                                          SingleCondFact(
+                                            TernaryStart(
+                                            ) [TernaryStart]
+                                            TermFiniteExpr(
+                                              FiniteTerm(
+                                                MulopTerm(
+                                                  FactorTerm(
+                                                    DesignatorFactor(
+                                                      Designator(
+                                                        DesignatorName(
+                                                         niz
+                                                        ) [DesignatorName]
+                                                        YesOptionalDesignator(
+                                                          NoTernaryExpr(
+                                                            SingleCondFact(
+                                                              TernaryStart(
+                                                              ) [TernaryStart]
+                                                              TermFiniteExpr(
+                                                                FiniteTerm(
+                                                                  FactorTerm(
+                                                                    IntFactor(
+                                                                     2
+                                                                    ) [IntFactor]
+                                                                  ) [FactorTerm]
+                                                                ) [FiniteTerm]
+                                                                NoOptionalTermList(
+                                                                ) [NoOptionalTermList]
+                                                              ) [TermFiniteExpr]
+                                                            ) [SingleCondFact]
+                                                          ) [NoTernaryExpr]
+                                                        ) [YesOptionalDesignator]
+                                                      ) [Designator]
+                                                    ) [DesignatorFactor]
+                                                  ) [FactorTerm]
+                                                  MulopDiv(
+                                                  ) [MulopDiv]
+                                                  DesignatorFactor(
+                                                    Designator(
+                                                      DesignatorName(
+                                                       niz
+                                                      ) [DesignatorName]
+                                                      YesOptionalDesignator(
+                                                        NoTernaryExpr(
+                                                          SingleCondFact(
+                                                            TernaryStart(
+                                                            ) [TernaryStart]
+                                                            TermFiniteExpr(
+                                                              FiniteTerm(
+                                                                FactorTerm(
+                                                                  IntFactor(
+                                                                   0
+                                                                  ) [IntFactor]
+                                                                ) [FactorTerm]
+                                                              ) [FiniteTerm]
+                                                              NoOptionalTermList(
+                                                              ) [NoOptionalTermList]
+                                                            ) [TermFiniteExpr]
+                                                          ) [SingleCondFact]
+                                                        ) [NoTernaryExpr]
+                                                      ) [YesOptionalDesignator]
+                                                    ) [Designator]
+                                                  ) [DesignatorFactor]
+                                                ) [MulopTerm]
+                                              ) [FiniteTerm]
+                                              NoOptionalTermList(
+                                              ) [NoOptionalTermList]
+                                            ) [TermFiniteExpr]
+                                          ) [SingleCondFact]
+                                        ) [NoTernaryExpr]
+                                      ) [AssignOpExprDesignatorAdditionNoError]
+                                    ) [PossibleErrorAssignOpDesignatorAddition]
+                                  ) [DesignatorStatement]
+                                ) [DesignatorStatementDecl]
+                              ) [YesMethodBody]
+                              PrintStatementDecl(
+                                PrintStatement(
+                                  NoTernaryExpr(
+                                    SingleCondFact(
+                                      TernaryStart(
+                                      ) [TernaryStart]
+                                      TermFiniteExpr(
+                                        FiniteTerm(
+                                          FactorTerm(
+                                            DesignatorFactor(
+                                              Designator(
+                                                DesignatorName(
+                                                 bodovi
+                                                ) [DesignatorName]
+                                                NoOptionalDesignator(
+                                                ) [NoOptionalDesignator]
+                                              ) [Designator]
+                                            ) [DesignatorFactor]
+                                          ) [FactorTerm]
+                                        ) [FiniteTerm]
+                                        NoOptionalTermList(
+                                        ) [NoOptionalTermList]
+                                      ) [TermFiniteExpr]
+                                    ) [SingleCondFact]
+                                  ) [NoTernaryExpr]
+                                  OptionalNoPrintNumber(
+                                  ) [OptionalNoPrintNumber]
+                                ) [PrintStatement]
+                              ) [PrintStatementDecl]
+                            ) [YesMethodBody]
+                            PrintStatementDecl(
+                              PrintStatement(
+                                NoTernaryExpr(
+                                  SingleCondFact(
+                                    TernaryStart(
+                                    ) [TernaryStart]
+                                    TermFiniteExpr(
+                                      FiniteTerm(
+                                        FactorTerm(
+                                          DesignatorFactor(
+                                            Designator(
+                                              DesignatorName(
+                                               niz
+                                              ) [DesignatorName]
+                                              YesOptionalDesignator(
+                                                NoTernaryExpr(
+                                                  SingleCondFact(
+                                                    TernaryStart(
+                                                    ) [TernaryStart]
+                                                    TermFiniteExpr(
+                                                      FiniteTerm(
+                                                        FactorTerm(
+                                                          IntFactor(
+                                                           2
+                                                          ) [IntFactor]
+                                                        ) [FactorTerm]
+                                                      ) [FiniteTerm]
+                                                      NoOptionalTermList(
+                                                      ) [NoOptionalTermList]
+                                                    ) [TermFiniteExpr]
+                                                  ) [SingleCondFact]
+                                                ) [NoTernaryExpr]
+                                              ) [YesOptionalDesignator]
+                                            ) [Designator]
+                                          ) [DesignatorFactor]
+                                        ) [FactorTerm]
+                                      ) [FiniteTerm]
+                                      NoOptionalTermList(
+                                      ) [NoOptionalTermList]
+                                    ) [TermFiniteExpr]
+                                  ) [SingleCondFact]
+                                ) [NoTernaryExpr]
+                                OptionalNoPrintNumber(
+                                ) [OptionalNoPrintNumber]
+                              ) [PrintStatement]
+                            ) [PrintStatementDecl]
+                          ) [YesMethodBody]
+                          DesignatorStatementDecl(
+                            DesignatorStatement(
+                              Designator(
+                                DesignatorName(
+                                 nizch
+                                ) [DesignatorName]
+                                NoOptionalDesignator(
+                                ) [NoOptionalDesignator]
+                              ) [Designator]
+                              PossibleErrorAssignOpDesignatorAddition(
+                                AssignOpExprDesignatorAdditionNoError(
+                                  Assignop(
+                                  ) [Assignop]
+                                  NoTernaryExpr(
+                                    SingleCondFact(
+                                      TernaryStart(
+                                      ) [TernaryStart]
+                                      TermFiniteExpr(
+                                        FiniteTerm(
+                                          FactorTerm(
+                                            NewArrayFactor(
+                                              Type(
+                                               char
+                                              ) [Type]
+                                              NoTernaryExpr(
+                                                SingleCondFact(
+                                                  TernaryStart(
+                                                  ) [TernaryStart]
+                                                  TermFiniteExpr(
+                                                    FiniteTerm(
+                                                      FactorTerm(
+                                                        IntFactor(
+                                                         3
+                                                        ) [IntFactor]
+                                                      ) [FactorTerm]
+                                                    ) [FiniteTerm]
+                                                    NoOptionalTermList(
+                                                    ) [NoOptionalTermList]
+                                                  ) [TermFiniteExpr]
+                                                ) [SingleCondFact]
+                                              ) [NoTernaryExpr]
+                                            ) [NewArrayFactor]
+                                          ) [FactorTerm]
+                                        ) [FiniteTerm]
+                                        NoOptionalTermList(
+                                        ) [NoOptionalTermList]
+                                      ) [TermFiniteExpr]
+                                    ) [SingleCondFact]
+                                  ) [NoTernaryExpr]
+                                ) [AssignOpExprDesignatorAdditionNoError]
+                              ) [PossibleErrorAssignOpDesignatorAddition]
+                            ) [DesignatorStatement]
+                          ) [DesignatorStatementDecl]
+                        ) [YesMethodBody]
+                        DesignatorStatementDecl(
+                          DesignatorStatement(
+                            Designator(
+                              DesignatorName(
+                               nizch
+                              ) [DesignatorName]
+                              YesOptionalDesignator(
+                                NoTernaryExpr(
+                                  SingleCondFact(
+                                    TernaryStart(
+                                    ) [TernaryStart]
+                                    TermFiniteExpr(
+                                      FiniteTerm(
+                                        FactorTerm(
+                                          IntFactor(
+                                           0
+                                          ) [IntFactor]
+                                        ) [FactorTerm]
+                                      ) [FiniteTerm]
+                                      NoOptionalTermList(
+                                      ) [NoOptionalTermList]
+                                    ) [TermFiniteExpr]
+                                  ) [SingleCondFact]
+                                ) [NoTernaryExpr]
+                              ) [YesOptionalDesignator]
+                            ) [Designator]
+                            PossibleErrorAssignOpDesignatorAddition(
+                              AssignOpExprDesignatorAdditionNoError(
+                                Assignop(
+                                ) [Assignop]
+                                NoTernaryExpr(
+                                  SingleCondFact(
+                                    TernaryStart(
+                                    ) [TernaryStart]
+                                    TermFiniteExpr(
+                                      FiniteTerm(
+                                        FactorTerm(
+                                          CharFactor(
+                                           a
+                                          ) [CharFactor]
+                                        ) [FactorTerm]
+                                      ) [FiniteTerm]
+                                      NoOptionalTermList(
+                                      ) [NoOptionalTermList]
+                                    ) [TermFiniteExpr]
+                                  ) [SingleCondFact]
+                                ) [NoTernaryExpr]
+                              ) [AssignOpExprDesignatorAdditionNoError]
+                            ) [PossibleErrorAssignOpDesignatorAddition]
+                          ) [DesignatorStatement]
+                        ) [DesignatorStatementDecl]
+                      ) [YesMethodBody]
+                      DesignatorStatementDecl(
+                        DesignatorStatement(
+                          Designator(
+                            DesignatorName(
+                             nizch
+                            ) [DesignatorName]
+                            YesOptionalDesignator(
+                              NoTernaryExpr(
+                                SingleCondFact(
+                                  TernaryStart(
+                                  ) [TernaryStart]
+                                  TermFiniteExpr(
+                                    FiniteTerm(
+                                      FactorTerm(
+                                        DesignatorFactor(
+                                          Designator(
+                                            DesignatorName(
+                                             jedan
+                                            ) [DesignatorName]
+                                            NoOptionalDesignator(
+                                            ) [NoOptionalDesignator]
+                                          ) [Designator]
+                                        ) [DesignatorFactor]
+                                      ) [FactorTerm]
+                                    ) [FiniteTerm]
+                                    NoOptionalTermList(
+                                    ) [NoOptionalTermList]
+                                  ) [TermFiniteExpr]
+                                ) [SingleCondFact]
+                              ) [NoTernaryExpr]
+                            ) [YesOptionalDesignator]
+                          ) [Designator]
+                          PossibleErrorAssignOpDesignatorAddition(
+                            AssignOpExprDesignatorAdditionNoError(
+                              Assignop(
+                              ) [Assignop]
+                              NoTernaryExpr(
+                                SingleCondFact(
+                                  TernaryStart(
+                                  ) [TernaryStart]
+                                  TermFiniteExpr(
+                                    FiniteTerm(
+                                      FactorTerm(
+                                        CharFactor(
+                                         b
+                                        ) [CharFactor]
+                                      ) [FactorTerm]
+                                    ) [FiniteTerm]
+                                    NoOptionalTermList(
+                                    ) [NoOptionalTermList]
+                                  ) [TermFiniteExpr]
+                                ) [SingleCondFact]
+                              ) [NoTernaryExpr]
+                            ) [AssignOpExprDesignatorAdditionNoError]
+                          ) [PossibleErrorAssignOpDesignatorAddition]
+                        ) [DesignatorStatement]
+                      ) [DesignatorStatementDecl]
+                    ) [YesMethodBody]
+                    DesignatorStatementDecl(
+                      DesignatorStatement(
+                        Designator(
+                          DesignatorName(
+                           nizch
+                          ) [DesignatorName]
+                          YesOptionalDesignator(
+                            NoTernaryExpr(
+                              SingleCondFact(
+                                TernaryStart(
+                                ) [TernaryStart]
+                                TermFiniteExpr(
+                                  FiniteTerm(
+                                    FactorTerm(
+                                      DesignatorFactor(
+                                        Designator(
+                                          DesignatorName(
+                                           pet
+                                          ) [DesignatorName]
+                                          NoOptionalDesignator(
+                                          ) [NoOptionalDesignator]
+                                        ) [Designator]
+                                      ) [DesignatorFactor]
+                                    ) [FactorTerm]
+                                  ) [FiniteTerm]
+                                  YesOptionalTermList(
+                                    NoOptionalTermList(
+                                    ) [NoOptionalTermList]
+                                    AddopMinus(
+                                    ) [AddopMinus]
+                                    FiniteTerm(
+                                      FactorTerm(
+                                        IntFactor(
+                                         3
+                                        ) [IntFactor]
+                                      ) [FactorTerm]
+                                    ) [FiniteTerm]
+                                  ) [YesOptionalTermList]
+                                ) [TermFiniteExpr]
+                              ) [SingleCondFact]
+                            ) [NoTernaryExpr]
+                          ) [YesOptionalDesignator]
+                        ) [Designator]
+                        PossibleErrorAssignOpDesignatorAddition(
+                          AssignOpExprDesignatorAdditionNoError(
+                            Assignop(
+                            ) [Assignop]
+                            NoTernaryExpr(
+                              SingleCondFact(
+                                TernaryStart(
+                                ) [TernaryStart]
+                                TermFiniteExpr(
+                                  FiniteTerm(
+                                    FactorTerm(
+                                      CharFactor(
+                                       c
+                                      ) [CharFactor]
+                                    ) [FactorTerm]
+                                  ) [FiniteTerm]
+                                  NoOptionalTermList(
+                                  ) [NoOptionalTermList]
+                                ) [TermFiniteExpr]
+                              ) [SingleCondFact]
+                            ) [NoTernaryExpr]
+                          ) [AssignOpExprDesignatorAdditionNoError]
+                        ) [PossibleErrorAssignOpDesignatorAddition]
+                      ) [DesignatorStatement]
+                    ) [DesignatorStatementDecl]
+                  ) [YesMethodBody]
+                  PrintStatementDecl(
+                    PrintStatement(
+                      NoTernaryExpr(
+                        SingleCondFact(
+                          TernaryStart(
+                          ) [TernaryStart]
+                          TermFiniteExpr(
+                            FiniteTerm(
+                              FactorTerm(
+                                DesignatorFactor(
+                                  Designator(
+                                    DesignatorName(
+                                     nizch
+                                    ) [DesignatorName]
+                                    YesOptionalDesignator(
+                                      NoTernaryExpr(
+                                        SingleCondFact(
+                                          TernaryStart(
+                                          ) [TernaryStart]
+                                          TermFiniteExpr(
+                                            FiniteTerm(
+                                              FactorTerm(
+                                                IntFactor(
+                                                 1
+                                                ) [IntFactor]
+                                              ) [FactorTerm]
+                                            ) [FiniteTerm]
+                                            NoOptionalTermList(
+                                            ) [NoOptionalTermList]
+                                          ) [TermFiniteExpr]
+                                        ) [SingleCondFact]
+                                      ) [NoTernaryExpr]
+                                    ) [YesOptionalDesignator]
+                                  ) [Designator]
+                                ) [DesignatorFactor]
+                              ) [FactorTerm]
+                            ) [FiniteTerm]
+                            NoOptionalTermList(
+                            ) [NoOptionalTermList]
+                          ) [TermFiniteExpr]
+                        ) [SingleCondFact]
+                      ) [NoTernaryExpr]
+                      OptionalNoPrintNumber(
+                      ) [OptionalNoPrintNumber]
+                    ) [PrintStatement]
+                  ) [PrintStatementDecl]
+                ) [YesMethodBody]
+                PrintStatementDecl(
+                  PrintStatement(
+                    NoTernaryExpr(
+                      SingleCondFact(
+                        TernaryStart(
+                        ) [TernaryStart]
+                        TermFiniteExpr(
+                          FiniteTerm(
+                            FactorTerm(
+                              DesignatorFactor(
+                                Designator(
+                                  DesignatorName(
+                                   nizch
+                                  ) [DesignatorName]
+                                  YesOptionalDesignator(
+                                    NoTernaryExpr(
+                                      SingleCondFact(
+                                        TernaryStart(
+                                        ) [TernaryStart]
+                                        TermFiniteExpr(
+                                          FiniteTerm(
+                                            MulopTerm(
+                                              FactorTerm(
+                                                DesignatorFactor(
+                                                  Designator(
+                                                    DesignatorName(
+                                                     jedan
+                                                    ) [DesignatorName]
+                                                    NoOptionalDesignator(
+                                                    ) [NoOptionalDesignator]
+                                                  ) [Designator]
+                                                ) [DesignatorFactor]
+                                              ) [FactorTerm]
+                                              MulopMul(
+                                              ) [MulopMul]
+                                              IntFactor(
+                                               2
+                                              ) [IntFactor]
+                                            ) [MulopTerm]
+                                          ) [FiniteTerm]
+                                          NoOptionalTermList(
+                                          ) [NoOptionalTermList]
+                                        ) [TermFiniteExpr]
+                                      ) [SingleCondFact]
+                                    ) [NoTernaryExpr]
+                                  ) [YesOptionalDesignator]
+                                ) [Designator]
+                              ) [DesignatorFactor]
+                            ) [FactorTerm]
+                          ) [FiniteTerm]
+                          NoOptionalTermList(
+                          ) [NoOptionalTermList]
+                        ) [TermFiniteExpr]
+                      ) [SingleCondFact]
+                    ) [NoTernaryExpr]
+                    OptionalNoPrintNumber(
+                    ) [OptionalNoPrintNumber]
+                  ) [PrintStatement]
+                ) [PrintStatementDecl]
+              ) [YesMethodBody]
+              DesignatorStatementDecl(
+                DesignatorStatement(
+                  Designator(
+                    DesignatorName(
+                     bodovi
+                    ) [DesignatorName]
+                    NoOptionalDesignator(
+                    ) [NoOptionalDesignator]
+                  ) [Designator]
+                  PossibleErrorAssignOpDesignatorAddition(
+                    AssignOpExprDesignatorAdditionNoError(
+                      Assignop(
+                      ) [Assignop]
+                      NoTernaryExpr(
+                        SingleCondFact(
+                          TernaryStart(
+                          ) [TernaryStart]
+                          TermFiniteExpr(
+                            FiniteTerm(
+                              FactorTerm(
+                                DesignatorFactor(
+                                  Designator(
+                                    DesignatorName(
+                                     bodovi
+                                    ) [DesignatorName]
+                                    NoOptionalDesignator(
+                                    ) [NoOptionalDesignator]
+                                  ) [Designator]
+                                ) [DesignatorFactor]
+                              ) [FactorTerm]
+                            ) [FiniteTerm]
+                            YesOptionalTermList(
+                              YesOptionalTermList(
+                                NoOptionalTermList(
+                                ) [NoOptionalTermList]
+                                AddopPlus(
+                                ) [AddopPlus]
+                                FiniteTerm(
+                                  MulopTerm(
+                                    FactorTerm(
+                                      ExprFactor(
+                                        NoTernaryExpr(
+                                          SingleCondFact(
+                                            TernaryStart(
+                                            ) [TernaryStart]
+                                            TermFiniteExpr(
+                                              FiniteTerm(
+                                                MulopTerm(
+                                                  FactorTerm(
+                                                    DesignatorFactor(
+                                                      Designator(
+                                                        DesignatorName(
+                                                         pet
+                                                        ) [DesignatorName]
+                                                        NoOptionalDesignator(
+                                                        ) [NoOptionalDesignator]
+                                                      ) [Designator]
+                                                    ) [DesignatorFactor]
+                                                  ) [FactorTerm]
+                                                  MulopMul(
+                                                  ) [MulopMul]
+                                                  DesignatorFactor(
+                                                    Designator(
+                                                      DesignatorName(
+                                                       jedan
+                                                      ) [DesignatorName]
+                                                      NoOptionalDesignator(
+                                                      ) [NoOptionalDesignator]
+                                                    ) [Designator]
+                                                  ) [DesignatorFactor]
+                                                ) [MulopTerm]
+                                              ) [FiniteTerm]
+                                              YesOptionalTermList(
+                                                NoOptionalTermList(
+                                                ) [NoOptionalTermList]
+                                                AddopMinus(
+                                                ) [AddopMinus]
+                                                FiniteTerm(
+                                                  FactorTerm(
+                                                    IntFactor(
+                                                     1
+                                                    ) [IntFactor]
+                                                  ) [FactorTerm]
+                                                ) [FiniteTerm]
+                                              ) [YesOptionalTermList]
+                                            ) [TermFiniteExpr]
+                                          ) [SingleCondFact]
+                                        ) [NoTernaryExpr]
+                                      ) [ExprFactor]
+                                    ) [FactorTerm]
+                                    MulopMul(
+                                    ) [MulopMul]
+                                    DesignatorFactor(
+                                      Designator(
+                                        DesignatorName(
+                                         bodovi
+                                        ) [DesignatorName]
+                                        NoOptionalDesignator(
+                                        ) [NoOptionalDesignator]
+                                      ) [Designator]
+                                    ) [DesignatorFactor]
+                                  ) [MulopTerm]
+                                ) [FiniteTerm]
+                              ) [YesOptionalTermList]
+                              AddopMinus(
+                              ) [AddopMinus]
+                              FiniteTerm(
+                                FactorTerm(
+                                  ExprFactor(
+                                    NoTernaryExpr(
+                                      SingleCondFact(
+                                        TernaryStart(
+                                        ) [TernaryStart]
+                                        TermFiniteExpr(
+                                          FiniteTerm(
+                                            MulopTerm(
+                                              FactorTerm(
+                                                IntFactor(
+                                                 3
+                                                ) [IntFactor]
+                                              ) [FactorTerm]
+                                              MulopMod(
+                                              ) [MulopMod]
+                                              IntFactor(
+                                               2
+                                              ) [IntFactor]
+                                            ) [MulopTerm]
+                                          ) [FiniteTerm]
+                                          YesOptionalTermList(
+                                            YesOptionalTermList(
+                                              NoOptionalTermList(
+                                              ) [NoOptionalTermList]
+                                              AddopPlus(
+                                              ) [AddopPlus]
+                                              FiniteTerm(
+                                                MulopTerm(
+                                                  FactorTerm(
+                                                    IntFactor(
+                                                     3
+                                                    ) [IntFactor]
+                                                  ) [FactorTerm]
+                                                  MulopMul(
+                                                  ) [MulopMul]
+                                                  IntFactor(
+                                                   2
+                                                  ) [IntFactor]
+                                                ) [MulopTerm]
+                                              ) [FiniteTerm]
+                                            ) [YesOptionalTermList]
+                                            AddopMinus(
+                                            ) [AddopMinus]
+                                            FiniteTerm(
+                                              FactorTerm(
+                                                IntFactor(
+                                                 3
+                                                ) [IntFactor]
+                                              ) [FactorTerm]
+                                            ) [FiniteTerm]
+                                          ) [YesOptionalTermList]
+                                        ) [TermFiniteExpr]
+                                      ) [SingleCondFact]
+                                    ) [NoTernaryExpr]
+                                  ) [ExprFactor]
+                                ) [FactorTerm]
+                              ) [FiniteTerm]
+                            ) [YesOptionalTermList]
+                          ) [TermFiniteExpr]
+                        ) [SingleCondFact]
+                      ) [NoTernaryExpr]
+                    ) [AssignOpExprDesignatorAdditionNoError]
+                  ) [PossibleErrorAssignOpDesignatorAddition]
+                ) [DesignatorStatement]
+              ) [DesignatorStatementDecl]
+            ) [YesMethodBody]
+            PrintStatementDecl(
+              PrintStatement(
+                NoTernaryExpr(
+                  SingleCondFact(
+                    TernaryStart(
+                    ) [TernaryStart]
+                    TermFiniteExpr(
+                      FiniteTerm(
+                        FactorTerm(
+                          DesignatorFactor(
+                            Designator(
+                              DesignatorName(
+                               bodovi
+                              ) [DesignatorName]
+                              NoOptionalDesignator(
+                              ) [NoOptionalDesignator]
+                            ) [Designator]
+                          ) [DesignatorFactor]
+                        ) [FactorTerm]
+                      ) [FiniteTerm]
+                      NoOptionalTermList(
+                      ) [NoOptionalTermList]
+                    ) [TermFiniteExpr]
+                  ) [SingleCondFact]
+                ) [NoTernaryExpr]
+                OptionalNoPrintNumber(
+                ) [OptionalNoPrintNumber]
+              ) [PrintStatement]
+            ) [PrintStatementDecl]
+          ) [YesMethodBody]
+          DesignatorStatementDecl(
+            DesignatorStatement(
+              Designator(
+                DesignatorName(
+                 bt
+                ) [DesignatorName]
+                NoOptionalDesignator(
+                ) [NoOptionalDesignator]
+              ) [Designator]
+              PossibleErrorAssignOpDesignatorAddition(
+                AssignOpExprDesignatorAdditionNoError(
+                  Assignop(
+                  ) [Assignop]
+                  NoTernaryExpr(
+                    SingleCondFact(
+                      TernaryStart(
+                      ) [TernaryStart]
+                      TermFiniteExpr(
+                        FiniteTerm(
+                          FactorTerm(
+                            BoolFactor(
+                             true
+                            ) [BoolFactor]
+                          ) [FactorTerm]
+                        ) [FiniteTerm]
+                        NoOptionalTermList(
+                        ) [NoOptionalTermList]
+                      ) [TermFiniteExpr]
+                    ) [SingleCondFact]
+                  ) [NoTernaryExpr]
+                ) [AssignOpExprDesignatorAdditionNoError]
+              ) [PossibleErrorAssignOpDesignatorAddition]
+            ) [DesignatorStatement]
+          ) [DesignatorStatementDecl]
+        ) [YesMethodBody]
+        PrintStatementDecl(
+          PrintStatement(
+            YesTernaryExpr(
+              SingleCondFact(
+                TernaryStart(
+                ) [TernaryStart]
+                TermFiniteExpr(
+                  FiniteTerm(
+                    FactorTerm(
+                      BoolFactor(
+                       false
+                      ) [BoolFactor]
+                    ) [FactorTerm]
+                  ) [FiniteTerm]
+                  NoOptionalTermList(
+                  ) [NoOptionalTermList]
+                ) [TermFiniteExpr]
+              ) [SingleCondFact]
+              TernaryQuestionMark(
+              ) [TernaryQuestionMark]
+              YesTernaryExpr(
+                SingleCondFact(
+                  TernaryStart(
+                  ) [TernaryStart]
+                  TermFiniteExpr(
+                    FiniteTerm(
+                      FactorTerm(
+                        BoolFactor(
+                         false
+                        ) [BoolFactor]
+                      ) [FactorTerm]
+                    ) [FiniteTerm]
+                    NoOptionalTermList(
+                    ) [NoOptionalTermList]
+                  ) [TermFiniteExpr]
+                ) [SingleCondFact]
+                TernaryQuestionMark(
+                ) [TernaryQuestionMark]
+                NoTernaryExpr(
+                  SingleCondFact(
+                    TernaryStart(
+                    ) [TernaryStart]
+                    TermFiniteExpr(
+                      FiniteTerm(
+                        FactorTerm(
+                          IntFactor(
+                           1
+                          ) [IntFactor]
+                        ) [FactorTerm]
+                      ) [FiniteTerm]
+                      NoOptionalTermList(
+                      ) [NoOptionalTermList]
+                    ) [TermFiniteExpr]
+                  ) [SingleCondFact]
+                ) [NoTernaryExpr]
+                TernaryColon(
+                ) [TernaryColon]
+                NoTernaryExpr(
+                  SingleCondFact(
+                    TernaryStart(
+                    ) [TernaryStart]
+                    TermFiniteExpr(
+                      FiniteTerm(
+                        FactorTerm(
+                          IntFactor(
+                           2
+                          ) [IntFactor]
+                        ) [FactorTerm]
+                      ) [FiniteTerm]
+                      NoOptionalTermList(
+                      ) [NoOptionalTermList]
+                    ) [TermFiniteExpr]
+                  ) [SingleCondFact]
+                ) [NoTernaryExpr]
+              ) [YesTernaryExpr]
+              TernaryColon(
+              ) [TernaryColon]
+              YesTernaryExpr(
+                SingleCondFact(
+                  TernaryStart(
+                  ) [TernaryStart]
+                  TermFiniteExpr(
+                    FiniteTerm(
+                      FactorTerm(
+                        BoolFactor(
+                         false
+                        ) [BoolFactor]
+                      ) [FactorTerm]
+                    ) [FiniteTerm]
+                    NoOptionalTermList(
+                    ) [NoOptionalTermList]
+                  ) [TermFiniteExpr]
+                ) [SingleCondFact]
+                TernaryQuestionMark(
+                ) [TernaryQuestionMark]
+                NoTernaryExpr(
+                  SingleCondFact(
+                    TernaryStart(
+                    ) [TernaryStart]
+                    TermFiniteExpr(
+                      FiniteTerm(
+                        FactorTerm(
+                          IntFactor(
+                           3
+                          ) [IntFactor]
+                        ) [FactorTerm]
+                      ) [FiniteTerm]
+                      NoOptionalTermList(
+                      ) [NoOptionalTermList]
+                    ) [TermFiniteExpr]
+                  ) [SingleCondFact]
+                ) [NoTernaryExpr]
+                TernaryColon(
+                ) [TernaryColon]
+                NoTernaryExpr(
+                  SingleCondFact(
+                    TernaryStart(
+                    ) [TernaryStart]
+                    TermFiniteExpr(
+                      FiniteTerm(
+                        FactorTerm(
+                          IntFactor(
+                           4
+                          ) [IntFactor]
+                        ) [FactorTerm]
+                      ) [FiniteTerm]
+                      NoOptionalTermList(
+                      ) [NoOptionalTermList]
+                    ) [TermFiniteExpr]
+                  ) [SingleCondFact]
+                ) [NoTernaryExpr]
+              ) [YesTernaryExpr]
+            ) [YesTernaryExpr]
+            OptionalNoPrintNumber(
+            ) [OptionalNoPrintNumber]
+          ) [PrintStatement]
+        ) [PrintStatementDecl]
+      ) [YesMethodBody]
+    ) [MethodDeclaration]
+  ) [YesMethodDeclarationList]
+) [Program]
+INFO  19:02:29,682 - ======================SEMANTIC ANALYSIS======================
+INFO  19:02:29,687 - Const variable nula declared on line 5
+INFO  19:02:29,688 - Const variable jedan declared on line 6
+INFO  19:02:29,688 - Const variable pet declared on line 7
+INFO  19:02:29,688 - Global array niz declared on line 9
+INFO  19:02:29,688 - Global array nizch declared on line 10
+INFO  19:02:29,688 - Method main declared on line 13
+INFO  19:02:29,688 - Local variable bodovi declared on line 14
+INFO  19:02:29,688 - Local variable bt declared on line 15
+INFO  19:02:29,688 - Variable bodovi used: Var bodovi: int, 0, 1 on line 17
+INFO  19:02:29,688 - Variable bodovi used: Var bodovi: int, 0, 1 on line 18
+INFO  19:02:29,688 - Variable bodovi used: Var bodovi: int, 0, 1 on line 19
+INFO  19:02:29,689 - Variable bodovi used: Var bodovi: int, 0, 1 on line 19
+INFO  19:02:29,689 - Variable jedan used: Con jedan: int, 1, 0 on line 19
+INFO  19:02:29,689 - Variable bodovi used: Var bodovi: int, 0, 1 on line 20
+INFO  19:02:29,689 - Variable bodovi used: Var bodovi: int, 0, 1 on line 20
+INFO  19:02:29,689 - Variable pet used: Con pet: int, 5, 0 on line 20
+INFO  19:02:29,689 - Variable bodovi used: Var bodovi: int, 0, 1 on line 21
+INFO  19:02:29,689 - Variable bodovi used: Var bodovi: int, 0, 1 on line 22
+INFO  19:02:29,689 - Array niz used: Var niz: Array of int, 0, 0 on line 25
+INFO  19:02:29,689 - Variable nula used: Con nula: int, 0, 0 on line 26
+INFO  19:02:29,689 - Element of array niz used: Elem niz: int, 0, 0 on line 26
+INFO  19:02:29,689 - Variable jedan used: Con jedan: int, 1, 0 on line 26
+INFO  19:02:29,689 - Element of array niz used: Elem niz: int, 0, 0 on line 27
+INFO  19:02:29,689 - Variable jedan used: Con jedan: int, 1, 0 on line 28
+INFO  19:02:29,689 - Element of array niz used: Elem niz: int, 0, 0 on line 28
+INFO  19:02:29,689 - Element of array niz used: Elem niz: int, 0, 0 on line 28
+INFO  19:02:29,689 - Element of array niz used: Elem niz: int, 0, 0 on line 28
+INFO  19:02:29,689 - Element of array niz used: Elem niz: int, 0, 0 on line 28
+INFO  19:02:29,689 - Variable bodovi used: Var bodovi: int, 0, 1 on line 29
+INFO  19:02:29,689 - Element of array niz used: Elem niz: int, 0, 0 on line 29
+INFO  19:02:29,689 - Element of array niz used: Elem niz: int, 0, 0 on line 29
+INFO  19:02:29,689 - Variable bodovi used: Var bodovi: int, 0, 1 on line 30
+INFO  19:02:29,690 - Element of array niz used: Elem niz: int, 0, 0 on line 31
+INFO  19:02:29,690 - Array nizch used: Var nizch: Array of char, 1, 0 on line 34
+INFO  19:02:29,690 - Element of array nizch used: Elem nizch: char, 1, 0 on line 35
+INFO  19:02:29,690 - Variable jedan used: Con jedan: int, 1, 0 on line 36
+INFO  19:02:29,690 - Element of array nizch used: Elem nizch: char, 1, 0 on line 36
+INFO  19:02:29,690 - Variable pet used: Con pet: int, 5, 0 on line 37
+INFO  19:02:29,690 - Element of array nizch used: Elem nizch: char, 1, 0 on line 37
+INFO  19:02:29,690 - Element of array nizch used: Elem nizch: char, 1, 0 on line 38
+INFO  19:02:29,690 - Variable jedan used: Con jedan: int, 1, 0 on line 39
+INFO  19:02:29,690 - Element of array nizch used: Elem nizch: char, 1, 0 on line 39
+INFO  19:02:29,690 - Variable bodovi used: Var bodovi: int, 0, 1 on line 42
+INFO  19:02:29,690 - Variable bodovi used: Var bodovi: int, 0, 1 on line 42
+INFO  19:02:29,690 - Variable pet used: Con pet: int, 5, 0 on line 42
+INFO  19:02:29,690 - Variable jedan used: Con jedan: int, 1, 0 on line 42
+INFO  19:02:29,690 - Variable bodovi used: Var bodovi: int, 0, 1 on line 42
+INFO  19:02:29,690 - Variable bodovi used: Var bodovi: int, 0, 1 on line 43
+INFO  19:02:29,690 - Variable bt used: Var bt: bool, 1, 1 on line 46
+INFO  19:02:29,690 - =======================SYNTAX ANALYSIS=======================
+INFO  19:02:29,690 - 1 methods in the program
+INFO  19:02:29,690 - 3 constants declared
+INFO  19:02:29,690 - 0 global variables declared
+INFO  19:02:29,690 - 2 global arrays declared
+INFO  19:02:29,690 - 2 local variables declared
+INFO  19:02:29,690 - 0 local arrays declared
+INFO  19:02:29,690 - 23 statements in main
+INFO  19:02:29,697 - ================SEMANTIC ANALYSIS SUCCESSFUL=================

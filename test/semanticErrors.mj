@@ -47,8 +47,6 @@ string s; // error, non-existing type
 		x[constChar]--; // error, cannot index an array with non-int value
 		x[3 * 7 - 4 / 2 + constInt]--; // OK
 
-		tmp = new int; // OK
-
 		print(-b); // error, minus sign can only be used with int types
 		print(-1); // OK
 

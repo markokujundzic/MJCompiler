@@ -1,0 +1,205 @@
+INFO  16:22:03,202 - ====================LEXICAL ANALYSIS========================
+INFO  16:22:03,283 - #2 program
+INFO  16:22:03,283 - #9 test
+INFO  16:22:03,284 - #3 {
+INFO  16:22:03,285 - #15 void
+INFO  16:22:03,286 - #9 main
+INFO  16:22:03,286 - #13 (
+INFO  16:22:03,287 - #14 )
+INFO  16:22:03,288 - #9 bool
+INFO  16:22:03,288 - #9 x
+INFO  16:22:03,289 - #6 ;
+INFO  16:22:03,292 - #3 {
+INFO  16:22:03,292 - #9 x
+INFO  16:22:03,293 - #8 =
+INFO  16:22:03,295 - #13 (
+INFO  16:22:03,296 - #10 2
+INFO  16:22:03,296 - #43 <
+INFO  16:22:03,299 - #10 3
+INFO  16:22:03,300 - #33 ?
+INFO  16:22:03,301 - #11 true
+INFO  16:22:03,301 - #18 :
+INFO  16:22:03,301 - #11 false
+INFO  16:22:03,301 - #14 )
+INFO  16:22:03,301 - #33 ?
+INFO  16:22:03,308 - #11 true
+INFO  16:22:03,308 - #18 :
+INFO  16:22:03,308 - #11 false
+INFO  16:22:03,308 - #6 ;
+INFO  16:22:03,309 - #4 }
+INFO  16:22:03,309 - #4 }
+INFO  16:22:03,319 - =======================SYNTAX TREE===========================
+INFO  16:22:03,320 - Program(
+  ProgramName(
+   test
+  ) [ProgramName]
+  NoDeclarationList(
+  ) [NoDeclarationList]
+  YesMethodDeclarationList(
+    NoMethodDeclarationList(
+    ) [NoMethodDeclarationList]
+    MethodDeclaration(
+      VoidMethodReturnType(
+      ) [VoidMethodReturnType]
+      MethodName(
+       main
+      ) [MethodName]
+      NoMethodParameters(
+      ) [NoMethodParameters]
+      YesMethodVariables(
+        NoMethodVariables(
+        ) [NoMethodVariables]
+        VarDeclNoError(
+          Type(
+           bool
+          ) [Type]
+          SingleVarDeclList(
+            DeclVariable(
+              VarDeclName(
+               x
+              ) [VarDeclName]
+              NoVarDeclArrayOption(
+              ) [NoVarDeclArrayOption]
+            ) [DeclVariable]
+          ) [SingleVarDeclList]
+        ) [VarDeclNoError]
+      ) [YesMethodVariables]
+      YesMethodBody(
+        NoMethodBody(
+        ) [NoMethodBody]
+        DesignatorStatementDecl(
+          DesignatorStatement(
+            Designator(
+              DesignatorName(
+               x
+              ) [DesignatorName]
+              NoOptionalDesignator(
+              ) [NoOptionalDesignator]
+            ) [Designator]
+            PossibleErrorAssignOpDesignatorAddition(
+              AssignOpExprDesignatorAdditionNoError(
+                Assignop(
+                ) [Assignop]
+                YesTernaryExpr(
+                  SingleCondFact(
+                    TermFiniteExpr(
+                      FiniteTerm(
+                        FactorTerm(
+                          ExprFactor(
+                            YesTernaryExpr(
+                              PluralCondFact(
+                                TermFiniteExpr(
+                                  FiniteTerm(
+                                    FactorTerm(
+                                      IntFactor(
+                                       2
+                                      ) [IntFactor]
+                                    ) [FactorTerm]
+                                  ) [FiniteTerm]
+                                  NoOptionalTermList(
+                                  ) [NoOptionalTermList]
+                                ) [TermFiniteExpr]
+                                RelopLess(
+                                ) [RelopLess]
+                                TermFiniteExpr(
+                                  FiniteTerm(
+                                    FactorTerm(
+                                      IntFactor(
+                                       3
+                                      ) [IntFactor]
+                                    ) [FactorTerm]
+                                  ) [FiniteTerm]
+                                  NoOptionalTermList(
+                                  ) [NoOptionalTermList]
+                                ) [TermFiniteExpr]
+                              ) [PluralCondFact]
+                              NoTernaryExpr(
+                                SingleCondFact(
+                                  TermFiniteExpr(
+                                    FiniteTerm(
+                                      FactorTerm(
+                                        BoolFactor(
+                                         true
+                                        ) [BoolFactor]
+                                      ) [FactorTerm]
+                                    ) [FiniteTerm]
+                                    NoOptionalTermList(
+                                    ) [NoOptionalTermList]
+                                  ) [TermFiniteExpr]
+                                ) [SingleCondFact]
+                              ) [NoTernaryExpr]
+                              NoTernaryExpr(
+                                SingleCondFact(
+                                  TermFiniteExpr(
+                                    FiniteTerm(
+                                      FactorTerm(
+                                        BoolFactor(
+                                         false
+                                        ) [BoolFactor]
+                                      ) [FactorTerm]
+                                    ) [FiniteTerm]
+                                    NoOptionalTermList(
+                                    ) [NoOptionalTermList]
+                                  ) [TermFiniteExpr]
+                                ) [SingleCondFact]
+                              ) [NoTernaryExpr]
+                            ) [YesTernaryExpr]
+                          ) [ExprFactor]
+                        ) [FactorTerm]
+                      ) [FiniteTerm]
+                      NoOptionalTermList(
+                      ) [NoOptionalTermList]
+                    ) [TermFiniteExpr]
+                  ) [SingleCondFact]
+                  NoTernaryExpr(
+                    SingleCondFact(
+                      TermFiniteExpr(
+                        FiniteTerm(
+                          FactorTerm(
+                            BoolFactor(
+                             true
+                            ) [BoolFactor]
+                          ) [FactorTerm]
+                        ) [FiniteTerm]
+                        NoOptionalTermList(
+                        ) [NoOptionalTermList]
+                      ) [TermFiniteExpr]
+                    ) [SingleCondFact]
+                  ) [NoTernaryExpr]
+                  NoTernaryExpr(
+                    SingleCondFact(
+                      TermFiniteExpr(
+                        FiniteTerm(
+                          FactorTerm(
+                            BoolFactor(
+                             false
+                            ) [BoolFactor]
+                          ) [FactorTerm]
+                        ) [FiniteTerm]
+                        NoOptionalTermList(
+                        ) [NoOptionalTermList]
+                      ) [TermFiniteExpr]
+                    ) [SingleCondFact]
+                  ) [NoTernaryExpr]
+                ) [YesTernaryExpr]
+              ) [AssignOpExprDesignatorAdditionNoError]
+            ) [PossibleErrorAssignOpDesignatorAddition]
+          ) [DesignatorStatement]
+        ) [DesignatorStatementDecl]
+      ) [YesMethodBody]
+    ) [MethodDeclaration]
+  ) [YesMethodDeclarationList]
+) [Program]
+INFO  16:22:03,320 - ======================SEMANTIC ANALYSIS======================
+INFO  16:22:03,324 - Method main declared on line 5
+INFO  16:22:03,325 - Local variable x declared on line 6
+INFO  16:22:03,326 - Variable x used: Var x: bool, 0, 1 on line 8
+INFO  16:22:03,327 - =======================SYNTAX ANALYSIS=======================
+INFO  16:22:03,327 - 1 methods in the program
+INFO  16:22:03,327 - 0 constants declared
+INFO  16:22:03,327 - 0 global variables declared
+INFO  16:22:03,327 - 0 global arrays declared
+INFO  16:22:03,327 - 1 local variables declared
+INFO  16:22:03,327 - 0 local arrays declared
+INFO  16:22:03,327 - 1 statements in main
+INFO  16:22:03,333 - ================SEMANTIC ANALYSIS SUCCESSFUL=================

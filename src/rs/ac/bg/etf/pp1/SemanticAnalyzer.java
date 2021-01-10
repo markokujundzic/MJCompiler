@@ -517,11 +517,6 @@ public class SemanticAnalyzer extends VisitorAdaptor
         exprFactor.struct = exprFactor.getExpr().struct;
     }
 
-    /*public void visit(NewFactor newFactor)
-    {
-        newFactor.struct = currentType;
-    }*/
-
     public void visit(NewArrayFactor newArrayFactor)
     {
         if (newArrayFactor.getExpr().struct != SymTab.intType)

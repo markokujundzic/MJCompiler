@@ -1,0 +1,200 @@
+INFO  16:33:04,453 - ====================LEXICAL ANALYSIS========================
+INFO  16:33:04,531 - #2 program
+INFO  16:33:04,531 - #9 test301
+INFO  16:33:04,531 - #3 {
+INFO  16:33:04,531 - #15 void
+INFO  16:33:04,531 - #9 main
+INFO  16:33:04,531 - #13 (
+INFO  16:33:04,531 - #14 )
+INFO  16:33:04,531 - #9 int
+INFO  16:33:04,546 - #9 bodovi
+INFO  16:33:04,546 - #6 ;
+INFO  16:33:04,546 - #9 bool
+INFO  16:33:04,546 - #9 bt
+INFO  16:33:04,546 - #6 ;
+INFO  16:33:04,546 - #3 {
+INFO  16:33:04,546 - #30 print
+INFO  16:33:04,546 - #13 (
+INFO  16:33:04,546 - #9 bt
+INFO  16:33:04,546 - #33 ?
+INFO  16:33:04,546 - #9 bodovi
+INFO  16:33:04,546 - #36 +
+INFO  16:33:04,546 - #10 20
+INFO  16:33:04,546 - #18 :
+INFO  16:33:04,546 - #9 bodovi
+INFO  16:33:04,562 - #36 +
+INFO  16:33:04,562 - #10 30
+INFO  16:33:04,562 - #14 )
+INFO  16:33:04,562 - #6 ;
+INFO  16:33:04,562 - #4 }
+INFO  16:33:04,562 - #4 }
+INFO  16:33:04,562 - =======================SYNTAX TREE===========================
+INFO  16:33:04,578 - Program(
+  ProgramName(
+   test301
+  ) [ProgramName]
+  NoDeclarationList(
+  ) [NoDeclarationList]
+  YesMethodDeclarationList(
+    NoMethodDeclarationList(
+    ) [NoMethodDeclarationList]
+    MethodDeclaration(
+      VoidMethodReturnType(
+      ) [VoidMethodReturnType]
+      MethodName(
+       main
+      ) [MethodName]
+      NoMethodParameters(
+      ) [NoMethodParameters]
+      YesMethodVariables(
+        YesMethodVariables(
+          NoMethodVariables(
+          ) [NoMethodVariables]
+          VarDeclNoError(
+            Type(
+             int
+            ) [Type]
+            SingleVarDeclList(
+              DeclVariable(
+                VarDeclName(
+                 bodovi
+                ) [VarDeclName]
+                NoVarDeclArrayOption(
+                ) [NoVarDeclArrayOption]
+              ) [DeclVariable]
+            ) [SingleVarDeclList]
+          ) [VarDeclNoError]
+        ) [YesMethodVariables]
+        VarDeclNoError(
+          Type(
+           bool
+          ) [Type]
+          SingleVarDeclList(
+            DeclVariable(
+              VarDeclName(
+               bt
+              ) [VarDeclName]
+              NoVarDeclArrayOption(
+              ) [NoVarDeclArrayOption]
+            ) [DeclVariable]
+          ) [SingleVarDeclList]
+        ) [VarDeclNoError]
+      ) [YesMethodVariables]
+      YesMethodBody(
+        NoMethodBody(
+        ) [NoMethodBody]
+        PrintStatementDecl(
+          PrintStatement(
+            YesTernaryExpr(
+              SingleCondFact(
+                TermFiniteExpr(
+                  FiniteTerm(
+                    FactorTerm(
+                      DesignatorFactor(
+                        Designator(
+                          DesignatorName(
+                           bt
+                          ) [DesignatorName]
+                          NoOptionalDesignator(
+                          ) [NoOptionalDesignator]
+                        ) [Designator]
+                      ) [DesignatorFactor]
+                    ) [FactorTerm]
+                  ) [FiniteTerm]
+                  NoOptionalTermList(
+                  ) [NoOptionalTermList]
+                ) [TermFiniteExpr]
+              ) [SingleCondFact]
+              TernaryQuestionMark(
+              ) [TernaryQuestionMark]
+              NoTernaryExpr(
+                SingleCondFact(
+                  TermFiniteExpr(
+                    FiniteTerm(
+                      FactorTerm(
+                        DesignatorFactor(
+                          Designator(
+                            DesignatorName(
+                             bodovi
+                            ) [DesignatorName]
+                            NoOptionalDesignator(
+                            ) [NoOptionalDesignator]
+                          ) [Designator]
+                        ) [DesignatorFactor]
+                      ) [FactorTerm]
+                    ) [FiniteTerm]
+                    YesOptionalTermList(
+                      NoOptionalTermList(
+                      ) [NoOptionalTermList]
+                      AddopPlus(
+                      ) [AddopPlus]
+                      FiniteTerm(
+                        FactorTerm(
+                          IntFactor(
+                           20
+                          ) [IntFactor]
+                        ) [FactorTerm]
+                      ) [FiniteTerm]
+                    ) [YesOptionalTermList]
+                  ) [TermFiniteExpr]
+                ) [SingleCondFact]
+              ) [NoTernaryExpr]
+              TernaryColon(
+              ) [TernaryColon]
+              NoTernaryExpr(
+                SingleCondFact(
+                  TermFiniteExpr(
+                    FiniteTerm(
+                      FactorTerm(
+                        DesignatorFactor(
+                          Designator(
+                            DesignatorName(
+                             bodovi
+                            ) [DesignatorName]
+                            NoOptionalDesignator(
+                            ) [NoOptionalDesignator]
+                          ) [Designator]
+                        ) [DesignatorFactor]
+                      ) [FactorTerm]
+                    ) [FiniteTerm]
+                    YesOptionalTermList(
+                      NoOptionalTermList(
+                      ) [NoOptionalTermList]
+                      AddopPlus(
+                      ) [AddopPlus]
+                      FiniteTerm(
+                        FactorTerm(
+                          IntFactor(
+                           30
+                          ) [IntFactor]
+                        ) [FactorTerm]
+                      ) [FiniteTerm]
+                    ) [YesOptionalTermList]
+                  ) [TermFiniteExpr]
+                ) [SingleCondFact]
+              ) [NoTernaryExpr]
+            ) [YesTernaryExpr]
+            OptionalNoPrintNumber(
+            ) [OptionalNoPrintNumber]
+          ) [PrintStatement]
+        ) [PrintStatementDecl]
+      ) [YesMethodBody]
+    ) [MethodDeclaration]
+  ) [YesMethodDeclarationList]
+) [Program]
+INFO  16:33:04,578 - ======================SEMANTIC ANALYSIS======================
+INFO  16:33:04,578 - Method main declared on line 4
+INFO  16:33:04,578 - Local variable bodovi declared on line 4
+INFO  16:33:04,578 - Local variable bt declared on line 4
+INFO  16:33:04,578 - Variable bt used: Var bt: bool, 1, 1 on line 6
+INFO  16:33:04,578 - Variable bodovi used: Var bodovi: int, 0, 1 on line 6
+INFO  16:33:04,578 - Variable bodovi used: Var bodovi: int, 0, 1 on line 6
+INFO  16:33:04,578 - =======================SYNTAX ANALYSIS=======================
+INFO  16:33:04,578 - 1 methods in the program
+INFO  16:33:04,578 - 0 constants declared
+INFO  16:33:04,578 - 0 global variables declared
+INFO  16:33:04,578 - 0 global arrays declared
+INFO  16:33:04,578 - 2 local variables declared
+INFO  16:33:04,578 - 0 local arrays declared
+INFO  16:33:04,578 - 1 statements in main
+INFO  16:33:04,593 - ================SEMANTIC ANALYSIS SUCCESSFUL=================
