@@ -4,8 +4,6 @@ import rs.ac.bg.etf.pp1.ast.*;
 import rs.etf.pp1.mj.runtime.Code;
 import rs.etf.pp1.symboltable.concepts.*;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Stack;
 
 public class CodeGenerator extends VisitorAdaptor
@@ -16,8 +14,8 @@ public class CodeGenerator extends VisitorAdaptor
 
     private Obj currentDesignator = null;
 
-    private Stack<Integer> jumpOnElseBackpatch = new Stack<>();
-    private Stack<Integer> jumpAfterElseBackpatch = new Stack<>();
+    private final Stack<Integer> jumpOnElseBackPatch = new Stack<>();
+    private final Stack<Integer> jumpAfterElseBackPatch = new Stack<>();
 
     /* Getters */
     public int getMainPC()
@@ -321,22 +319,19 @@ public class CodeGenerator extends VisitorAdaptor
         {
             Code.put(Code.const_1);
             Code.putFalseJump(Code.eq, 0);
-            jumpOnElseBackpatch.push(Code.pc - 2);
+            jumpOnElseBackPatch.push(Code.pc - 2);
         }
     }
 
     public void visit(TernaryColon ternaryColon)
     {
-        // Code.put(Code.const_1);
-        // Code.put(Code.const_1);
-        // Code.putFalseJump(Code.ne, 0);
         Code.putJump(0);
-        jumpAfterElseBackpatch.push(Code.pc - 2);
-        Code.fixup(jumpOnElseBackpatch.pop());
+        jumpAfterElseBackPatch.push(Code.pc - 2);
+        Code.fixup(jumpOnElseBackPatch.pop());
     }
 
     public void visit(YesTernaryExpr yesTernaryExpr)
     {
-        Code.fixup(jumpAfterElseBackpatch.pop());
+        Code.fixup(jumpAfterElseBackPatch.pop());
     }
 }

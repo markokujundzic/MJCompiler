@@ -29,12 +29,6 @@ string s; // error, non-existing type
 		print(x, 5); // error, operand of print method must be a variable or an array element, not an array
 		print(tmp, 7); // OK
 
-		c = x[0] >= x[1]; // error, return value of comparison must be a bool
-		b = x[0] <= x[1]; // OK
-
-		b = x < y; // error, array types can only be compared for equality or non-equality
-		b = x != y; // OK
-
 		c = null; // error, null can only be assigned to array type
 		x = null; // OK
 
@@ -53,12 +47,12 @@ string s; // error, non-existing type
 		print(5 ? 1 : 2); // error, CondFact used in Ternary Expression must be a bool
 		print(true ? 1 : 2); // OK
 
-		tmp = (true != false) ? 1 : 0; // OK
+		tmp = (true) ? 1 : 0; // OK
 
 		print('c' * 'd'); // error, operands of *, /, % must be of int type
 		print(missing); // error, use of undeclared variable
 
 		print(true ? false : true ? 3 : 4); // error, non-compatible types in nested Ternary Expression
-		print(true ? false : tmp < 10 ? true : false); // OK
+		print(true ? false : true ? true : false); // OK
 	}
 }

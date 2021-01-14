@@ -1,34 +1,23 @@
 // generated with ast extension for cup
 // version 0.8
-// 10/0/2021 18:10:53
+// 11/0/2021 14:17:49
 
 
 package rs.ac.bg.etf.pp1.ast;
 
 public class PluralCondFact extends CondFact {
 
-    private TernaryStart TernaryStart;
     private FiniteExpr FiniteExpr;
     private Relop Relop;
     private FiniteExpr FiniteExpr1;
 
-    public PluralCondFact (TernaryStart TernaryStart, FiniteExpr FiniteExpr, Relop Relop, FiniteExpr FiniteExpr1) {
-        this.TernaryStart=TernaryStart;
-        if(TernaryStart!=null) TernaryStart.setParent(this);
+    public PluralCondFact (FiniteExpr FiniteExpr, Relop Relop, FiniteExpr FiniteExpr1) {
         this.FiniteExpr=FiniteExpr;
         if(FiniteExpr!=null) FiniteExpr.setParent(this);
         this.Relop=Relop;
         if(Relop!=null) Relop.setParent(this);
         this.FiniteExpr1=FiniteExpr1;
         if(FiniteExpr1!=null) FiniteExpr1.setParent(this);
-    }
-
-    public TernaryStart getTernaryStart() {
-        return TernaryStart;
-    }
-
-    public void setTernaryStart(TernaryStart TernaryStart) {
-        this.TernaryStart=TernaryStart;
     }
 
     public FiniteExpr getFiniteExpr() {
@@ -60,7 +49,6 @@ public class PluralCondFact extends CondFact {
     }
 
     public void childrenAccept(Visitor visitor) {
-        if(TernaryStart!=null) TernaryStart.accept(visitor);
         if(FiniteExpr!=null) FiniteExpr.accept(visitor);
         if(Relop!=null) Relop.accept(visitor);
         if(FiniteExpr1!=null) FiniteExpr1.accept(visitor);
@@ -68,14 +56,12 @@ public class PluralCondFact extends CondFact {
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
-        if(TernaryStart!=null) TernaryStart.traverseTopDown(visitor);
         if(FiniteExpr!=null) FiniteExpr.traverseTopDown(visitor);
         if(Relop!=null) Relop.traverseTopDown(visitor);
         if(FiniteExpr1!=null) FiniteExpr1.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
-        if(TernaryStart!=null) TernaryStart.traverseBottomUp(visitor);
         if(FiniteExpr!=null) FiniteExpr.traverseBottomUp(visitor);
         if(Relop!=null) Relop.traverseBottomUp(visitor);
         if(FiniteExpr1!=null) FiniteExpr1.traverseBottomUp(visitor);
@@ -86,12 +72,6 @@ public class PluralCondFact extends CondFact {
         StringBuffer buffer=new StringBuffer();
         buffer.append(tab);
         buffer.append("PluralCondFact(\n");
-
-        if(TernaryStart!=null)
-            buffer.append(TernaryStart.toString("  "+tab));
-        else
-            buffer.append(tab+"  null");
-        buffer.append("\n");
 
         if(FiniteExpr!=null)
             buffer.append(FiniteExpr.toString("  "+tab));

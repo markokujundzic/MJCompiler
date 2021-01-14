@@ -1,0 +1,145 @@
+INFO  19:47:53,216 - ====================LEXICAL ANALYSIS========================
+INFO  19:47:53,310 - #2 program
+INFO  19:47:53,310 - #9 error_recovery_1
+INFO  19:47:53,310 - #5 const
+INFO  19:47:53,310 - #9 int
+INFO  19:47:53,310 - #9 i
+INFO  19:47:53,310 - #8 =
+INFO  19:47:53,310 - #37 *
+ERROR 19:47:53,310 - Syntax error on line 3
+INFO  19:47:53,310 - #7 ,
+INFO  19:47:53,310 - #9 k
+INFO  19:47:53,326 - #8 =
+INFO  19:47:53,326 - #10 5
+ERROR 19:47:53,326 - Successful error recovery by parser on line 3 -> Constant Declaration
+INFO  19:47:53,326 - #7 ,
+INFO  19:47:53,326 - #9 l
+INFO  19:47:53,326 - #8 =
+INFO  19:47:53,326 - #7 ,
+ERROR 19:47:53,326 - Syntax error on line 3
+INFO  19:47:53,326 - #6 ;
+INFO  19:47:53,326 - #9 int
+INFO  19:47:53,326 - #9 x
+INFO  19:47:53,326 - #7 ,
+ERROR 19:47:53,326 - Successful error recovery by parser on line 3 -> Constant Declaration
+INFO  19:47:53,326 - #36 +
+ERROR 19:47:53,326 - Syntax error on line 4
+INFO  19:47:53,326 - #7 ,
+INFO  19:47:53,326 - #9 y
+INFO  19:47:53,326 - #20 [
+INFO  19:47:53,326 - #21 ]
+ERROR 19:47:53,326 - Successful error recovery by parser on line 4 -> Variable Declaration
+INFO  19:47:53,326 - #6 ;
+INFO  19:47:53,326 - #5 const
+INFO  19:47:53,326 - #9 int
+INFO  19:47:53,326 - #6 ;
+ERROR 19:47:53,326 - Syntax error on line 5
+INFO  19:47:53,326 - #9 int
+INFO  19:47:53,326 - #9 niz
+INFO  19:47:53,326 - #20 [
+ERROR 19:47:53,326 - Successful error recovery by parser on line 5 -> Constant Declaration
+INFO  19:47:53,341 - #21 ]
+INFO  19:47:53,341 - #7 ,
+INFO  19:47:53,341 - #6 ;
+ERROR 19:47:53,341 - Syntax error on line 7
+INFO  19:47:53,341 - #9 bool
+INFO  19:47:53,341 - #9 ibool
+INFO  19:47:53,341 - #3 {
+ERROR 19:47:53,341 - Successful error recovery by parser on line 7 -> Variable Declaration
+ERROR 19:47:53,341 - Syntax error on line 8
+INFO  19:47:53,341 - #4 }
+INFO  19:47:53,341 - #6 ;
+INFO  19:47:53,341 - #3 {
+INFO  19:47:53,341 - #15 void
+INFO  19:47:53,341 - #9 main
+ERROR 19:47:53,341 - Successful error recovery by parser on line 8 -> Variable Declaration
+INFO  19:47:53,341 - #13 (
+INFO  19:47:53,341 - #14 )
+INFO  19:47:53,341 - #3 {
+INFO  19:47:53,341 - #4 }
+INFO  19:47:53,341 - #4 }
+INFO  19:47:53,357 - =======================SYNTAX TREE===========================
+INFO  19:47:53,357 - Program(
+  ProgramName(
+   error_recovery_1
+  ) [ProgramName]
+  YesDeclarationList(
+    YesDeclarationList(
+      YesDeclarationList(
+        YesDeclarationList(
+          YesDeclarationList(
+            NoDeclarationList(
+            ) [NoDeclarationList]
+            ConstantDeclaration(
+              ConstDeclNoError(
+                Type(
+                 int
+                ) [Type]
+                ErrorConstDeclList(
+                ) [ErrorConstDeclList]
+              ) [ConstDeclNoError]
+            ) [ConstantDeclaration]
+          ) [YesDeclarationList]
+          VariableDeclaration(
+            VarDeclNoError(
+              Type(
+               int
+              ) [Type]
+              PluralVarDeclList(
+                ErrorVarDeclList(
+                ) [ErrorVarDeclList]
+                DeclVariable(
+                  VarDeclName(
+                   y
+                  ) [VarDeclName]
+                  YesVarDeclArrayOption(
+                  ) [YesVarDeclArrayOption]
+                ) [DeclVariable]
+              ) [PluralVarDeclList]
+            ) [VarDeclNoError]
+          ) [VariableDeclaration]
+        ) [YesDeclarationList]
+        ConstantDeclaration(
+          ConstDeclYesError(
+          ) [ConstDeclYesError]
+        ) [ConstantDeclaration]
+      ) [YesDeclarationList]
+      VariableDeclaration(
+        VarDeclNoError(
+          Type(
+           int
+          ) [Type]
+          ErrorVarDeclList(
+          ) [ErrorVarDeclList]
+        ) [VarDeclNoError]
+      ) [VariableDeclaration]
+    ) [YesDeclarationList]
+    VariableDeclaration(
+      VarDeclNoError(
+        Type(
+         bool
+        ) [Type]
+        ErrorVarDeclList(
+        ) [ErrorVarDeclList]
+      ) [VarDeclNoError]
+    ) [VariableDeclaration]
+  ) [YesDeclarationList]
+  YesMethodDeclarationList(
+    NoMethodDeclarationList(
+    ) [NoMethodDeclarationList]
+    MethodDeclaration(
+      VoidMethodReturnType(
+      ) [VoidMethodReturnType]
+      MethodName(
+       main
+      ) [MethodName]
+      NoMethodParameters(
+      ) [NoMethodParameters]
+      NoMethodVariables(
+      ) [NoMethodVariables]
+      NoMethodBody(
+      ) [NoMethodBody]
+    ) [MethodDeclaration]
+  ) [YesMethodDeclarationList]
+) [Program]
+ERROR 19:47:53,357 - ==============ERROR ENCOUNTERED WHILE PARSING==================

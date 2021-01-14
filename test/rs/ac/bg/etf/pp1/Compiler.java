@@ -13,7 +13,6 @@ import rs.etf.pp1.mj.runtime.Code;
 
 public class Compiler
 {
-
 	static
 	{
 		DOMConfigurator.configure(Log4JUtils.instance().findLoggerConfigFile());
