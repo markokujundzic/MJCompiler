@@ -1,0 +1,43 @@
+program semanticErrorsNoArrays
+
+const int arraySizeInt = 1;
+const char constChar = '1';
+const bool constBool = true;
+
+const int arraySizeInt = true; // error, cannot assign bool to int
+
+const int arraySizeInt = 3; // error, double declaration od variable constInt
+
+int y[];
+bool b;
+char c;
+
+{
+	void main() int tmp;
+	{
+		b = c; // error, cannot assign char to bool
+		b = true; // OK
+
+		c++; // error, operand of ++ must be an int
+
+		print(tmp, 7); // OK
+
+		c = null; // error, null can only be assigned to array type
+
+		tmp = y; // error, cannot assign array to int
+
+		print(-b); // error, minus sign can only be used with int types
+		print(-1); // OK
+
+		print(5 ? 1 : 2); // error, CondFact used in Ternary Expression must be a bool
+		print(true ? 1 : 2); // OK
+
+		tmp = (true) ? 1 : 0; // OK
+
+		print('c' * 'd'); // error, operands of *, /, % must be of int type
+		print(missing); // error, use of undeclared variable
+
+		print(true ? false : true ? 3 : 4); // error, non-compatible types in nested Ternary Expression
+		print(true ? false : true ? true : false); // OK
+	}
+}

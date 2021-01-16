@@ -1,0 +1,33 @@
+program semanticErrorsArrays
+
+const int constInt = 1;
+
+const int arraySize = 3; // error, double declaration od variable constInt
+
+int x[], y[];
+char c;
+
+string s; // error, non-existing type
+
+{
+	void main() int tmp;
+	{
+		x[0]++; // OK
+
+		c = null; // error, null can only be assigned to array type
+		x = null; // OK
+
+		p = new bool[5]; // error, variable p has not been declared
+		x = new char[arraySize * 2]; // error, cannot assign char array to int array
+		x = new int[4 + 2]; // OK
+
+		tmp = y; // error, cannot assign array to int
+
+		x[constChar]--; // error, cannot index an array with non-int value
+		x[3 * 7 - 4 / 2 + constInt]--; // OK
+
+		y = new int[arraySize];
+		print(y); // error, cannot print an array
+		print(y[0]); // OK
+	}
+}

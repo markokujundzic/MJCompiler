@@ -1,0 +1,241 @@
+INFO  13:51:15,827 - ====================LEXICAL ANALYSIS========================
+INFO  13:51:15,914 - #2 program
+INFO  13:51:15,915 - #9 test301
+INFO  13:51:15,915 - #5 const
+INFO  13:51:15,916 - #9 int
+INFO  13:51:15,916 - #9 nula
+INFO  13:51:15,917 - #8 =
+INFO  13:51:15,917 - #10 0
+INFO  13:51:15,917 - #6 ;
+INFO  13:51:15,918 - #5 const
+INFO  13:51:15,919 - #9 int
+INFO  13:51:15,919 - #9 jedan
+INFO  13:51:15,919 - #8 =
+INFO  13:51:15,919 - #10 1
+INFO  13:51:15,919 - #6 ;
+INFO  13:51:15,919 - #5 const
+INFO  13:51:15,919 - #9 int
+INFO  13:51:15,919 - #9 pet
+INFO  13:51:15,919 - #8 =
+INFO  13:51:15,919 - #10 5
+INFO  13:51:15,919 - #6 ;
+INFO  13:51:15,919 - #9 int
+INFO  13:51:15,920 - #9 niz
+INFO  13:51:15,920 - #20 [
+INFO  13:51:15,926 - #21 ]
+INFO  13:51:15,927 - #6 ;
+INFO  13:51:15,929 - #9 char
+INFO  13:51:15,929 - #9 nizch
+INFO  13:51:15,929 - #20 [
+INFO  13:51:15,929 - #21 ]
+INFO  13:51:15,929 - #6 ;
+INFO  13:51:15,929 - #3 {
+INFO  13:51:15,929 - #15 void
+INFO  13:51:15,930 - #9 main
+INFO  13:51:15,931 - #13 (
+INFO  13:51:15,932 - #14 )
+INFO  13:51:15,933 - #9 int
+INFO  13:51:15,934 - #9 bodovi
+INFO  13:51:15,934 - #6 ;
+INFO  13:51:15,934 - #9 bool
+INFO  13:51:15,935 - #9 bt
+INFO  13:51:15,935 - #6 ;
+INFO  13:51:15,935 - #3 {
+INFO  13:51:15,935 - #30 print
+INFO  13:51:15,936 - #13 (
+INFO  13:51:15,936 - #10 10
+INFO  13:51:15,936 - #14 )
+INFO  13:51:15,943 - #6 ;
+INFO  13:51:15,943 - #4 }
+INFO  13:51:15,944 - #4 }
+INFO  13:51:15,954 - =======================SYNTAX TREE===========================
+INFO  13:51:15,955 - Program(
+  ProgramName(
+   test301
+  ) [ProgramName]
+  YesDeclarationList(
+    YesDeclarationList(
+      YesDeclarationList(
+        YesDeclarationList(
+          YesDeclarationList(
+            NoDeclarationList(
+            ) [NoDeclarationList]
+            ConstantDeclaration(
+              ConstDeclNoError(
+                Type(
+                 int
+                ) [Type]
+                SingleConstDeclList(
+                  ConstDeclVariable(
+                    ConstDeclName(
+                     nula
+                    ) [ConstDeclName]
+                    ConstDeclValueInt(
+                     0
+                    ) [ConstDeclValueInt]
+                  ) [ConstDeclVariable]
+                ) [SingleConstDeclList]
+              ) [ConstDeclNoError]
+            ) [ConstantDeclaration]
+          ) [YesDeclarationList]
+          ConstantDeclaration(
+            ConstDeclNoError(
+              Type(
+               int
+              ) [Type]
+              SingleConstDeclList(
+                ConstDeclVariable(
+                  ConstDeclName(
+                   jedan
+                  ) [ConstDeclName]
+                  ConstDeclValueInt(
+                   1
+                  ) [ConstDeclValueInt]
+                ) [ConstDeclVariable]
+              ) [SingleConstDeclList]
+            ) [ConstDeclNoError]
+          ) [ConstantDeclaration]
+        ) [YesDeclarationList]
+        ConstantDeclaration(
+          ConstDeclNoError(
+            Type(
+             int
+            ) [Type]
+            SingleConstDeclList(
+              ConstDeclVariable(
+                ConstDeclName(
+                 pet
+                ) [ConstDeclName]
+                ConstDeclValueInt(
+                 5
+                ) [ConstDeclValueInt]
+              ) [ConstDeclVariable]
+            ) [SingleConstDeclList]
+          ) [ConstDeclNoError]
+        ) [ConstantDeclaration]
+      ) [YesDeclarationList]
+      VariableDeclaration(
+        VarDeclNoError(
+          Type(
+           int
+          ) [Type]
+          SingleVarDeclList(
+            DeclVariable(
+              VarDeclName(
+               niz
+              ) [VarDeclName]
+              YesVarDeclArrayOption(
+              ) [YesVarDeclArrayOption]
+            ) [DeclVariable]
+          ) [SingleVarDeclList]
+        ) [VarDeclNoError]
+      ) [VariableDeclaration]
+    ) [YesDeclarationList]
+    VariableDeclaration(
+      VarDeclNoError(
+        Type(
+         char
+        ) [Type]
+        SingleVarDeclList(
+          DeclVariable(
+            VarDeclName(
+             nizch
+            ) [VarDeclName]
+            YesVarDeclArrayOption(
+            ) [YesVarDeclArrayOption]
+          ) [DeclVariable]
+        ) [SingleVarDeclList]
+      ) [VarDeclNoError]
+    ) [VariableDeclaration]
+  ) [YesDeclarationList]
+  YesMethodDeclarationList(
+    NoMethodDeclarationList(
+    ) [NoMethodDeclarationList]
+    MethodDeclaration(
+      VoidMethodReturnType(
+      ) [VoidMethodReturnType]
+      MethodName(
+       main
+      ) [MethodName]
+      NoMethodParameters(
+      ) [NoMethodParameters]
+      YesMethodVariables(
+        YesMethodVariables(
+          NoMethodVariables(
+          ) [NoMethodVariables]
+          VarDeclNoError(
+            Type(
+             int
+            ) [Type]
+            SingleVarDeclList(
+              DeclVariable(
+                VarDeclName(
+                 bodovi
+                ) [VarDeclName]
+                NoVarDeclArrayOption(
+                ) [NoVarDeclArrayOption]
+              ) [DeclVariable]
+            ) [SingleVarDeclList]
+          ) [VarDeclNoError]
+        ) [YesMethodVariables]
+        VarDeclNoError(
+          Type(
+           bool
+          ) [Type]
+          SingleVarDeclList(
+            DeclVariable(
+              VarDeclName(
+               bt
+              ) [VarDeclName]
+              NoVarDeclArrayOption(
+              ) [NoVarDeclArrayOption]
+            ) [DeclVariable]
+          ) [SingleVarDeclList]
+        ) [VarDeclNoError]
+      ) [YesMethodVariables]
+      YesMethodBody(
+        NoMethodBody(
+        ) [NoMethodBody]
+        PrintStatementDecl(
+          PrintStatement(
+            NoTernaryExpr(
+              SingleCondFact(
+                TermFiniteExpr(
+                  FiniteTerm(
+                    FactorTerm(
+                      IntFactor(
+                       10
+                      ) [IntFactor]
+                    ) [FactorTerm]
+                  ) [FiniteTerm]
+                  NoOptionalTermList(
+                  ) [NoOptionalTermList]
+                ) [TermFiniteExpr]
+              ) [SingleCondFact]
+            ) [NoTernaryExpr]
+            OptionalNoPrintNumber(
+            ) [OptionalNoPrintNumber]
+          ) [PrintStatement]
+        ) [PrintStatementDecl]
+      ) [YesMethodBody]
+    ) [MethodDeclaration]
+  ) [YesMethodDeclarationList]
+) [Program]
+INFO  13:51:16,003 - ======================SEMANTIC ANALYSIS======================
+INFO  13:51:16,008 - Const variable nula declared on line 5
+INFO  13:51:16,009 - Const variable jedan declared on line 6
+INFO  13:51:16,009 - Const variable pet declared on line 7
+INFO  13:51:16,009 - Global array niz declared on line 9
+INFO  13:51:16,009 - Global array nizch declared on line 10
+INFO  13:51:16,009 - Method main declared on line 13
+INFO  13:51:16,009 - Local variable bodovi declared on line 14
+INFO  13:51:16,009 - Local variable bt declared on line 15
+INFO  13:51:16,009 - =======================SYNTAX ANALYSIS=======================
+INFO  13:51:16,009 - 1 methods in the program
+INFO  13:51:16,010 - 3 constants declared
+INFO  13:51:16,010 - 0 global variables declared
+INFO  13:51:16,010 - 2 global arrays declared
+INFO  13:51:16,010 - 2 local variables declared
+INFO  13:51:16,010 - 0 local arrays declared
+INFO  13:51:16,010 - 1 statements in main
+INFO  13:51:16,017 - ================SEMANTIC ANALYSIS SUCCESSFUL=================
